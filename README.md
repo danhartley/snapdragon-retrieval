@@ -39,3 +39,29 @@ Here's how this example repo was set up:
 - Install `preact`, uninstall `react` and `react-dom`.
 - Install [preact-compat/react](https://github.com/preact-compat/react) and [preact-compat/react-dom](https://github.com/preact-compat/react-dom) for aliasing.
 - Use an [npm alias](https://github.com/npm/rfcs/blob/latest/implemented/0001-package-aliases.md#detailed-explanation) to replace `react-ssr-prepass` with `preact-ssr-prepass` (also [works](https://twitter.com/sebmck/status/873958247304232961) with Yarn).
+
+
+#Me
+
+## npm i --save react@npm:@preact/compat react-dom@npm:@preact/compat
+## npm install --save-dev typescript @types/react @types/node (tsconfig.json added on build)
+
+## _app for, among other things, global syles.
+## SASS e.g. .module.scss for styles at component level (see next.config.js for including SASS: https://nextjs.org/docs/basic-features/built-in-css-support)
+## Build: 
+    0. Run once for project: git init (and/or create new repo for me: https://github.com/new)
+    1. danminimac$ npm run build --profile, or --debug
+    2. git add .
+    3. danminimac$ git commit -m "{my message}"
+    4. change origin: git remote set-url origin NEW_URL e.g. git remote set-url origin https://github.com/danhartley/netlify-preact-test.git
+    5. (once, or 4 above: git remote add origin https://github.com/danhartley/netlify-preact-test.git)
+    6. git push
+## For .ts or .tsx files: npm install --save-dev typescript @types/react @types/node (tsconfig.json created automatically)
+
+## Change origin
+
+1. $ git remote rm origin
+2. $ git remote add origin git@github.com:aplikacjainfo/proj1.git
+3. $ git config master.remote origin
+4. $ git config master.merge refs/heads/master
+5. $ git push --set-upstream origin master
