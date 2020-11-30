@@ -12,7 +12,7 @@ collections:
     files:
     - label: "Card"
       name: "card"
-      file: "pages/cards/cards-json.json",
+      file: "pages/cards/cards.json",
       slug: "{{slug}}"
       fields:
         - label: 'Card list'

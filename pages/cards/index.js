@@ -1,5 +1,4 @@
-// import { cards } from './cards';
-import cards from './cards-json.json';
+import cards from './cards.json';
 
 const Cards = () => {
     return (
