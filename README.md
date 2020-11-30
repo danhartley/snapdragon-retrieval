@@ -87,3 +87,5 @@ Here's how this example repo was set up:
 
 - https://www.netlifycms.org/docs/add-to-your-site/
 - Add /admin under /public
+- For identity, follow the steps: https://www.netlifycms.org/docs/add-to-your-site/ or https://www.netlifycms.org/docs/nextjs/
+- Add the <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> script
