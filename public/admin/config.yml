@@ -11,12 +11,12 @@ collections:
   
     files:
     - label: "Cards"
-      name: "cards"
+      name: "cardList"
+      widget: list
       file: "pages/cards/cards.json"
       fields:
-        - label: 'Card list'
-          name: "cardList"
-          widget: list
+        - label: 'Card'
+          name: "card"          
           allow_add: true
           fields:
             - { label: "term", name: "term", widget: "string"}
