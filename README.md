@@ -54,6 +54,7 @@ Here's how this example repo was set up:
 - SASS e.g. .module.scss for styles at component level (see next.config.js for including SASS: https://nextjs.org/docs/basic-features/built-in-css-support)
 
 ### Build: 
+
     1. Run once for project: git init (and/or create new repo for me: https://github.com/new)
     2. danminimac$ npm run build --profile, or --debug
     3. git add .
@@ -61,6 +62,11 @@ Here's how this example repo was set up:
     5. change origin: git remote set-url origin NEW_URL e.g. git remote set-url origin https://github.com/danhartley/netlify-preact-test.git
     6. (once, or 4 above: git remote add origin https://github.com/danhartley/netlify-preact-test.git)
     7. git push
+
+### To publish
+
+- Create netlify.toml
+- Add, push to git, etc.
 
 ### Typescript 
 
@@ -74,7 +80,7 @@ Here's how this example repo was set up:
 4. $ git config master.merge refs/heads/master
 5. $ git push --set-upstream origin master
 
-### Support for netlify CMS 
+### Support for Netlify CMS 
 
 - https://www.netlifycms.org/docs/add-to-your-site/
 - Add /admin under /public
