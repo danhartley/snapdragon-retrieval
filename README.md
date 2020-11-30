@@ -73,3 +73,8 @@ Here's how this example repo was set up:
 3. $ git config master.remote origin
 4. $ git config master.merge refs/heads/master
 5. $ git push --set-upstream origin master
+
+### Support for netlify CMS 
+
+- https://www.netlifycms.org/docs/add-to-your-site/
+- Add /admin under /public
