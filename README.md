@@ -67,6 +67,9 @@ Here's how this example repo was set up:
 
 - Create netlify.toml
 - Add, push to git, etc.
+- Site: relaxed-shockley-d78002
+- NB replaced "dev": "cross-env NODE_ENV=development next", with "dev": "next dev",
+- NB replaced "start": "cross-env NODE_ENV=production next start", "start": "next start",
 
 ### Typescript 
 
