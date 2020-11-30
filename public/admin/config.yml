@@ -10,18 +10,16 @@ collections:
     name: "climateCards"
   
     files:
+
     - label: "Cards"
       name: "cardList"
-      widget: list
       file: "pages/cards/cards.json"
+      widget: list
+      allow_add: true      
       fields:
-        - label: 'Card'
-          name: "card"          
-          allow_add: true
-          fields:
-            - { label: "term", name: "term", widget: "string"}
-            - { label: "definition", name: "definition", widget: "string"}
-            - { label: "author", name: "author", widget: "string"}
-            - { label: "source", name: "source", widget: "string"}
-            - { label: "year", name: "year", widget: "datetime" }
-            - { label: "Publish Date", name: "date", widget: "datetime" }
+          - { label: "term", name: "term", widget: "string"}
+          - { label: "definition", name: "definition", widget: "string"}
+          - { label: "author", name: "author", widget: "string"}
+          - { label: "source", name: "source", widget: "string"}
+          - { label: "year", name: "year", widget: "datetime" }
+          - { label: "Publish Date", name: "date", widget: "datetime" }
