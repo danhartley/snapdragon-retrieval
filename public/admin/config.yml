@@ -6,19 +6,22 @@ media_folder: "public/img" # Media files will be stored in the repo under images
 public_folder: "/img" # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
-  - name: "pages"
-    label: "Pages"
+  - label: "Cards sets"
+    name: "cardSets"
+  
     files:
-    - label: "Home"
-      name: "home"
-      file: "content/home.md"
+    - label: "Card"
+      name: "card"
+      file: "pages/cards/cards-json.json",
+      slug: "{{slug}}"
       fields:
-        - { label: "Title", name: "title", widget: "string"}
-        - { label: "Publish Date", name: "date", widget: "datetime" }
-        - { label: "Body", name: "body", widget: "markdown"}
-        - label: 'Cats'
-          name: "cats"
+        - label: 'Card list'
+          name: "cardList"
           widget: list
           fields:
-            - { label: "Name", name: "name", widget: "string"}
-            - { label: "Description", name: "description", widget: "text"}
+            - { label: "term", name: "title", widget: "string"}
+            - { label: "definition", name: "title", widget: "string"}
+            - { label: "author", name: "author", widget: "string"}
+            - { label: "source", name: "source", widget: "string"}
+            - { label: "year", name: "date", widget: "datetime" }
+            - { label: "Publish Date", name: "date", widget: "datetime" }

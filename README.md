@@ -89,3 +89,12 @@ Here's how this example repo was set up:
 - Add /admin under /public
 - For identity, follow the steps: https://www.netlifycms.org/docs/add-to-your-site/ or https://www.netlifycms.org/docs/nextjs/
 - Add the <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> script
+
+
+### Netlify CLI
+
+- npm i netlify-cli (instead of "New site from Git" in the dashboard, we can run: netflify deploy)
+
+## To do
+
+- Create deploy branch (rather than using Master) or gh-pages (with dist/build files only)?

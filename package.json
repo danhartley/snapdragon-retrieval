@@ -2,10 +2,8 @@
   "name": "nextjs-preact-demo",
   "version": "1.0.0",
   "scripts": {
-    
     "build:ssg": "cross-env NODE_ENV=production next build && next export -o build",
     "build:ssr": "cross-env NODE_ENV=production next build",
-    
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -18,6 +16,7 @@
     "typescript": "^4.1.2"
   },
   "dependencies": {
+    "netlify-cli": "^2.69.0",
     "next": "10.0.0",
     "next-plugin-preact": "^3.0.3",
     "preact": "^10.5.5",
