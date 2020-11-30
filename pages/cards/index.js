@@ -2,7 +2,7 @@ import cards from './cards.json';
 
 const Cards = () => {
     return (
-        <div>{ cards.members[0].definition }</div>
+        <div>{ cards.cardList[0].definition }</div>
     )
 };
 
