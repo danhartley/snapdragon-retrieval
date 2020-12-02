@@ -46,7 +46,6 @@ collections:
           name: "provider"
           widget: "relation"
           collection: "providers"
-          # file: "providers"
           search_fields: ["providersList.*.name"]
           display_fields: ["providersList.*.name"]
           value_field: "providersList.*.name"
@@ -54,6 +53,18 @@ collections:
         - { label: "slug", name: "slug", widget: "string"}
 
   # Cards
+
+  - label: "Lesson cards"
+    name: "cards"
+    folder: "pages/provider/[provider]/lessons/[lesson]/cards"
+    create: true
+    fields:
+    - { label: "term", name: "title", widget: "string"}
+    - { label: "definition", name: "definition", widget: "string"}
+    - { label: "author", name: "author", widget: "string"}
+    - { label: "source", name: "source", widget: "string"}
+    - { label: "year", name: "year", widget: "string" }
+    - { label: "Publish Date", name: "date", widget: "datetime" }     
 
     # - label: "cards file" # Change to folder structure i.e. lesson/cards
     #   name: "cardsFile"
