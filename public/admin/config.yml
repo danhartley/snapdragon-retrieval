@@ -9,21 +9,21 @@ collections:
 
   # Providers
 
-  - label: "Providers"
+  - label: "Lesson Providers"
     name: "providers"    
 
     files:
     - file: "pages/providers/providers.json"
-      label: "Providers file"
+      label: "Providers"
       name: "providersFile"      
       
       fields:
-      - label: "List of providers"
+      - label: "Providers"
         name: "providersList"
         widget: list
         allow_add: true
         fields:
-        - { label: "name", name: "title", widget: "string"}
+        - { label: "name", name: "name", widget: "string"}
         - { label: "slug", name: "slug", widget: "string"}
 
   # Lessons
