@@ -1,12 +1,11 @@
 import { useRouter } from 'next/router';
 
 import lessons from 'pages/provider/[provider]/lessons/lessons.json';
+import cards from 'pages/provider/[provider]/lessons/[lesson]/cards.json';
 
 const Lesson = ({lesson}) => {
 
     const router = useRouter();
-
-    console.log('router.query: ', router.query)
 
     return (
         <div>{lesson.title}</div>

@@ -15,11 +15,9 @@ collections:
     - label: "providers container"
       name: "providersContainer"
       file: "pages/providers/providers.json"
-
       fields:
       - label: "providers"
         name: "providersList"
-
         widget: list
         allow_add: true
         fields:
@@ -30,14 +28,29 @@ collections:
     - label: "lessons container"
       name: "lessonsContainer"
       file: "pages/provider/[provider]/lessons/lessons.json"
-
       fields:
       - label: "lessons"
-        name: "lessonsList"
-
+        name: "lessonList"
         widget: list
         allow_add: true
         fields:
             - { label: "provider", name: "provider", widget: "string"}
             - { label: "title", name: "title", widget: "string"}
             - { label: "slug", name: "slug", widget: "string"}
+
+    - label: "cards container"
+      name: "cardsContainer"
+      file: "pages/provider/[provider]/lessons/[lesson]/cards.json"
+      
+      fields:
+      - label: "cards"
+        name: "cardList"
+        widget: list
+        allow_add: true
+        fields:
+            - { label: "term", name: "term", widget: "string"}
+            - { label: "definition", name: "definition", widget: "string"}
+            - { label: "author", name: "author", widget: "string"}
+            - { label: "source", name: "source", widget: "string"}
+            - { label: "year", name: "year", widget: "string" }
+            - { label: "Publish Date", name: "date", widget: "datetime" }            
