@@ -1,18 +1,13 @@
-import React from 'react'
+import { h } from 'preact';
+import { useState, useEffect, useRef } from 'preact/hooks';
 import Link from 'next/link'
 
 const Home = () => {
-  const [state, setState] = React.useState(0)
   return (
     <main>
-      <h1>Hello from ePreact</h1>
-      <p>{state}</p>
-      <button onClick={() => setState(state + 1)}>Increment</button>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-      <Link href="/cards">
-        <a>Cards</a>
+      <h1>Snapdragon retrieval</h1>
+      <Link href="/providers">
+        <a>Providers</a>
       </Link>
     </main>
   )

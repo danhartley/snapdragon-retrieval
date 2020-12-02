@@ -1,0 +1,14 @@
+{    
+    "lessonList": [
+        {
+            "provider": "snapdragon",
+            "title": "climate basics",
+            "slug": "climate-basics"
+        },
+        {
+            "provider": "carbonbrief",
+            "title": "chemistry basics",
+            "slug": "chemistry-basics"
+        }
+    ]
+  }

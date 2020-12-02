@@ -9,5 +9,5 @@ module.exports = withPreact({
   },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
-  },
+  }
 });

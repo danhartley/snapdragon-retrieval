@@ -1,0 +1,12 @@
+{
+    "providersList": [
+        {
+            "name": "snapdragon",
+            "slug": "snapdragon"
+        },
+        {
+            "name": "carbonbrief",
+            "slug": "carbonbrief"
+        }
+    ]
+}

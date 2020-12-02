@@ -41,7 +41,7 @@ Here's how this example repo was set up:
 - Use an [npm alias](https://github.com/npm/rfcs/blob/latest/implemented/0001-package-aliases.md#detailed-explanation) to replace `react-ssr-prepass` with `preact-ssr-prepass` (also [works](https://twitter.com/sebmck/status/873958247304232961) with Yarn).
 
 
-# Me
+# Snapdragon
 
 ### Basic setup
 
@@ -98,3 +98,12 @@ Here's how this example repo was set up:
 ## To do
 
 - Create deploy branch (rather than using Master) or gh-pages (with dist/build files only)?
+
+## Absolute paths
+
+- Add "baseUrl": "." to compilerOptions in tsconfig.json
+- https://nextjs.org/docs/advanced-features/module-path-aliases
+
+## Naming
+
+- Why providers/index.tsx and not providers/providers.tsx? The URL of the first is /providers and of the second /providers/providers
