@@ -7,26 +7,22 @@ public_folder: "/img" # The src attribute for uploaded media will begin with /im
 
 collections:
 
-  - label: "Providers",
-    label_singular: "Provider"
-    description: >
-      Add a new lesson provider.
-    name: providers
-    create: true
-    folder: "pages/providers/providers.json"
+    - label: "Providers",
+      label_singular: "Provider"
+      description: >
+        Add a new lesson provider.
+      name: providers
+      create: true
+      folder: "pages/providers/providers.json"
     
-    # files:
-    # - label: "providers container"
-    #   name: "providersContainer"
-    #   file: "pages/providers/providers.json"
-    fields:
-    - label: "providers"
-      name: "providersList"
-      widget: list
-      allow_add: true
       fields:
-          - { label: "name", name: "title", widget: "string"}
-          - { label: "slug", name: "slug", widget: "string"}
+      - label: "providers"
+        name: "providersList"
+        widget: list
+        allow_add: true
+        fields:
+            - { label: "name", name: "title", widget: "string"}
+            - { label: "slug", name: "slug", widget: "string"}
 
 
     - label: "lessons container"
