@@ -42,7 +42,7 @@ collections:
         widget: list
         allow_add: true
         fields:
-        - { label: "provider", name: "title", widget: "string"}
+        - { label: "provider", name: "provider", widget: "string"}
         - { label: "title", name: "title", widget: "string"}
         - { label: "slug", name: "slug", widget: "string"}
 
