@@ -1,12 +1,16 @@
 {
-    "providersList": [
-        {
-            "name": "snapdragon",
-            "slug": "snapdragon"
-        },
-        {
-            "name": "carbonbrief",
-            "slug": "carbonbrief"
-        }
-    ]
+  "providersList": [
+    {
+      "name": "snapdragon",
+      "slug": "snapdragon"
+    },
+    {
+      "name": "carbonbrief",
+      "slug": "carbonbrief"
+    },
+    {
+      "name": "our world in data",
+      "slug": "our-world-in-data"
+    }
+  ]
 }
