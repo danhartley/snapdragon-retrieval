@@ -7,38 +7,44 @@ public_folder: "/img" # The src attribute for uploaded media will begin with /im
 
 collections:
 
-    - label: "Providers"
-      label_singular: "Provider"
-      description: >
-        Add a new lesson provider.
-      name: "providers"
-      create: true
-      folder: "pages/providers/providers.json"    
+  # Providers
+
+  - label: "Providers"
+    name: "providers"
+    file: "pages/providers/providers.json"
+
+    # fields:
+    # - label: "providers file"
+    #   name: "providersFile"      
+    fields:
+    - label: "providers"
+      name: "providersList"
+      widget: list
+      allow_add: true
       fields:
-        - label: "providers"
-          name: "providersList"
-          widget: list
-          allow_add: true
-          fields:
-              - { label: "name", name: "title", widget: "string"}
-              - { label: "slug", name: "slug", widget: "string"}
+          - { label: "name", name: "name", widget: "string"}
+          - { label: "slug", name: "slug", widget: "string"}
 
+  # Lessons
 
-    # - label: "lessons container"
-    #   name: "lessonsContainer"
-    #   file: "pages/provider/[provider]/lessons/lessons.json"
-    #   fields:
-    #   - label: "lessons"
-    #     name: "lessonList"
-    #     widget: list
-    #     allow_add: true
-    #     fields:
-    #         - { label: "title", name: "title", widget: "string"}
-    #         - { label: "slug", name: "slug", widget: "string"}
-    #         - { label: "provider", name: "provider", widget: "string"}
+    - label: "lessons file"
+      name: "lessonsFile"
+      file: "pages/provider/[provider]/lessons/lessons.json"
+      
+      fields:
+      - label: "lessons"
+        name: "lessonList"
+        widget: list
+        allow_add: true
+        fields:
+            - { label: "provider", name: "title", widget: "string"}
+            - { label: "title", name: "title", widget: "string"}
+            - { label: "slug", name: "slug", widget: "string"}
 
-    # - label: "cards container"
-      name: "cardsContainer"
+  # Cards
+
+    - label: "cards file" # Change to folder structure i.e. lesson/cards
+      name: "cardsFile"
       file: "pages/provider/[provider]/lessons/[lesson]/cards.json"
       
       fields:
@@ -47,9 +53,9 @@ collections:
         widget: list
         allow_add: true
         fields:
-            - { label: "term", name: "title", widget: "string"}
-            - { label: "definition", name: "definition", widget: "string"}
-            - { label: "author", name: "author", widget: "string"}
-            - { label: "source", name: "source", widget: "string"}
-            - { label: "year", name: "year", widget: "string" }
-            - { label: "Publish Date", name: "date", widget: "datetime" }            
+              - { label: "term", name: "title", widget: "string"}
+              - { label: "definition", name: "definition", widget: "string"}
+              - { label: "author", name: "author", widget: "string"}
+              - { label: "source", name: "source", widget: "string"}
+              - { label: "year", name: "year", widget: "string" }
+              - { label: "Publish Date", name: "date", widget: "datetime" }            
