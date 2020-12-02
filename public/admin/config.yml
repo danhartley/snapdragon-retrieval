@@ -45,11 +45,11 @@ collections:
         - label: "provider"
           name: "provider"
           widget: "relation"
-          collection: "relation_files"
-          file: "providers"
-          search_fields: ["providers.*.name"]
-          display_fields: ["providers.*.name"]
-          value_field: "providers.*.name"
+          collection: "providers"
+          # file: "providers"
+          search_fields: ["providersList.*.name"]
+          display_fields: ["providersList.*.name"]
+          value_field: "providersList.*.name"
         - { label: "title", name: "title", widget: "string"}
         - { label: "slug", name: "slug", widget: "string"}
 
