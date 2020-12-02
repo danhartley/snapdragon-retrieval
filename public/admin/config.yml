@@ -28,19 +28,23 @@ collections:
 
   # Lessons
 
-    # - label: "lessons file"
-    #   name: "lessonsFile"      
+  - label: "Lessons"
+    name: "lessons"      
+    
+    files:
+    - file: "pages/provider/[provider]/lessons/lessons.json"
+      label: "Lessons"
+      name: "lessonsFile"      
       
-    #   fields:
-    #   - file: "pages/provider/[provider]/lessons/lessons.json"
-    #     label: "lessons"
-    #     name: "lessonList"
-    #     widget: list
-    #     allow_add: true
-    #     fields:
-    #         - { label: "provider", name: "title", widget: "string"}
-    #         - { label: "title", name: "title", widget: "string"}
-    #         - { label: "slug", name: "slug", widget: "string"}
+      fields:
+      - label: "Lessons"
+        name: "lessonList"
+        widget: list
+        allow_add: true
+        fields:
+        - { label: "provider", name: "title", widget: "string"}
+        - { label: "title", name: "title", widget: "string"}
+        - { label: "slug", name: "slug", widget: "string"}
 
   # Cards
 
