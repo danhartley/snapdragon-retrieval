@@ -11,7 +11,7 @@ collections:
       label_singular: "Provider"
       description: >
         Add a new lesson provider.
-      name: providers
+      name: "providers"
       create: true
       folder: "pages/providers/providers.json"    
       fields:
