@@ -25,3 +25,19 @@ collections:
         fields:
             - { label: "name", name: "name", widget: "string"}
             - { label: "slug", name: "slug", widget: "string"}
+
+
+    - label: "lessons container"
+      name: "lessonsContainer"
+      file: "pages/provider/[provider]/lessons/lessons.json"
+
+      fields:
+      - label: "lessons"
+        name: "lessonsList"
+
+        widget: list
+        allow_add: true
+        fields:
+            - { label: "provider", name: "provider", widget: "string"}
+            - { label: "title", name: "title", widget: "string"}
+            - { label: "slug", name: "slug", widget: "string"}
