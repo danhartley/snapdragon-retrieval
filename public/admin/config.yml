@@ -9,36 +9,35 @@ collections:
 
     - label: "Providers",
       label_singular: "Provider"
-      description: >
-        Add a new lesson provider.
+      # description: >
+      #   Add a new lesson provider.
       name: providers
       create: true
-      folder: "pages/providers/providers.json"
-    
+      folder: "pages/providers/providers.json"    
       fields:
-      - label: "providers"
-        name: "providersList"
-        widget: list
-        allow_add: true
-        fields:
-            - { label: "name", name: "title", widget: "string"}
-            - { label: "slug", name: "slug", widget: "string"}
+        - label: "providers"
+          name: "providersList"
+          widget: list
+          allow_add: true
+          fields:
+              - { label: "name", name: "title", widget: "string"}
+              - { label: "slug", name: "slug", widget: "string"}
 
 
-    - label: "lessons container"
-      name: "lessonsContainer"
-      file: "pages/provider/[provider]/lessons/lessons.json"
-      fields:
-      - label: "lessons"
-        name: "lessonList"
-        widget: list
-        allow_add: true
-        fields:
-            - { label: "title", name: "title", widget: "string"}
-            - { label: "slug", name: "slug", widget: "string"}
-            - { label: "provider", name: "provider", widget: "string"}
+    # - label: "lessons container"
+    #   name: "lessonsContainer"
+    #   file: "pages/provider/[provider]/lessons/lessons.json"
+    #   fields:
+    #   - label: "lessons"
+    #     name: "lessonList"
+    #     widget: list
+    #     allow_add: true
+    #     fields:
+    #         - { label: "title", name: "title", widget: "string"}
+    #         - { label: "slug", name: "slug", widget: "string"}
+    #         - { label: "provider", name: "provider", widget: "string"}
 
-    - label: "cards container"
+    # - label: "cards container"
       name: "cardsContainer"
       file: "pages/provider/[provider]/lessons/[lesson]/cards.json"
       
