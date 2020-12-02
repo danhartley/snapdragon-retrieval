@@ -19,14 +19,14 @@ collections:
     # - label: "providers container"
     #   name: "providersContainer"
     #   file: "pages/providers/providers.json"
+    fields:
+    - label: "providers"
+      name: "providersList"
+      widget: list
+      allow_add: true
       fields:
-      - label: "providers"
-        name: "providersList"
-        widget: list
-        allow_add: true
-        fields:
-            - { label: "name", name: "title", widget: "string"}
-            - { label: "slug", name: "slug", widget: "string"}
+          - { label: "name", name: "title", widget: "string"}
+          - { label: "slug", name: "slug", widget: "string"}
 
 
     - label: "lessons container"
