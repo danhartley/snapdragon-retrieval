@@ -30,39 +30,54 @@ collections:
 
   - label: "Lessons"
     name: "lessons"      
-    
-    files:
-    - file: "pages/provider/[provider]/lessons/lessons.json"
-      label: "Lessons"
-      name: "lessonsFile"      
+
+    folder: "pages/provider/[provider]/lessons"
+    create: true
+    format: "json"  
       
+    fields:
+    - label: "Lesson"
+      name: "lesson"
       fields:
-      - label: "Lessons"
-        name: "lessonList"
+      - label: "provider"
+        name: "provider"
+        widget: "relation"
+        collection: "providers"
+        search_fields: ["providersList.*.name"]
+        display_fields: ["providersList.*.name"]
+        value_field: "providersList.*.name"
+      - { label: "title", name: "title", widget: "string" }
+      - { label: "slug", name: "slug", widget: "string" }
+      - label: "Cards"
+        name: "cards"
         widget: list
-        allow_add: true
         fields:
-        - label: "provider"
-          name: "provider"
-          widget: "relation"
-          collection: "providers"
-          search_fields: ["providersList.*.name"]
-          display_fields: ["providersList.*.name"]
-          value_field: "providersList.*.name"
-        - { label: "title", name: "title", widget: "string"}
-        - { label: "slug", name: "slug", widget: "string"}
+        - { label: "term", name: "term", widget: "string"} 
+        - { label: "definition", name: "definition", widget: "string" }
+        - { label: "author", name: "author", widget: "string" }
+        - { label: "source", name: "source", widget: "string" }
+        - { label: "year", name: "year", widget: "string" }
+        - { label: "Publish Date", name: "date", widget: "datetime" }
+
 
   # Cards
 
-  - label: "Lesson Card"
-    name: "cards"
-    folder: "pages/provider/[provider]/lessons/[lesson]/cards"
-    create: true
-    format: "json"
-    fields:
-    - { label: "term", name: "title", widget: "string"}
-    - { label: "definition", name: "definition", widget: "string"}
-    - { label: "author", name: "author", widget: "string"}
-    - { label: "source", name: "source", widget: "string"}
-    - { label: "year", name: "year", widget: "string" }
-    - { label: "Publish Date", name: "date", widget: "datetime" }
+  # - label: "Lesson Card"
+  #   name: "cards"
+  #   folder: "pages/provider/[provider]/lessons/[lesson]/cards"
+  #   create: true
+  #   format: "json"
+  #   fields:
+  #   - { label: "term", name: "title", widget: "string"}
+  #   - { label: "definition", name: "definition", widget: "string"}
+  #   - { label: "author", name: "author", widget: "string"}
+  #   - { label: "source", name: "source", widget: "string"}
+  #   - { label: "year", name: "year", widget: "string" }
+  #   - { label: "Publish Date", name: "date", widget: "datetime" }
+  #   - label: "provider"
+  #     name: "lesson"
+  #     widget: "relation"
+  #     collection: "lessons"
+  #     search_fields: ["lessonList.*.title"]
+  #     display_fields: ["lessonList.*.title"]
+  #     value_field: "lessonList.*.title"
