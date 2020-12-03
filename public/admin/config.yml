@@ -36,28 +36,25 @@ collections:
     format: "json"  
       
     fields:
-    - label: "Lesson"
-      name: "lesson"
+    - label: "Provider"
+      name: "provider"
+      widget: "relation"
+      collection: "providers"
+      search_fields: ["providersList.*.name"]
+      display_fields: ["providersList.*.name"]
+      value_field: "providersList.*.name"
+    - { label: "title", name: "title", widget: "string" }
+    - { label: "slug", name: "slug", widget: "string" }
+    - label: "Cards"
+      name: "cards"
+      widget: list
       fields:
-      - label: "provider"
-        name: "provider"
-        widget: "relation"
-        collection: "providers"
-        search_fields: ["providersList.*.name"]
-        display_fields: ["providersList.*.name"]
-        value_field: "providersList.*.name"
-      - { label: "title", name: "title", widget: "string" }
-      - { label: "slug", name: "slug", widget: "string" }
-      - label: "Cards"
-        name: "cards"
-        widget: list
-        fields:
-        - { label: "term", name: "term", widget: "string"} 
-        - { label: "definition", name: "definition", widget: "string" }
-        - { label: "author", name: "author", widget: "string" }
-        - { label: "source", name: "source", widget: "string" }
-        - { label: "year", name: "year", widget: "string" }
-        - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "term", name: "term", widget: "string"} 
+      - { label: "definition", name: "definition", widget: "string" }
+      - { label: "author", name: "author", widget: "string" }
+      - { label: "source", name: "source", widget: "string" }
+      - { label: "year", name: "year", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
 
 
   # Cards
