@@ -2,6 +2,8 @@ backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
 
+publish_mode: editorial_workflow
+
 media_folder: "public/img" # Media files will be stored in the repo under images/uploads
 public_folder: "/img" # The src attribute for uploaded media will begin with /images/uploads
 
@@ -9,16 +11,17 @@ collections:
 
   # Providers
 
-  - label: "Lesson Providers"
+  - label: "Providers"    
     name: "providers"    
 
     files:
     - file: "pages/providers/providers.json"
       label: "Providers"
+      label_singular: "Provider"
       name: "providersFile"      
       
       fields:
-      - label: "Providers"
+      - label: "All Providers"        
         name: "providersList"
         widget: list
         allow_add: true
@@ -26,17 +29,37 @@ collections:
         - { label: "name", name: "name", widget: "string"}
         - { label: "slug", name: "slug", widget: "string"}
 
+  # Authors
+
+  - label: "Authors"    
+    name: "authors"    
+
+    files:
+    - file: "pages/authors/authors.json"
+      label: "Authors"
+      name: "authorsFile"      
+      
+      fields:
+      - label: "All Authors"
+        label_singular: "Author"
+        name: "authorsList"
+        widget: list
+        allow_add: true
+        fields:
+        - { label: "name", name: "name", widget: "string"}
+
   # Lessons
 
   - label: "Lessons"
-    name: "lessons"      
+    label_singular: "Lesson"
+    name: "lessons"
 
     folder: "api/lessons"
     create: true
     format: "json"  
       
     fields:
-    - label: "Provider"
+    - label: "provider"
       name: "provider"
       widget: "relation"
       collection: "providers"
@@ -46,12 +69,19 @@ collections:
     - { label: "title", name: "title", widget: "string" }
     - { label: "slug", name: "slug", widget: "string" }
     - label: "Cards"
+      label_singular: "Card"
       name: "cards"
       widget: list
       fields:
       - { label: "term", name: "term", widget: "string"} 
-      - { label: "definition", name: "definition", widget: "string" }
-      - { label: "author", name: "author", widget: "string" }
+      - { label: "definition", name: "definition", widget: "string" }      
       - { label: "source", name: "source", widget: "string" }
       - { label: "year", name: "year", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "publish date", name: "date", widget: "datetime" }
+      - label: "provider"
+        name: "author"
+        widget: "relation"
+        collection: "author"
+        search_fields: ["authorList.*.name"]
+        display_fields: ["authorList.*.name"]
+        value_field: "authorList.*.name"
