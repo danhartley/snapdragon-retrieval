@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import fs from 'fs';
-import path from 'path';
+import { getLessons } from 'api/lessons/utils';
 
 import providers from 'pages/providers/providers.json';
 
@@ -31,21 +30,9 @@ const Lessons = ({lessons}) => {
 export default Lessons;
 
 export async function getStaticProps() {    
-
-    var EXTENSION = '.json';
-    
-    const lessons = [];
-
-    const files = fs.readdirSync('api/lessons').filter(file => path.extname(file).toLowerCase() === EXTENSION);
-    
-    files.forEach(file => {
-        const lesson = JSON.parse(fs.readFileSync(`api/lessons/${file}`, 'utf8'));
-        lessons.push(lesson);
-    });
-
     return {
       props: {
-        lessons
+        lessons: getLessons()
       },
     }
 }
