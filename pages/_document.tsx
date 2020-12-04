@@ -11,8 +11,8 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
             <meta http-equiv="content-type" content="text/html;charset=utf-8"></meta>
-            {/* <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> */}
-            <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet" />
+            <link rel="preload" href="public/fonts/open-sans-v17-latin-regular.woff" as="font" type="font/woff2" />
+            <link href="public/fonts/open-sans-v17-latin-regular.woff2" as="font" type="font/woff2" />
         </Head>
         <body>
           <Main />
