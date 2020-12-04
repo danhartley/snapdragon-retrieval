@@ -7,8 +7,10 @@ const Lesson = ({lesson}) => {
 
     const router = useRouter();
 
+    const provider = router.query.provider;
+
     return (
-        <Layout title="Lesson">
+        <Layout title="Lesson" description={`${provider} ${lesson.title} lesson`}>
             <h1>{lesson.title}</h1>
             <Card lesson={lesson}></Card>
         </Layout>

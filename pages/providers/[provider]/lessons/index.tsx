@@ -9,12 +9,14 @@ const Lessons = ({lessons}) => {
 
     const router = useRouter();
 
+    const provider = router.query.provider;
+
     const _lessons = lessons.filter(lesson => lesson.provider === router.query.provider).map(lesson => 
         <li>
             <Link 
                 href={{
                         pathname: '/providers/[provider]/lessons/[lesson]',
-                        query: { provider: router.query.provider, lesson: lesson.slug },
+                        query: { provider, lesson: lesson.slug },
                     }}
             >
                 <a>{lesson.title}</a>
@@ -22,7 +24,8 @@ const Lessons = ({lessons}) => {
         </li>);
     
         return (
-            <Layout title="Lessons">
+            <Layout title="Lessons" description={`Lessons for ${provider}`}>
+                <h1>{provider}</h1>
                 <ul>
                     { _lessons }
                 </ul>
