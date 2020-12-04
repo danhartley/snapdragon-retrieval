@@ -11,8 +11,6 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
             <meta http-equiv="content-type" content="text/html;charset=utf-8"></meta>
-            <link rel="preload" href="public/fonts/open-sans-v17-latin-regular.woff" as="font" type="font/woff2" />
-            <link href="public/fonts/open-sans-v17-latin-regular.woff2" as="font" type="font/woff2" />
         </Head>
         <body>
           <Main />
