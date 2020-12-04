@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import Layout from 'components/layout';
 import { getLessons } from 'api/lessons/utils';
 
 import providers from 'pages/providers/providers.json';
@@ -12,7 +13,7 @@ const Lessons = ({lessons}) => {
         <li>
             <Link 
                 href={{
-                        pathname: '/provider/[provider]/lessons/[lesson]',
+                        pathname: '/providers/[provider]/lessons/[lesson]',
                         query: { provider: router.query.provider, lesson: lesson.slug },
                     }}
             >
@@ -21,9 +22,11 @@ const Lessons = ({lessons}) => {
         </li>);
     
         return (
-            <ul>
-                { _lessons }
-            </ul>
+            <Layout title="Lessons">
+                <ul>
+                    { _lessons }
+                </ul>
+            </Layout>
         )
     };
     

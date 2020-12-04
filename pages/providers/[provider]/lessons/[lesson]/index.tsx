@@ -1,12 +1,17 @@
 import { useRouter } from 'next/router';
 import { getLessons } from 'api/lessons/utils';
+import Layout from 'components/layout';
+import { Card } from 'components/card/card';
 
 const Lesson = ({lesson}) => {
 
     const router = useRouter();
 
     return (
-        <div>{lesson.title}</div>
+        <Layout title="Lesson">
+            <h1>{lesson.title}</h1>
+            <Card lesson={lesson}></Card>
+        </Layout>
     )
 };
 

@@ -1,0 +1,37 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+@mixin btn-text($element, $content) {
+    &:#{$element}, &::#{$element} {        
+      content: $content + ' card';
+    }
+    @media (max-width: $narrow) {
+        &:#{$element}, &::#{$element} {        
+            content: $content;
+        }        
+    }
+  }
+  
+.cards {        
+    display: grid;
+    row-gap: 10px;
+    max-width: 800px;
+    .term {
+        width: auto;
+        height: 200px;
+        padding: 5px;
+        @include double-centred();
+        border: 1px solid rgba($colour, 0.4);
+    }
+    .controls {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        button {            
+            &.next { @include btn-text('after', 'Next'); }
+            &.flip { @include btn-text('after', 'Flip'); }
+            &.shuffle { @include btn-text('after', 'Shuffle'); }
+            &.previous { @include btn-text('after', 'Previous'); }        
+        }
+    }    
+}

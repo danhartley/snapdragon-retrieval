@@ -1,5 +1,5 @@
 import Link from 'next/link';
-
+import Layout from 'components/layout';
 import providers from 'pages/providers/providers.json';
 
 import { useRouter } from 'next/router';
@@ -11,12 +11,12 @@ const Provider = ({provider}) => {
     const query = router.query;
 
     return (
-        <>
-        <div>{provider}</div>
-        <Link href={`/provider/${query.provider}/lessons`}>
-            <a>Lessons</a>
-        </Link>
-        </>
+        <Layout title="Provider">
+            <div>{provider}</div>
+            <Link href={`/providers/${query.provider}/lessons`}>
+                <a>Lessons</a>
+            </Link>
+        </Layout>
     )
 };
 
@@ -32,7 +32,7 @@ export const getStaticProps = async ({params}) => {
 
 export const getStaticPaths = async () => {
     
-    const paths = providers.providersList.map(provider => `/provider/${provider.name}`);
+    const paths = providers.providersList.map(provider => `/providers/${provider.name}`);
 
     return {
         paths,
