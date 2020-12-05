@@ -11,6 +11,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
             <meta http-equiv="content-type" content="text/html;charset=utf-8"></meta>
+            <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
         </Head>
         <body>
           <Main />
