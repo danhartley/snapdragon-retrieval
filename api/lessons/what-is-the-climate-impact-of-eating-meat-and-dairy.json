@@ -7,6 +7,14 @@
       "definition": "15-to-1",
       "source": "https://www.pnas.org/content/115/25/6506",
       "year": "2018"
+    },
+    {
+      "date": "2020-12-05T16:40:48.118Z",
+      "author": "The Food and Agriculture Organization (FAO)",
+      "source": "http://www.fao.org/livestock-systems/global-distributions/chickens/en/",
+      "year": "2020",
+      "term": "How many chickens are there for each person on the planet?",
+      "definition": "3"
     }
   ],
   "provider": "carbonbrief",
