@@ -1,16 +1,16 @@
 {
-  "provider": "carbonbrief",
-  "title": "what is the climate impact of eating meat and dairy",
-  "slug": "what-is-the-climate-impact-of-eating-meat-and-dairy",
-  "source": "https://interactive.carbonbrief.org/what-is-the-climate-impact-of-eating-meat-and-dairy/",
   "cards": [
     {
-      "date": "2020-12-05T16:28:25.579Z",
+      "date": "2020-12-05T16:13:07.749Z",
+      "author": "The Proceedings of the National Academy of Sciences (PNAS)",
       "term": "The mass of animals raised for slaughter on Earth now outweighs wildlife by a factor of what?",
       "definition": "15-to-1",
       "source": "https://www.pnas.org/content/115/25/6506",
-      "year": "2018",
-      "author": "The Guardian"
+      "year": "2018"
     }
-  ]
+  ],
+  "provider": "carbonbrief",
+  "slug": "what-is-the-climate-impact-of-eating-meat-and-dairy",
+  "title": "what is the climate impact of eating meat and dairy",
+  "source": "https://interactive.carbonbrief.org/what-is-the-climate-impact-of-eating-meat-and-dairy/"
 }
