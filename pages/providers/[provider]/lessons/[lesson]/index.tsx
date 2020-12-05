@@ -20,9 +20,10 @@ const Lesson = ({lesson}) => {
 export default Lesson;
 
 export async function getStaticProps({params: {provider, lesson}}) {    
+    console.log(`******${lesson}******`)
     return {
       props: {
-        lesson: getLessons().find(lesson => lesson.provider === provider)
+        lesson: getLessons().find(l => l.provider === provider && l.slug === lesson)
       },
     }
 }
