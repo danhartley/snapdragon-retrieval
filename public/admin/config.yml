@@ -68,6 +68,7 @@ collections:
       value_field: "providersList.*.name"
     - { label: "title", name: "title", widget: "string" }
     - { label: "slug", name: "slug", widget: "string" }
+    - { label: "source", name: "source", widget: "string" }
     - label: "Cards"
       label_singular: "Card"
       name: "cards"
