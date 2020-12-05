@@ -15,6 +15,14 @@
       "year": "2020",
       "term": "How many chickens are there for each person on the planet?",
       "definition": "3"
+    },
+    {
+      "date": "2020-12-05T16:52:22.415Z",
+      "author": "The Food and Agriculture Organization (FAO)",
+      "source": "http://www.fao.org/home/en/",
+      "year": "2020",
+      "term": "Meat and dairy specifically accounts for what percentage of global greenhouse gas emissions?",
+      "definition": "~14.5%"
     }
   ],
   "provider": "carbonbrief",
