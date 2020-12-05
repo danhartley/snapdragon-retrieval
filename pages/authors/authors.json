@@ -3,7 +3,14 @@
     {
       "name": "Carbon brief"
     },
-    { "name": "The Guardian" },
-    { "name": "earth observatory (NASA)" }
+    {
+      "name": "The Guardian"
+    },
+    {
+      "name": "earth observatory (NASA)"
+    },
+    {
+      "name": "The Proceedings of the National Academy of Sciences (PNAS)"
+    }
   ]
 }
