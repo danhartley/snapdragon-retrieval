@@ -12,7 +12,7 @@ const Provider = ({provider}) => {
 
     return (
         <Layout title="Provider" description={`${provider}, lesson provider`}>
-            <div>{provider}</div>
+            <h1>{provider}</h1>
             <Link href={`/providers/${query.provider}/lessons`}>
                 <a>Lessons</a>
             </Link>

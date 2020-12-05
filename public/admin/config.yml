@@ -81,7 +81,7 @@ collections:
       - label: "author"
         name: "author"
         widget: "relation"
-        collection: "author"
+        collection: "authors"
         search_fields: ["authorsList.*.name"]
         display_fields: ["authorsList.*.name"]
         value_field: "authorsList.*.name"
