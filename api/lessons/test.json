@@ -1,0 +1,16 @@
+{
+  "provider": "carbonbrief",
+  "title": "test",
+  "slug": "test",
+  "source": "test",
+  "cards": [
+    {
+      "date": "2020-12-05T16:18:09.959Z",
+      "term": "test",
+      "definition": "test",
+      "source": "test",
+      "year": "2018",
+      "author": "The Guardian"
+    }
+  ]
+}
