@@ -23,6 +23,14 @@
       "year": "2020",
       "term": "Meat and dairy specifically accounts for what percentage of global greenhouse gas emissions?",
       "definition": "~14.5%"
+    },
+    {
+      "date": "2020-12-05T17:37:39.708Z",
+      "source": "https://science.sciencemag.org/content/360/6392/987",
+      "year": "2018",
+      "author": "Science (American Association for the Advancement of Science)",
+      "term": "What is the greenhouse gas emissions per kilogram of beef from a beef herd?",
+      "definition": "~60KgCO2 (equivalent)"
     }
   ],
   "provider": "carbonbrief",
