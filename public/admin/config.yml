@@ -73,6 +73,7 @@ collections:
       label_singular: "Card"
       name: "cards"
       widget: list
+      allow_add: true
       fields:
       - { label: "term", name: "term", widget: "string"} 
       - { label: "definition", name: "definition", widget: "string" }      
