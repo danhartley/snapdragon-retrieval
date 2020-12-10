@@ -22,7 +22,7 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx", "components/question/question.ts", "logic/logic.ts", "logic/logic.test.ts", "api/lessons/utils.js"
   ],
   "exclude": [
     "node_modules"

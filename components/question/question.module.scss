@@ -1,0 +1,35 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+.questions {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    @media (min-width: 601px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    section {
+        display: grid;
+        row-gap: 10px;
+    }
+}   
+
+.answers li { 
+    line-height: 2;
+    cursor: pointer;
+    color: rgba($colour,.8);
+    width: 100px;
+    border-bottom: 3px solid rgba($colour,0.05);    
+
+    &.correct { 
+        @include correct-answer();
+    }
+    &.incorrect { 
+        border-bottom: 3px solid rgba($colour,.3);  
+        color: rgba($colour, 0.4);
+    }
+    &.correctOrder {
+        @include correct-answer();
+        background-position: right 15px center;
+    }
+}

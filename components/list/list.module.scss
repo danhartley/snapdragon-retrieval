@@ -1,0 +1,16 @@
+@import 'variables.scss';
+
+.data {
+    table-layout: auto;
+    td:nth-child(3) {
+        text-align: right;
+    }
+    td:nth-child(2) {
+        width: 100%;
+    }
+}
+
+.unitText {
+    font-size: .7rem;
+    text-align: right;
+}

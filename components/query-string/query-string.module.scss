@@ -1,0 +1,48 @@
+@import 'variables.scss';
+
+.navButtons {
+    display: flex;
+    justify-content: flex-start;
+    li {
+        margin-right: 10px;
+    }
+}
+
+$space: .5rem;
+
+.rbList {
+    display: flex;
+    align-items: center;
+    &.disabled {
+        pointer-events: none;
+        opacity: .3;
+    }
+    input {
+        appearance: none;
+        border-radius: 50%;
+        transition: all .2s linear;
+        margin: 0 $space 0 0;
+        padding: 0;
+        cursor: pointer;
+        border: .5rem solid rgba($colour, .5);
+        &:checked {            
+            border: .5em solid rgba($colour, .8);
+            background-color: rgba($colour, .8);
+        }
+        &:checked + label {
+            color: rgba($colour, 1);
+        }
+        &:focus {
+            outline: none;
+        }        
+    }
+    label {
+        cursor: pointer;
+        color: rgba($colour, .7);
+        span:nth-child(2) {
+            font-size: .6rem;
+            vertical-align: super;
+            margin-left: 2px;
+        }
+    }
+}

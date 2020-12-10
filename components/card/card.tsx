@@ -1,11 +1,9 @@
 import { useState, useEffect, useRef } from 'preact/hooks';
+import { ExternalLinkList } from 'components/list/list';
+import { enums } from 'components/enums';
+import { logic } from 'logic/logic';
 
-import styles from 'components/card.module.scss';
-
-enum Direction {
-    Previous = 1,
-    Next
-  }
+import styles from 'components/card/card.module.scss';
 
 export const Card = ({lesson}) => {
 
@@ -18,19 +16,7 @@ export const Card = ({lesson}) => {
 
     const nextCard = e => {
         e.preventDefault();
-        let index;
-        switch(parseInt(e.target.dataset.direction)) {
-            case Direction.Next:
-                index = (face.index + 1) % lesson.cards.length;
-                break;
-            case Direction.Previous:
-                index = index > 0
-                    ? index - 1
-                    : index = lesson.cards.length-1;
-                break;
-            default:
-                index = 0;
-        }
+        const index = logic.next(parseInt(e.target.dataset.direction), face.index, lesson.cards.length);
         setCard(lesson.cards[index]);
         setFace({ value: card.term, isTerm: true, index });
     }; 
@@ -41,17 +27,16 @@ export const Card = ({lesson}) => {
                 <div class={styles.term}>{face.value}</div>
             </section>
             <section class={styles.controls}>
-                <button data-direction={Direction.Previous} onClick={nextCard} class={styles.previous}></button>
-                <button data-direction={Direction.Next} onClick={nextCard} class={styles.next}></button>
+                <button data-direction={enums.DIRECTION.Previous} onClick={nextCard} class={styles.previous}></button>
+                <button data-direction={enums.DIRECTION.Next} onClick={nextCard} class={styles.next}></button>
                 <button onClick={flipCard} class={styles.flip}></button>
-                <button class={styles.shuffle}></button>            
-                <div></div>
-                <div class={styles.centred}>Card count: {lesson.cards.length}</div>            
+                <button class={styles.shuffle}></button>
             </section>
             <section class={styles.source}>
                 <div><a href={card.source} target="_blank">Open source in a new tab</a></div>
                 <div>Source: {card.author}</div>
             </section>
+            <section><ExternalLinkList items={lesson.cards} source={lesson.source}></ExternalLinkList></section>
         </div>
     )
 };

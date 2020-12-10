@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import Layout from 'components/layout';
+import Layout from 'components/layout/layout';
+import { enums } from 'components/enums';
 import { getLessons } from 'api/lessons/utils';
 
 import providers from 'pages/providers/providers.json';
@@ -11,12 +12,12 @@ const Lessons = ({lessons}) => {
 
     const provider = router.query.provider;
 
-    const _lessons = lessons.filter(lesson => lesson.provider === router.query.provider).map(lesson => 
+    const providerLessons = lessons.filter(lesson => lesson.provider === router.query.provider).map(lesson => 
         <li>
             <Link 
                 href={{
                         pathname: '/providers/[provider]/lessons/[lesson]',
-                        query: { provider, lesson: lesson.slug },
+                        query: { provider, lesson: lesson.slug, type: enums.LESSON_TYPE.FLASHCARDS },
                     }}
             >
                 <a>{lesson.title}</a>
@@ -27,7 +28,7 @@ const Lessons = ({lessons}) => {
             <Layout title="Lessons" description={`Lessons for ${provider}`}>
                 <h1>{provider}</h1>
                 <ul>
-                    { _lessons }
+                    { providerLessons }
                 </ul>
             </Layout>
         )

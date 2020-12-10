@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import Layout from 'components/layout';
+import Layout from 'components/layout/layout';
 import providers from 'pages/providers/providers.json';
 
 const Providers = ({providers}) => {
 
-const _providers = providers.map(provider => <li><Link href={`/providers/${provider.name}`}><a>{provider.name}</a></Link></li>);
+const _providers = providers.map(provider => <li><Link href={`/providers/${provider.name}/lessons`}><a>{provider.name}</a></Link></li>);
 
     return (
         <Layout title="Providers">

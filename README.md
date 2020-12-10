@@ -107,3 +107,32 @@ Here's how this example repo was set up:
 ## Naming
 
 - Why providers/index.tsx and not providers/providers.tsx? The URL of the first is /providers and of the second /providers/providers
+
+## Testing
+
+- For simple paths, add moduleDirectories: ['node_modules', './'] in jest.config.js
+
+# JS
+
+- Already included: https://preactjs.com/guide/v10/preact-testing-library/
+
+# TS
+
+Not sure which, if any, of these libraries were needed:
+
+- npm i jest ts-jest babel-jest -D
+- npm i -D @babel/preset-react
+- npm i -D @babel/preset-env
+- //babel.config.js --> module.exports = {presets: ['@babel/preset-env']}
+
+Required:
+
+- use relative path e.g. ./
+- jest.config.js 
+
+## Debugging
+
+- Read https://mattmazzola.medium.com/how-to-debug-jest-tests-with-vscode-48f003c7cb41
+- create new launch.json from the snippet
+- Create new JS debug terminal
+- run npm test from there

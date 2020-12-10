@@ -2,6 +2,8 @@ import { useRouter } from 'next/router';
 import Link from 'next/link'
 import Head from 'next/head'
 
+import styles from 'components/layout/layout.module.scss';
+
 export default function Layout({
   children,
   title = 'This is the default title',
@@ -13,7 +15,7 @@ export default function Layout({
     const { provider, lesson } = router.query;
 
     return (
-        <>
+        <div class={styles.container}>
             <Head>
                 <title>{title}</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes"></meta>
@@ -43,6 +45,6 @@ export default function Layout({
             {children}
 
             <footer>{'I`m here to stay'}</footer>
-        </>
+        </div>
     )
 }

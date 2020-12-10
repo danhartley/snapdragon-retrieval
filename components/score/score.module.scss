@@ -1,0 +1,4 @@
+.correct {    
+    &::before { padding: 0 10px 0 0; content:'\2713'; }
+}
+.incorrect::before { padding: 0 12px 0 0; content:'\2717'; }

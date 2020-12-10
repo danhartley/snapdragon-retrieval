@@ -2,7 +2,7 @@ import { h } from 'preact';
 import { useState, useEffect, useRef } from 'preact/hooks';
 import Link from 'next/link'
 
-import Layout from 'components/layout';
+import Layout from 'components/layout/layout';
 
 const Home = () => {
   return (
