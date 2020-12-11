@@ -101,7 +101,7 @@
       {
           "type": "ordered",
           "unit": "%",
-          "unitDescription": "how food is transported",
+          "unitDescription": "share of carbon dioxide emissions",
           "text": "list the main 4 forms of food transport, from highest to lowest",
           "listCount": 4,
           "items": [
@@ -126,6 +126,40 @@
                   "value": "0.17"
               }
           ]
-      }
+      },
+      {
+        "type": "ordered",
+        "unit": "kgCO2eq",
+        "unitDescription": "share of carbon dioxide emissions",
+        "text": "list the main dairy and dairy equivalents, from highest to lowest",
+        "listCount": 5,
+        "items": [
+            {
+                "rank": 1,
+                "name": "dairy milk",
+                "value": ".63"
+            },
+            {
+                "rank": 2,
+                "name": "rice milk",
+                "value": ".24"
+            },
+            {
+                "rank": 3,
+                "name": "soymilk",
+                "value": ".2"
+            },
+            {
+                "rank": 4,
+                "name": "oat milk",
+                "value": "0.18"
+            },
+            {
+                "rank": 5,
+                "name": "almond milk",
+                "value": "0.14"
+            }
+        ]
+    }
   ]
 }

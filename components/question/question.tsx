@@ -1,5 +1,6 @@
-import { useState, useRef, useEffect, useReducer } from "preact/hooks";
+import { useState, useRef, useEffect } from "preact/hooks";
 import { logic } from 'logic/logic';
+import { useLocalStorageState } from 'api/state';
 import { enums } from 'components/enums';
 import { RankedList } from 'components/list/list';
 
@@ -10,12 +11,13 @@ export const Question = ({lesson}) => {
     if(!lesson.questions) return;
 
     const PLACEHOLDER = '---';
-    const INITIAL_QUESTION = 1;
+    const INITIAL_QUESTION = 2;
 
     const [question, setQuestion] = useState(lesson.questions[INITIAL_QUESTION]);
     const [list, setList] = useState(logic.getPlaceholders(question.listCount, PLACEHOLDER));
     const [testState, setTestState] = useState(enums.TEST_STATE.RUNNING);
-    const [score, setScore] = useState({total: 0, correct: 0});
+    const [history, setHistory] = useLocalStorageState(null, enums.STORAGE_KEY.HISTORY);
+    const [progress, setProgress] = useState({ number: 1, of: lesson.questions.length });
 
     const inputRef = useRef(null);
     const btnMarkRef = useRef(null);
@@ -45,10 +47,10 @@ export const Question = ({lesson}) => {
     };
 
     const checkAnswers = e => {
-        const scores = logic.mark({ question, list })
-        setList(scores);
+        const _score = logic.mark({ question, list })
+        setList(_score.scores);
         setTestState(enums.TEST_STATE.MARKED);
-        setScore({ total: score.total++, correct: scores.isCorrect ? score.correct++ : score.correct });
+        setHistory({..._score, lessonTitle: lesson.title}, enums.STORAGE_KEY.HISTORY);
     };
 
     const nextTest = e => {
@@ -56,7 +58,8 @@ export const Question = ({lesson}) => {
         const index = logic.next(enums.DIRECTION.Next, lesson.questions.indexOf(question), lesson.questions.length);
         setQuestion(lesson.questions[index]);
         setTestState(enums.TEST_STATE.RUNNING);
-        setList(getPlaceholders(lesson.questions[index].listCount));
+        setProgress({ ...progress, number: progress.number + 1});
+        setList(logic.getPlaceholders(lesson.questions[index].listCount, PLACEHOLDER));
     }; 
 
     useEffect(() => {
@@ -98,7 +101,7 @@ export const Question = ({lesson}) => {
     return (
         <div class={styles.questions}>
             <section>
-                <span>{question.text}</span>        
+                <div><span>{question.text}</span><span class="super">{`${progress.number}/${progress.of}`}</span></div>
                 <input disabled={list.filter(l => l.name !== PLACEHOLDER).length === question.listCount} ref={inputRef} type="text" onBlur={e => addToList(e)} placeholder="" />
                 <ul class={styles.answers}>{listItems}</ul>
                 <button ref={btnMarkRef} onClick={checkAnswers} disabled={testState !== enums.TEST_STATE.COMPLETED}>Check answers</button>      

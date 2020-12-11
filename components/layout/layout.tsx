@@ -23,28 +23,37 @@ export default function Layout({
             </Head>
             <header>
                 <nav>
-                <Link href="/">
-                    <a>Home</a>
-                </Link>{' '}
-                |
-                <Link href="/providers">
-                    <a>Providers</a>
-                </Link>{' '}
-                { (provider && lesson) ?
-                    <span>
-                        |
-                        <Link href={`/providers/${provider}/lessons`}>
-                            <a>Lessons</a>
+                    <div>
+                        <Link href="/">
+                            <a>Home</a>
                         </Link>
-                    </span> 
-                    : null
-                }
+                        |
+                        <Link href="/providers">
+                            <a>Providers</a>
+                        </Link>
+                        { (provider && lesson) ?
+                            <>
+                                |
+                                <Link href={`/providers/${provider}/lessons`}>
+                                    <a>Lessons</a>
+                                </Link>
+                            </> 
+                            : null
+                        }
+                    </div>
+                    <div>
+                        <span>
+                            <Link href={`/users/danielhartley`}>
+                                <a>User</a>
+                            </Link>
+                        </span>
+                    </div>
                 </nav>
             </header>
 
             {children}
 
-            <footer>{'I`m here to stay'}</footer>
+            <footer>Score: 1 out of 12</footer>
         </div>
     )
 }

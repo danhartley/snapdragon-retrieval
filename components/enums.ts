@@ -15,7 +15,7 @@ enum TRILEAN {
 };
 
 enum TEST_STATE {
-    RUNNING = "ready",
+    RUNNING = "running",
     COMPLETED = "completed",
     MARKED = "marked"
 }
@@ -25,10 +25,15 @@ enum DIRECTION {
     Next
 };
 
+enum STORAGE_KEY {
+    HISTORY = "history"
+};
+
 export const enums = {
     LESSON_TYPE,
     TEST_TYPE,
     TEST_STATE,
     TRILEAN,
-    DIRECTION
+    DIRECTION,
+    STORAGE_KEY
 }

@@ -39,10 +39,5 @@ $space: .5rem;
     label {
         cursor: pointer;
         color: rgba($colour, .7);
-        span:nth-child(2) {
-            font-size: .6rem;
-            vertical-align: super;
-            margin-left: 2px;
-        }
     }
 }

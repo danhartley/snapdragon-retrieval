@@ -9,29 +9,30 @@ const sanitise = str => {
 }
 
 const mark = (lesson) => {
-    const scores = lesson.list.map(answer => {
+    const score = { scores: [], isCorrect: false, isOrderedCorrect: false };
+    score.scores = lesson.list.map(answer => {
         const score = lesson.question.items.find(item => toArray(item.name).find(name => sanitise(name) === sanitise(answer.name))); // fuzzy, not precise (flag?)            
         return score ? { name: answer.name, state: enums.TRILEAN.TRUE } : { name: answer.name, state: enums.TRILEAN.FALSE };
     });
-    scores.isCorrect = lesson.list.length === scores.filter(score => score.state === enums.TRILEAN.TRUE).length;
+    score.isCorrect = lesson.list.length === score.scores.filter(score => score.state === enums.TRILEAN.TRUE).length;
     switch(lesson.question.type) {
         case enums.TEST_TYPE.UNORDERED:
-            return scores;
+            return score;
         case enums.TEST_TYPE.ORDERED:
-            scores.forEach((score, index) => {
+            score.scores.forEach((score, index) => {
                 score.isOrdered = score.name === lesson.question.items[index].name ? enums.TRILEAN.TRUE : enums.TRILEAN.FALSE;
             });
-            scores.isOrderedCorrect = lesson.list.length === scores.filter(score => score.isOrdered === enums.TRILEAN.TRUE).length;
-            return scores;
+            score.isOrderedCorrect = lesson.list.length === score.scores.filter(score => score.isOrdered === enums.TRILEAN.TRUE).length;
+            return score;
     }
 };
 
 const markOrdered = lesson => {
-    const scores = mark(lesson);
-    scores.forEach((score, index) => {
+    const score = mark(lesson);
+    score.scores.forEach((score, index) => {
         score.isOrdered = score.name === lesson.question.items[index].name ? enums.TRILEAN.TRUE : enums.TRILEAN.FALSE;
     });
-    return scores;
+    return score;
 };
 
 const next = (direction, currentIndex, length) => {

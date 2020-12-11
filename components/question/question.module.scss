@@ -22,14 +22,13 @@
     border-bottom: 3px solid rgba($colour,0.05);    
 
     &.correct { 
-        @include correct-answer();
+        @include one-tick();
     }
     &.incorrect { 
         border-bottom: 3px solid rgba($colour,.3);  
         color: rgba($colour, 0.4);
     }
     &.correctOrder {
-        @include correct-answer();
-        background-position: right 15px center;
+        @include two-ticks();
     }
 }

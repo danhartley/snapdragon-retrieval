@@ -17,6 +17,22 @@ body {
     padding: 10px;
 }
 
+header nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    background-color: rgba($colour, 0.2);
+    padding: 10px 0;
+    font-style: italic;
+    font-weight: bold;
+}
+
+h1 {
+    opacity: .8;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -69,4 +85,10 @@ input {
 
 button:disabled {
     cursor: unset;
+}
+
+.super {
+    font-size: .6rem;
+    vertical-align: super;
+    margin-left: 2px;
 }

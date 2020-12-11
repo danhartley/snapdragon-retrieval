@@ -24,7 +24,7 @@ const QueryString = ({options, lesson}) => {
         <input onClick={() => changeOption(options[key])} type="radio" id={options[key]} name="type" value={options[key]} checked={options[key] === type} />
             <label htmlFor={options[key]}>
                 <span>{options[key]}</span>
-                <span>{options[key] === enums.LESSON_TYPE.FLASHCARDS ? lesson.cards.length : lesson.questions.length}</span>
+                <span class="super">{options[key] === enums.LESSON_TYPE.FLASHCARDS ? lesson.cards.length : lesson.questions.length}</span>
             </label>
         </li>
         // <li><button class="rbList" onClick={e => changeOption(options[key])}>{options[key]}</button></li>
