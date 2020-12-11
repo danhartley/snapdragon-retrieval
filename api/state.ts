@@ -23,7 +23,7 @@ export const useLocalStorageState = (defaulState, key) => {
     return [value, setValue];
 };
 
-function parseHistory(value: any, histories: Array<History>) {
+const parseHistory = (value: any, histories: Array<History>) => {
 
     if(!value || !value.scores) return histories;
 
@@ -48,4 +48,8 @@ function parseHistory(value: any, histories: Array<History>) {
     history.correct = history.correct + correct;
 
     return histories ? [ ...histories.filter(h => h.lessonTitle !== history.lessonTitle), history ] : [ history ];
-}
+};
+
+export const getFromLocalStorage = key => {
+    return JSON.parse(window.localStorage.getItem(key));
+};
