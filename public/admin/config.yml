@@ -94,14 +94,14 @@ collections:
       fields:
       - { label: "type", name: "type", widget: "string" }
       - { label: "unit", name: "unit", widget: "string" }
-      - { label: "unitDescription", name: "unitDescription", widget: "string" }
-      - { label: "listCount", name: "listCount", widget: "number" }
+      - { label: "unit description", name: "unitDescription", widget: "string" }
+      - { label: "list count", name: "listCount", widget: "number" }
       - label: "Items"
         label_singular: "Item"
         name: "items"
         widget: "list"
         allow_add: true
         fields:
-        - { label: "rank", name: "rank", widget: "string"}
-        - { label: "name", name: "name", widget: "number"}
+        - { label: "rank", name: "rank", widget: "number"}
+        - { label: "name", name: "name", widget: "string"}
         - { label: "value", name: "value", widget: "string"}
