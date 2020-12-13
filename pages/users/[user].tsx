@@ -15,7 +15,7 @@ const User = ({user}) => {
     return (
         <Layout title="User" description={`${user}, user`}>
             <h1>{user}</h1>
-            {renderScoreHistory()}
+            {/* {renderScoreHistory()} */}
         </Layout>
     )
 };
