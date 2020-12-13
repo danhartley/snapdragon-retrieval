@@ -16,6 +16,21 @@
           "rank": 2,
           "name": "feed",
           "value": "feed"
+        },
+        {
+          "rank": 3,
+          "name": "fibre",
+          "value": "fibre"
+        },
+        {
+          "rank": 4,
+          "name": "timber",
+          "value": "timber"
+        },
+        {
+          "rank": 5,
+          "name": "energy",
+          "value": "energy"
         }
       ],
       "type": "unordered",
