@@ -3,6 +3,7 @@
   "title": "chemistry basics",
   "slug": "chemistry-basics",
   "source": "https://www.theguardian.com/environment/2015/dec/13/paris-climate-deal-cop-diplomacy-developing-united-nations",
+  "author": "The Guardian",
   "cards": [
     {
       "term": "At what level did the signatories of the Paris Agreement agree to limit global warming?",
@@ -12,5 +13,6 @@
       "year": "2015",
       "text": "Developed and developing countries alike are required to limit their emissions to relatively safe levels, of 2C with an aspiration of 1.5C"
     }
-  ]
+  ],
+  "questions": []
 }

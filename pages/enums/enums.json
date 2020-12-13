@@ -1,0 +1,11 @@
+{
+    "enumsList": [
+        {
+            "name": "test-type",
+            "values": [
+                "ordered",
+                "unordered"
+            ]
+        }
+    ]
+}
