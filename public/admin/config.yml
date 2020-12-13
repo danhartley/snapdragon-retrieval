@@ -95,6 +95,7 @@ collections:
       - { label: "type", name: "type", widget: "string" }
       - { label: "unit", name: "unit", widget: "string" }
       - { label: "unit description", name: "unitDescription", widget: "string" }
+      - { label: "text", name: "text", widget: "string" }
       - { label: "list count", name: "listCount", widget: "number" }
       - label: "Items"
         label_singular: "Item"
