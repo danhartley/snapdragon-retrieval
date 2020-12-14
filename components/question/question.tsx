@@ -110,7 +110,7 @@ export const Question = ({lesson}) => {
             <section>{ testState === enums.QUESTION_STATE.MARKED ? <RankedList items={question.items} unit={question.unit} /> : null }</section>
             <section class={styles.source}>
                 <div><a href={lesson.source} target="_blank">Open source in a new tab</a></div>
-                <div>Source: {lesson.author}</div>
+                <div>Source: {lesson.provider}</div>
             </section>
         </div>
     )

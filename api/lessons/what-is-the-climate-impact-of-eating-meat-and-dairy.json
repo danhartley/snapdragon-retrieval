@@ -33,11 +33,11 @@
       "text": "How do emissions from meat, dairy and other foods compare"
     }
   ],
-  "provider": "carbon brief",
+  "provider": "carbonbrief",
   "slug": "what-is-the-climate-impact-of-eating-meat-and-dairy",
   "title": "what is the climate impact of eating meat and dairy",
   "source": "https://interactive.carbonbrief.org/what-is-the-climate-impact-of-eating-meat-and-dairy/",
-  "author": "carbonbrief",
+  
   "ranked": [
     {
       "type": "unordered",
