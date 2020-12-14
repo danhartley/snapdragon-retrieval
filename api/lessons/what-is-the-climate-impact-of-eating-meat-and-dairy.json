@@ -1,161 +1,165 @@
 {
-	"cards": [{
-			"author": "The Proceedings of the National Academy of Sciences (PNAS)",
-			"term": "The mass of animals raised for slaughter on Earth now outweighs wildlife by a factor of what?",
-			"definition": "15-to-1",
-			"source": "https://www.pnas.org/content/115/25/6506",
-			"year": "2018",
-			"text": "The mass of animals raised for slaughter on Earth now outweighs wildlife by a factor of 15-to-1"
-		},
-		{
-			"author": "The Food and Agriculture Organization (FAO)",
-			"source": "http://www.fao.org/livestock-systems/global-distributions/chickens/en/",
-			"year": "2020",
-			"term": "How many chickens are there for each person on the planet?",
-			"definition": "3",
-			"text": "For every person on the planet, there are approximately three chickens"
-		},
-		{
-			"author": "The Food and Agriculture Organization (FAO)",
-			"source": "http://www.fao.org/home/en/",
-			"year": "2020",
-			"term": "Meat and dairy specifically accounts for what percentage of global greenhouse gas emissions?",
-			"definition": "~14.5%",
-			"text": "Meat and dairy specifically accounts for around 14.5% of global greenhouse gas emissions"
-		},
-		{
-			"source": "https://science.sciencemag.org/content/360/6392/987",
-			"year": "2018",
-			"author": "Science (American Association for the Advancement of Science)",
-			"term": "What is the greenhouse gas emissions per kilogram of beef from a beef herd?",
-			"definition": "~60KgCO2 (equivalent)",
-			"text": "How do emissions from meat, dairy and other foods compare"
-		}
-	],
-	"provider": "carbonbrief",
-	"slug": "what-is-the-climate-impact-of-eating-meat-and-dairy",
-	"title": "what is the climate impact of eating meat and dairy",
-	"source": "https://interactive.carbonbrief.org/what-is-the-climate-impact-of-eating-meat-and-dairy/",
-	"author": "carbonbrief",
-	"ranked": [
+  "cards": [
+    {
+      "author": "The Proceedings of the National Academy of Sciences (PNAS)",
+      "term": "The mass of animals raised for slaughter on Earth now outweighs wildlife by a factor of what?",
+      "definition": "15-to-1",
+      "source": "https://www.pnas.org/content/115/25/6506",
+      "year": "2018",
+      "text": "The mass of animals raised for slaughter on Earth now outweighs wildlife by a factor of 15-to-1"
+    },
+    {
+      "author": "The Food and Agriculture Organization (FAO)",
+      "source": "http://www.fao.org/livestock-systems/global-distributions/chickens/en/",
+      "year": "2020",
+      "term": "How many chickens are there for each person on the planet?",
+      "definition": "3",
+      "text": "For every person on the planet, there are approximately three chickens"
+    },
+    {
+      "author": "The Food and Agriculture Organization (FAO)",
+      "source": "http://www.fao.org/home/en/",
+      "year": "2020",
+      "term": "Meat and dairy specifically accounts for what percentage of global greenhouse gas emissions?",
+      "definition": "~14.5%",
+      "text": "Meat and dairy specifically accounts for around 14.5% of global greenhouse gas emissions"
+    },
+    {
+      "source": "https://science.sciencemag.org/content/360/6392/987",
+      "year": "2018",
+      "author": "Science (American Association for the Advancement of Science)",
+      "term": "What is the greenhouse gas emissions per kilogram of beef from a beef herd?",
+      "definition": "~60KgCO2 (equivalent)",
+      "text": "How do emissions from meat, dairy and other foods compare"
+    }
+  ],
+  "provider": "carbon brief",
+  "slug": "what-is-the-climate-impact-of-eating-meat-and-dairy",
+  "title": "what is the climate impact of eating meat and dairy",
+  "source": "https://interactive.carbonbrief.org/what-is-the-climate-impact-of-eating-meat-and-dairy/",
+  "author": "carbonbrief",
+  "ranked": [
+    {
+      "type": "unordered",
+      "unit": "kgCO2",
+      "unitDescription": "gas emissions per kilo",
+      "text": "list 5 food groups with greenhouse gas emissions per kilogram in the top 10",
+      "listCount": 5,
+      "items": [
         {
-            "type": "unordered",
-			"unit": "kgCO2",
-			"unitDescription": "gas emissions per kilo",
-			"text": "list 5 food groups with greenhouse gas emissions per kilogram in the top 10",
-			"listCount": 5,
-			"items": [{
-					"rank": 1,
-					"name": "beef (beef herd)",
-					"value": "59.60"
-				},
-				{
-					"rank": 2,
-					"name": "lamb & mutton",
-					"value": "24.50"
-				},
-				{
-					"rank": 3,
-					"name": "cheese",
-					"value": "21.20"
-				},
-				{
-					"rank": 3,
-					"name": "beef (dairy herd)",
-					"value": "21.20"
-				},
-				{
-					"rank": 5,
-					"name": "dark chocolate",
-					"value": "18.70"
-				},
-				{
-					"rank": 6,
-					"name": "coffee",
-					"value": "16.50"
-				},
-				{
-					"rank": 7,
-					"name": "shrimps (farmed)",
-					"value": "11.80"
-				},
-				{
-					"rank": 8,
-					"name": "palm oil",
-					"value": "7.60"
-				},
-				{
-					"rank": 9,
-					"name": "pork",
-					"value": "7.20"
-				},
-				{
-					"rank": 10,
-					"name": "poultry",
-					"value": "6.10"
-				}
-			]
-		},
-		{
-            "type": "ordered",
-			"unit": "%",
-			"unitDescription": "share of carbon dioxide emissions",
-			"text": "list the main 4 forms of food transport, from highest to lowest",
-			"listCount": 4,
-			"items": [{
-					"rank": 1,
-					"name": "water",
-					"value": "58.97"
-				},
-				{
-					"rank": 2,
-					"name": "road",
-					"value": "30.97"
-				},
-				{
-					"rank": 3,
-					"name": "rail",
-					"value": "9.9"
-				},
-				{
-					"rank": 4,
-					"name": "air",
-					"value": "0.17"
-				}
-			]
-		},
-		{
-            "type": "ordered",
-			"unit": "kgCO2eq",
-			"unitDescription": "share of carbon dioxide emissions",
-			"text": "list the main dairy and dairy equivalents, from highest to lowest",
-			"listCount": 5,
-			"items": [{
-					"rank": 1,
-					"name": "dairy milk",
-					"value": ".63"
-				},
-				{
-					"rank": 2,
-					"name": "rice milk",
-					"value": ".24"
-				},
-				{
-					"rank": 3,
-					"name": "soymilk",
-					"value": ".2"
-				},
-				{
-					"rank": 4,
-					"name": "oat milk",
-					"value": "0.18"
-				},
-				{
-					"rank": 5,
-					"name": "almond milk",
-					"value": "0.14"
-				}
-			]
-		}
-    ]
+          "rank": 1,
+          "name": "beef (beef herd)",
+          "value": "59.60"
+        },
+        {
+          "rank": 2,
+          "name": "lamb & mutton",
+          "value": "24.50"
+        },
+        {
+          "rank": 3,
+          "name": "cheese",
+          "value": "21.20"
+        },
+        {
+          "rank": 3,
+          "name": "beef (dairy herd)",
+          "value": "21.20"
+        },
+        {
+          "rank": 5,
+          "name": "dark chocolate",
+          "value": "18.70"
+        },
+        {
+          "rank": 6,
+          "name": "coffee",
+          "value": "16.50"
+        },
+        {
+          "rank": 7,
+          "name": "shrimps (farmed)",
+          "value": "11.80"
+        },
+        {
+          "rank": 8,
+          "name": "palm oil",
+          "value": "7.60"
+        },
+        {
+          "rank": 9,
+          "name": "pork",
+          "value": "7.20"
+        },
+        {
+          "rank": 10,
+          "name": "poultry",
+          "value": "6.10"
+        }
+      ]
+    },
+    {
+      "unit": "%",
+      "unitDescription": "share of carbon dioxide emissions",
+      "text": "list the main 4 forms of food transport, from highest to lowest",
+      "listCount": 4,
+      "items": [
+        {
+          "rank": 1,
+          "name": "water",
+          "value": "58.97"
+        },
+        {
+          "rank": 2,
+          "name": "road",
+          "value": "30.97"
+        },
+        {
+          "rank": 3,
+          "name": "rail",
+          "value": "9.9"
+        },
+        {
+          "rank": 4,
+          "name": "air",
+          "value": "0.17"
+        }
+      ],
+      "type": "ordered"
+    },
+    {
+      "unit": "kgCO2eq",
+      "unitDescription": "share of carbon dioxide emissions",
+      "text": "list the main dairy and dairy equivalents, from highest to lowest",
+      "listCount": 5,
+      "items": [
+        {
+          "rank": 1,
+          "name": "dairy milk",
+          "value": ".63"
+        },
+        {
+          "rank": 2,
+          "name": "rice milk",
+          "value": ".24"
+        },
+        {
+          "rank": 3,
+          "name": "soymilk",
+          "value": ".2"
+        },
+        {
+          "rank": 4,
+          "name": "oat milk",
+          "value": "0.18"
+        },
+        {
+          "rank": 5,
+          "name": "almond milk",
+          "value": "0.14"
+        }
+      ],
+      "type": "ordered"
+    }
+  ]
 }
