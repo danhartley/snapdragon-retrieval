@@ -97,6 +97,7 @@
 			]
 		},
 		{
+            "type": "ordered",
 			"unit": "%",
 			"unitDescription": "share of carbon dioxide emissions",
 			"text": "list the main 4 forms of food transport, from highest to lowest",
@@ -124,6 +125,7 @@
 			]
 		},
 		{
+            "type": "ordered",
 			"unit": "kgCO2eq",
 			"unitDescription": "share of carbon dioxide emissions",
 			"text": "list the main dairy and dairy equivalents, from highest to lowest",

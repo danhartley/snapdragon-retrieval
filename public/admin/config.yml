@@ -98,7 +98,6 @@ collections:
         search_fields: ["questionTypes.*.name"]
         display_fields: ["questionTypes.*.name"]
         value_field: "questionTypes.*.name"
-        required: false
       - { label: "unit", name: "unit", widget: "string" }
       - { label: "unit description", name: "unitDescription", widget: "string" }
       - { label: "text", name: "text", widget: "string" }
@@ -117,14 +116,6 @@ collections:
       widget: "list"
       allow_add: true
       fields:
-      - label: "lesson type"
-        name: "type"
-        widget: "relation"
-        collection: "enums"
-        search_fields: ["questionTypes.*.name"]
-        display_fields: ["questionTypes.*.name"]
-        value_field: "questionTypes.*.name"
-        required: false
       - { label: "unit", name: "unit", widget: "string" }
       - { label: "unit description", name: "unitDescription", widget: "string" }
       - { label: "text", name: "text", widget: "string" }
