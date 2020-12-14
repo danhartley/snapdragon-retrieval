@@ -92,17 +92,37 @@ collections:
       widget: "list"
       allow_add: true
       fields:
-      - { label: "type", name: "type", widget: "string" }
-      - { label: "unit", name: "unit", widget: "string" }
-      - { label: "unit description", name: "unitDescription", widget: "string" }
-      - { label: "text", name: "text", widget: "string" }
-      - { label: "list count", name: "listCount", widget: "number" }
-      - label: "Items"
-        label_singular: "Item"
-        name: "items"
+      - label: "Ordered"
+        name: "ordered"
         widget: "list"
         allow_add: true
         fields:
-        - { label: "rank", name: "rank", widget: "number", required: "false" }
-        - { label: "name", name: "name", widget: "string" }
-        - { label: "value", name: "value", widget: "string", required: "false" }
+        - { label: "unit", name: "unit", widget: "string" }
+        - { label: "unit description", name: "unitDescription", widget: "string" }
+        - { label: "text", name: "text", widget: "string" }
+        - { label: "list count", name: "listCount", widget: "number" }
+        - label: "Items"
+          label_singular: "Item"
+          name: "items"
+          widget: "list"
+          allow_add: true
+          fields:
+          - { label: "rank", name: "rank", widget: "number", required: "false" }
+          - { label: "name", name: "name", widget: "string" }
+          - { label: "value", name: "value", widget: "string", required: "false" }
+      - label: "Unordered"
+        name: "unordered"
+        widget: "list"
+        allow_add: true
+        fields:
+        - { label: "unit", name: "unit", widget: "string" }
+        - { label: "unit description", name: "unitDescription", widget: "string" }
+        - { label: "text", name: "text", widget: "string" }
+        - { label: "list count", name: "listCount", widget: "number" }
+        - label: "Items"
+          label_singular: "Item"
+          name: "items"
+          widget: "list"
+          allow_add: true
+          fields:
+          - { label: "name", name: "name", widget: "string" }

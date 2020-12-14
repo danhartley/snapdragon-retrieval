@@ -12,7 +12,7 @@ const Lesson = ({lesson}) => {
 
     const provider = router.query.provider;
     const type = router.query.type;
-
+    
     return (
         <Layout title="Lesson" description={`${provider} ${lesson.title} lesson`}>
             <h1>{lesson.title}</h1>
@@ -25,9 +25,17 @@ const Lesson = ({lesson}) => {
 export default Lesson;
 
 export async function getStaticProps({params: {provider, lesson}}) {    
+
+    const providerLesson = getLessons().find(l => l.provider === provider && l.slug === lesson);
+
+    const ordered = providerLesson.questions.ordered ? providerLesson.questions.ordered.map(o => { return { ...o, type: enums.QUESTION_TYPE.ORDERED } }) : [];
+    const unordered = providerLesson.questions.unordered ? providerLesson.questions.unordered.map(u => { return { ...u, type: enums.QUESTION_TYPE.UNORDERED } }) : [];
+    
+    providerLesson.questions = [ ...ordered, ...unordered ];
+
     return {
       props: {
-        lesson: getLessons().find(l => l.provider === provider && l.slug === lesson)
+        lesson: providerLesson
       },
     }
 }
