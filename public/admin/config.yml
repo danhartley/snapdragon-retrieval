@@ -115,7 +115,7 @@ collections:
       - label: "lesson type"
         name: "type"
         widget: "relation"
-        collection: "enums"
+        collection: "questions"
         search_fields: ["questionTypes.*.name"]
         display_fields: ["questionTypes.*.name"]
         value_field: "questionTypes.*.name"
