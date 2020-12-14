@@ -27,6 +27,17 @@
       "unit": "land area",
       "unitDescription": "land area",
       "listCount": 5
+    },
+    {
+      "text": "Estimate the percentage of food that is lost or wasted annually.",
+      "unit": "%",
+      "unitDescription": "$",
+      "listCount": 1,
+      "items": [
+        {
+          "name": "25-30"
+        }
+      ]
     }
   ]
 }
