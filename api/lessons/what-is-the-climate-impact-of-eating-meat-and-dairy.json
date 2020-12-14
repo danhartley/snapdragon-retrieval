@@ -128,9 +128,9 @@
       "type": "ordered"
     },
     {
+      "text": "list the main dairy and dairy equivalents, from highest to lowest",
       "unit": "kgCO2eq",
       "unitDescription": "share of carbon dioxide emissions",
-      "text": "list the main dairy and dairy equivalents, from highest to lowest",
       "listCount": 5,
       "items": [
         {
