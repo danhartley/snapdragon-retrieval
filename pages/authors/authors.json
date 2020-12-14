@@ -9,19 +9,24 @@
         "slug": "the-guardian"
     },
     {
-      "name": "earth observatory (NASA)"
+      "name": "earth observatory (NASA)",
+      "slug": "nasa"
     },
     {
-      "name": "The Proceedings of the National Academy of Sciences (PNAS)"
+      "name": "The Proceedings of the National Academy of Sciences (PNAS)",
+      "slug": "pnas"
     },
     {
-      "name": "The Food and Agriculture Organization (FAO)"
+      "name": "The Food and Agriculture Organization (FAO)",
+      "slug": "fao"
     },
     {
-      "name": "Science (American Association for the Advancement of Science)"
+      "name": "Science (American Association for the Advancement of Science)",
+      "slug": "science"
     },
     {
-      "name": "Snapdragon"
+      "name": "Snapdragon",
+      "slug": "Snapdragon"
     },
     {
         "name": "intergovernmental panel on climate change",
