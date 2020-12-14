@@ -47,6 +47,26 @@ collections:
         allow_add: true
         fields:
         - { label: "name", name: "name", widget: "string"}
+  
+  # Question types
+
+  - label: "Question types"    
+    name: "questionTypes"    
+
+    files:
+    - file: "pages/enums/enums.json"
+      label: "Question types"
+      name: "enumsFile"      
+      
+      fields:
+      - label: "question types"
+        label_singular: "question type"
+        name: "questionTypes"
+        widget: "list"
+        allow_add: true
+        fields:
+        - { label: "name", name: "name", widget: "string"}
+        - { label: "definition", name: "definition", widget: "string"}
 
   # Lessons
 
@@ -87,6 +107,7 @@ collections:
         display_fields: ["authorsList.*.name"]
         value_field: "authorsList.*.name"
     - label: "Ranked collections"
+      label_singular: "ranked collection"
       name: "ranked"
       widget: "list"
       allow_add: true
@@ -112,6 +133,7 @@ collections:
         - { label: "name", name: "name", widget: "string" }
         - { label: "value", name: "value", widget: "string" }
     - label: "Unranked collections"
+      label_singular: "unranked collection"
       name: "unranked"
       widget: "list"
       allow_add: true

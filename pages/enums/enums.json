@@ -1,10 +1,12 @@
 {
 	"questionTypes":
 		[{
-				"name": "ordered"
+				"name": "ordered",
+                "definition": "answer order is significant"
 			},
 			{
-				"name": "unordered"
+				"name": "unordered",
+                "definition": "answer order is not significant"
 			}
 		],
 	"ipccConfidenceLevels": [{
