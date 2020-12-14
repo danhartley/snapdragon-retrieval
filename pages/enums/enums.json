@@ -1,85 +1,72 @@
 {
-    "enumsList": [
-        {
-            "name": "question-type",
-            "values": [
-                {
-                    "name": "ordered"                    
-                },
-                {
-                    "name": "unordered"
-                }
-            ]
-        },
-        {
-            "name": "ipcc-confidence-level",
-            "values": [
-                {
-                    "name": "very low confidence",
-                    "definition": "less than 1 out of 10 chance"
-                },
-                {
-                    "name": "low confidence",
-                    "definition": "about 2 out of 10 chance"
-                },
-                {
-                    "name": "medium confidence",
-                    "definition": "about 5 out of 10 chance "
-                },
-                {
-                    "name": "high confidence",
-                    "definition": "about 8 out of 10 chance "
-                },
-                {
-                    "name": "very high confidence",
-                    "definition": "at least 9 out of 10 chance "
-                }
-            ]
-        },
-        {
-            "name": "ipcc-likelihood-level",
-            "values": [
-                {
-                    "name": "exceptionally unlikely",
-                    "definition": "< 1% probability"
-                },
-                {
-                    "name": "extremely unlikely",
-                    "definition": "< 5% probability"
-                },
-                {
-                    "name": "very unlikely",
-                    "definition": "< 10% probability"
-                },
-                {
-                    "name": "unlikely",
-                    "definition": "< 33% probability"
-                },
-                {
-                    "name": "about as likely as not",
-                    "definition": "33 to 66% probability"
-                },
-                {
-                    "name": "more likely than not",
-                    "definition": "> 50% probability"
-                },
-                {
-                    "name": "likely",
-                    "definition": "> 66% probability"
-                },
-                {
-                    "name": "very likely",
-                    "definition": "> 90% probability"
-                },
-                {
-                    "name": "extremely likely",
-                    "definition": "> 95% probability"
-                },
-                {
-                    "name": "virtually certain",
-                    "definition": "> 99% probability"
-                }
-            ]
-        }
-    ]
+	"questionTypes":
+		[{
+				"name": "ordered"
+			},
+			{
+				"name": "unordered"
+			}
+		],
+	"ipccConfidenceLevels": [{
+			"name": "very low confidence",
+			"definition": "less than 1 out of 10 chance"
+		},
+		{
+			"name": "low confidence",
+			"definition": "about 2 out of 10 chance"
+		},
+		{
+			"name": "medium confidence",
+			"definition": "about 5 out of 10 chance "
+		},
+		{
+			"name": "high confidence",
+			"definition": "about 8 out of 10 chance "
+		},
+		{
+			"name": "very high confidence",
+			"definition": "at least 9 out of 10 chance "
+		}
+	],
+	"ipccLikelihoodLevels": [{
+			"name": "exceptionally unlikely",
+			"definition": "< 1% probability"
+		},
+		{
+			"name": "extremely unlikely",
+			"definition": "< 5% probability"
+		},
+		{
+			"name": "very unlikely",
+			"definition": "< 10% probability"
+		},
+		{
+			"name": "unlikely",
+			"definition": "< 33% probability"
+		},
+		{
+			"name": "about as likely as not",
+			"definition": "33 to 66% probability"
+		},
+		{
+			"name": "more likely than not",
+			"definition": "> 50% probability"
+		},
+		{
+			"name": "likely",
+			"definition": "> 66% probability"
+		},
+		{
+			"name": "very likely",
+			"definition": "> 90% probability"
+		},
+		{
+			"name": "extremely likely",
+			"definition": "> 95% probability"
+		},
+		{
+			"name": "virtually certain",
+			"definition": "> 99% probability"
+		}
+	]
 }

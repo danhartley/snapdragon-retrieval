@@ -86,11 +86,19 @@ collections:
         search_fields: ["authorsList.*.name"]
         display_fields: ["authorsList.*.name"]
         value_field: "authorsList.*.name"
-    - label: "Ordered questions"
-      name: "ordered"
+    - label: "Ranked collections"
+      name: "ranked"
       widget: "list"
       allow_add: true
       fields:
+      - label: "lesson type"
+        name: "type"
+        widget: "relation"
+        collection: "enums"
+        search_fields: ["questionTypes.*.name"]
+        display_fields: ["questionTypes.*.name"]
+        value_field: "questionTypes.*.name"
+        required: false
       - { label: "unit", name: "unit", widget: "string" }
       - { label: "unit description", name: "unitDescription", widget: "string" }
       - { label: "text", name: "text", widget: "string" }
@@ -104,11 +112,19 @@ collections:
         - { label: "rank", name: "rank", widget: "number" }
         - { label: "name", name: "name", widget: "string" }
         - { label: "value", name: "value", widget: "string" }
-    - label: "Unordered questions"
-      name: "unordered"
+    - label: "Unranked collections"
+      name: "unranked"
       widget: "list"
       allow_add: true
       fields:
+      - label: "lesson type"
+        name: "type"
+        widget: "relation"
+        collection: "enums"
+        search_fields: ["questionTypes.*.name"]
+        display_fields: ["questionTypes.*.name"]
+        value_field: "questionTypes.*.name"
+        required: false
       - { label: "unit", name: "unit", widget: "string" }
       - { label: "unit description", name: "unitDescription", widget: "string" }
       - { label: "text", name: "text", widget: "string" }

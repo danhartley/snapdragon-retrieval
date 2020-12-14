@@ -28,10 +28,10 @@ export async function getStaticProps({params: {provider, lesson}}) {
 
     const providerLesson = getLessons().find(l => l.provider === provider && l.slug === lesson);
 
-    const ordered = providerLesson.ordered ? providerLesson.ordered.map(o => { return { ...o, type: enums.QUESTION_TYPE.ORDERED } }) : [];
-    const unordered = providerLesson.unordered ? providerLesson.unordered.map(u => { return { ...u, type: enums.QUESTION_TYPE.UNORDERED } }) : [];
+    const ranked = providerLesson.ranked ? providerLesson.ranked.map(r => { return { ...r, type: r.type || enums.QUESTION_TYPE.ORDERED } }) : [];
+    const unranked = providerLesson.unranked ? providerLesson.unranked.map(u => { return { ...u, type: u.type || enums.QUESTION_TYPE.UNORDERED } }) : [];
     
-    providerLesson.questions = [ ...ordered, ...unordered ];
+    providerLesson.questions = [ ...ranked, ...unranked ];
 
     return {
       props: {
