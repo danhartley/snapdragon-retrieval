@@ -37,7 +37,7 @@
 	"title": "what is the climate impact of eating meat and dairy",
 	"source": "https://interactive.carbonbrief.org/what-is-the-climate-impact-of-eating-meat-and-dairy/",
 	"author": "carbonbrief",
-	"unordered": [{
+	"ordered": [{
 			"unit": "kgCO2",
 			"unitDescription": "gas emissions per kilo",
 			"text": "list 5 food groups with greenhouse gas emissions per kilogram in the top 10",
