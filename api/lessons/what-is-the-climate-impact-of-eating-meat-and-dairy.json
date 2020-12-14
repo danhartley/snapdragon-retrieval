@@ -124,7 +124,8 @@
           "name": "air",
           "value": "0.17"
         }
-      ]
+      ],
+      "type": "ordered"
     },
     {
       "unit": "kgCO2eq",
@@ -157,7 +158,8 @@
           "name": "almond milk",
           "value": "0.14"
         }
-      ]
+      ],
+      "type": "ordered"
     }
   ]
 }
