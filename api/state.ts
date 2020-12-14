@@ -23,25 +23,27 @@ export const useLocalStorageState = (defaulState, key) => {
     return [value, setValue];
 };
 
-const parseHistory = (value: any, histories: Array<History>) => {
+const parseHistory = (score: any, histories: Array<History>) => {
 
-    if(!value || !value.scores) return histories;
+    if(!score || !score.scores) return histories;
 
-    const score = value;
     let total = 0, correct = 0;
+
     score.scores.map(s => {
         total++;
-        if (new Boolean(s.state))
+        if (s.state === enums.TRILEAN.TRUE)
             correct++;
         if (s.hasOwnProperty('isOrdered')) {
             total++;
-            if (new Boolean(s.isOrdered))
+            if (s.isOrdered === enums.TRILEAN.TRUE)
                 correct++;
         }
     });
 
     const history = histories
-        ? histories.find(h => h.lessonTitle === score.lessonTitle) as History
+        ? histories.find(h => h.lessonTitle === score.lessonTitle)
+            ? histories.find(h => h.lessonTitle === score.lessonTitle) as History
+            : new History(score.lessonTitle,0,0)
         : new History(score.lessonTitle,0,0);
 
     history.total = history.total + total;
