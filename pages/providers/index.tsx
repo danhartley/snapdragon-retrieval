@@ -4,7 +4,7 @@ import providers from 'pages/providers/providers.json';
 
 const Providers = ({providers}) => {
 
-const _providers = providers.map(provider => <li><Link href={`/providers/${provider.name}/lessons`}><a>{provider.name}</a></Link></li>);
+const _providers = providers.map(provider => <li><Link href={`/providers/${provider.slug}/lessons`}><a>{provider.name}</a></Link></li>);
 
     return (
         <Layout title="Providers">

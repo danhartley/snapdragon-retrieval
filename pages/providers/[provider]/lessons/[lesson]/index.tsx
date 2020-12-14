@@ -17,7 +17,7 @@ const Lesson = ({lesson}) => {
         <Layout title="Lesson" description={`${provider} ${lesson.title} lesson`}>
             <h1>{lesson.title}</h1>
             <QueryString options={enums.LESSON_TYPE} lesson={lesson} />
-            { type === enums.LESSON_TYPE.FLASHCARDS ? <Card lesson={lesson}></Card> : <Question lesson={lesson}></Question> }
+            { type === enums.LESSON_TYPE.CARDS ? <Card lesson={lesson}></Card> : <Question lesson={lesson}></Question> }
         </Layout>
     )
 };

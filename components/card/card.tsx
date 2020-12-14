@@ -7,6 +7,8 @@ import styles from 'components/card/card.module.scss';
 
 export const Card = ({lesson}) => {
 
+    if(!lesson.cards) return;
+
     const [card, setCard] = useState(() => lesson.cards[0]);
     const [face, setFace] = useState(() => { return { value: card.term, isTerm: true, index: 0 } });
 

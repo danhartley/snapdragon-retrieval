@@ -16,9 +16,9 @@ const mark = (lesson) => {
     });
     score.isCorrect = lesson.list.length === score.scores.filter(score => score.state === enums.TRILEAN.TRUE).length;
     switch(lesson.question.type) {
-        case enums.TEST_TYPE.UNORDERED:
+        case enums.QUESTION_TYPE.UNORDERED:
             return score;
-        case enums.TEST_TYPE.ORDERED:
+        case enums.QUESTION_TYPE.ORDERED:
             score.scores.forEach((score, index) => {
                 score.isOrdered = score.name === lesson.question.items[index].name ? enums.TRILEAN.TRUE : enums.TRILEAN.FALSE;
             });
@@ -64,10 +64,10 @@ const getPlaceholders = (number, placeholder) => {
 const updateList = (question, list, entry, placeholder) => {
     let updatedList;
     switch(question.type) {
-        case enums.TEST_TYPE.UNORDERED:
+        case enums.QUESTION_TYPE.UNORDERED:
             updatedList = [ entry, ...list.slice(0, list.length - 1) ];
             break;
-        case enums.TEST_TYPE.ORDERED:
+        case enums.QUESTION_TYPE.ORDERED:
             const nonPlaceHolders = list.filter(l => l.name !== placeholder);
             const existingEntries = list.slice(0, nonPlaceHolders.length);
             const placeholderEntries = list.slice(existingEntries.length+1);

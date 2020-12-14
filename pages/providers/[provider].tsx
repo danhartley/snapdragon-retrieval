@@ -32,7 +32,7 @@ export const getStaticProps = async ({params}) => {
 
 export const getStaticPaths = async () => {
     
-    const paths = providers.providersList.map(provider => `/providers/${provider.name}`);
+    const paths = providers.providersList.map(provider => `/providers/${provider.slug}`);
 
     return {
         paths,

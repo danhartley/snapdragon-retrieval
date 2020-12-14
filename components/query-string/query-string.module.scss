@@ -34,7 +34,10 @@ $space: .5rem;
         }
         &:focus {
             outline: none;
-        }        
+        }
+        &.square {
+            border-radius: unset;
+        }    
     }
     label {
         cursor: pointer;

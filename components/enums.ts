@@ -1,9 +1,9 @@
 enum LESSON_TYPE {
-    FLASHCARDS = "flashcards",
-    TESTS = "tests"
+    CARDS = "cards",
+    QUESTIONS = "questions"
 };
 
-enum TEST_TYPE {
+enum QUESTION_TYPE {
     UNORDERED = "unordered",
     ORDERED = "ordered"
 };
@@ -14,7 +14,7 @@ enum TRILEAN {
     UNKNOWN = "unknown"
 };
 
-enum TEST_STATE {
+enum QUESTION_STATE {
     RUNNING = "running",
     COMPLETED = "completed",
     MARKED = "marked"
@@ -31,8 +31,8 @@ enum STORAGE_KEY {
 
 export const enums = {
     LESSON_TYPE,
-    TEST_TYPE,
-    TEST_STATE,
+    QUESTION_TYPE,
+    QUESTION_STATE,
     TRILEAN,
     DIRECTION,
     STORAGE_KEY

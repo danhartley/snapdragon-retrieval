@@ -1,7 +1,7 @@
 {
     "enumsList": [
         {
-            "name": "test-type",
+            "name": "question-type",
             "values": [
                 {
                     "name": "ordered"                    

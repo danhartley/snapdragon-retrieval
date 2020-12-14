@@ -1,38 +1,29 @@
 {
   "title": "special report on climate change and land 2016",
-  "provider": "intergovernmental panel on climate change",
+  "provider": "ipcc",
   "slug": "special-report-on-climate-change-and-land-2016",
   "source": "https://www.ipcc.ch/srccl/chapter/summary-for-policymakers/",
-  "cards": [],
+  "author": "intergovernmental-panel-on-climate-change",
   "questions": [
     {
       "items": [
         {
-          "rank": 1,
-          "name": "food",
-          "value": "food"
+          "name": "food"
         },
         {
-          "rank": 2,
-          "name": "feed",
-          "value": "feed"
+          "name": "feed"
         },
         {
-          "rank": 3,
-          "name": "fibre",
-          "value": "fibre"
+          "name": "fibre"
         },
         {
-          "rank": 4,
-          "name": "timber",
-          "value": "timber"
+          "name": "timber"
         },
         {
-          "rank": 5,
-          "name": "energy",
-          "value": "energy"
+          "name": "energy"
         }
       ],
+      "text": "name 5 main human uses of land and freshwater",
       "type": "unordered",
       "unit": "land area",
       "unitDescription": "land area",

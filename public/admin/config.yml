@@ -103,6 +103,6 @@ collections:
         widget: "list"
         allow_add: true
         fields:
-        - { label: "rank", name: "rank", widget: "number"}
-        - { label: "name", name: "name", widget: "string"}
-        - { label: "value", name: "value", widget: "string"}
+        - { label: "rank", name: "rank", widget: "number", required: "false" }
+        - { label: "name", name: "name", widget: "string" }
+        - { label: "value", name: "value", widget: "string", required: "false" }

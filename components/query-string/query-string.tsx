@@ -19,18 +19,20 @@ const QueryString = ({options, lesson}) => {
           setType(type);
     });
     
-    const optionList = Object.keys(options).map(key => 
+    const activeOptions = Object.keys(options).map(key => {
+        return lesson[options[key]] ? options[key] : undefined;
+    }).filter(option => option);
+
+    const optionList = activeOptions.map(option => 
         <li class={styles.rbList}>
-        <input onClick={() => changeOption(options[key])} type="radio" id={options[key]} name="type" value={options[key]} checked={options[key] === type} />
-            <label htmlFor={options[key]}>
-                <span>{options[key]}</span>
-                <span class="super">{options[key] === enums.LESSON_TYPE.FLASHCARDS ? lesson.cards.length : lesson.questions.length}</span>
+        <input onClick={() => changeOption(option)} type="radio" id={option} name="type" value={option} checked={option === type} class={activeOptions.length === 1 ? styles.square: null} />
+            <label htmlFor={option}>
+                <span>{option}</span>
+                <span class="super">{lesson[option].length}</span>
             </label>
         </li>
         // <li><button class="rbList" onClick={e => changeOption(options[key])}>{options[key]}</button></li>
     );
-
-    // const optionList = Object.keys(options).map(key => <li><button class="card" onClick={e => changeOption(options[key])}>{options[key]}</button></li>);
 
     return (
         <ul class={styles.navButtons}>{optionList}</ul>

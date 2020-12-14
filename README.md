@@ -132,7 +132,7 @@ Required:
 
 ## Debugging
 
-- Read https://mattmazzola.medium.com/how-to-debug-jest-tests-with-vscode-48f003c7cb41
+- Read https://mattmazzola.medium.com/how-to-debug-jest-QUESTIONS-with-vscode-48f003c7cb41
 - create new launch.json from the snippet
 - Create new JS debug terminal
 - run npm test from there

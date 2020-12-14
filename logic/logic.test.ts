@@ -6,7 +6,7 @@ describe('marking unordered lessons', () => {
     let lesson = {
         question: {
             "listCount": 2,
-            "type": enums.TEST_TYPE.UNORDERED,
+            "type": enums.QUESTION_TYPE.UNORDERED,
             items: [
                 {"name": "beef (beef herd)"},
                 {"name": "lamb & mutton"},
@@ -53,7 +53,7 @@ describe('marking unordered lessons', () => {
     let lesson = {
         question: {
             "listCount": 2,
-            "type": enums.TEST_TYPE.UNORDERED,
+            "type": enums.QUESTION_TYPE.UNORDERED,
             items: [
                 {"name": "water"},
                 {"name": "road"},
@@ -88,7 +88,7 @@ describe('marking unordered lessons', () => {
     });
 
     test('check answers are correct based on test type', () => {
-        lesson.question.type = enums.TEST_TYPE.ORDERED;
+        lesson.question.type = enums.QUESTION_TYPE.ORDERED;
         list = [ {name:'water', state: enums.TRILEAN.UNKNOWN }, { name:'road', state: enums.TRILEAN.UNKNOWN}, { name:'rail', state: enums.TRILEAN.UNKNOWN }, { name:'air', state: enums.TRILEAN.UNKNOWN }];
         score = logic.mark({ ...lesson, list});
         expect(score.scores).toStrictEqual([
@@ -101,7 +101,7 @@ describe('marking unordered lessons', () => {
 
 });
 
-describe('iterate forward (next) and back(previous) through cards or tests', () => {
+describe('iterate forward (next) and back(previous) through cards or questions', () => {
     let index;
     let direction = enums.DIRECTION.Next;
     let currentIndex = 0;
@@ -123,7 +123,7 @@ describe('iterate forward (next) and back(previous) through cards or tests', () 
 describe('update answer list', () => {
     let question = {
         "listCount": 5,
-        "type": enums.TEST_TYPE.UNORDERED,
+        "type": enums.QUESTION_TYPE.UNORDERED,
         items: [
             {"name": "beef (beef herd)"},
             {"name": "lamb & mutton"},
@@ -149,7 +149,7 @@ describe('update answer list', () => {
     });
 
     test('ordered answer list', () => {
-        question.type = enums.TEST_TYPE.ORDERED;
+        question.type = enums.QUESTION_TYPE.ORDERED;
         list = logic.getPlaceholders(question.listCount, placeholder);        
         entry = { name:'beef', state: enums.TRILEAN.UNKNOWN };
         updatedList = logic.updateList(question, list, entry, placeholder);

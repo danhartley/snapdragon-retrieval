@@ -17,7 +17,7 @@ const Lessons = ({lessons}) => {
             <Link 
                 href={{
                         pathname: '/providers/[provider]/lessons/[lesson]',
-                        query: { provider, lesson: lesson.slug, type: enums.LESSON_TYPE.FLASHCARDS },
+                        query: { provider, lesson: lesson.slug, type: lesson.cards ? enums.LESSON_TYPE.CARDS : enums.LESSON_TYPE.QUESTIONS },
                     }}
             >
                 <a>{lesson.title}</a>

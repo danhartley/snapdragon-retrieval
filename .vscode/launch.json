@@ -1,7 +1,7 @@
 {
     "type": "node",
     "request": "launch",
-    "name": "Jest Tests",
+    "name": "Jest QUESTIONS",
     "program": "${workspaceRoot}\\node_modules\\jest\\bin\\jest.js",
     "args": [
         "-i"
