@@ -3,7 +3,6 @@
   "provider": "ipcc",
   "slug": "special-report-on-climate-change-and-land-2016",
   "source": "https://www.ipcc.ch/srccl/chapter/summary-for-policymakers/",
-  
   "unranked": [
     {
       "text": "name 5 main human uses of land and freshwater",
@@ -38,6 +37,15 @@
           "name": "25-30"
         }
       ]
+    }
+  ],
+  "cards": [
+    {
+      "term": "In 2017 326 million Americans ate 80.67 pounds or 36.67 kilos of beef per person. How much carbon dioxide emissions did this contribute to their carbon footprint?",
+      "definition": "Each kilo of beef is responsible for 60 kilos of carbon dioxide emissions. Therefore the emissions per person in the United States was (36.67 * 60) = 2.2 tonnes per person.",
+      "source": "https://www.meatinstitute.org/index.php?ht=d/sp/i/47465/pid/47465",
+      "year": "2017",
+      "author": "Snapdragon"
     }
   ]
 }
