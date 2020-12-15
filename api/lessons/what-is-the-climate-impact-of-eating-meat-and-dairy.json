@@ -31,7 +31,14 @@
       "term": "What is the greenhouse gas emissions per kilogram of beef from a beef herd?",
       "definition": "~60KgCO2 (equivalent)",
       "text": "How do emissions from meat, dairy and other foods compare"
-    }
+    },
+    {
+        "term": "In 2017 326 million Americans ate 80.67 pounds or 36.67 kilos of beef per person. How much carbon dioxide emissions did this contribute to their carbon footprint?",
+        "definition": "Each kilo of beef is responsible for 60 kilos of carbon dioxide emissions. Therefore the emissions per person in the United States was (36.67 * 60) = 2.2 tonnes per person.",
+        "source": "https://www.meatinstitute.org/index.php?ht=d/sp/i/47465/pid/47465",
+        "year": "2017",
+        "author": "Snapdragon"
+      }
   ],
   "provider": "carbonbrief",
   "slug": "what-is-the-climate-impact-of-eating-meat-and-dairy",
