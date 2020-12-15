@@ -9,8 +9,8 @@ export const Card = ({lesson}) => {
 
     if(!lesson.cards) return;
 
-    const [card, setCard] = useState(() => lesson.cards[0]);
-    const [face, setFace] = useState(() => { return { value: card.term, isTerm: true, index: 0 } });
+    const [card, setCard] = useState(lesson.cards[0]);
+    const [face, setFace] = useState({ value: card.term, isTerm: true, index: card.term ? lesson.cards.map(c => c.term).indexOf(card.term) : 0 });
 
     const flipCard = () => {
         setFace({ value: face.isTerm ? card.definition : card.term, isTerm: !face.isTerm, index: face.index });
@@ -19,8 +19,9 @@ export const Card = ({lesson}) => {
     const nextCard = e => {
         e.preventDefault();
         const index = logic.next(parseInt(e.target.dataset.direction), face.index, lesson.cards.length);
-        setCard(lesson.cards[index]);
-        setFace({ value: card.term, isTerm: true, index });
+        const _card = lesson.cards[index];
+        setCard(_card);
+        setFace({ value: _card.term, isTerm: true, index });
     }; 
 
     return (
