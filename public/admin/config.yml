@@ -167,5 +167,5 @@ collections:
         name: "answers"
         widget: "list"
         allow_add: true
-        fields:
-        - { label: "name", name: "name", widget: "string" }
+        # fields:
+        # - { label: "name", name: "name", widget: "string" }

@@ -45,19 +45,11 @@
         "unit": "%",
         "unitDescription": "$",
         "listCount": 4,
-        "answer": {
-            "name": "25"
-        },
+        "answer": "25",
         "answers": [
-            {
-                "name": "10"
-            },
-            {
-                "name": "45"
-            },
-            {
-                "name": "60"
-            }
+            "10",
+            "45",
+            "60"
         ]        
       }
   ]

@@ -3,12 +3,12 @@ import styles from 'components/multiple-choice/multiple-choice.module.scss';
 
 export const MultipleChoice = ({question, type, checkAnswer}) => {
 
-    question.items = question.items || [ ...question.answers, question.answer ];
+    question.items = question.items || [ ...question.answers.map(a => { return { name: a } }), { name: question.answer } ];
 
     const handleCheckAnswers = (response) => {
         question.response = response;
         question.items = question.items.map(item => {
-            return (response === question.answer.name && response === item.name)
+            return (response === question.answer && response === item.name)
                 ? { ...item, state: enums.TRILEAN.TRUE }
                 : response === item.name 
                     ? { ...item, state: enums.TRILEAN.FALSE }
