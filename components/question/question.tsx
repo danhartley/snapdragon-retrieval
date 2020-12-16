@@ -3,10 +3,13 @@ import { logic } from 'logic/logic';
 import { useLocalStorageState } from 'api/state';
 import { enums } from 'components/enums';
 import { RankedList } from 'components/list/list';
+import { MultipleChoice } from 'components/multiple-choice/multiple-choice';
 
 import styles from 'components/question/question.module.scss';
 
 export const Question = ({lesson}) => {
+
+    lesson.questions = logic.shuffleArray(lesson.questions);
 
     if(!lesson.questions) return;
 
@@ -46,9 +49,15 @@ export const Question = ({lesson}) => {
         resetInput();
     };
 
-    const checkAnswers = e => {
-        const _score = logic.mark({ question, list })
+    const checkAnswers = () => {
+        const _score = logic.mark({ question, list });
         setList(_score.scores);
+        setTestState(enums.QUESTION_STATE.MARKED);
+        setHistory({..._score, lessonTitle: lesson.title}, enums.STORAGE_KEY.HISTORY);
+    };
+
+    const checkAnswer = question => {
+        const _score = logic.mark({ question, list });
         setTestState(enums.QUESTION_STATE.MARKED);
         setHistory({..._score, lessonTitle: lesson.title}, enums.STORAGE_KEY.HISTORY);
     };
@@ -94,20 +103,37 @@ export const Question = ({lesson}) => {
 
     setTimeout(() => {
         resetInput();
-        if(testState === enums.QUESTION_STATE.COMPLETED) btnMarkRef.current.focus();
-        if(testState === enums.QUESTION_STATE.MARKED) btnNextRef.current.focus();
+        if(testState === enums.QUESTION_STATE.COMPLETED) btnMarkRef.current ? btnMarkRef.current.focus() : null;
+        if(testState === enums.QUESTION_STATE.MARKED) btnNextRef.current ? btnNextRef.current.focus() : null;
     });
+
+    let format;
+
+    switch(question.type) {
+        case enums.QUESTION_TYPE.ORDERED:
+        case enums.QUESTION_TYPE.UNORDERED:
+            format = 
+                <>
+                <input disabled={list.filter(l => l.name !== PLACEHOLDER).length === question.listCount} ref={inputRef} type="text" onBlur={e => addToList(e)} placeholder="" />
+                <ul class={styles.answers}>{listItems}</ul>
+                <button ref={btnMarkRef} onClick={() => checkAnswers()} disabled={testState !== enums.QUESTION_STATE.COMPLETED}>Check answers</button>
+                </>;
+            break;
+        case enums.QUESTION_TYPE.MULTIPLE_CHOICE:
+            format = <MultipleChoice question={question} type={enums.MULTIPLE_CHOICE_TYPE.RADIO_BUTTONS} checkAnswer={(question) => checkAnswer(question)} />;
+            break;
+    }
 
     return (
         <div class={styles.questions}>
             <section>
-                <div><span>{question.text}</span><span class="super">{`${progress.number}/${progress.of}`}</span></div>
-                <input disabled={list.filter(l => l.name !== PLACEHOLDER).length === question.listCount} ref={inputRef} type="text" onBlur={e => addToList(e)} placeholder="" />
-                <ul class={styles.answers}>{listItems}</ul>
-                <button ref={btnMarkRef} onClick={checkAnswers} disabled={testState !== enums.QUESTION_STATE.COMPLETED}>Check answers</button>      
+                <div><span>{question.text}</span><span class="super">{`${progress.number}/${progress.of}`}</span></div>                
+                <>{format}</>                
                 <button ref={btnNextRef} disabled={testState !== enums.QUESTION_STATE.MARKED} onClick={nextTest}>Next question</button>
             </section>
-            <section>{ testState === enums.QUESTION_STATE.MARKED ? <RankedList items={question.items} unit={question.unit} /> : null }</section>
+            <section>
+                { (testState === enums.QUESTION_STATE.MARKED && question.type !== enums.QUESTION_TYPE.MULTIPLE_CHOICE) ? <RankedList items={question.items} unit={question.unit} /> : null }
+            </section>
             <section class={styles.source}>
                 <div><a href={lesson.source} target="_blank">Open source in a new tab</a></div>
                 <div>Source: {lesson.provider}</div>

@@ -1,46 +1,44 @@
-// import { useState } from 'preact/hooks';
 import { enums } from 'components/enums';
 import styles from 'components/multiple-choice/multiple-choice.module.scss';
 
-export const MultipleChoice = ({_lesson, checkAnswers, type}) => {
+export const MultipleChoice = ({question, type, checkAnswer}) => {
 
-    // const [response, setResponse] = useState(null);
-
-    const lesson = _lesson || {};
-
-    const answer = lesson.answer || "25";
-
-    const answers = lesson.answers ? [ ...lesson.answers, lesson.answer ] : [
-        "10", "25", "45", "60"
-    ];
-
-    const unit = lesson.unit ? `1${lesson.unit}` : "1%";
+    question.items = question.items || [ ...question.answers, question.answer ];
 
     const handleCheckAnswers = (response) => {
-        lesson.response = response;
+        question.response = response;
+        question.items = question.items.map(item => {
+            return (response === question.answer.name && response === item.name)
+                ? { ...item, state: enums.TRILEAN.TRUE }
+                : response === item.name 
+                    ? { ...item, state: enums.TRILEAN.FALSE }
+                    : { ...item, state: enums.TRILEAN.UNKNOWN };
+        });
+        checkAnswer(question);
     };
 
     let selection;
 
-    var style = `--value:${answer};--unit:${unit}` as any;
+    var style = `--value:${question.answer};--unit:${question.unit}` as any;
 
     switch(type) {
         case enums.MULTIPLE_CHOICE_TYPE.PIE:
-            const options = answers.map(answer => {
+            const options = question.items.map(answer => {
                 return <button onClick={e => handleCheckAnswers(answer)} class={styles.pie} style={style}></button>;
             });
             selection = <section class={styles.container}>{ options }</section>;
             break;
         case enums.MULTIPLE_CHOICE_TYPE.RADIO_BUTTONS:
-            const listItems = answers.map(answer => {
-                return <li key={answer} class={styles.rbList}>
-                <input onClick={e => handleCheckAnswers(answer)} type="radio" id={answer} name="answer" value={answer} />
-                <label htmlFor={answer}>
-                    <span>{answer}</span>
+            const listItems = question.items.map(answer => {
+                const isCorrect = answer.state ? answer.state === enums.TRILEAN.TRUE ? styles.correct : answer.state === enums.TRILEAN.FALSE ? styles.incorrect : null : null;
+                return <li key={answer.name} class={`${styles.rbList} ${isCorrect}`}>
+                <input onClick={e => handleCheckAnswers(answer.name)} type="radio" id={answer.name} name="answer" value={answer.name} />
+                <label htmlFor={answer.name}>
+                    <span>{answer.name}</span>
                 </label>
             </li>
             });
-            selection = <ul>{listItems}</ul>;
+            selection = <ul class={question.response ? styles.disableOverlay : null}>{listItems}</ul>;
     }
 
     return (

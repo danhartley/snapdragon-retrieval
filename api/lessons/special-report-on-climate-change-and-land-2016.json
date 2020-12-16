@@ -42,11 +42,22 @@
   "multiplechoice": [
       {
         "text": "Food production accounts for what percentage of the world’s greenhouse gas emissions?",
-        "answer": "25",
+        "answer": {
+            "name": "25"
+        },
         "answers": [
-            "10", "45", "60"
+            {
+                "name": "10"
+            },
+            {
+                "name": "45"
+            },
+            {
+                "name": "60"
+            }
         ],
-        "unit": "%"
+        "unit": "%",
+        "listCount": 4
       }
   ]
 }

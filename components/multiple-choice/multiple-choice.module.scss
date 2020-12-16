@@ -25,4 +25,18 @@
 
 .rbList {
     @include rb-list();
+    width: 100px;
+    &.incorrect { 
+        border-bottom: 3px solid rgba($colour,.3);  
+        color: rgba($colour, 0.4);
+        @include one-cross();
+    }
+    &.correct { 
+        @include one-tick();
+    }
+}
+
+.disableOverlay {
+    pointer-events: none;
+    opacity: .8;
 }

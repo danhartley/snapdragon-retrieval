@@ -15,7 +15,7 @@ const User = ({user}) => {
     return (
         <Layout title="User" description={`${user}, user`}>
             <h1>{user}</h1>
-            {/* {renderScoreHistory()} */}
+            {typeof window !== 'undefined' ? renderScoreHistory() : null}
         </Layout>
     )
 };
@@ -32,7 +32,7 @@ export const getStaticProps = async ({params}) => {
 
 export const getStaticPaths = async () => {
     
-    const paths = users.usersList.map(user => `/users/${user.username}`);
+    const paths = users.usersList.map(user => `/users/${user.slug}`);
 
     return {
         paths,

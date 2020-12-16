@@ -1,6 +1,7 @@
 enum LESSON_TYPE {
     CARDS = "cards",
-    QUESTIONS = "questions"
+    QUESTIONS = "questions",
+    // MULTIPLECHOICE = "multiplechoice"
 };
 
 enum QUESTION_TYPE {

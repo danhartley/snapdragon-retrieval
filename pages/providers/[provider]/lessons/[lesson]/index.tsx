@@ -29,9 +29,14 @@ export async function getStaticProps({params: {provider, lesson}}) {
     const providerLesson = getLessons().find(l => l.provider === provider && l.slug === lesson);
 
     const ranked = providerLesson.ranked ? providerLesson.ranked.map(r => r) : [];
-    const unranked = providerLesson.unranked ? providerLesson.unranked.map(u => { return { ...u, type: u.type || enums.QUESTION_TYPE.UNORDERED } }) : [];
+    const unranked = providerLesson.unranked 
+        ? providerLesson.unranked.map(u => { return { ...u, type: u.type || enums.QUESTION_TYPE.UNORDERED } }) 
+        : [];
+    const multipleChoice = providerLesson.multiplechoice
+        ? providerLesson.multiplechoice.map(m => { return { ...m, type: m.type || enums.QUESTION_TYPE.MULTIPLE_CHOICE } })
+        : [];
     
-    providerLesson.questions = [ ...ranked, ...unranked ];
+    providerLesson.questions = [ ...ranked, ...unranked, ...multipleChoice ];
 
     return {
       props: {
