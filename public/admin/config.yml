@@ -108,8 +108,8 @@ collections:
         search_fields: ["authorsList.*.name"]
         display_fields: ["authorsList.*.name"]
         value_field: "authorsList.*.slug"
-    - label: "Ranked collections"
-      label_singular: "ranked collection"
+    - label: "Ordered list questions"
+      label_singular: "ordered list question"
       name: "ranked"
       widget: "list"
       allow_add: true
@@ -134,8 +134,8 @@ collections:
         - { label: "rank", name: "rank", widget: "number" }
         - { label: "name", name: "name", widget: "string" }
         - { label: "value", name: "value", widget: "string" }
-    - label: "Unranked collections"
-      label_singular: "unranked collection"
+    - label: "Unordered list questions"
+      label_singular: "unordered list question"
       name: "unranked"
       widget: "list"
       allow_add: true
@@ -147,6 +147,24 @@ collections:
       - label: "Items"
         label_singular: "Item"
         name: "items"
+        widget: "list"
+        allow_add: true
+        fields:
+        - { label: "name", name: "name", widget: "string" }
+    - label: "Mutliple choice questions"
+      label_singular: "mutliple choice question"
+      name: "multiplechoice"
+      widget: "list"
+      allow_add: true
+      fields:
+      - { label: "text", name: "text", widget: "string" }
+      - { label: "unit", name: "unit", widget: "string" }
+      - { label: "unit description", name: "unitDescription", widget: "string" }
+      - { label: "list count", name: "listCount", widget: "number" }
+      - { label: "answer", name: "answer", widget: "string" }
+      - label: "Answers"
+        label_singular: "Answer"
+        name: "answers"
         widget: "list"
         allow_add: true
         fields:
