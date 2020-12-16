@@ -7,6 +7,10 @@
 			{
 				"name": "unordered",
                 "definition": "answer order is not significant"
+			},
+			{
+				"name": "multiple choice",
+                "definition": "select answer from a selection of options"
 			}
 		],
 	"ipccConfidenceLevels": [{

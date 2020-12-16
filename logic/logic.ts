@@ -8,22 +8,34 @@ const sanitise = str => {
     return str.trim().toLowerCase();
 }
 
-const mark = (lesson) => {
+const listScore = lesson => {
     const score = { scores: [], isCorrect: false, isOrderedCorrect: false };
     score.scores = lesson.list.map(answer => {
         const score = lesson.question.items.find(item => toArray(item.name).find(name => sanitise(name) === sanitise(answer.name))); // fuzzy, not precise (flag?)            
         return score ? { name: answer.name, state: enums.TRILEAN.TRUE } : { name: answer.name, state: enums.TRILEAN.FALSE };
     });
     score.isCorrect = lesson.list.length === score.scores.filter(score => score.state === enums.TRILEAN.TRUE).length;
+    return score;
+};
+
+const mark = (lesson) => {
+    let score;
     switch(lesson.question.type) {
         case enums.QUESTION_TYPE.UNORDERED:
-            return score;
+            return listScore(lesson);
         case enums.QUESTION_TYPE.ORDERED:
+            score = listScore(lesson);
             score.scores.forEach((score, index) => {
                 score.isOrdered = score.name === lesson.question.items[index].name ? enums.TRILEAN.TRUE : enums.TRILEAN.FALSE;
             });
             score.isOrderedCorrect = lesson.list.length === score.scores.filter(score => score.isOrdered === enums.TRILEAN.TRUE).length;
             return score;
+        case enums.QUESTION_TYPE.MULTIPLE_CHOICE:
+            score = {
+                scores: [],
+                isCorrect: sanitise(lesson.answer) === sanitise(lesson.choice),
+                isOrderedCorrect: false
+            };
     }
 };
 

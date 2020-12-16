@@ -1,0 +1,28 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+// $colour: #134c66;
+
+.container {
+    display: flex;
+    flex-direction: column;    
+}
+
+.pie {    
+    background: conic-gradient(rgba($colour, .2) calc(var(--value, 0) * var(--unit)), rgba($colour, .6) calc(var(--value, 0) * var(--unit)));
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    border: none;
+    cursor: pointer;
+    opacity: .6;
+    &:hover, &:focus {
+        border: none;        
+        opacity: 1;
+    }
+    margin: .25rem 0;
+}
+
+.rbList {
+    @include rb-list();
+}

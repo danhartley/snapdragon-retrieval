@@ -5,7 +5,8 @@ enum LESSON_TYPE {
 
 enum QUESTION_TYPE {
     UNORDERED = "unordered",
-    ORDERED = "ordered"
+    ORDERED = "ordered",
+    MULTIPLE_CHOICE = "multiple choice"
 };
 
 enum TRILEAN {
@@ -29,11 +30,17 @@ enum STORAGE_KEY {
     HISTORY = "history"
 };
 
+enum MULTIPLE_CHOICE_TYPE {
+    PIE = "pie",
+    RADIO_BUTTONS = "radio buttons"
+}
+
 export const enums = {
     LESSON_TYPE,
     QUESTION_TYPE,
     QUESTION_STATE,
     TRILEAN,
     DIRECTION,
-    STORAGE_KEY
+    STORAGE_KEY,
+    MULTIPLE_CHOICE_TYPE
 }

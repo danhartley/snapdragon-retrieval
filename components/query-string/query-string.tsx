@@ -25,13 +25,12 @@ const QueryString = ({options, lesson}) => {
 
     const optionList = activeOptions.map(option => 
         <li class={styles.rbList}>
-        <input onClick={() => changeOption(option)} type="radio" id={option} name="type" value={option} checked={option === type} class={activeOptions.length === 1 ? styles.square: null} />
+            <input onClick={() => changeOption(option)} type="radio" id={option} name="type" value={option} checked={option === type} class={activeOptions.length === 1 ? styles.square: null} />
             <label htmlFor={option}>
                 <span>{option}</span>
                 <span class="super">{lesson[option].length}</span>
             </label>
         </li>
-        // <li><button class="rbList" onClick={e => changeOption(options[key])}>{options[key]}</button></li>
     );
 
     return (
