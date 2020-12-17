@@ -63,7 +63,7 @@ export const Question = ({lesson}) => {
     return (
         <div class={styles.questions}>
             <section>
-                <div class={styles.text}><span>{question.text}</span><span class="super">{`${progress.number}/${progress.of}`}</span></div>                
+                <div class={styles.text}><span>&gt;</span><span>{question.text}</span><span class="super">{`${progress.number}/${progress.of}`}</span></div>                
                 <>{format}</>
                 <div class={styles.flex}>
                     <button class={testState !== enums.QUESTION_STATE.MARKED ? styles.hidden : null} ref={btnNextRef} onClick={nextTest}>Next question</button>

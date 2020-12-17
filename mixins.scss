@@ -35,16 +35,16 @@
         appearance: none;
         border-radius: 50%;
         transition: all .2s linear;
-        margin: 0 $space 0 0;
+        margin: 0 $space/2 0 0;
         padding: 0;
         cursor: pointer;
         border: .5rem solid rgba($colour, .5);
         &:checked {            
-            border: .5em solid rgba($colour, .8);
-            background-color: rgba($colour, .8);
+            border: .5em solid rgba($colour, .7);
+            background-color: rgba($colour, .7);
         }
         &:checked + label {
-            color: rgba($colour, 1);
+            color: rgba($colour, .8);
         }
         &:focus {
             outline: none;
@@ -55,7 +55,7 @@
     }
     label {
         cursor: pointer;
-        color: rgba($colour, .7);
+        color: rgba($colour, .6);
     }
 }
 
@@ -63,7 +63,7 @@
     width: auto;
     height: 240px;
     padding: 10px;
-    border: 1px solid rgba($colour, .2);
+    border: 1px dashed rgba($colour, .2);
 }
 
 @mixin question-container() {
@@ -72,6 +72,10 @@
     }    
     .text {
         min-height: 45px;
+        @include double-centred();
+        span:nth-child(1) {
+            margin-right: $space/2;
+        }
     }
     .answers {
         min-height: 5 * 35px;
@@ -82,7 +86,7 @@
                 cursor: pointer;
                 color: rgba($colour,.8);            
                 border-bottom: 3px solid rgba($colour,0.05);
-                width: 100px;
+                width: 125px;
                 display: inline-block;
                 &.correct { 
                     @include one-tick();
@@ -101,9 +105,9 @@
         display: flex;
         button {        
             width: 100%;
-            &:nth-child(1), &:nth-child(2) {
-                margin-right: 5px;
-            }
+            // &:nth-child(1), &:nth-child(2) {
+            //     margin-right: 5px;
+            // }
         }
     }
     .hidden {
