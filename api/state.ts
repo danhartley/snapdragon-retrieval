@@ -40,7 +40,7 @@ const parseHistory = (score: any, histories: Array<History>) => {
         }
     });
 
-    const history = histories
+    const history = histories !== null
         ? histories.find(h => h.lessonTitle === score.lessonTitle)
             ? histories.find(h => h.lessonTitle === score.lessonTitle) as History
             : new History(score.lessonTitle,0,0)

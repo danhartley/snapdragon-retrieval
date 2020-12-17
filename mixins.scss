@@ -58,3 +58,59 @@
         color: rgba($colour, .7);
     }
 }
+
+@mixin active-screen() {
+    width: auto;
+    height: 240px;
+    padding: 10px;
+    border: 1px solid rgba($colour, .2);
+}
+
+@mixin question-container() {
+    .container {
+        @include active-screen();
+    }    
+    .text {
+        min-height: 45px;
+    }
+    .answers {
+        min-height: 5 * 35px;
+        li { 
+            line-height: 2;
+            min-height: 35px;
+            span:nth-child(1) {
+                cursor: pointer;
+                color: rgba($colour,.8);            
+                border-bottom: 3px solid rgba($colour,0.05);
+                width: 100px;
+                display: inline-block;
+                &.correct { 
+                    @include one-tick();
+                }
+                &.incorrect { 
+                    border-bottom: 3px solid rgba($colour,.3);  
+                    color: rgba($colour, 0.4);
+                }
+                &.correctOrder {
+                    @include two-ticks();
+                }
+            }
+        }
+    }
+    .flex {
+        display: flex;
+        button {        
+            width: 100%;
+            &:nth-child(1), &:nth-child(2) {
+                margin-right: 5px;
+            }
+        }
+    }
+    .hidden {
+        display: none;
+    }
+
+    .invisible {
+        visibility: hidden;
+    }
+}

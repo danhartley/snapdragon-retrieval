@@ -1,20 +1,19 @@
 import { enums } from 'components/enums';
 
-const toArray = str => {
-    return str.split(' ');
-};
-
 const sanitise = str => {
     return str.trim().toLowerCase();
 }
 
-const listScore = lesson => {
-    const score = { scores: [], isCorrect: false, isOrderedCorrect: false };
-    score.scores = lesson.list.map(answer => {
-        const score = lesson.question.items.find(item => toArray(item.name).find(name => sanitise(name) === sanitise(answer.name))); // fuzzy, not precise (flag?)            
-        return score ? { name: answer.name, state: enums.TRILEAN.TRUE } : { name: answer.name, state: enums.TRILEAN.FALSE };
+const markUnordered = lesson => {
+    const score = { markedAnswerList: [], isCorrect: false, isOrderedCorrect: false };
+    const unusedCorrectAnswers = getUnusedAnswers(lesson.question.items.map(i => i.name), lesson.answerList.map(a => a.name));
+    score.markedAnswerList = lesson.answerList.map(answer => {
+        const score = lesson.question.items.find(item => sanitise(item.name) === sanitise(answer.name));
+        return score 
+            ? { name: answer.name, state: enums.TRILEAN.TRUE } 
+            : { name: answer.name, state: enums.TRILEAN.FALSE, correct: unusedCorrectAnswers.splice(0,1)[0] };
     });
-    score.isCorrect = lesson.list.length === score.scores.filter(score => score.state === enums.TRILEAN.TRUE).length;
+    score.isCorrect = lesson.answerList.length === score.markedAnswerList.filter(score => score.state === enums.TRILEAN.TRUE).length;
     return score;
 };
 
@@ -22,18 +21,18 @@ const mark = (lesson) => {
     let score;
     switch(lesson.question.type) {
         case enums.QUESTION_TYPE.UNORDERED:
-            return listScore(lesson);
+            return markUnordered(lesson);
         case enums.QUESTION_TYPE.ORDERED:
-            score = listScore(lesson);
-            score.scores.forEach((score, index) => {
+            score = markUnordered(lesson);
+            score.markedAnswerList.forEach((score, index) => {
                 score.isOrdered = score.name === lesson.question.items[index].name ? enums.TRILEAN.TRUE : enums.TRILEAN.FALSE;
             });
-            score.isOrderedCorrect = lesson.list.length === score.scores.filter(score => score.isOrdered === enums.TRILEAN.TRUE).length;
+            score.isOrderedCorrect = lesson.answerList.length === score.markedAnswerList.filter(score => score.isOrdered === enums.TRILEAN.TRUE).length;
             return score;
         case enums.QUESTION_TYPE.MULTIPLE_CHOICE:
             score = {
                 scores: [],
-                isCorrect: sanitise(lesson.question.answer.name) === sanitise(lesson.question.response),
+                isCorrect: sanitise(lesson.question.answer) === sanitise(lesson.question.response),
                 isOrderedCorrect: false
             };
             return score;
@@ -42,7 +41,7 @@ const mark = (lesson) => {
 
 const markOrdered = lesson => {
     const score = mark(lesson);
-    score.scores.forEach((score, index) => {
+    score.markedAnswerList.forEach((score, index) => {
         score.isOrdered = score.name === lesson.question.items[index].name ? enums.TRILEAN.TRUE : enums.TRILEAN.FALSE;
     });
     return score;
@@ -74,7 +73,7 @@ const getPlaceholders = (number, placeholder) => {
     return placeholders;
 };
 
-const updateList = (question, list, entry, placeholder) => {
+const updateAnswerList = (question, list, entry, placeholder) => {
     let updatedList;
     switch(question.type) {
         case enums.QUESTION_TYPE.UNORDERED:
@@ -109,11 +108,17 @@ const shuffleArray = array => {
     return [ ...array ];
 };
 
+const getUnusedAnswers = (fullList: any, answerList: any) => {
+    return fullList.filter(x => answerList.indexOf(x) === -1);
+};
+
 export const logic = {
     mark,
+    markUnordered,
     markOrdered,
     next,
-    updateList,
+    updateAnswerList,
     getPlaceholders,
-    shuffleArray
+    shuffleArray,
+    getUnusedAnswers
 };

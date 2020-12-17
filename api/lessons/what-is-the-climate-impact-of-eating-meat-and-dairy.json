@@ -55,12 +55,12 @@
       "items": [
         {
           "rank": 1,
-          "name": "beef (beef herd)",
+          "name": "beef",
           "value": "59.60"
         },
         {
           "rank": 2,
-          "name": "lamb & mutton",
+          "name": "lamb",
           "value": "24.50"
         },
         {
@@ -70,12 +70,12 @@
         },
         {
           "rank": 3,
-          "name": "beef (dairy herd)",
+          "name": "dairy beef",
           "value": "21.20"
         },
         {
           "rank": 5,
-          "name": "dark chocolate",
+          "name": "chocolate",
           "value": "18.70"
         },
         {
@@ -85,7 +85,7 @@
         },
         {
           "rank": 7,
-          "name": "shrimps (farmed)",
+          "name": "shrimps",
           "value": "11.80"
         },
         {
@@ -135,34 +135,34 @@
       "type": "ordered"
     },
     {
-      "text": "list the main dairy and dairy equivalents, from highest to lowest",
+      "text": "list the main sources of milk, from highest to lowest carbon emissions",
       "unit": "kgCO2eq",
       "unitDescription": "share of carbon dioxide emissions",
       "listCount": 5,
       "items": [
         {
           "rank": 1,
-          "name": "dairy milk",
+          "name": "dairy",
           "value": ".63"
         },
         {
           "rank": 2,
-          "name": "rice milk",
+          "name": "rice",
           "value": ".24"
         },
         {
           "rank": 3,
-          "name": "soymilk",
+          "name": "soy",
           "value": ".2"
         },
         {
           "rank": 4,
-          "name": "oat milk",
+          "name": "oat",
           "value": "0.18"
         },
         {
           "rank": 5,
-          "name": "almond milk",
+          "name": "almond",
           "value": "0.14"
         }
       ],

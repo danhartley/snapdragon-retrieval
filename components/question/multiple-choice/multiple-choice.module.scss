@@ -1,12 +1,7 @@
 @import 'variables.scss';
 @import 'mixins.scss';
 
-// $colour: #134c66;
-
-.container {
-    display: flex;
-    flex-direction: column;    
-}
+@include question-container();
 
 .pie {    
     background: conic-gradient(rgba($colour, .2) calc(var(--value, 0) * var(--unit)), rgba($colour, .6) calc(var(--value, 0) * var(--unit)));
@@ -26,6 +21,7 @@
 .rbList {
     @include rb-list();
     width: 100px;
+    min-height: 35px;
     &.incorrect { 
         border-bottom: 3px solid rgba($colour,.3);  
         color: rgba($colour, 0.4);
