@@ -181,6 +181,18 @@
         "25",
         "65"
       ]
+    },
+    {
+      "text": "Meat and dairy specifically accounts for what percentage of global greenhouse gas emissions?",
+      "unit": "%",
+      "unitDescription": "%",
+      "answer": "14.5",
+      "answers": [
+        "6.5",
+        "20.5",
+        "25.5"
+      ],
+      "listCount": 4
     }
   ]
 }
