@@ -20,7 +20,7 @@
       "author": "The Food and Agriculture Organization (FAO)",
       "source": "http://www.fao.org/home/en/",
       "year": "2020",
-      "term": "Meat and dairy specifically accounts for what percentage of global greenhouse gas emissions?",
+      "term": "Meat and dairy specifically account for what percentage of global greenhouse gas emissions?",
       "definition": "~14.5%",
       "text": "Meat and dairy specifically accounts for around 14.5% of global greenhouse gas emissions"
     },
@@ -50,7 +50,7 @@
       "type": "unordered",
       "unit": "kgCO2",
       "unitDescription": "gas emissions per kilo",
-      "text": "list 5 food groups with greenhouse gas emissions per kilogram in the top 10",
+      "text": "List 5 of the top 10 foods with the highest emissions",
       "listCount": 5,
       "items": [
         {
@@ -108,7 +108,7 @@
     {
       "unit": "%",
       "unitDescription": "share of carbon dioxide emissions",
-      "text": "list the main 4 forms of food transport, from highest to lowest",
+      "text": "List by highest to lowest emissions the 4 main forms of food transport",
       "listCount": 4,
       "items": [
         {
@@ -135,7 +135,7 @@
       "type": "ordered"
     },
     {
-      "text": "list the main sources of milk, from highest to lowest carbon emissions",
+      "text": "List by highest to lowest emissions the main sources of milk",
       "unit": "kgCO2eq",
       "unitDescription": "share of carbon dioxide emissions",
       "listCount": 5,
@@ -171,7 +171,7 @@
   ],
   "multiplechoice": [
     {
-      "text": "Food production accounts for what percentage of the planet’s habitable surface?",
+      "text": "Food production accounts for what % of the planet’s habitable surface?",
       "unit": "%",
       "unitDescription": "%",
       "listCount": 4,
@@ -183,7 +183,7 @@
       ]
     },
     {
-      "text": "Meat and dairy specifically accounts for what percentage of global greenhouse gas emissions?",
+      "text": "Meat and dairy specifically account for what % of emissions?",
       "unit": "%",
       "unitDescription": "%",
       "answer": "14.5",

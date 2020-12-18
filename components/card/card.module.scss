@@ -18,7 +18,8 @@
     .term {
         @include active-screen();
         @include double-centred();
-        border: 1px solid rgba($colour, 0.4);
+        border: 1px solid rgba($colour, 0.4) !important;
+        border-radius: 5px;
     }
     .controls {
         display: grid;

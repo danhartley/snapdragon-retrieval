@@ -3,9 +3,8 @@ import Layout from 'components/layout/layout';
 
 const Home = () => {
   return (
-    <Layout title="Home">
+    <Layout title="Home" header={"Snapdragon retrieval"}>
         <main>
-            <h1>Snapdragon retrieval</h1>
             <Link href="/providers">
                 <a>Providers</a>
             </Link>

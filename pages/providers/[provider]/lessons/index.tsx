@@ -25,8 +25,7 @@ const Lessons = ({lessons}) => {
         </li>);
     
         return (
-            <Layout title="Lessons" description={`Lessons for ${provider}`}>
-                <h1>{provider}</h1>
+            <Layout title="Lessons" description={`Lessons for ${provider}`} header={provider}>
                 <ul>
                     { providerLessons }
                 </ul>

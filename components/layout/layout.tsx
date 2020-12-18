@@ -7,7 +7,8 @@ import styles from 'components/layout/layout.module.scss';
 export default function Layout({
   children,
   title = 'This is the default title',
-  description = 'Lesson retrieval'
+  description = 'Lesson retrieval',
+  header = ""
 }) {
 
     const router = useRouter();
@@ -50,6 +51,7 @@ export default function Layout({
                     </div>
                 </nav>
             </header>
+            <h1>{header}</h1>
 
             {children}
 

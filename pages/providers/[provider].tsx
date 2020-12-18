@@ -11,8 +11,7 @@ const Provider = ({provider}) => {
     const query = router.query;
 
     return (
-        <Layout title="Provider" description={`${provider}, lesson provider`}>
-            <h1>{provider}</h1>
+        <Layout title="Provider" description={`${provider}, lesson provider`} header={provider}>            
             <Link href={`/providers/${query.provider}/lessons`}>
                 <a>Lessons</a>
             </Link>

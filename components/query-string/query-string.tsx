@@ -34,7 +34,7 @@ const QueryString = ({options, lesson}) => {
     );
 
     return (
-        <ul class={styles.navButtons}>{optionList}</ul>
+        <ul class={styles.typeOptions}>{optionList}</ul>
     )
 };
 

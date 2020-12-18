@@ -25,11 +25,15 @@ export const MultipleChoice = ({question, type, completeTest, setQuestion}) => {
     
     switch(type) {
         case enums.MULTIPLE_CHOICE_TYPE.PIE:
-            var style = `--value:${question.answer};--unit:${question.unit}` as any;
             const options = question.items.map(answer => {
-                return <button onClick={e => handleCheckAnswers(answer)} class={styles.pie} style={style}></button>;
+                const style = `--value:${answer.name}; --unit:1${question.unit};` as any;
+                const css = answer.state === enums.TRILEAN.TRUE ? styles.correct : answer.state === enums.TRILEAN.FALSE ? styles.incorrect : null;
+                return  <div class={styles.pie}>
+                            <button onClick={e => handleCheckAnswers(answer.name)} class={`${styles.pie} ${css}`} style={style} ></button>
+                            <span class={css}></span>
+                        </div>;
             });
-            format = { options };
+            format = options
             break;
         case enums.MULTIPLE_CHOICE_TYPE.RADIO_BUTTONS:
             const listItems = question.items.map(answer => {
@@ -42,6 +46,7 @@ export const MultipleChoice = ({question, type, completeTest, setQuestion}) => {
                       </li>
             });;
             format = <ul class={question.response ? styles.disableOverlay : null}>{listItems}</ul>
+            break;
     }
 
     return (

@@ -14,10 +14,11 @@ const Lesson = ({lesson}) => {
     const type = router.query.type;
     
     return (
-        <Layout title="Lesson" description={`${provider} ${lesson.title} lesson`}>
-            <h1>{lesson.title}</h1>
-            <QueryString options={enums.LESSON_TYPE} lesson={lesson} />
-            { type === enums.LESSON_TYPE.CARDS ? <Card lesson={lesson}></Card> : <Question lesson={lesson}></Question> }
+        <Layout title="Lesson" description={`${provider} ${lesson.title} lesson`} header={lesson.title}>
+            <div>
+                <QueryString options={enums.LESSON_TYPE} lesson={lesson} />
+                { type === enums.LESSON_TYPE.CARDS ? <Card lesson={lesson}></Card> : <Question lesson={lesson}></Question> }
+            </div>
         </Layout>
     )
 };

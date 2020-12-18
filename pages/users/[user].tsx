@@ -13,8 +13,7 @@ const User = ({user}) => {
     const query = router.query;
 
     return (
-        <Layout title="User" description={`${user}, user`}>
-            <h1>{user}</h1>
+        <Layout title="User" description={`${user}, user`} header={user}>
             {typeof window !== 'undefined' ? renderScoreHistory() : null}
         </Layout>
     )

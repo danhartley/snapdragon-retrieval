@@ -1,7 +1,7 @@
 @import 'variables.scss';
 @import 'mixins.scss';
 
-.questions {
+.questions {    
     display: grid;
     gap: 10px;
     grid-template-columns: 1fr;
@@ -12,6 +12,11 @@
         display: grid;
         row-gap: 10px;
     }
+    // .cue {
+    //     @media (min-width: 601px) {
+    //         @include cue();
+    //     }
+    // }
 }
 
 @include question-container();
