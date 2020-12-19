@@ -118,6 +118,9 @@ collections:
           display_fields: ["authorsList.*.name"]
           value_field: "authorsList.*.slug"
         - { label: "source", name: "source", widget: "string" }
+
+    # Ordered lists
+
     - label: "Ordered list questions"
       label_singular: "ordered list question"
       name: "ranked"
@@ -145,11 +148,11 @@ collections:
         - { label: "name", name: "name", widget: "string" }
         - { label: "value", name: "value", widget: "string" }
       - label: "Sources"
-      label_singular: "source"
-      name: "sources"
-      widget: "list"
-      allow_add: true
-      fields:
+        label_singular: "source"
+        name: "sources"
+        widget: "list"
+        allow_add: true
+        fields:
         - label: "author"
           name: "author"
           widget: "relation"
@@ -158,6 +161,9 @@ collections:
           display_fields: ["authorsList.*.name"]
           value_field: "authorsList.*.slug"
         - { label: "source", name: "source", widget: "string" }
+
+    # Unordered lists
+
     - label: "Unordered list questions"
       label_singular: "unordered list question"
       name: "unranked"
