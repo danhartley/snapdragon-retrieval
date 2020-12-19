@@ -109,7 +109,7 @@ collections:
         name: "sources"
         widget: "list"
         allow_add: true
-        required: "false"
+        required: false
         fields:
         - label: "author"
           name: "author"
@@ -153,7 +153,7 @@ collections:
         name: "sources"
         widget: "list"
         allow_add: true
-        required: "false"
+        required: false
         fields:
         - label: "author"
           name: "author"
@@ -204,7 +204,7 @@ collections:
         name: "sources"
         widget: "list"
         allow_add: true
-        required: "false"
+        required: false
         fields:
         - label: "author"
           name: "author"
