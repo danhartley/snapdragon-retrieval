@@ -1,12 +1,12 @@
 {
   "authorsList": [
     {
-        "name": "carbon brief",
-        "slug": "carbonbrief"
+      "name": "carbon brief",
+      "slug": "carbonbrief"
     },
     {
-        "name": "the guardian",
-        "slug": "the-guardian"
+      "name": "the guardian",
+      "slug": "the-guardian"
     },
     {
       "name": "earth observatory (NASA)",
@@ -29,12 +29,16 @@
       "slug": "Snapdragon"
     },
     {
-        "name": "intergovernmental panel on climate change",
-        "slug": "ipcc"
+      "name": "intergovernmental panel on climate change",
+      "slug": "ipcc"
     },
     {
-        "name": "north american meat institute",
-        "slug": "nama"
+      "name": "north american meat institute",
+      "slug": "nama"
+    },
+    {
+      "slug": "ucsf",
+      "name": "University of California San Francisco Office of Sustainability (UCSF)"
     }
   ]
 }
