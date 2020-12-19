@@ -13,7 +13,7 @@
       "source": "http://www.fao.org/livestock-systems/global-distributions/chickens/en/",
       "year": "2020",
       "term": "How many chickens are there for each person on the planet?",
-      "definition": "3",
+      "definition": "Three",
       "text": "For every person on the planet, there are approximately three chickens"
     },
     {
@@ -29,15 +29,15 @@
       "year": "2018",
       "author": "Science (American Association for the Advancement of Science)",
       "term": "What is the greenhouse gas emissions per kilogram of beef from a beef herd?",
-      "definition": "~60KgCO2 (equivalent)",
+      "definition": "~60KgCO2e (CO2 emissions, or equivalent emissions from other GHGs such as methane)",
       "text": "How do emissions from meat, dairy and other foods compare"
     },
     {
-      "term": "In 2017, 326 million Americans ate 80.67 pounds or 36.67 kilos of beef per person. How much carbon dioxide emissions did this contribute to their carbon footprint?",
-      "definition": "Each kilo of beef is responsible for 60 kilos of carbon dioxide emissions. Therefore the emissions per person in the United States was (36.67 * 60) = 2.2 tonnes per person.",
+      "term": "In 2017, 326 million Americans ate 80.67 pounds or 36.67 kilos of beef per person. How much carbon dioxide did this contribute to their carbon footprint?",
+      "definition": "Each kilo of beef is responsible for ~60 kilos of carbon dioxide emissions. Therefore the emissions per person in the United States was (36.67 * 60) = 2.2 tonnes per person.",
       "source": "https://www.meatinstitute.org/index.php?ht=d/sp/i/47465/pid/47465",
       "year": "2017",
-      "author": "Snapdragon",
+      "author": "North American Meat Institute (NAMA)",
       "text": "carbon dioxide emissions per head for beef in the united states"
     }
   ],

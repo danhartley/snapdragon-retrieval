@@ -5,7 +5,7 @@ import styles from 'components/question/multiple-choice/multiple-choice.module.s
 
 export const MultipleChoice = ({question, type, completeTest, setQuestion}) => {
 
-    question.items = question.items || [ ...question.answers.map(a => { return { name: a } }), { name: question.answer } ];
+    question.items = question.items || logic.shuffleArray([ ...question.answers.map(a => { return { name: a } }), { name: question.answer } ]);
 
     const handleCheckAnswers = (response) => {
         question.response = response;

@@ -69,8 +69,8 @@
 @mixin active-screen() {
     width: auto;
     height: 240px;
-    padding: 10px;
     border: 1px dashed rgba($colour, .2);
+    padding: 10px;
 }
 
 @mixin question-container() {

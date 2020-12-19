@@ -31,6 +31,10 @@
     {
         "name": "intergovernmental panel on climate change",
         "slug": "ipcc"
+    },
+    {
+        "name": "north american meat institute",
+        "slug": "nama"
     }
   ]
 }

@@ -1,15 +1,12 @@
 import { useRouter } from 'next/router';
 
 import styles from 'components/query-string/query-string.module.scss';
-import { enums } from 'components/enums';
-import { useState } from 'preact/hooks';
+import { useState, useEffect } from 'preact/hooks';
 
 const QueryString = ({options, lesson}) => {
 
-    // have choice of presentation
-    
     const router = useRouter();
-    const [type, setType] = useState(router.query.type);
+    const [type, setType] = useState(() => router.query.type);
 
     const changeOption = (type => {
         router.push({
@@ -18,7 +15,7 @@ const QueryString = ({options, lesson}) => {
           })
           setType(type);
     });
-    
+
     const activeOptions = Object.keys(options).map(key => {
         return lesson[options[key]] ? options[key] : undefined;
     }).filter(option => option);
@@ -32,6 +29,10 @@ const QueryString = ({options, lesson}) => {
             </label>
         </li>
     );
+
+    useEffect(() => {
+        setType(router.query.type);
+    },[router.query.type]);
 
     return (
         <ul class={styles.typeOptions}>{optionList}</ul>

@@ -74,7 +74,7 @@ export const Question = ({lesson}) => {
                 </div>
             </section>
             <section class={styles.source}>
-                <div><a href={lesson.source} target="_blank">Open source in a new tab</a></div>
+                <div><a href={lesson.source} target="_blank">Additional source (opens in a new tab)</a></div>
                 <div>Source: {lesson.provider}</div>
             </section>
         </div>

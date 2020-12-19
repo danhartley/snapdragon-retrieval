@@ -27,7 +27,7 @@ export const Card = ({lesson}) => {
     return (
         <div class={styles.cards}>
             <section>
-                <div class={styles.term}>{face.value}</div>
+                <div onClick={flipCard} class={styles.term}><span>{face.value}</span></div>
             </section>
             <section class={styles.controls}>
                 <button data-direction={enums.DIRECTION.Previous} onClick={nextCard} class={styles.previous}></button>
@@ -36,10 +36,10 @@ export const Card = ({lesson}) => {
                 <button class={styles.shuffle}></button>
             </section>
             <section class={styles.source}>
-                <div><a href={card.source} target="_blank">Open source in a new tab</a></div>
-                <div>Source: {card.author}</div>
+                <div><a href={card.source} target="_blank">Additional source (opens in a new tab)</a></div>
+                <div>Author: {card.author}</div>
             </section>
-            <section><ExternalLinkList items={lesson.cards} source={lesson.source}></ExternalLinkList></section>
+            {/* <section><ExternalLinkList items={lesson.cards} source={lesson.source}></ExternalLinkList></section> */}
         </div>
     )
 };

@@ -17,9 +17,16 @@
     row-gap: 10px;
     .term {
         @include active-screen();
+        padding: 0;
         @include double-centred();
-        border: 1px solid rgba($colour, 0.4) !important;
-        border-radius: 5px;
+        border: none;
+        background-color: rgba($colour, .8);
+        color: rgba($colour-light, .8);
+        cursor: pointer;
+        & > span { padding: 10px; }
+        @media (min-width: $narrow) {
+            & > span { padding: 30px; }
+        }
     }
     .controls {
         display: grid;
