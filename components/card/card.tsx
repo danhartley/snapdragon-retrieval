@@ -36,7 +36,7 @@ export const Card = ({lesson}) => {
                 <button class={styles.shuffle}></button>
             </section>
             <section class={styles.source}>
-                <div><a href={card.source} target="_blank">Additional source (opens in a new tab)</a></div>
+                <div><a href={card.sources[0].source} target="_blank">Additional source (opens in a new tab)</a></div>
                 <div>Author: {card.author}</div>
             </section>
             {/* <section><ExternalLinkList items={lesson.cards} source={lesson.source}></ExternalLinkList></section> */}
