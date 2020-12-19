@@ -101,8 +101,7 @@ collections:
       fields:
       - { label: "term", name: "term", widget: "string" }
       - { label: "definition", name: "definition", widget: "string" }    
-      - { label: "text", name: "text", widget: "string" } 
-      - { label: "source", name: "source", widget: "string" }
+      - { label: "text", name: "text", widget: "string" }
       - { label: "year", name: "year", widget: "string" }
       - label: "Sources"
         label_singular: "source"
