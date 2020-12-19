@@ -105,6 +105,7 @@ collections:
       - { label: "source", name: "source", widget: "string" }
       - { label: "year", name: "year", widget: "string" }
       - label: "Sources"
+        label_singular: "source"
         name: "sources"
         widget: "list"
         allow_add: true
@@ -143,6 +144,20 @@ collections:
         - { label: "rank", name: "rank", widget: "number" }
         - { label: "name", name: "name", widget: "string" }
         - { label: "value", name: "value", widget: "string" }
+      - label: "Sources"
+      label_singular: "source"
+      name: "sources"
+      widget: "list"
+      allow_add: true
+      fields:
+        - label: "author"
+          name: "author"
+          widget: "relation"
+          collection: "authors"
+          search_fields: ["authorsList.*.name"]
+          display_fields: ["authorsList.*.name"]
+          value_field: "authorsList.*.slug"
+        - { label: "source", name: "source", widget: "string" }
     - label: "Unordered list questions"
       label_singular: "unordered list question"
       name: "unranked"
@@ -176,5 +191,19 @@ collections:
         name: "answers"
         widget: "list"
         allow_add: true
+      - label: "Sources"
+        label_singular: "source"
+        name: "sources"
+        widget: "list"
+        allow_add: true
+        fields:
+        - label: "author"
+          name: "author"
+          widget: "relation"
+          collection: "authors"
+          search_fields: ["authorsList.*.name"]
+          display_fields: ["authorsList.*.name"]
+          value_field: "authorsList.*.slug"
+        - { label: "source", name: "source", widget: "string" }
         # fields:
         # - { label: "name", name: "name", widget: "string" }
