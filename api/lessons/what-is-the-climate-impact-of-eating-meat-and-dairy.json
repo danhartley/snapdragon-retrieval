@@ -1,50 +1,66 @@
 {
   "cards": [
     {
-      "author": "The Proceedings of the National Academy of Sciences (PNAS)",
+    "sources": [
+        {
+            "author": "The Proceedings of the National Academy of Sciences (PNAS)",
+            "source": "https://www.pnas.org/content/115/25/6506"
+        }
+    ],
       "term": "The mass of animals raised for slaughter on Earth now outweighs wildlife by a factor of what?",
       "definition": "15-to-1",
-      "source": "https://www.pnas.org/content/115/25/6506",
       "year": "2018",
       "text": "The mass of animals raised for slaughter on Earth now outweighs wildlife by a factor of 15-to-1"
     },
     {
-      "author": "The Food and Agriculture Organization (FAO)",
-      "source": "http://www.fao.org/livestock-systems/global-distributions/chickens/en/",
+        "sources": [
+            {
+                "author": "The Food and Agriculture Organization (FAO)",
+                "source": "http://www.fao.org/livestock-systems/global-distributions/chickens/en/"
+            }
+        ],
       "year": "2020",
       "term": "How many chickens are there for each person on the planet?",
       "definition": "Three",
       "text": "For every person on the planet, there are approximately three chickens"
     },
     {
-      "author": "The Food and Agriculture Organization (FAO)",
-      "source": "http://www.fao.org/home/en/",
+        "sources": [
+            {
+                "author": "The Food and Agriculture Organization (FAO)",
+                "source": "http://www.fao.org/home/en/"
+            }
+        ],
       "year": "2020",
       "term": "Meat and dairy specifically account for what percentage of global greenhouse gas emissions?",
       "definition": "~14.5%",
       "text": "Meat and dairy specifically accounts for around 14.5% of global greenhouse gas emissions"
     },
     {
-      "source": "https://science.sciencemag.org/content/360/6392/987",
+        "sources": [{
+            "source": "https://science.sciencemag.org/content/360/6392/987",
+            "author": "Science (American Association for the Advancement of Science)"
+        }],
       "year": "2018",
-      "author": "Science (American Association for the Advancement of Science)",
       "term": "What is the greenhouse gas emissions per kilogram of beef from a beef herd?",
       "definition": "~60KgCO2e (CO2 emissions, or equivalent emissions from other GHGs such as methane)",
       "text": "How do emissions from meat, dairy and other foods compare"
     },
     {
+        "sources": [{
+            "source": "https://www.meatinstitute.org/index.php?ht=d/sp/i/47465/pid/47465",
+            "author": "North American Meat Institute (NAMA)"
+        }],
       "term": "In 2017, 326 million Americans ate 80.67 pounds or 36.67 kilos of beef per person. How much carbon dioxide did this contribute to their carbon footprint?",
       "definition": "Each kilo of beef is responsible for ~60 kilos of carbon dioxide emissions. Therefore the emissions per person in the United States was (36.67 * 60) = 2.2 tonnes per person.",
-      "source": "https://www.meatinstitute.org/index.php?ht=d/sp/i/47465/pid/47465",
       "year": "2017",
-      "author": "North American Meat Institute (NAMA)",
       "text": "carbon dioxide emissions per head for beef in the united states"
     }
   ],
   "provider": "carbonbrief",
+  "source": "https://interactive.carbonbrief.org/what-is-the-climate-impact-of-eating-meat-and-dairy/",
   "slug": "what-is-the-climate-impact-of-eating-meat-and-dairy",
   "title": "what is the climate impact of eating meat and dairy",
-  "source": "https://interactive.carbonbrief.org/what-is-the-climate-impact-of-eating-meat-and-dairy/",
   "ranked": [
     {
       "type": "unordered",

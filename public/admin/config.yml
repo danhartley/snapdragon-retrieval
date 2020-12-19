@@ -90,6 +90,9 @@ collections:
     - { label: "title", name: "title", widget: "string" }
     - { label: "slug", name: "slug", widget: "string" }
     - { label: "source", name: "source", widget: "string" }
+
+    # Cards
+
     - label: "Cards"
       label_singular: "Card"
       name: "cards"
@@ -101,13 +104,19 @@ collections:
       - { label: "text", name: "text", widget: "string" } 
       - { label: "source", name: "source", widget: "string" }
       - { label: "year", name: "year", widget: "string" }
-      - label: "author"
-        name: "author"
-        widget: "relation"
-        collection: "authors"
-        search_fields: ["authorsList.*.name"]
-        display_fields: ["authorsList.*.name"]
-        value_field: "authorsList.*.slug"
+      - label: "Sources"
+        name: "sources"
+        widget: "list"
+        allow_add: true
+        fields:
+        - label: "author"
+          name: "author"
+          widget: "relation"
+          collection: "authors"
+          search_fields: ["authorsList.*.name"]
+          display_fields: ["authorsList.*.name"]
+          value_field: "authorsList.*.slug"
+        - { label: "source", name: "source", widget: "string" }
     - label: "Ordered list questions"
       label_singular: "ordered list question"
       name: "ranked"
