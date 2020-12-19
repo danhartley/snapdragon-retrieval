@@ -59,6 +59,18 @@
       "definition": "Each kilo of beef is responsible for ~60 kilos of carbon dioxide emissions. Therefore the emissions per person in the United States was (36.67 * 60) = 2.2 tonnes per person.",
       "year": "2017",
       "text": "carbon dioxide emissions per head for beef in the united states"
+    },
+    {
+      "sources": [
+        {
+          "author": "ucsf",
+          "source": "https://sustainability.ucsf.edu/1.713"
+        }
+      ],
+      "term": "Almond milk production produces around .2kg of CO2eq emissions per 300ml. Does this make it the most sustainable alternative to dairy milk?",
+      "text": "How sustainable is almond milk production?",
+      "definition": "Probably not. The production of almond milk requires large amounts of water. (In California, where 80% of the world’s almonds are produced, it has also been linked to unsustainable pesticide use.)",
+      "year": "2018"
     }
   ],
   "provider": "carbonbrief",
