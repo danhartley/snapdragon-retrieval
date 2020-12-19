@@ -24,6 +24,13 @@ export const Card = ({lesson}) => {
         setFace({ value: _card.term, isTerm: true, index });
     }; 
 
+    const sources = card.sources ? card.sources.map(card => {
+        <>
+        <div><a href={card.source} target="_blank">Additional source (opens in a new tab)</a></div>
+        <div>Author: {card.author}</div>
+        </>
+    }): null
+
     return (
         <div class={styles.cards}>
             <section>
@@ -36,8 +43,7 @@ export const Card = ({lesson}) => {
                 <button class={styles.shuffle}></button>
             </section>
             <section class={styles.source}>
-                <div><a href={card.sources[0].source} target="_blank">Additional source (opens in a new tab)</a></div>
-                <div>Author: {card.author}</div>
+                {sources}
             </section>
             {/* <section><ExternalLinkList items={lesson.cards} source={lesson.source}></ExternalLinkList></section> */}
         </div>
