@@ -78,7 +78,7 @@
         @include active-screen();
     }    
     .text {
-        min-height: 45px;
+        min-height: 50px;
         @include double-centred();
         font-style: italic;
     }

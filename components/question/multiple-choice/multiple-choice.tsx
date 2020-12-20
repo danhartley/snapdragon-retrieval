@@ -50,6 +50,8 @@ export const MultipleChoice = ({question, type, PLACEHOLDER, completeTest, setQu
     }
 
     return (
-        <section class={styles.container}>{format}</section>
+        <section class={styles.container}>            
+            {format}
+        </section>
     )
 };

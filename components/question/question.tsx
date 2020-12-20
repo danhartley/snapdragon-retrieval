@@ -70,7 +70,7 @@ export const Question = ({lesson}) => {
                 <>{format}</>
                 <div class={styles.flex}>
                     <button class={testState !== enums.QUESTION_STATE.MARKED ? styles.hidden : null} ref={btnNextRef} onClick={nextTest}>Next question</button>
-                    <button class={testState === enums.QUESTION_STATE.MARKED ? styles.hidden : null} ref={btnSkipRef} onClick={skipTest}>Skip question</button>
+                    <button class={testState === enums.QUESTION_STATE.MARKED || testState === enums.QUESTION_STATE.COMPLETED ? styles.hidden : null} ref={btnSkipRef} onClick={skipTest}>Skip question</button>
                 </div>
             </section>
             <section class={styles.source}>

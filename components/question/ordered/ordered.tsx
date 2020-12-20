@@ -6,7 +6,7 @@ import styles from 'components/question/question.module.scss';
 
 export const OrderedSelections = ({question, testState, type, PLACEHOLDER, completeTest, setTestState}) => {
 
-    const [answerList, setAnswerList] = useState(logic.getPlaceholders(question.listCount || question.items.length, PLACEHOLDER));
+    const [answerList, setAnswerList] = useState(logic.getPlaceholders(question.listCount, PLACEHOLDER));
 
     const inputRef = useRef(null);
     const btnMarkRef = useRef(null);
@@ -70,6 +70,10 @@ export const OrderedSelections = ({question, testState, type, PLACEHOLDER, compl
         });
     });
 
+    useEffect(() => {
+        setAnswerList(logic.getPlaceholders(question.listCount, PLACEHOLDER));
+    },[question.text]);
+
     const handleCheckAnswer = e => {
         e.preventDefault();
         const score = logic.mark({ question, answerList }, PLACEHOLDER);
@@ -87,7 +91,7 @@ export const OrderedSelections = ({question, testState, type, PLACEHOLDER, compl
             <input disabled={answerList.filter(l => l.name !== PLACEHOLDER).length === question.listCount} ref={inputRef} type="text" onBlur={e => addToList(e)} placeholder="" />
             <ul class={styles.answers}>{listItems}</ul>
         </section>
-        <button ref={btnMarkRef} onClick={handleCheckAnswer} disabled={testState !== enums.QUESTION_STATE.COMPLETED}>Check answer</button>
+        <button ref={btnMarkRef} onClick={handleCheckAnswer} class={testState !== enums.QUESTION_STATE.COMPLETED ? styles.hidden : null}>Check answer</button>
         </>
     )
 };

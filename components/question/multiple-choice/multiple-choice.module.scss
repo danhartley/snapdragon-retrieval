@@ -34,7 +34,7 @@
 .rbList {
     @include rb-list();
     width: 100px;
-    min-height: 35px;
+    min-height: 40px;
     border-bottom: 3px solid rgba($colour,0);  
     &.incorrect { 
         border-bottom: 3px solid rgba($colour,.3);  
