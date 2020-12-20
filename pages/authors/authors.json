@@ -39,6 +39,10 @@
     {
       "slug": "ucsf",
       "name": "University of California San Francisco Office of Sustainability (UCSF)"
+    },
+    {
+      "name": "wikipedia",
+      "slug": "wikipedia"
     }
   ]
 }
