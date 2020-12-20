@@ -199,6 +199,41 @@
         }
       ],
       "type": "ordered"
+    },
+    {
+      "text": "The main greenhouse gases are water vapour, carbon dioxide, methane, nitrous oxide, and ozone. Order them in order of abundance, from highest to lowest, and for an extra mark, give their chemical symbol.",
+      "type": "ordered",
+      "unit": "%",
+      "unitDescription": "%",
+      "listCount": 3,
+      "sources": [],
+      "items": [
+        {
+          "rank": 1,
+          "name": "water vapour",
+          "value": "H20"
+        },
+        {
+          "rank": 2,
+          "name": "carbon dioxide",
+          "value": "CO2"
+        },
+        {
+          "rank": 3,
+          "name": "methane",
+          "value": "CH4"
+        },
+        {
+          "rank": 4,
+          "name": "nitrous oxide",
+          "value": "N20"
+        },
+        {
+          "rank": 5,
+          "name": "ozone",
+          "value": "O3"
+        }
+      ]
     }
   ],
   "multiplechoice": [
