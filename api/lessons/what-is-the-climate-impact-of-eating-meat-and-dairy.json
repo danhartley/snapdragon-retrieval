@@ -55,8 +55,8 @@
           "author": "North American Meat Institute (NAMA)"
         }
       ],
-      "term": "In 2017, 326 million Americans ate 80.67 pounds or 36.67 kilos of beef per person. How much carbon dioxide did this contribute to their carbon footprint?",
-      "definition": "Each kilo of beef is responsible for ~60 kilos of carbon dioxide emissions. Therefore the emissions per person in the United States was (36.67 * 60) = 2.2 tonnes per person.",
+      "term": "In 2017, 326 million Americans ate 80.67 pounds (36.67 kilos) of beef per person. How much carbon dioxide did this contribute to their carbon footprint?",
+      "definition": "Each kilo of beef is responsible for ~60 kilos of carbon dioxide emissions. Therefore the emissions, per person, in the United States was (36.67 * 60) = 2.2 tonnes.",
       "year": "2017",
       "text": "carbon dioxide emissions per head for beef in the united states"
     },
