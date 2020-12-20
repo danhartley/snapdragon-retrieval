@@ -17,6 +17,36 @@
     //         @include cue();
     //     }
     // }
+    .liveScore {
+        top: 120px;
+        height: 25px;
+        width: 25px;
+        padding: 10px;
+        font-size: .8rem;
+        @media (min-width: 601px) {
+            top: 50px;
+            height: 40px;
+            width: 40px;
+            font-size: .9rem;
+        }
+        border: 1px solid rgba($colour,.5);
+        color: rgba($colour,.5);        
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        right: 0;
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:nth-child(1) {
+                border-bottom: 2px solid rgba($colour,.2);
+            }
+        }
+    }
 }
 
 @include question-container();

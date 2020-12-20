@@ -1,6 +1,6 @@
-import { useState, useRef } from "preact/hooks";
+import { useState, useRef, useEffect } from "preact/hooks";
 import { logic } from 'logic/logic';
-import { useLocalStorageState } from 'api/state';
+import { useLocalStorageState, getFromLocalStorage } from 'api/state';
 import { enums } from 'components/enums';
 import { MultipleChoice } from 'components/question/multiple-choice/multiple-choice';
 import { OrderedSelections } from 'components/question/ordered/ordered';
@@ -20,6 +20,7 @@ export const Question = ({lesson}) => {
     const [testState, setTestState] = useState(enums.QUESTION_STATE.RUNNING);
     const [history, setHistory] = useLocalStorageState(null, enums.STORAGE_KEY.HISTORY);
     const [progress, setProgress] = useState({ number: 1, of: lesson.questions.length });
+    const [score, setScore] = useState({total: 0, correct: 0});
 
     const btnNextRef = useRef(null);
     const btnSkipRef = useRef(null);
@@ -48,6 +49,11 @@ export const Question = ({lesson}) => {
         if(testState === enums.QUESTION_STATE.MARKED) btnNextRef.current ? btnNextRef.current.focus() : null;
     });
 
+    useEffect(() => {
+        const lessonHistory = getFromLocalStorage(enums.STORAGE_KEY.HISTORY).find(history => history.lessonTitle === lesson.title);
+        setScore(lessonHistory);
+    }, [history]);
+
     let format;
 
     switch(question.type) {
@@ -66,6 +72,7 @@ export const Question = ({lesson}) => {
                 <div class={styles.text}>
                     <span class={styles.cue}></span>
                     <span><span>{question.text}</span><span class="super">{`${progress.number}/${progress.of}`}</span></span>
+                    <span class={styles.liveScore}><span>{score.correct}</span><span>{score.total}</span></span>
                 </div> 
                 <>{format}</>
                 <div class={styles.flex}>

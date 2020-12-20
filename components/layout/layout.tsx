@@ -55,7 +55,7 @@ export default function Layout({
 
             {children}
 
-            <footer>Score: 1 out of 12</footer>
+            <footer>© Daniel Hartley 2020. All rights reserved.</footer>
         </div>
     )
 }

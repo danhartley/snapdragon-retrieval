@@ -58,7 +58,7 @@ export const OrderedSelections = ({question, testState, type, PLACEHOLDER, compl
     useEffect(() => {
         window.addEventListener("keydown", e => {                 
             const target = e.target as HTMLButtonElement;          
-            if(target.type === 'submit') return;
+            if(target.type === 'submit' || (inputRef.current && inputRef.current.value === "")) return;
             switch(e.code) {                
                 case 'Enter':              
                     const updatedAnswerList = logic.updateAnswerList(question, answerList, { name: inputRef.current.value, state: enums.TRILEAN.UNKNOWN }, PLACEHOLDER);
