@@ -3,7 +3,7 @@ import { enums } from 'components/enums';
 import { logic } from 'logic/logic';
 import styles from 'components/question/multiple-choice/multiple-choice.module.scss';
 
-export const MultipleChoice = ({question, type, completeTest, setQuestion}) => {
+export const MultipleChoice = ({question, type, PLACEHOLDER, completeTest, setQuestion}) => {
 
     question.items = question.items || logic.shuffleArray([ ...question.answers.map(a => { return { name: a } }), { name: question.answer } ]);
 
@@ -17,7 +17,7 @@ export const MultipleChoice = ({question, type, completeTest, setQuestion}) => {
                     : { ...item, state: enums.TRILEAN.UNKNOWN };
         });
         setQuestion(question);
-        const score = logic.mark({ question });
+        const score = logic.mark({ question }, PLACEHOLDER);
         completeTest(score);
     };
 

@@ -4,10 +4,10 @@ const sanitise = str => {
     return str.trim().toLowerCase();
 }
 
-const markUnordered = lesson => {
+const markUnordered = (lesson, placeholder) => {
     const score = { markedAnswerList: [], isCorrect: false, isOrderedCorrect: false };
     const unusedCorrectAnswers = getUnusedAnswers(lesson.question.items.map(i => i.name), lesson.answerList.map(a => a.name));
-    score.markedAnswerList = lesson.answerList.map(answer => {
+    score.markedAnswerList = lesson.answerList.filter(answer => answer.name !== placeholder).map(answer => {
         const score = lesson.question.items.find(item => sanitise(item.name) === sanitise(answer.name));
         return score 
             ? { name: answer.name, state: enums.TRILEAN.TRUE } 
@@ -17,15 +17,16 @@ const markUnordered = lesson => {
     return score;
 };
 
-const mark = (lesson) => {
+const mark = (lesson, placeholder = '---') => {
     let score;
     switch(lesson.question.type) {
         case enums.QUESTION_TYPE.UNORDERED:
-            return markUnordered(lesson);
+            return markUnordered(lesson, placeholder);
         case enums.QUESTION_TYPE.ORDERED:
-            score = markUnordered(lesson);
+            score = markUnordered(lesson, placeholder);
             score.markedAnswerList.forEach((score, index) => {
                 score.isOrdered = score.name === lesson.question.items[index].name ? enums.TRILEAN.TRUE : enums.TRILEAN.FALSE;
+                score.correct = score.isOrdered === "false" ? lesson.question.items[index].name : null;
             });
             score.isOrderedCorrect = lesson.answerList.length === score.markedAnswerList.filter(score => score.isOrdered === enums.TRILEAN.TRUE).length;
             return score;
@@ -39,10 +40,11 @@ const mark = (lesson) => {
     }
 };
 
-const markOrdered = lesson => {
-    const score = mark(lesson);
+const markOrdered = (lesson, placeholder = '---') => {
+    const score = mark(lesson, placeholder);
     score.markedAnswerList.forEach((score, index) => {
         score.isOrdered = score.name === lesson.question.items[index].name ? enums.TRILEAN.TRUE : enums.TRILEAN.FALSE;
+        score.correct = !score.isOrdered ? lesson.question.items[index].name : null;
     });
     return score;
 };

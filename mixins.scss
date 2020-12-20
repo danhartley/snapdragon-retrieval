@@ -91,7 +91,7 @@
                 cursor: pointer;
                 color: rgba($colour,.8);            
                 border-bottom: 3px solid rgba($colour,0.05);
-                width: 125px;
+                width: 200px;
                 display: inline-block;
                 &.correct { 
                     @include one-tick();
@@ -103,6 +103,9 @@
                 &.correctOrder {
                     @include two-ticks();
                 }
+            }
+            span:nth-child(2) {
+                margin-left: 10px;
             }
         }
     }

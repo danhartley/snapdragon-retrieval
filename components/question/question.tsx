@@ -56,7 +56,7 @@ export const Question = ({lesson}) => {
             format = <OrderedSelections question={question} testState={testState} type={question.type} PLACEHOLDER={PLACEHOLDER} completeTest={(score) => completeTest(score)} setTestState={setTestState} />
             break;
         case enums.QUESTION_TYPE.MULTIPLE_CHOICE:
-            format = <MultipleChoice setQuestion={setQuestion} question={question} type={enums.MULTIPLE_CHOICE_TYPE.RADIO_BUTTONS} completeTest={(score) => completeTest(score)} />
+            format = <MultipleChoice setQuestion={setQuestion} question={question} type={enums.MULTIPLE_CHOICE_TYPE.RADIO_BUTTONS} PLACEHOLDER={PLACEHOLDER} completeTest={(score) => completeTest(score)} />
             break;
     }
 
