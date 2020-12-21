@@ -71,6 +71,18 @@
       "text": "How sustainable is almond milk production?",
       "definition": "Probably not. The production of almond milk requires large amounts of water. (In California, where 80% of the world’s almonds are produced, it has also been linked to unsustainable pesticide use.)",
       "year": "2018"
+    },
+    {
+      "term": "Coffee's high carbon footprint",
+      "definition": "Coffee is mostly grown in tropical regions. What is the main reason for its high carbon footprint?",
+      "text": "Coffee production often involves using high amounts of nitrogen fertilisers.",
+      "year": "2019",
+      "sources": [
+        {
+          "source": "https://link.springer.com/article/10.1007/s13762-019-02539-5",
+          "author": "carbonbrief"
+        }
+      ]
     }
   ],
   "provider": "carbonbrief",
