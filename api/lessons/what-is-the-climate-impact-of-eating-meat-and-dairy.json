@@ -83,6 +83,18 @@
           "author": "ijest"
         }
       ]
+    },
+    {
+      "sources": [
+        {
+          "author": "e360",
+          "source": "https://e360.yale.edu/features/the-real-price-of-a-chocolate-bar-west-africas-rainforests"
+        }
+      ],
+      "year": "2019",
+      "text": "Chocolate's carbon footprint?",
+      "term": "Why does chocolate have such a high carbon footprint?",
+      "definition": "Chocolate’s climate impact is mostly caused by the land-use change required to produce cocoa."
     }
   ],
   "provider": "carbonbrief",
