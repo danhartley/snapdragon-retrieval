@@ -7,7 +7,7 @@ const Providers = ({providers}) => {
 const _providers = providers.map(provider => <li><Link href={`/providers/${provider.slug}/lessons`}><a>{provider.name}</a></Link></li>);
 
     return (
-        <Layout title="Providers">
+        <Layout title="Providers" header="Providers">
             <ul>
                 { _providers }
             </ul>
