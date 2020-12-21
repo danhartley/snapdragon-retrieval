@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "preact/hooks";
 import { logic } from 'logic/logic';
-import { useLocalStorageState, getFromLocalStorage } from 'api/state';
+import { useLocalStorageState, getScore } from 'api/state';
 import { enums } from 'components/enums';
 import { MultipleChoice } from 'components/question/multiple-choice/multiple-choice';
 import { OrderedSelections } from 'components/question/ordered/ordered';
@@ -40,19 +40,15 @@ export const Question = ({lesson}) => {
         setProgress({ ...progress, number: progress.number + 1});
     };
 
-    const completeTest = score => {
+    const completeTest = currentScore => {
         setTestState(enums.QUESTION_STATE.MARKED);
-        setHistory({...score, lessonTitle: lesson.title}, enums.STORAGE_KEY.HISTORY);
+        setHistory({...currentScore, lessonTitle: lesson.title}, enums.STORAGE_KEY.HISTORY);
+        setScore({ total: score.total + getScore(currentScore).total, correct: score.correct + getScore(currentScore).correct });
     };
 
     setTimeout(() => {
         if(testState === enums.QUESTION_STATE.MARKED) btnNextRef.current ? btnNextRef.current.focus() : null;
     });
-
-    useEffect(() => {
-        const lessonHistory = getFromLocalStorage(enums.STORAGE_KEY.HISTORY).find(history => history.lessonTitle === lesson.title);
-        setScore(lessonHistory);
-    }, [history]);
 
     let format;
 

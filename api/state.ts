@@ -19,7 +19,8 @@ export const useLocalStorageState = (defaulState, key) => {
                 window.localStorage.setItem(key, JSON.stringify(updatedHistory));
                 break;
         }
-        }, [key, value]);
+    }, [key, value]);
+
     return [value, setValue];
 };
 
@@ -29,21 +30,7 @@ const parseHistory = (score: any, histories: Array<History>) => {
 
     let total = 0, correct = 0;
 
-    if(score.markedAnswerList !== undefined) {
-        score.markedAnswerList.map(s => {
-            total++;
-            if (s.state === enums.TRILEAN.TRUE)
-                correct++;
-            if (s.hasOwnProperty('isOrdered')) {
-                total++;
-                if (s.isOrdered === enums.TRILEAN.TRUE)
-                    correct++;
-            }
-        });
-    } else if(score.isCorrect) {
-        total++;
-        correct++;
-    }
+    ({ total, correct } = getScore(score, total, correct));
 
     const history = histories !== null
         ? histories.find(h => h.lessonTitle === score.lessonTitle)
@@ -60,3 +47,24 @@ const parseHistory = (score: any, histories: Array<History>) => {
 export const getFromLocalStorage = key => {
     return JSON.parse(window.localStorage.getItem(key));
 };
+
+export const getScore = (score: any) => {
+    let total = 0, correct = 0;
+    if (score.markedAnswerList !== undefined) {
+        score.markedAnswerList.map(s => {
+            total++;
+            if (s.state === enums.TRILEAN.TRUE)
+                correct++;
+            if (s.hasOwnProperty('isOrdered')) {
+                total++;
+                if (s.isOrdered === enums.TRILEAN.TRUE)
+                    correct++;
+            }
+        });
+    } else if (score.isCorrect) {
+        total++;
+        correct++;
+    }
+    return { total, correct };
+}
+

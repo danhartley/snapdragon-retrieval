@@ -1,9 +1,11 @@
-import { useRef } from "preact/hooks";
+import { useState, useEffect } from "preact/hooks";
 import { enums } from 'components/enums';
 import { logic } from 'logic/logic';
 import styles from 'components/question/multiple-choice/multiple-choice.module.scss';
 
 export const MultipleChoice = ({question, type, PLACEHOLDER, completeTest, setQuestion}) => {
+
+    const [answerList, setAnswerList] = useState(logic.getPlaceholders(question.listCount, PLACEHOLDER));
 
     question.items = question.items || logic.shuffleArray([ ...question.answers.map(a => { return { name: a } }), { name: question.answer } ]);
 
@@ -48,6 +50,10 @@ export const MultipleChoice = ({question, type, PLACEHOLDER, completeTest, setQu
             format = <ul class={question.response ? styles.disableOverlay : null}>{listItems}</ul>
             break;
     }
+
+    useEffect(() => {
+        setAnswerList(logic.getPlaceholders(question.listCount, PLACEHOLDER));
+    },[question.text]);
 
     return (
         <section class={styles.container}>            
