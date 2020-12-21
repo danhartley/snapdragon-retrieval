@@ -46,8 +46,9 @@ collections:
         widget: "list"
         allow_add: true
         fields:
-        - { label: "name", name: "name", widget: "string"}
-        - { label: "slug", name: "slug", widget: "string"}
+        - { label: "name", name: "name", widget: "string" }
+        - { label: "slug", name: "slug", widget: "string" }
+        - { label: "link", name: "link", widget: "string", required: false }
   
   # Question types
 
@@ -182,6 +183,9 @@ collections:
         allow_add: true
         fields:
         - { label: "name", name: "name", widget: "string" }
+
+    # Mutliple choice
+
     - label: "Mutliple choice questions"
       label_singular: "mutliple choice question"
       name: "multiplechoice"

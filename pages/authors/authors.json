@@ -50,7 +50,8 @@
     },
     {
       "name": "Yale Environment 360",
-      "slug": "e360"
+      "slug": "e360",
+      "link": "https://e360.yale.edu/"
     }
   ]
 }
