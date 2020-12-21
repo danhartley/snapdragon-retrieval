@@ -43,6 +43,10 @@
     {
       "name": "wikipedia",
       "slug": "wikipedia"
+    },
+    {
+      "name": "International Journal of Environmental Science and Technology",
+      "slug": "ijest"
     }
   ]
 }
