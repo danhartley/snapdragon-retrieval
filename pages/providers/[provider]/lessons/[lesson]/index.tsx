@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { getLessons } from 'api/lessons/utils';
+import { logic } from 'logic/logic';
 import Layout from 'components/layout/layout';
 import { Card } from 'components/card/card';
 import { Question } from 'components/question/question';
@@ -7,6 +8,8 @@ import QueryString from 'components/query-string/query-string';
 import { enums } from "components/enums";
 
 const Lesson = ({lesson}) => {
+
+    lesson.questions = logic.shuffleArray(lesson.questions);
 
     const router = useRouter();
 

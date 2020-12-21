@@ -2,14 +2,12 @@ import { useState, useRef, useEffect } from "preact/hooks";
 import { logic } from 'logic/logic';
 import { useLocalStorageState, getScore } from 'api/state';
 import { enums } from 'components/enums';
-import { MultipleChoice } from 'components/question/multiple-choice/multiple-choice';
-import { OrderedSelections } from 'components/question/ordered/ordered';
+import MultipleChoice from 'components/question/multiple-choice/multiple-choice';
+import OrderedSelections from 'components/question/ordered/ordered';
 
 import styles from 'components/question/question.module.scss';
 
 export const Question = ({lesson}) => {
-
-    lesson.questions = logic.shuffleArray(lesson.questions);
 
     if(!lesson.questions) return;
 
@@ -20,7 +18,7 @@ export const Question = ({lesson}) => {
     const [testState, setTestState] = useState(enums.QUESTION_STATE.RUNNING);
     const [history, setHistory] = useLocalStorageState(null, enums.STORAGE_KEY.HISTORY);
     const [progress, setProgress] = useState({ number: 1, of: lesson.questions.length });
-    const [score, setScore] = useState({total: 0, correct: 0});
+    const [score, setScore] = useState({total: 0, correct: 0, answered: 0, skipped: 0, isLessonOver: false});
 
     const btnNextRef = useRef(null);
     const btnSkipRef = useRef(null);
@@ -30,6 +28,13 @@ export const Question = ({lesson}) => {
         const index = logic.next(enums.DIRECTION.Next, lesson.questions.indexOf(question), lesson.questions.length);
         setQuestion(lesson.questions[index]);
         setProgress({ ...progress, number: progress.number === lesson.questions.length ? 1 : progress.number + 1 });
+        setScore({ ...score, answered: score.answered + 1, skipped: score.skipped + 1, isLessonOver: score.answered + 1 === lesson.questions.length });
+    };
+
+    const markTest = currentScore => {
+        setTestState(enums.QUESTION_STATE.MARKED);
+        setHistory({...currentScore, lessonTitle: lesson.title}, enums.STORAGE_KEY.HISTORY);
+        setScore({ ...score, total: score.total + getScore(currentScore).total, correct: score.correct + getScore(currentScore).correct, answered: score.answered + 1, isLessonOver: score.answered + 1 === lesson.questions.length });
     };
 
     const nextTest = e => {
@@ -38,12 +43,6 @@ export const Question = ({lesson}) => {
         setQuestion(lesson.questions[index]);
         setTestState(enums.QUESTION_STATE.RUNNING);
         setProgress({ ...progress, number: progress.number + 1});
-    };
-
-    const completeTest = currentScore => {
-        setTestState(enums.QUESTION_STATE.MARKED);
-        setHistory({...currentScore, lessonTitle: lesson.title}, enums.STORAGE_KEY.HISTORY);
-        setScore({ total: score.total + getScore(currentScore).total, correct: score.correct + getScore(currentScore).correct });
     };
 
     setTimeout(() => {
@@ -55,10 +54,10 @@ export const Question = ({lesson}) => {
     switch(question.type) {
         case enums.QUESTION_TYPE.ORDERED:
         case enums.QUESTION_TYPE.UNORDERED:
-            format = <OrderedSelections question={question} testState={testState} type={question.type} PLACEHOLDER={PLACEHOLDER} completeTest={(score) => completeTest(score)} setTestState={setTestState} />
+            format = <OrderedSelections question={question} testState={testState} type={question.type} PLACEHOLDER={PLACEHOLDER} markTest={(score) => markTest(score)} setTestState={setTestState} />
             break;
         case enums.QUESTION_TYPE.MULTIPLE_CHOICE:
-            format = <MultipleChoice setQuestion={setQuestion} question={question} type={enums.MULTIPLE_CHOICE_TYPE.RADIO_BUTTONS} PLACEHOLDER={PLACEHOLDER} completeTest={(score) => completeTest(score)} />
+            format = <MultipleChoice setQuestion={setQuestion} question={question} type={enums.MULTIPLE_CHOICE_TYPE.RADIO_BUTTONS} PLACEHOLDER={PLACEHOLDER} markTest={(score) => markTest(score)} />
             break;
     }
 
@@ -72,7 +71,9 @@ export const Question = ({lesson}) => {
                 </div> 
                 <>{format}</>
                 <div class={styles.flex}>
-                    <button class={testState !== enums.QUESTION_STATE.MARKED ? styles.hidden : null} ref={btnNextRef} onClick={nextTest}>Next question</button>
+                    <button class={testState !== enums.QUESTION_STATE.MARKED ? styles.hidden : null} ref={btnNextRef} onClick={nextTest} disabled={score.isLessonOver}>
+                        {score.isLessonOver ? `Lesson over` : `Next question`}
+                    </button>
                     <button class={testState === enums.QUESTION_STATE.MARKED || testState === enums.QUESTION_STATE.COMPLETED ? styles.hidden : null} ref={btnSkipRef} onClick={skipTest}>Skip question</button>
                 </div>
             </section>

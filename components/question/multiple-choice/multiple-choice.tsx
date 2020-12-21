@@ -3,7 +3,7 @@ import { enums } from 'components/enums';
 import { logic } from 'logic/logic';
 import styles from 'components/question/multiple-choice/multiple-choice.module.scss';
 
-export const MultipleChoice = ({question, type, PLACEHOLDER, completeTest, setQuestion}) => {
+const MultipleChoice = ({question, type, PLACEHOLDER, markTest, setQuestion}) => {
 
     const [answerList, setAnswerList] = useState(logic.getPlaceholders(question.listCount, PLACEHOLDER));
 
@@ -20,7 +20,7 @@ export const MultipleChoice = ({question, type, PLACEHOLDER, completeTest, setQu
         });
         setQuestion(question);
         const score = logic.mark({ question }, PLACEHOLDER);
-        completeTest(score);
+        markTest(score);
     };
 
     let format;
@@ -61,3 +61,5 @@ export const MultipleChoice = ({question, type, PLACEHOLDER, completeTest, setQu
         </section>
     )
 };
+
+export default MultipleChoice;

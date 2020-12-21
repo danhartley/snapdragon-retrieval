@@ -4,7 +4,7 @@ import { enums } from 'components/enums';
 
 import styles from 'components/question/question.module.scss';
 
-export const OrderedSelections = ({question, testState, type, PLACEHOLDER, completeTest, setTestState}) => {
+const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, setTestState}) => {
 
     const [answerList, setAnswerList] = useState(logic.getPlaceholders(question.listCount, PLACEHOLDER));
 
@@ -78,7 +78,7 @@ export const OrderedSelections = ({question, testState, type, PLACEHOLDER, compl
         e.preventDefault();
         const score = logic.mark({ question, answerList }, PLACEHOLDER);
         setAnswerList(score.markedAnswerList);
-        completeTest(score);
+        markTest(score);
     };
 
     setTimeout(() => {
@@ -95,3 +95,5 @@ export const OrderedSelections = ({question, testState, type, PLACEHOLDER, compl
         </>
     )
 };
+
+export default OrderedSelections;
