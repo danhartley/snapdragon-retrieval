@@ -289,6 +289,28 @@
         "25.5"
       ],
       "listCount": 4
+    },
+    {
+      "text": "By what amount could emissions of CO2e emissions be reduced per year if we all became vegan?",
+      "unit": "GtCO2e/year",
+      "unitDescription": "bn tonnes of CO2e a year",
+      "listCount": 4,
+      "answer": "7.9-14.7",
+      "answers": [
+        "2.9-5.7",
+        "7.9-8.7",
+        "11.9-13.9"
+      ],
+      "sources": [
+        {
+          "author": "fao",
+          "source": "http://www.fao.org/3/a-ap106e.pdf"
+        },
+        {
+          "author": "science",
+          "source": "https://science.sciencemag.org/content/363/6429/eaaw9908"
+        }
+      ]
     }
   ]
 }
