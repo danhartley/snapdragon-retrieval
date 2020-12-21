@@ -50,7 +50,7 @@ const markOrdered = (lesson, placeholder = '---') => {
 };
 
 const next = (direction, currentIndex, length) => {
-    let index;
+    let index: number;
     switch(direction) {
         case enums.DIRECTION.Next:
             index = (currentIndex + 1) % length;

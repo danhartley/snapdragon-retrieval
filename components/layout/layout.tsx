@@ -13,49 +13,64 @@ export default function Layout({
 
     const router = useRouter();
 
-    const { provider, lesson } = router.query;
+    const { provider, lesson, widget } = router.query;
+
+    if(widget) {
+        document.querySelector('body').setAttribute("style", "padding: 0;");
+    }
 
     return (
-        <div class={styles.container}>
+        !widget ? 
+            <div class={styles.container}>
+                <Head>
+                    <title>{title}</title>
+                    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes"></meta>
+                    <meta name="description" content={description}></meta>
+                </Head>
+                <header>
+                    <nav>
+                        <div>
+                            <Link href="/">
+                                <a>Home</a>
+                            </Link>
+                            |
+                            <Link href="/providers">
+                                <a>Providers</a>
+                            </Link>
+                            { (provider && lesson) ?
+                                <>
+                                    |
+                                    <Link href={`/providers/${provider}/lessons`}>
+                                        <a>Lessons</a>
+                                    </Link>
+                                </> 
+                                : null
+                            }
+                        </div>
+                        <div>
+                            <span>
+                                <Link href={`/users/danielhartley`}>
+                                    <a>User</a>
+                                </Link>
+                            </span>
+                        </div>
+                    </nav>
+                </header>
+                <h1>{header}</h1>
+
+                {children}
+
+                <footer>© Daniel Hartley 2020. All rights reserved.</footer>
+            </div>
+            :
+            <div class={styles.container}>
             <Head>
                 <title>{title}</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes"></meta>
                 <meta name="description" content={description}></meta>
             </Head>
-            <header>
-                <nav>
-                    <div>
-                        <Link href="/">
-                            <a>Home</a>
-                        </Link>
-                        |
-                        <Link href="/providers">
-                            <a>Providers</a>
-                        </Link>
-                        { (provider && lesson) ?
-                            <>
-                                |
-                                <Link href={`/providers/${provider}/lessons`}>
-                                    <a>Lessons</a>
-                                </Link>
-                            </> 
-                            : null
-                        }
-                    </div>
-                    <div>
-                        <span>
-                            <Link href={`/users/danielhartley`}>
-                                <a>User</a>
-                            </Link>
-                        </span>
-                    </div>
-                </nav>
-            </header>
-            <h1>{header}</h1>
-
+            <header><h1>{header}</h1></header>
             {children}
-
-            <footer>© Daniel Hartley 2020. All rights reserved.</footer>
         </div>
     )
 }
