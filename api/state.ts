@@ -28,9 +28,7 @@ const parseHistory = (score: any, histories: Array<History>) => {
 
     if(!score) return histories;
 
-    let total = 0, correct = 0;
-
-    ({ total, correct } = getScore(score, total, correct));
+    let { total, correct } = getScore(score);
 
     const history = histories !== null
         ? histories.find(h => h.lessonTitle === score.lessonTitle)
