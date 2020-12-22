@@ -45,7 +45,7 @@
 }
 
 .rbList {
-    @include rb-list();
+    @include rb-list();    
     max-width: 200px;
     min-height: 40px;
     border-bottom: 3px solid rgba($colour,0);  
@@ -56,6 +56,9 @@
     }
     &.correct { 
         @include one-tick();
+    }
+    input {
+        border: 0.5rem solid rgba(0, 0, 0, 0.3);
     }
 }
 
