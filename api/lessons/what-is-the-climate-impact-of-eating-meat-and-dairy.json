@@ -95,6 +95,13 @@
       "text": "Chocolate's carbon footprint?",
       "term": "Why does chocolate have such a high carbon footprint?",
       "definition": "Chocolate’s climate impact is mostly caused by the land-use change required to produce cocoa."
+    },
+    {
+      "term": "Emissions from food production depend on many factors. Outline 4 of these.",
+      "definition": "How much and what type of land has been converted, the type and amount of fertilisers used, animal welfare and upkeep, and feed types.",
+      "text": "Food production emissions",
+      "year": "2020",
+      "sources": []
     }
   ],
   "provider": "carbonbrief",
@@ -299,6 +306,41 @@
           "rank": 5,
           "name": "N2O",
           "value": "Nitrous oxide"
+        }
+      ]
+    },
+    {
+      "text": "Rank, from lowest to highest, the sources of beef production emissions from Farming (fertilisers, machinery, etc.), Transport, Land Use Change, and Feed.",
+      "type": "ordered",
+      "unit": "kg CO2 eq. per kg",
+      "unitDescription": "kg CO2 eq. per kg",
+      "listCount": 4,
+      "items": [
+        {
+          "rank": 1,
+          "name": "Transport",
+          "value": "0.3"
+        },
+        {
+          "rank": 2,
+          "name": "Feed",
+          "value": "1.9"
+        },
+        {
+          "value": "16.3",
+          "rank": 3,
+          "name": "Land Use Change"
+        },
+        {
+          "rank": 4,
+          "value": "39.4",
+          "name": "Farming"
+        }
+      ],
+      "sources": [
+        {
+          "author": "ourworldindata",
+          "source": "https://ourworldindata.org/food-choice-vs-eating-local"
         }
       ]
     }
