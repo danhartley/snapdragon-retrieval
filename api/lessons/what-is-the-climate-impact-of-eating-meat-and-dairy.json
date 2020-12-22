@@ -95,6 +95,13 @@
       "text": "Chocolate's carbon footprint?",
       "term": "Why does chocolate have such a high carbon footprint?",
       "definition": "Chocolate’s climate impact is mostly caused by the land-use change required to produce cocoa."
+    },
+    {
+      "term": "Emissions from food production depend on many factors. Outline 4 of these.",
+      "definition": "How much and what type of land has been converted, the type and amount of fertilisers used, animal welfare and upkeep, and feed types.",
+      "text": "Food production emissions",
+      "year": "2020",
+      "sources": []
     }
   ],
   "provider": "carbonbrief",
