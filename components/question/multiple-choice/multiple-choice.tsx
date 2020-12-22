@@ -30,14 +30,14 @@ const MultipleChoice = ({question, type, PLACEHOLDER, markTest, setQuestion}) =>
             const options = question.items.map(answer => {
                 const style = `--value:${answer.name}; --unit:1${question.unit};` as any;
                 const css = answer.state === enums.TRILEAN.TRUE ? styles.correct : answer.state === enums.TRILEAN.FALSE ? styles.incorrect : null;
-                return  <div class={styles.pie}>
+                return  <li class={styles.pie}>
                             <button onClick={e => handleCheckAnswers(answer.name)} class={`${styles.pie} ${css}`} style={style} >
                                 <span>{answer.name}</span>
                             </button>
                             <span class={css}></span>
-                        </div>;
-            });
-            format = options
+                        </li>;
+            });            
+            format = <ul class={question.response ? styles.disableOverlay : null}>{options}</ul>
             break;
         case enums.MULTIPLE_CHOICE_TYPE.RADIO_BUTTONS:
             const listItems = question.items.map(answer => {
