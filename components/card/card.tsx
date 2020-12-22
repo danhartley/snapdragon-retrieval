@@ -34,13 +34,13 @@ export const Card = ({lesson}) => {
     return (
         <div class={styles.cards}>
             <section>
-                <div onClick={flipCard} class={styles.term}><span>{face.value}</span></div>
+                <div onClick={flipCard} class={`${styles.term} ${face.value === card.definition ? styles.definition : null}`}><span>{face.value}</span></div>
             </section>
             <section class={styles.controls}>
-                <button data-direction={enums.DIRECTION.Previous} onClick={nextCard} class={styles.previous}></button>
-                <button data-direction={enums.DIRECTION.Next} onClick={nextCard} class={styles.next}></button>
-                <button onClick={flipCard} class={styles.flip}></button>
-                <button class={styles.shuffle}></button>
+                <button aria-label="Got to previous card" data-direction={enums.DIRECTION.Previous} onClick={nextCard} class={styles.previous}></button>
+                <button aria-label="Got to next card" data-direction={enums.DIRECTION.Next} onClick={nextCard} class={styles.next}></button>
+                <button aria-label="Turn the card over" onClick={flipCard} class={styles.flip}></button>
+                <button aria-label="Shuffle the cards" class={styles.shuffle}></button>
             </section>
             <section class={styles.source}>
                 {sources}

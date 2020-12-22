@@ -17,15 +17,23 @@
     row-gap: 10px;
     .term {
         @include active-screen();
-        padding: 0;
         @include double-centred();
-        border: none;
+        padding: 0;
+        border: 1px solid transparent;
         background-color: rgba($colour, .8);
         color: rgba($colour-light, .8);
         cursor: pointer;
         & > span { padding: 10px; }
         @media (min-width: $narrow) {
             & > span { padding: 30px; }
+        }
+        &:hover {
+            color: rgba($colour-light, 1);
+        }
+        &.definition {
+            background-color: rgba($colour-light, .8);
+            color: rgba($colour, .8);
+            border: 1px solid rgba($colour, .3);
         }
     }
     .controls {
