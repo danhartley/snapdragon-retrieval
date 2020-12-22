@@ -159,6 +159,12 @@
           "name": "poultry",
           "value": "6.10"
         }
+      ],
+      "sources": [
+        {
+          "author": "science",
+          "source": "https://science.sciencemag.org/content/360/6392/987"
+        }
       ]
     },
     {
@@ -288,7 +294,13 @@
         "20.5",
         "25.5"
       ],
-      "listCount": 4
+      "listCount": 4,
+      "sources": [
+        {
+          "author": "fao",
+          "source": "http://www.fao.org/home/en/"
+        }
+      ]
     },
     {
       "text": "By what amount could emissions of CO2e emissions be reduced per year if we all became vegan?",
