@@ -136,8 +136,8 @@ collections:
         search_fields: ["questionTypes.*.name"]
         display_fields: ["questionTypes.*.name"]
         value_field: "questionTypes.*.name"
-      - { label: "unit", name: "unit", widget: "string" }
-      - { label: "unit description", name: "unitDescription", widget: "string" }      
+      - { label: "unit", name: "unit", widget: "string", required: false }
+      - { label: "unit description", name: "unitDescription", widget: "string", required: false }      
       - { label: "list count", name: "listCount", widget: "number" }
       - label: "Items"
         label_singular: "Item"
@@ -173,8 +173,8 @@ collections:
       allow_add: true
       fields:
       - { label: "text", name: "text", widget: "string" }
-      - { label: "unit", name: "unit", widget: "string" }
-      - { label: "unit description", name: "unitDescription", widget: "string" }
+      - { label: "unit", name: "unit", widget: "string", required: false }
+      - { label: "unit description", name: "unitDescription", widget: "string", required: false }
       - { label: "list count", name: "listCount", widget: "number" }
       - label: "Items"
         label_singular: "Item"
@@ -193,8 +193,8 @@ collections:
       allow_add: true
       fields:
       - { label: "text", name: "text", widget: "string" }
-      - { label: "unit", name: "unit", widget: "string" }
-      - { label: "unit description", name: "unitDescription", widget: "string" }
+      - { label: "unit", name: "unit", widget: "string", required: false }
+      - { label: "unit description", name: "unitDescription", widget: "string", required: false }
       - { label: "list count", name: "listCount", widget: "number" }
       - { label: "answer", name: "answer", widget: "string" }
       - label: "Answers"
