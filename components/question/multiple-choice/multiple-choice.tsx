@@ -7,7 +7,7 @@ const MultipleChoice = ({question, type, PLACEHOLDER, markTest, setQuestion}) =>
 
     const [answerList, setAnswerList] = useState(logic.getPlaceholders(question.listCount, PLACEHOLDER));
 
-    question.items = question.items || logic.shuffleArray([ ...question.answers.map(a => { return { name: a } }), { name: question.answer } ]);
+    question.items = question.items || logic.sortBy(logic.shuffleArray([ ...question.answers.map(a => { return { name: a } }), { name: question.answer } ]), "name");
 
     const handleCheckAnswers = (response) => {
         question.response = response;
@@ -31,7 +31,9 @@ const MultipleChoice = ({question, type, PLACEHOLDER, markTest, setQuestion}) =>
                 const style = `--value:${answer.name}; --unit:1${question.unit};` as any;
                 const css = answer.state === enums.TRILEAN.TRUE ? styles.correct : answer.state === enums.TRILEAN.FALSE ? styles.incorrect : null;
                 return  <div class={styles.pie}>
-                            <button onClick={e => handleCheckAnswers(answer.name)} class={`${styles.pie} ${css}`} style={style} ></button>
+                            <button onClick={e => handleCheckAnswers(answer.name)} class={`${styles.pie} ${css}`} style={style} >
+                                <span>{answer.name}</span>
+                            </button>
                             <span class={css}></span>
                         </div>;
             });
@@ -43,7 +45,7 @@ const MultipleChoice = ({question, type, PLACEHOLDER, markTest, setQuestion}) =>
                 return <li key={answer.name} class={`${styles.rbList} ${isCorrect}`}>
                         <input onClick={e => handleCheckAnswers(answer.name)} type="radio" id={answer.name} name="answer" value={answer.name} />
                         <label htmlFor={answer.name}>
-                            <span>{answer.name}</span>
+                            <span>{answer.name}</span><span>{question.unit ?? ''}</span>
                         </label>
                       </li>
             });;

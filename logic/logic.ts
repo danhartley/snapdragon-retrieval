@@ -114,6 +114,12 @@ const getUnusedAnswers = (fullList: any, answerList: any) => {
     return fullList.filter(x => answerList.indexOf(x) === -1);
 };
 
+const sortBy = (arr, prop, dir = 'asc') => {
+    return dir === 'asc' 
+      ? arr.sort((a, b) => parseFloat(a[prop]) - parseFloat(b[prop]))
+      : arr.sort((a, b) => parseFloat(b[prop]) - parseFloat(a[prop]));  
+};
+
 export const logic = {
     mark,
     markUnordered,
@@ -122,5 +128,6 @@ export const logic = {
     updateAnswerList,
     getPlaceholders,
     shuffleArray,
-    getUnusedAnswers
+    getUnusedAnswers,
+    sortBy
 };

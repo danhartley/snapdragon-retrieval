@@ -5,23 +5,34 @@
 
 .pie {    
     display: flex;
+    padding: 10px 0;
+    align-items: center;
     button {        
         background: conic-gradient(rgba($colour, .2) calc(var(--value, 0) * var(--unit)), rgba($colour, .6) calc(var(--value, 0) * var(--unit)));
         border-radius: 50%;
         height: 2rem;
+        min-height: 2rem;
+        max-height: 2rem;
         width: 2rem;
         border: none;
         cursor: pointer;
         opacity: .6;
-        &:hover, &:focus, &.correct {
+        &:hover, &:focus, &.correct, &.incorrect {
             border: none;
             opacity: 1;
         }
-        margin: .25rem 0;
+        position: relative;
+        span {
+            position: absolute;
+            height: auto;
+            top: 0;
+            right: -35px;
+        }
     }
     span { 
+        margin-left: 15px;
+        height: 2rem;
         width: 35px;
-        margin-bottom: 15px;
         &.correct {
             @include one-tick();
         }
@@ -33,7 +44,7 @@
 
 .rbList {
     @include rb-list();
-    width: 100px;
+    max-width: 200px;
     min-height: 40px;
     border-bottom: 3px solid rgba($colour,0);  
     &.incorrect { 
