@@ -159,6 +159,12 @@
           "name": "poultry",
           "value": "6.10"
         }
+      ],
+      "sources": [
+        {
+          "author": "science",
+          "source": "https://science.sciencemag.org/content/360/6392/987"
+        }
       ]
     },
     {
