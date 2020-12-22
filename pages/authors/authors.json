@@ -1,48 +1,58 @@
 {
   "authorsList": [
     {
-      "name": "carbon brief",
-      "slug": "carbonbrief"
+      "name": "Carbon Brief",
+      "slug": "carbonbrief",
+      "link": "https://www.carbonbrief.org/"
     },
     {
-      "name": "the guardian",
-      "slug": "the-guardian"
+      "name": "The Guardian",
+      "slug": "the-guardian",
+      "link": "https://www.theguardian.com/"
     },
     {
       "name": "earth observatory (NASA)",
-      "slug": "nasa"
+      "slug": "nasa",
+      "link": "https://earthobservatory.nasa.gov/"
     },
     {
       "name": "The Proceedings of the National Academy of Sciences (PNAS)",
-      "slug": "pnas"
+      "slug": "pnas",
+      "link": "https://www.pnas.org/"
     },
     {
       "name": "The Food and Agriculture Organization (FAO)",
-      "slug": "fao"
+      "slug": "fao",
+      "link": "http://www.fao.org/home/en/"
     },
     {
       "name": "Science (American Association for the Advancement of Science)",
-      "slug": "science"
+      "slug": "science",
+      "link": "https://www.sciencemag.org/"
     },
     {
       "name": "Snapdragon",
-      "slug": "Snapdragon"
+      "slug": "Snapdragon",
+      "link": "https://www.learn-the-planet.com/"
     },
     {
-      "name": "intergovernmental panel on climate change",
-      "slug": "ipcc"
+      "name": "Intergovernmental Panel on Climate Change",
+      "slug": "ipcc",
+      "link": "https://www.ipcc.ch/"
     },
     {
-      "name": "north american meat institute",
-      "slug": "nama"
+      "name": "North American Meat Institute",
+      "slug": "nama",
+      "link": "https://www.meatinstitute.org/"
     },
     {
       "slug": "ucsf",
       "name": "University of California San Francisco Office of Sustainability (UCSF)"
     },
     {
-      "name": "wikipedia",
-      "slug": "wikipedia"
+      "name": "Wikipedia",
+      "slug": "wikipedia",
+      "link": "https://en.wikipedia.org/"
     },
     {
       "name": "International Journal of Environmental Science and Technology",
@@ -56,6 +66,11 @@
     {
       "name": "Our World in Data",
       "slug": "ourworldindata"
+    },
+    {
+      "name": "ScienceDirect",
+      "slug": "sciencedirect",
+      "link": "https://www.sciencedirect.com/"
     }
   ]
 }
