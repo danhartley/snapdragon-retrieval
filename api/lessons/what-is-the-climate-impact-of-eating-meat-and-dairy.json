@@ -269,6 +269,38 @@
           "value": "O3"
         }
       ]
+    },
+    {
+      "text": "Give the chemical formulae for methane, carbon dioxide, water vapour, ozone, and nitrous oxide.",
+      "type": "ordered",
+      "listCount": 5,
+      "items": [
+        {
+          "rank": 1,
+          "name": "CH4",
+          "value": "Methane"
+        },
+        {
+          "rank": 2,
+          "name": "CO2",
+          "value": "Carbon dioxide"
+        },
+        {
+          "rank": 3,
+          "name": "H2O",
+          "value": "Water"
+        },
+        {
+          "rank": 4,
+          "name": "O3",
+          "value": "Ozone"
+        },
+        {
+          "rank": 5,
+          "name": "N2O",
+          "value": "Nitrous oxide"
+        }
+      ]
     }
   ],
   "multiplechoice": [
