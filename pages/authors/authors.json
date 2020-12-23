@@ -11,7 +11,7 @@
       "link": "https://www.theguardian.com/"
     },
     {
-      "name": "earth observatory (NASA)",
+      "name": "Earth Observatory (NASA)",
       "slug": "nasa",
       "link": "https://earthobservatory.nasa.gov/"
     },
@@ -71,6 +71,11 @@
       "name": "ScienceDirect",
       "slug": "sciencedirect",
       "link": "https://www.sciencedirect.com/"
+    },
+    {
+      "name": "Energy Education University of Calgary",
+      "link": "https://energyeducation.ca/",
+      "slug": "energy-education-university-of-calgary"
     }
   ]
 }
