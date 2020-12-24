@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'preact/hooks';
 import { ExternalLinkList } from 'components/list/list';
 import { enums } from 'components/enums';
 import { logic } from 'logic/logic';
+import Sources from 'components/question/source';
 
 import styles from 'components/card/card.module.scss';
 
@@ -42,9 +43,7 @@ export const Card = ({lesson}) => {
                 <button aria-label="Turn the card over" onClick={flipCard} class={styles.flip}></button>
                 <button aria-label="Shuffle the cards" class={styles.shuffle}></button>
             </section>
-            <section class={styles.source}>
-                {sources}
-            </section>
+            <Sources sources={card.sources} />
             {/* <section><ExternalLinkList items={lesson.cards} source={lesson.source}></ExternalLinkList></section> */}
         </div>
     )

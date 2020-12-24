@@ -69,10 +69,10 @@ describe('marking unordered lessons', () => {
     test('check answers are in the correct order', () => {
         score = logic.markOrdered({ ...lesson, answerList });         
         expect(score.markedAnswerList).toStrictEqual([
-            { name: 'water', state: enums.TRILEAN.TRUE, isOrdered: enums.TRILEAN.TRUE },
-            { name: 'road', state: enums.TRILEAN.TRUE, isOrdered: enums.TRILEAN.TRUE },
-            { name: 'rail', state: enums.TRILEAN.TRUE, isOrdered: enums.TRILEAN.TRUE },
-            { name: 'air', state: enums.TRILEAN.TRUE, isOrdered: enums.TRILEAN.TRUE },
+            { correct: null, name: 'water', state: enums.TRILEAN.TRUE, isOrdered: enums.TRILEAN.TRUE },
+            { correct: null, name: 'road', state: enums.TRILEAN.TRUE, isOrdered: enums.TRILEAN.TRUE },
+            { correct: null, name: 'rail', state: enums.TRILEAN.TRUE, isOrdered: enums.TRILEAN.TRUE },
+            { correct: null, name: 'air', state: enums.TRILEAN.TRUE, isOrdered: enums.TRILEAN.TRUE },
         ]);
     });
 
@@ -80,10 +80,10 @@ describe('marking unordered lessons', () => {
         answerList = [ {name:'water', state: enums.TRILEAN.UNKNOWN }, { name:'road', state: enums.TRILEAN.UNKNOWN}, { name:'air', state: enums.TRILEAN.UNKNOWN }, { name:'rail', state: enums.TRILEAN.UNKNOWN }];
         score = logic.markOrdered({ ...lesson, answerList });         
         expect(score.markedAnswerList).toStrictEqual([
-            { name: 'water', state: enums.TRILEAN.TRUE, isOrdered: enums.TRILEAN.TRUE },
-            { name: 'road', state: enums.TRILEAN.TRUE, isOrdered: enums.TRILEAN.TRUE },
-            { name: 'air', state: enums.TRILEAN.TRUE, isOrdered: enums.TRILEAN.FALSE },
-            { name: 'rail', state: enums.TRILEAN.TRUE, isOrdered: enums.TRILEAN.FALSE }
+            { correct: null, name: 'water', state: enums.TRILEAN.TRUE, isOrdered: enums.TRILEAN.TRUE },
+            { correct: null, name: 'road', state: enums.TRILEAN.TRUE, isOrdered: enums.TRILEAN.TRUE },
+            { correct: null, name: 'air', state: enums.TRILEAN.TRUE, isOrdered: enums.TRILEAN.FALSE },
+            { correct: null, name: 'rail', state: enums.TRILEAN.TRUE, isOrdered: enums.TRILEAN.FALSE }
         ]);
     });
 
@@ -92,10 +92,10 @@ describe('marking unordered lessons', () => {
         answerList = [ {name:'water', state: enums.TRILEAN.UNKNOWN }, { name:'road', state: enums.TRILEAN.UNKNOWN}, { name:'rail', state: enums.TRILEAN.UNKNOWN }, { name:'air', state: enums.TRILEAN.UNKNOWN }];
         score = logic.mark({ ...lesson, answerList});
         expect(score.markedAnswerList).toStrictEqual([
-            { name: 'water', state: enums.TRILEAN.TRUE, isOrdered: enums.TRILEAN.TRUE },
-            { name: 'road', state: enums.TRILEAN.TRUE, isOrdered: enums.TRILEAN.TRUE },
-            { name: 'rail', state: enums.TRILEAN.TRUE, isOrdered: enums.TRILEAN.TRUE },
-            { name: 'air', state: enums.TRILEAN.TRUE, isOrdered: enums.TRILEAN.TRUE },
+            { correct: null, name: 'water', state: enums.TRILEAN.TRUE, isOrdered: enums.TRILEAN.TRUE },
+            { correct: null, name: 'road', state: enums.TRILEAN.TRUE, isOrdered: enums.TRILEAN.TRUE },
+            { correct: null, name: 'rail', state: enums.TRILEAN.TRUE, isOrdered: enums.TRILEAN.TRUE },
+            { correct: null, name: 'air', state: enums.TRILEAN.TRUE, isOrdered: enums.TRILEAN.TRUE },
         ]);
     });
 

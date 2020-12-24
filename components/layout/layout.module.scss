@@ -3,9 +3,9 @@
 .container {
     display: grid;
     row-gap: 10px;
-    grid-template-rows: 45px 60px auto 45px;
+    grid-template-rows: 45px 75px auto 45px;
     @media (min-width: 601px) {
-        grid-template-rows: 45px 35px auto 45px;
+        grid-template-rows: 45px 40px auto 45px;
     }
     height: 100%;
     position: relative;

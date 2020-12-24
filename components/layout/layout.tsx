@@ -8,7 +8,8 @@ export default function Layout({
   children,
   title = 'This is the default title',
   description = 'Lesson retrieval',
-  header = ""
+  header = '',
+  headerLink = ''
 }) {
 
     const router = useRouter();
@@ -56,7 +57,8 @@ export default function Layout({
                         </div>
                     </nav>
                 </header>
-                <h1>{header}</h1>
+                
+                { headerLink !== '' ? <h1><a target="_blank" href={headerLink}>{header}</a></h1> : <h1>{header}</h1> }
 
                 {children}
 

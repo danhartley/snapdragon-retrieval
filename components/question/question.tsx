@@ -4,6 +4,7 @@ import { useLocalStorageState, getScore } from 'api/state';
 import { enums } from 'components/enums';
 import MultipleChoice from 'components/question/multiple-choice/multiple-choice';
 import OrderedSelections from 'components/question/ordered/ordered';
+import Sources from 'components/question/source';
 
 import styles from 'components/question/question.module.scss';
 
@@ -77,10 +78,7 @@ export const Question = ({lesson}) => {
                     <button class={testState === enums.QUESTION_STATE.MARKED || testState === enums.QUESTION_STATE.COMPLETED ? styles.hidden : null} ref={btnSkipRef} onClick={skipTest}>Skip question</button>
                 </div>
             </section>
-            <section class={styles.source}>
-                <div><a href={lesson.source} target="_blank">Additional source (opens in a new tab)</a></div>
-                <div>Source: {lesson.provider}</div>
-            </section>
+            <Sources sources={question.sources} />          
         </div>
     )
 };
