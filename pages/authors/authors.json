@@ -76,6 +76,11 @@
       "name": "Energy Education University of Calgary",
       "link": "https://energyeducation.ca/",
       "slug": "energy-education-university-of-calgary"
+    },
+    {
+      "name": "Nature",
+      "slug": "nature",
+      "link": "https://www.nature.com/"
     }
   ]
 }
