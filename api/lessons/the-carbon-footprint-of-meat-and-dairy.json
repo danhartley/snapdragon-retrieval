@@ -58,5 +58,59 @@
   ],
   "slug": "the-cost-of-meat-and-dairy",
   "title": "The cost of meat and dairy",
-  "source": "https://www.theguardian.com/environment/2018/may/31/avoiding-meat-and-dairy-is-single-biggest-way-to-reduce-your-impact-on-earth"
+  "source": "https://www.theguardian.com/environment/2018/may/31/avoiding-meat-and-dairy-is-single-biggest-way-to-reduce-your-impact-on-earth",
+  "ranked": [
+    {
+      "text": "Rank milk, beef, chicken, plants, and pork in order, from lowest to highest, of their climate cost.",
+      "type": "ordered",
+      "listCount": 5,
+      "sources": [
+        {
+          "author": "the-guardian",
+          "source": "https://www.theguardian.com/environment/2020/dec/23/organic-meat-production-just-as-bad-for-climate-study-finds"
+        }
+      ],
+      "items": [
+        {
+          "rank": 1,
+          "name": "Plants",
+          "value": ".04"
+        },
+        {
+          "rank": 2,
+          "name": "Milk",
+          "value": ".24"
+        },
+        {
+          "rank": 3,
+          "name": "Pork",
+          "value": "1.72"
+        },
+        {
+          "rank": 4,
+          "name": "Chicken",
+          "value": "2.85"
+        },
+        {
+          "rank": 5,
+          "name": "Beef",
+          "value": "6.65"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "definition": "For beef and lamb, organic and conventional production result in similar climate costs. Organic chicken is slightly worse for the climate and organic pork slightly better than their conventional counterparts.",
+      "term": "How do the climate costs of meat produced by conventional methods, and organic methods compare?",
+      "text": "conventional and organic methods of meat production have similar climate costs.",
+      "year": "2020",
+      "sources": [
+        {
+          "source": "https://www.nature.com/articles/s41467-020-19474-6",
+          "author": "the-guardian"
+        }
+      ]
+    }
+  ]
 }
