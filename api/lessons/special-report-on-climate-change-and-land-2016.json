@@ -1,5 +1,5 @@
 {
-  "title": "special report on climate change and land 2016",
+  "title": "Special report on climate change and land 2016",
   "provider": "ipcc",
   "slug": "special-report-on-climate-change-and-land-2016",
   "source": "https://www.ipcc.ch/srccl/chapter/summary-for-policymakers/",
@@ -40,17 +40,113 @@
     }
   ],
   "multiplechoice": [
-      {
-        "text": "Food production accounts for what % of the world’s emissions?",
-        "unit": "%",
-        "unitDescription": "$",
-        "listCount": 4,
-        "answer": "25",
-        "answers": [
-            "10",
-            "45",
-            "60"
-        ]        
-      }
+    {
+      "text": "What percentage of calories does livestock contribute?",
+      "answers": [
+        "10",
+        "23",
+        "28"
+      ],
+      "unit": "%",
+      "unitDescription": "%",
+      "listCount": 4,
+      "answer": "18",
+      "sources": [
+        {
+          "author": "science",
+          "source": "http://josephpoore.com/Science%20360%206392%20987%20-%20Accepted%20Manuscript.pdf"
+        }
+      ]
+    },
+    {
+      "text": "What percentage of farmland does livestock occupy?",
+      "unit": "%",
+      "unitDescription": "%",
+      "listCount": 4,
+      "answer": "83",
+      "answers": [
+        "28",
+        "42",
+        "65"
+      ]
+    },
+    {
+      "text": "Meat and dairy are responsible for what percentage of agriculture’s greenhouse gas emissions?",
+      "unit": "%",
+      "unitDescription": "%",
+      "listCount": 4,
+      "answer": "60",
+      "answers": [
+        "20",
+        "40",
+        "80"
+      ]
+    },
+    {
+      "text": "The lowest impact beef requires 36 times more land than peas. And many times more greenhouse gases?",
+      "unit": "%",
+      "unitDescription": "%",
+      "listCount": 4,
+      "answer": "6",
+      "answers": [
+        "2",
+        "4",
+        "8"
+      ]
+    }
+  ],
+  "ranked": [
+    {
+      "text": "Rank milk, beef, chicken, plants, and pork in order, from lowest to highest, of their climate cost.",
+      "type": "ordered",
+      "listCount": 5,
+      "sources": [
+        {
+          "author": "the-guardian",
+          "source": "https://www.theguardian.com/environment/2020/dec/23/organic-meat-production-just-as-bad-for-climate-study-finds"
+        }
+      ],
+      "items": [
+        {
+          "rank": 1,
+          "name": "Plants",
+          "value": ".04"
+        },
+        {
+          "rank": 2,
+          "name": "Milk",
+          "value": ".24"
+        },
+        {
+          "rank": 3,
+          "name": "Pork",
+          "value": "1.72"
+        },
+        {
+          "rank": 4,
+          "name": "Chicken",
+          "value": "2.85"
+        },
+        {
+          "rank": 5,
+          "name": "Beef",
+          "value": "6.65"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "definition": "For beef and lamb, organic and conventional production result in similar climate costs. Organic chicken is slightly worse for the climate and organic pork slightly better than their conventional counterparts.",
+      "term": "How do the climate costs of meat produced by conventional methods, and organic methods compare?",
+      "text": "conventional and organic methods of meat production have similar climate costs.",
+      "year": "2020",
+      "sources": [
+        {
+          "source": "https://www.nature.com/articles/s41467-020-19474-6",
+          "author": "nature"
+        }
+      ]
+    }
   ]
 }
