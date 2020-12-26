@@ -102,6 +102,18 @@
       "text": "Food production emissions",
       "year": "2020",
       "sources": []
+    },
+    {
+      "term": "How would you convert one tonne of carbon into one tonne of carbon dioxide?",
+      "definition": "Each molecule of CO2 has two oxygens, each with a mass of 16, and one carbon, with an atomic mass of 12. Its total mass is therefore 44 (16*2 + 12*1). Each molecule of carbon has one carbon, and an atomic mass 12. Therefore each C molecule is converted into 44/12 CO2 molecules. 1 tonne of carbon therefore equates to 3.67 tonnes of CO2.",
+      "text": "How to compare the mass of carbon and carbon dioxide.",
+      "year": "0",
+      "sources": [
+        {
+          "author": "energy-education-university-of-calgary",
+          "source": "https://energyeducation.ca/encyclopedia/C_vs_CO2"
+        }
+      ]
     }
   ],
   "provider": "carbonbrief",
