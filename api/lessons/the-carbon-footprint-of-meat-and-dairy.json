@@ -98,5 +98,19 @@
         }
       ]
     }
+  ],
+  "cards": [
+    {
+      "definition": "For beef and lamb, organic and conventional production result in similar climate costs. Organic chicken is slightly worse for the climate and organic pork slightly better than their conventional counterparts.",
+      "term": "How do the climate costs of meat produced by conventional methods, and organic methods compare?",
+      "text": "conventional and organic methods of meat production have similar climate costs.",
+      "year": "2020",
+      "sources": [
+        {
+          "source": "https://www.nature.com/articles/s41467-020-19474-6",
+          "author": "the-guardian"
+        }
+      ]
+    }
   ]
 }
