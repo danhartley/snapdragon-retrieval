@@ -30,6 +30,18 @@
         "42",
         "65"
       ]
+    },
+    {
+      "text": "Meat and dairy are responsible for what percentage of agriculture’s greenhouse gas emissions?",
+      "unit": "%",
+      "unitDescription": "%",
+      "listCount": 4,
+      "answer": "60",
+      "answers": [
+        "20",
+        "40",
+        "80"
+      ]
     }
   ],
   "slug": "the-cost-of-meat-and-dairy",
