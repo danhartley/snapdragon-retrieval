@@ -42,6 +42,18 @@
         "40",
         "80"
       ]
+    },
+    {
+      "text": "The lowest impact beef requires 36 times more land than peas. And many times more greenhouse gases?",
+      "unit": "%",
+      "unitDescription": "%",
+      "listCount": 4,
+      "answer": "6",
+      "answers": [
+        "2",
+        "4",
+        "8"
+      ]
     }
   ],
   "slug": "the-cost-of-meat-and-dairy",
