@@ -18,6 +18,18 @@
           "source": "http://josephpoore.com/Science%20360%206392%20987%20-%20Accepted%20Manuscript.pdf"
         }
       ]
+    },
+    {
+      "text": "What percentage of farmland does livestock occupy?",
+      "unit": "%",
+      "unitDescription": "%",
+      "listCount": 4,
+      "answer": "83",
+      "answers": [
+        "28",
+        "42",
+        "65"
+      ]
     }
   ],
   "slug": "avoiding-meat-and-dairy-is-single-biggest-way-to-reduce-your-impact-on-earth",
