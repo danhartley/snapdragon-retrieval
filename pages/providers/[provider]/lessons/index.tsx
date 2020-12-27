@@ -25,7 +25,7 @@ const Lessons = ({lessons}) => {
         </li>);
     
         return (
-            <Layout title="Lessons" description={`Lessons for ${provider}`} header={provider as string}>
+            <Layout title="Lessons" description={`Lessons for ${provider}`} header={lessons.find(l => l.provider === provider).providerName as string}>
                 <ul>
                     { providerLessons }
                 </ul>
@@ -36,9 +36,15 @@ const Lessons = ({lessons}) => {
 export default Lessons;
 
 export async function getStaticProps() {    
+    const providerLessons = getLessons().map(lesson => {
+        return { 
+            ...lesson,
+            providerName: providers.providersList.find(p => p.slug === lesson.provider).name
+        };
+    });
     return {
       props: {
-        lessons: getLessons()
+        lessons: providerLessons
       },
     }
 }
