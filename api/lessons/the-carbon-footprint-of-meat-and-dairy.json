@@ -148,6 +148,17 @@
           "name": "65"
         }
       ]
+    },
+    {
+      "text": "Beef cattle raised on deforested land produces how many times more emissions than those grazing rich natural pasture?",
+      "unit": "x",
+      "unitDescription": "times",
+      "listCount": -1,
+      "items": [
+        {
+          "name": "12"
+        }
+      ]
     }
   ]
 }
