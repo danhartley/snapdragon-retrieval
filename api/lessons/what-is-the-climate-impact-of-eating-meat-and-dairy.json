@@ -63,7 +63,7 @@
     {
       "sources": [
         {
-          "author": "ucsf",
+          "author": "University of California San Francisco Office of Sustainability (UCSF)",
           "source": "https://sustainability.ucsf.edu/1.713"
         }
       ],
@@ -80,14 +80,14 @@
       "sources": [
         {
           "source": "https://link.springer.com/article/10.1007/s13762-019-02539-5",
-          "author": "ijest"
+          "author": "International Journal of Environmental Science and Technology"
         }
       ]
     },
     {
       "sources": [
         {
-          "author": "e360",
+          "author": "Yale Environment 360",
           "source": "https://e360.yale.edu/features/the-real-price-of-a-chocolate-bar-west-africas-rainforests"
         }
       ],
@@ -110,7 +110,7 @@
       "year": "0",
       "sources": [
         {
-          "author": "energy-education-university-of-calgary",
+          "author": "Energy Education University of Calgary",
           "source": "https://energyeducation.ca/encyclopedia/C_vs_CO2"
         }
       ]
@@ -181,7 +181,7 @@
       ],
       "sources": [
         {
-          "author": "science",
+          "author": "Science (American Association for the Advancement of Science)",
           "source": "https://science.sciencemag.org/content/360/6392/987"
         }
       ]
@@ -257,7 +257,7 @@
       "listCount": 5,
       "sources": [
         {
-          "author": "wikipedia",
+          "author": "Wikipedia",
           "source": "https://en.wikipedia.org/wiki/Greenhouse_gas"
         }
       ],
@@ -351,7 +351,7 @@
       ],
       "sources": [
         {
-          "author": "ourworldindata",
+          "author": "Our World in Data",
           "source": "https://ourworldindata.org/food-choice-vs-eating-local"
         }
       ]
@@ -383,7 +383,7 @@
       "listCount": 4,
       "sources": [
         {
-          "author": "fao",
+          "author": "The Food and Agriculture Organization (FAO)",
           "source": "http://www.fao.org/home/en/"
         }
       ]
@@ -401,11 +401,11 @@
       ],
       "sources": [
         {
-          "author": "fao",
+          "author": "The Food and Agriculture Organization (FAO)",
           "source": "http://www.fao.org/3/a-ap106e.pdf"
         },
         {
-          "author": "science",
+          "author": "Science (American Association for the Advancement of Science)",
           "source": "https://science.sciencemag.org/content/363/6429/eaaw9908"
         }
       ]
@@ -423,7 +423,7 @@
       ],
       "sources": [
         {
-          "author": "ourworldindata",
+          "author": "Our World in Data",
           "source": "https://ourworldindata.org/environmental-impacts-of-food"
         }
       ]

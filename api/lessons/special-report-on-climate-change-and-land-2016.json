@@ -53,7 +53,7 @@
       "answer": "18",
       "sources": [
         {
-          "author": "science",
+          "author": "Science (American Association for the Advancement of Science)",
           "source": "http://josephpoore.com/Science%20360%206392%20987%20-%20Accepted%20Manuscript.pdf"
         }
       ]
@@ -102,7 +102,7 @@
       "listCount": 5,
       "sources": [
         {
-          "author": "the-guardian",
+          "author": "The Guardian",
           "source": "https://www.theguardian.com/environment/2020/dec/23/organic-meat-production-just-as-bad-for-climate-study-finds"
         }
       ],
@@ -144,7 +144,7 @@
       "sources": [
         {
           "source": "https://www.nature.com/articles/s41467-020-19474-6",
-          "author": "nature"
+          "author": "Nature"
         }
       ]
     }

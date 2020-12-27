@@ -117,7 +117,7 @@ collections:
           collection: "authors"
           search_fields: ["authorsList.*.name"]
           display_fields: ["authorsList.*.name"]
-          value_field: "authorsList.*.slug"
+          value_field: "authorsList.*.name"
         - { label: "source", name: "source", widget: "string" }
 
     # Ordered lists
@@ -161,7 +161,7 @@ collections:
           collection: "authors"
           search_fields: ["authorsList.*.name"]
           display_fields: ["authorsList.*.name"]
-          value_field: "authorsList.*.slug"
+          value_field: "authorsList.*.name"
         - { label: "source", name: "source", widget: "string" }
 
     # Unordered lists
@@ -215,7 +215,7 @@ collections:
           collection: "authors"
           search_fields: ["authorsList.*.name"]
           display_fields: ["authorsList.*.name"]
-          value_field: "authorsList.*.slug"
+          value_field: "authorsList.*.name"
         - { label: "source", name: "source", widget: "string" }
         # fields:
         # - { label: "name", name: "name", widget: "string" }
