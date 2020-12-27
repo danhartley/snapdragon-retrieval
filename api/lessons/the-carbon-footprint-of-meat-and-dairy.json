@@ -126,6 +126,17 @@
           "name": "Methane"
         }
       ]
+    },
+    {
+      "text": "What is the estimated annual spend on agricultural subsidies, in dollars?",
+      "unit": "$",
+      "unitDescription": "$",
+      "listCount": 1,
+      "items": [
+        {
+          "name": "500 billion"
+        }
+      ]
     }
   ]
 }
