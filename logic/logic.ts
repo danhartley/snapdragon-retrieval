@@ -25,8 +25,8 @@ const mark = (lesson, placeholder = '---') => {
         case enums.QUESTION_TYPE.ORDERED:
             score = markUnordered(lesson, placeholder);
             score.markedAnswerList.forEach((score, index) => {
-                score.isOrdered = score.name === lesson.question.items[index].name ? enums.TRILEAN.TRUE : enums.TRILEAN.FALSE;
-                score.correct = score.isOrdered === "false" ? lesson.question.items[index].name : null;
+                score.isOrdered = sanitise(score.name) === sanitise(lesson.question.items[index].name) ? enums.TRILEAN.TRUE : enums.TRILEAN.FALSE;
+                score.correct = score.isOrdered === "false" ? sanitise(lesson.question.items[index].name) : null;
             });
             score.isOrderedCorrect = lesson.answerList.length === score.markedAnswerList.filter(score => score.isOrdered === enums.TRILEAN.TRUE).length;
             return score;
@@ -44,7 +44,7 @@ const markOrdered = (lesson, placeholder = '---') => {
     const score = mark(lesson, placeholder);
     score.markedAnswerList.forEach((score, index) => {
         score.isOrdered = sanitise(score.name) === sanitise(lesson.question.items[index].name) ? enums.TRILEAN.TRUE : enums.TRILEAN.FALSE;
-        score.correct = !score.isOrdered ? lesson.question.items[index].name : null;
+        score.correct = !score.isOrdered ? sanitise(lesson.question.items[index].name) : null;
     });
     return score;
 };
