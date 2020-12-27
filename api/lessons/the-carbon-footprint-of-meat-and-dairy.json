@@ -137,6 +137,17 @@
           "name": "500 billion"
         }
       ]
+    },
+    {
+      "text": " If the most harmful half of meat and dairy production was replaced by plant-based food, it would deliver what percent of the benefit?",
+      "unit": "%",
+      "unitDescription": "%",
+      "listCount": 1,
+      "items": [
+        {
+          "name": "65"
+        }
+      ]
     }
   ]
 }
