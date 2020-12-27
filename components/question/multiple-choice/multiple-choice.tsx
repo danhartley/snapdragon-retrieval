@@ -29,7 +29,13 @@ const MultipleChoice = ({question, type, PLACEHOLDER, markTest, setQuestion}) =>
         case enums.MULTIPLE_CHOICE_TYPE.PIE:
             const options = question.items.map(answer => {
                 const style = `--value:${answer.name}; --unit:1${question.unit};` as any;
-                const css = answer.state === enums.TRILEAN.TRUE ? styles.correct : answer.state === enums.TRILEAN.FALSE ? styles.incorrect : null;
+                const css = answer.state === enums.TRILEAN.TRUE 
+                            ? styles.correct 
+                            : answer.state === enums.TRILEAN.FALSE 
+                                ? styles.incorrect 
+                                : answer.name === question.answer && answer.state === enums.TRILEAN.UNKNOWN
+                                    ? styles.correctAnswer
+                                    : null;
                 return  <li class={styles.pie}>
                             <button onClick={e => handleCheckAnswers(answer.name)} class={`${styles.pie} ${css}`} style={style} >
                                 <span>{answer.name}</span>
@@ -41,7 +47,15 @@ const MultipleChoice = ({question, type, PLACEHOLDER, markTest, setQuestion}) =>
             break;
         case enums.MULTIPLE_CHOICE_TYPE.RADIO_BUTTONS:
             const listItems = question.items.map(answer => {
-                const isCorrect = answer.state ? answer.state === enums.TRILEAN.TRUE ? styles.correct : answer.state === enums.TRILEAN.FALSE ? styles.incorrect : null : null;
+                const isCorrect = answer.state 
+                                    ? answer.state === enums.TRILEAN.TRUE 
+                                        ? styles.correct 
+                                        : answer.state === enums.TRILEAN.FALSE 
+                                            ? styles.incorrect 
+                                            : answer.name === question.answer && answer.state === enums.TRILEAN.UNKNOWN
+                                                ? styles.correctAnswer
+                                                : null
+                                    : null;
                 return <li key={answer.name} class={`${styles.rbList} ${isCorrect}`}>
                         <input onClick={e => handleCheckAnswers(answer.name)} type="radio" id={answer.name} name="answer" value={answer.name} />
                         <label htmlFor={answer.name}>

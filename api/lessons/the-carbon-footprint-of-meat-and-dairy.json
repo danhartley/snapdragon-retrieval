@@ -45,7 +45,7 @@
     },
     {
       "text": "The lowest impact beef requires 36 times more land than peas. And many times more greenhouse gases?",
-      "unit": "times",
+      "unit": "x",
       "unitDescription": "times",
       "listCount": 4,
       "answer": "6",

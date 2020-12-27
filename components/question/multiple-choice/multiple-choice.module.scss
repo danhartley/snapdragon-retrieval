@@ -41,6 +41,11 @@
         &.incorrect { 
             @include one-cross();
         }
+        &.correctAnswer { 
+            @include one-tick();
+            border-bottom: 3px solid rgba($colour,.4);  
+            color: rgba($colour, 0.4);
+        }
     }
 }
 
@@ -56,6 +61,11 @@
     }
     &.correct { 
         @include one-tick();
+    }
+    &.correctAnswer { 
+        @include one-tick();
+        border-bottom: 3px solid rgba($colour,.4);  
+        color: rgba($colour, 0.4);
     }
     input {
         border: 0.5rem solid rgba(0, 0, 0, 0.3);
