@@ -14,7 +14,7 @@
       "answer": "18",
       "sources": [
         {
-          "author": "Science (American Association for the Advancement of Science)",
+          "author": "science",
           "source": "http://josephpoore.com/Science%20360%206392%20987%20-%20Accepted%20Manuscript.pdf"
         }
       ]
@@ -45,8 +45,8 @@
     },
     {
       "text": "The lowest impact beef requires 36 times more land than peas. And many times more greenhouse gases?",
-      "unit": "%",
-      "unitDescription": "%",
+      "unit": "times",
+      "unitDescription": "times",
       "listCount": 4,
       "answer": "6",
       "answers": [
@@ -66,7 +66,7 @@
       "listCount": 5,
       "sources": [
         {
-          "author": "The Guardian",
+          "author": "the-guardian",
           "source": "https://www.theguardian.com/environment/2020/dec/23/organic-meat-production-just-as-bad-for-climate-study-finds"
         }
       ],
@@ -108,10 +108,10 @@
       "sources": [
         {
           "source": "https://www.nature.com/articles/s41467-020-19474-6",
-          "author": "Nature"
+          "author": "nature"
         },
         {
-          "author": "The Guardian",
+          "author": "the-guardian",
           "source": "https://www.theguardian.com/environment/2020/dec/23/organic-meat-production-just-as-bad-for-climate-study-finds"
         }
       ]
