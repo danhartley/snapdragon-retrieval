@@ -17,5 +17,19 @@
         "55"
       ]
     }
+  ],
+  "cards": [
+    {
+      "term": "What contribution does food make to greenhouse gas emissions?",
+      "definition": "Agriculture contributes 18.4%, but the food system as a whole – including processing, packaging, transport and retail - accounts for nearly one quarter of emissions.",
+      "year": "2019",
+      "sources": [
+        {
+          "author": "Our World in Data",
+          "source": "https://ourworldindata.org/food-ghg-emissions"
+        }
+      ],
+      "text": "ghg emissions from food"
+    }
   ]
 }
