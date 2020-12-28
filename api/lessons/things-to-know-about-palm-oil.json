@@ -26,6 +26,16 @@
         "75",
         "100"
       ]
+    },
+    {
+      "text": "Palm oil is an efficient crop, supplying:",
+      "answer": "35% of demand on 10% of the land",
+      "answers": [
+        "25% of demand on 10% of the land",
+        "35% of demand on 20% of the land",
+        "25% of demand on 20% of the land"
+      ],
+      "listCount": 4
     }
   ],
   "cards": [
