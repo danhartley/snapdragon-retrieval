@@ -83,13 +83,23 @@
       "answer": "RNA"
     },
     {
-      "text": "What type of vaccine is Novavax and Chinese Academy of Sciences using?",
+      "text": "What type of vaccine are Novavax and Chinese Academy of Sciences using?",
       "answers": [
         "viral vector",
         "'whole' virus",
         "RNA"
       ],
       "answer": "protein subunit",
+      "listCount": 4
+    },
+    {
+      "text": "What type of vaccine are Sinovac, Bharat Biotech and Sinopharm using?",
+      "answers": [
+        "viral vector",
+        "RNA",
+        "protein subunit"
+      ],
+      "answer": "'whole' virus",
       "listCount": 4
     }
   ]
