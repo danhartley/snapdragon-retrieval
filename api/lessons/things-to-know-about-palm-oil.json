@@ -83,6 +83,21 @@
           "name": "Deforestation"
         }
       ]
+    },
+    {
+      "text": "Name 3 already endangered species whose habitat is threatened by increased palm oil production.",
+      "listCount": 2,
+      "items": [
+        {
+          "name": "Orangutan"
+        },
+        {
+          "name": "Pygmy elephant"
+        },
+        {
+          "name": "Sumatran rhino"
+        }
+      ]
     }
   ]
 }
