@@ -1,0 +1,14 @@
+{
+  "provider": "wellcome",
+  "title": "What different types of Covid-19 vaccine are there?",
+  "slug": "what-different-types-covid-19-vaccine-are-there",
+  "source": "https://wellcome.org/news/what-different-types-covid-19-vaccine-are-there",
+  "cards": [
+    {
+      "term": "How do vaccines work?",
+      "definition": "All vaccines work by teaching our bodies to recognise and fight the pathogen in a safe way. They encourage our immune system to produce antibodies, T-cells or both, so that if we encounter the infection later our immune system knows how to defend against it. ",
+      "text": "how vaccines work",
+      "year": "2020"
+    }
+  ]
+}
