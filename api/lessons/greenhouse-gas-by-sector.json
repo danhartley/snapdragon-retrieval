@@ -16,6 +16,19 @@
         "45",
         "55"
       ]
+    },
+    {
+      "text": "What proportion of ghg emissions does the energy sector account for?",
+      "unit": "%",
+      "unitDescription": "%",
+      "listCount": 5,
+      "answer": "75",
+      "answers": [
+        "15",
+        "25",
+        "50",
+        "65"
+      ]
     }
   ],
   "cards": [
