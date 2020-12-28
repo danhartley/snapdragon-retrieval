@@ -1,0 +1,31 @@
+{
+  "provider": "wwf",
+  "title": "Things to know about palm oil",
+  "slug": "things-to-know-about-palm-oil",
+  "source": "https://www.wwf.org.uk/updates/8-things-know-about-palm-oil",
+  "multiplechoice": [
+    {
+      "text": "Which 2 countries make up 85% of global supply?",
+      "answer": " Indonesia and Malaysia",
+      "answers": [
+        "Indonesia and India",
+        "Malaysia and China",
+        "China and India",
+        "Kenya and Malaysia"
+      ],
+      "listCount": 5
+    },
+    {
+      "text": "Palm oil is in roughly what percentage of packaged products?",
+      "unit": "%",
+      "unitDescription": "%",
+      "listCount": 4,
+      "answer": "50",
+      "answers": [
+        "25",
+        "75",
+        "100"
+      ]
+    }
+  ]
+}
