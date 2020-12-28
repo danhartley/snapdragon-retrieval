@@ -10,5 +10,25 @@
       "text": "how vaccines work",
       "year": "2020"
     }
+  ],
+  "unranked": [
+    {
+      "text": "What are the 4 approaches to vaccination that are most advanced?",
+      "listCount": 4,
+      "items": [
+        {
+          "name": "Viral vector"
+        },
+        {
+          "name": "RNA"
+        },
+        {
+          "name": "'Whole' virus"
+        },
+        {
+          "name": "Protein subunit"
+        }
+      ]
+    }
   ]
 }
