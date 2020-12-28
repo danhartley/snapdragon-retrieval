@@ -36,5 +36,17 @@
         }
       ]
     }
+  ],
+  "multiplechoice": [
+    {
+      "text": "What type of vaccine is Oxford-AstraZeneca?",
+      "listCount": 4,
+      "answer": "Viral vector",
+      "answers": [
+        "RNA",
+        "'whole' virus",
+        "protein subunit"
+      ]
+    }
   ]
 }
