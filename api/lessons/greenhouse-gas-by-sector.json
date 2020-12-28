@@ -1,0 +1,21 @@
+{
+  "provider": "our-world-in-data",
+  "title": "Greenhouse gas by sector",
+  "slug": "ghg-emissions-by-sector",
+  "source": "https://ourworldindata.org/ghg-emissions-by-sector",
+  "multiplechoice": [
+    {
+      "text": "How many billion tonnes of greenhouse gases does the world emit each year?",
+      "unit": "CO2eq",
+      "unitDescription": "CO2 equivalents",
+      "listCount": 5,
+      "answer": "50",
+      "answers": [
+        "30",
+        "35",
+        "45",
+        "55"
+      ]
+    }
+  ]
+}
