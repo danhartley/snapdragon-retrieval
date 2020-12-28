@@ -35,5 +35,18 @@
       "text": "Why palm oil is useful",
       "year": "2020"
     }
+  ],
+  "unranked": [
+    {
+      "text": "Alternative crop plants that yield oil typically yield .4-.7 tonnes per hectare. What is palm oil's yield?",
+      "unit": "t/ha",
+      "unitDescription": "tonnes per hectare",
+      "listCount": 1,
+      "items": [
+        {
+          "name": "3.3"
+        }
+      ]
+    }
   ]
 }
