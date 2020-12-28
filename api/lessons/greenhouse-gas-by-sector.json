@@ -28,6 +28,12 @@
         "25",
         "50",
         "65"
+      ],
+      "sources": [
+        {
+          "author": "Climate Watch",
+          "source": "https://www.climatewatchdata.org/ghg-emissions?end_year=2017&start_year=1990"
+        }
       ]
     }
   ],
