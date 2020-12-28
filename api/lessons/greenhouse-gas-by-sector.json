@@ -76,6 +76,41 @@
         }
       ],
       "sources": []
+    },
+    {
+      "text": "Rank shipping, pipeline, road, rail, and aviation transport emissions in ascending order.",
+      "type": "ordered",
+      "unit": "%",
+      "unitDescription": "%",
+      "listCount": 5,
+      "items": [
+        {
+          "rank": 1,
+          "name": "Pipeline",
+          "value": ".3"
+        },
+        {
+          "rank": 2,
+          "name": "Rail",
+          "value": ".4"
+        },
+        {
+          "rank": 3,
+          "name": "Shipping",
+          "value": "1.7"
+        },
+        {
+          "rank": 4,
+          "name": "Aviation",
+          "value": "1.9"
+        },
+        {
+          "rank": 5,
+          "name": "Road",
+          "value": "11.9"
+        }
+      ]
     }
-  ]
+  ],
+  "unranked": []
 }
