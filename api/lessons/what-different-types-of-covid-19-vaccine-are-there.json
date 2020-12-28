@@ -9,6 +9,12 @@
       "definition": "All vaccines work by teaching our bodies to recognise and fight the pathogen in a safe way. They encourage our immune system to produce antibodies, T-cells or both, so that if we encounter the infection later our immune system knows how to defend against it. ",
       "text": "how vaccines work",
       "year": "2020"
+    },
+    {
+      "term": "How do viral vector vaccines work?",
+      "definition": "A harmless virus is altered by introducing part of the disease-causing virus’ genetic code, such as the code for Covid-19’s ‘spike’ protein.   The harmless virus transports the code into our cells which then start to produce the protein.  This triggers an immune response, priming our immune system to attack the real virus later.",
+      "text": "viral vector vaccines",
+      "year": "2020"
     }
   ],
   "unranked": [
