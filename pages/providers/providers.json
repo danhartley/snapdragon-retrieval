@@ -1,16 +1,8 @@
 {
   "providersList": [
     {
-      "name": "snapdragon",
-      "slug": "snapdragon"
-    },
-    {
       "name": "carbon brief",
       "slug": "carbonbrief"
-    },
-    {
-      "name": "our world in data",
-      "slug": "our-world-in-data"
     },
     {
       "name": "the guardian",
