@@ -35,6 +35,17 @@
           "source": "https://www.climatewatchdata.org/ghg-emissions?end_year=2017&start_year=1990"
         }
       ]
+    },
+    {
+      "text": "Energy use in private and commercial buildings contribute 17.5% of emissions, but in what proportion?",
+      "unit": "%",
+      "unitDescription": "%",
+      "listCount": 2,
+      "answer": "Residential 10.9%, Commercial 6.6% ",
+      "answers": [
+        "Residential 6.6%",
+        "Commercial 10.9%"
+      ]
     }
   ],
   "cards": [
