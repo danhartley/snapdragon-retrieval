@@ -15,6 +15,12 @@
       "definition": "A harmless virus is altered by introducing part of the disease-causing virus’ genetic code, such as the code for Covid-19’s ‘spike’ protein.   The harmless virus transports the code into our cells which then start to produce the protein.  This triggers an immune response, priming our immune system to attack the real virus later.",
       "text": "viral vector vaccines",
       "year": "2020"
+    },
+    {
+      "term": "How do RNA vaccines work?",
+      "definition": "Messenger RNA is a sequence of genetic code which our bodies use all the time – it tells our cells what proteins to build so they can function.   To produce an RNA vaccine, scientists develop a synthetic version of the virus’ messenger RNA.   When this is injected into our bodies, cells read it as an instruction to start building the relevant viral protein, for example Covid-19's 'spike' protein. This prompts our immune system to respond, and in doing so it learns how to protect against future Covid-19 infection.",
+      "text": "RNA vaccines",
+      "year": "2020"
     }
   ],
   "unranked": [
