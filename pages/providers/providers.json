@@ -19,6 +19,10 @@
     {
       "name": "intergovernmental panel on climate change",
       "slug": "ipcc"
+    },
+    {
+      "name": "World Wildlife Fund for Nature",
+      "slug": "wwf"
     }
   ]
 }
