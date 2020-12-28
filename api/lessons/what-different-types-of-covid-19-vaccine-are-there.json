@@ -73,7 +73,7 @@
       ]
     },
     {
-      "text": "What type of vaccine does Pfizer-BioNTech and Moderna use?",
+      "text": "What type of vaccine do Pfizer-BioNTech and Moderna use?",
       "listCount": 4,
       "answers": [
         "viral vector",
@@ -81,6 +81,16 @@
         "protein subunit"
       ],
       "answer": "RNA"
+    },
+    {
+      "text": "What type of vaccine is Novavax and Chinese Academy of Sciences using?",
+      "answers": [
+        "viral vector",
+        "'whole' virus",
+        "RNA"
+      ],
+      "answer": "protein subunit",
+      "listCount": 4
     }
   ]
 }
