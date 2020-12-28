@@ -90,6 +90,11 @@
     {
       "name": "International Energy Agency (IEA)",
       "slug": "https://www.iea.org/"
+    },
+    {
+      "slug": "wellcome",
+      "link": "https://wellcome.org/",
+      "name": "The Wellcome Trust"
     }
   ]
 }
