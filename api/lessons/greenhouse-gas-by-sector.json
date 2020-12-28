@@ -1,6 +1,6 @@
 {
   "provider": "our-world-in-data",
-  "title": "Greenhouse gas by sector",
+  "title": "Greenhouse gas emissions by sector",
   "slug": "ghg-emissions-by-sector",
   "source": "https://ourworldindata.org/ghg-emissions-by-sector",
   "multiplechoice": [
@@ -54,6 +54,18 @@
       "term": "Road transport accounts for 11.9% of greenhouse gas emissions. Break this figure down, and explain how it could be mitigated.",
       "definition": "60% of road transport emissions come from passenger travel, 40% from road freight (lorries and trucks). If the whole road transport sector could be fully decarbonised electricity mix, we could reduce global emissions by 11.9%.",
       "text": "impact of transport emissions",
+      "year": "2020",
+      "sources": [
+        {
+          "source": "https://www.iea.org/data-and-statistics/charts/transport-sector-co2-emissions-by-mode-in-the-sustainable-development-scenario-2000-2030",
+          "author": "International Energy Agency (IEA)"
+        }
+      ]
+    },
+    {
+      "term": "Cement production accounts for 3% of greenhouse gases emissions. Why?",
+      "definition": "CO2 is produced as a byproduct of a chemical conversion process used in the production of clinker, a component of cement, and from the prodution of energy required for its manufacture.",
+      "text": "cement emissions",
       "year": "2020"
     }
   ],
