@@ -44,5 +44,32 @@
       ],
       "text": "ghg emissions from food"
     }
+  ],
+  "ranked": [
+    {
+      "text": "Rank the top 3 energy sectors by ghg emissions, highest to lowest (one word for each).",
+      "type": "ordered",
+      "unit": "%",
+      "unitDescription": "%",
+      "listCount": 1,
+      "items": [
+        {
+          "rank": 1,
+          "name": "Industry",
+          "value": "24.2"
+        },
+        {
+          "rank": 2,
+          "name": "Buildings",
+          "value": "17.5"
+        },
+        {
+          "rank": 3,
+          "name": "Transport",
+          "value": "16.2"
+        }
+      ],
+      "sources": []
+    }
   ]
 }
