@@ -61,6 +61,12 @@
       "definition": "Crude palm oil comes from squeezing the fleshy fruit, and palm kernel oil which comes from crushing the kernel, or the stone in the middle of the fruit.",
       "text": "two types of palm oil",
       "year": "2020"
+    },
+    {
+      "term": "What are the benefits of palm oil?",
+      "definition": "Millions of smallholder farmers in emerging economies depend on producing palm oil for their livelihood. It is also a highly efficient crop in terms of land use, and yield.",
+      "text": "oil palm benefits",
+      "year": "2020"
     }
   ],
   "unranked": [
@@ -96,6 +102,21 @@
         },
         {
           "name": "Sumatran rhino"
+        }
+      ]
+    },
+    {
+      "text": "Name 3 benefits of oil palm production",
+      "listCount": 3,
+      "items": [
+        {
+          "name": "High yield"
+        },
+        {
+          "name": "Low land use"
+        },
+        {
+          "name": "Source of income"
         }
       ]
     }
