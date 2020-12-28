@@ -47,12 +47,22 @@
     {
       "text": "What type of vaccine is Oxford-AstraZeneca?",
       "listCount": 4,
-      "answer": "Viral vector",
+      "answer": "viral vector",
       "answers": [
         "RNA",
         "'whole' virus",
         "protein subunit"
       ]
+    },
+    {
+      "text": "What type of vaccine does Pfizer-BioNTech and Moderna use?",
+      "listCount": 4,
+      "answers": [
+        "viral vector",
+        "'whole' virus",
+        "protein subunit"
+      ],
+      "answer": "RNA"
     }
   ]
 }
