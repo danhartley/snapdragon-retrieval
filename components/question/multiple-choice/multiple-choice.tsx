@@ -56,7 +56,8 @@ const MultipleChoice = ({question, type, PLACEHOLDER, markTest, setQuestion}) =>
                                                 ? styles.correctAnswer
                                                 : null
                                     : null;
-                return <li key={answer.name} class={`${styles.rbList} ${isCorrect}`}>
+                const isLong = question.answer.length > 20 ? styles.longEntry : null;
+                return <li key={answer.name} class={`${styles.rbList} ${isCorrect} ${isLong}`}>
                         <input onClick={e => handleCheckAnswers(answer.name)} type="radio" id={answer.name} name="answer" value={answer.name} />
                         <label htmlFor={answer.name}>
                             <span>{answer.name}</span><span>{question.unit ?? ''}</span>
