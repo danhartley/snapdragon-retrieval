@@ -49,6 +49,12 @@
         }
       ],
       "text": "ghg emissions from food"
+    },
+    {
+      "term": "Road transport accounts for 11.9% of greenhouse gas emissions. Break this figure down, and explain how it could be mitigated.",
+      "definition": "60% of road transport emissions come from passenger travel, 40% from road freight (lorries and trucks). If the whole road transport sector could be fully decarbonised electricity mix, we could reduce global emissions by 11.9%.",
+      "text": "impact of transport emissions",
+      "year": "2020"
     }
   ],
   "ranked": [
