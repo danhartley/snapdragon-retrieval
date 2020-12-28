@@ -81,6 +81,11 @@
       "name": "Nature",
       "slug": "nature",
       "link": "https://www.nature.com/"
+    },
+    {
+      "name": "Climate Watch",
+      "link": "https://www.climatewatchdata.org/",
+      "slug": "climatewatch"
     }
   ]
 }
