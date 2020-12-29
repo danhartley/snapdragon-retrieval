@@ -196,10 +196,47 @@ collections:
       - { label: "unit", name: "unit", widget: "string", required: false }
       - { label: "unit description", name: "unitDescription", widget: "string", required: false }
       - { label: "list count", name: "listCount", widget: "number" }
-      - { label: "answer", name: "answer", widget: "string" }
+      - { label: "answer", name: "correct answer", widget: "string" }
       - label: "Answers"
         label_singular: "Answer"
-        name: "answers"
+        name: "incorrect alternatives"
+        widget: "list"
+        allow_add: true
+      - label: "Sources"
+        label_singular: "source"
+        name: "sources"
+        widget: "list"
+        allow_add: true
+        required: false
+        fields:
+        - label: "author"
+          name: "author"
+          widget: "relation"
+          collection: "authors"
+          search_fields: ["authorsList.*.name"]
+          display_fields: ["authorsList.*.name"]
+          value_field: "authorsList.*.name"
+        - { label: "source", name: "source", widget: "string" }
+
+    # Checkboxes
+
+    - label: "Multiple select questions"
+      label_singular: "mutliple select question"
+      name: "multipleselect"
+      widget: "list"
+      allow_add: true
+      fields:
+      - { label: "text", name: "text", widget: "string" }
+      - { label: "unit", name: "unit", widget: "string", required: false }
+      - { label: "unit description", name: "unitDescription", widget: "string", required: false }
+      - { label: "list count", name: "listCount", widget: "number" }
+      - label: "answer", 
+        name: "correct answers", 
+        widget: "list"
+        allow_add: true
+      - label: "Answers"
+        label_singular: "Answer"
+        name: "incorrect alternatives"
         widget: "list"
         allow_add: true
       - label: "Sources"

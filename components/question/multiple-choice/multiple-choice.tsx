@@ -1,6 +1,7 @@
 import { useState, useEffect } from "preact/hooks";
 import { enums } from 'components/enums';
 import { logic } from 'logic/logic';
+
 import styles from 'components/question/multiple-choice/multiple-choice.module.scss';
 
 const MultipleChoice = ({question, type, PLACEHOLDER, markTest, setQuestion}) => {
