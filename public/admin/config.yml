@@ -196,10 +196,10 @@ collections:
       - { label: "unit", name: "unit", widget: "string", required: false }
       - { label: "unit description", name: "unitDescription", widget: "string", required: false }
       - { label: "list count", name: "listCount", widget: "number" }
-      - { label: "answer", name: "correct answer", widget: "string" }
-      - label: "Answers"
-        label_singular: "Answer"
-        name: "incorrect alternatives"
+      - { label: "correct answer", name: "answer", widget: "string" }
+      - label: "Incorrect alternatives"
+        label_singular: "incorrect alternative"
+        name: "answers"
         widget: "list"
         allow_add: true
       - label: "Sources"
@@ -230,13 +230,14 @@ collections:
       - { label: "unit", name: "unit", widget: "string", required: false }
       - { label: "unit description", name: "unitDescription", widget: "string", required: false }
       - { label: "list count", name: "listCount", widget: "number" }
-      - label: "answer", 
-        name: "correct answers", 
+      - label: "Correct Answers"
+        label_singular: "correct answers"
+        name: "answers"
         widget: "list"
         allow_add: true
-      - label: "Answers"
-        label_singular: "Answer"
-        name: "incorrect alternatives"
+      - label: "Incorrect alternatives"
+        label_singular: "incorrect alternative"
+        name: "alternatives"
         widget: "list"
         allow_add: true
       - label: "Sources"

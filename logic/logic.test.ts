@@ -173,3 +173,46 @@ describe('should return getUnusedAnswers list', () => {
         expect(logic.getUnusedAnswers(fullList, answerList)).toStrictEqual(listOfDifferences);
     });
 });
+
+describe('marking markMultipleAnswers questions', () => {
+    let score, question = {
+        "answers": [
+            "requires two doses",
+            "should be stored at 70°",
+            "can be stored for 5 days at 2-8°"
+        ],
+        "alternatives": [
+            "unsuitable for people with weak immune systems",
+            "there are many other similar licenced vaccines"
+        ],
+        items: [
+            {
+              "name": "should be stored at 70°"
+            },
+            {
+              "name": "there are many other similar licenced vaccines"
+            },
+            {
+              "name": "can be stored for 5 days at 2-8°"
+            },
+            {
+              "name": "requires two doses"
+            },
+            {
+              "name": "unsuitable for people with weak immune systems"
+            }
+          ]
+    }, checkedAnswers = [
+        "requires two doses",
+        "should be stored at 70°",
+        "unsuitable for people with weak immune systems",
+    ],
+    lesson = {question, checkedAnswers};
+
+    test.only('check for balance of right and wrong answers', () => {
+        score = logic.markMultipleAnswers(lesson);
+        expect(score.total).toBe(3);
+        expect(score.correct).toBe(0);
+    });
+    
+});

@@ -114,5 +114,20 @@
       "answer": "'whole' virus",
       "listCount": 4
     }
+  ],
+  "multipleselect": [
+    {
+        "text": "The Pfizer-BioNTech vaccine has which characteristics?",
+        "answers": [
+            "requires two doses",
+            "should be stored at 70°",
+            "can be stored for 5 days at 2-8°"
+        ],
+        "alternatives": [
+            "unsuitable for people with weak immune systems",
+            "there are many other similar licenced vaccines"
+        ],
+        "listCount": 5
+      }
   ]
 }

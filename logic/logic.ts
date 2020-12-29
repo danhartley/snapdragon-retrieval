@@ -49,6 +49,28 @@ const markOrdered = (lesson, placeholder = '---') => {
     return score;
 };
 
+const markMultipleAnswers = (lesson) => {
+    
+    const {question, checkedAnswers} = lesson;
+
+    question.items.forEach(answer => {
+        if(checkedAnswers.indexOf(answer.name) > -1) {
+            answer.state = question.answers.indexOf(answer.name) > -1
+                ? enums.TRILEAN.TRUE
+                : enums.TRILEAN.FALSE
+        } else {
+            answer.state = question.answers.indexOf(answer.name) > -1
+                ? enums.TRILEAN.FALSE
+                : enums.TRILEAN.UNKNOWN
+        }
+    });
+
+    const rightAnswers = question.items.filter(answer => answer.state === enums.TRILEAN.TRUE).length;
+    const wrongAnswers = question.items.filter(answer => answer.state === enums.TRILEAN.FALSE).length;
+    const score = { total: question.answers.length, correct: (rightAnswers - wrongAnswers), items: question.items };
+    return score;
+};
+
 const next = (direction, currentIndex, length) => {
     let index: number;
     switch(direction) {
@@ -124,6 +146,7 @@ export const logic = {
     mark,
     markUnordered,
     markOrdered,
+    markMultipleAnswers,
     next,
     updateAnswerList,
     getPlaceholders,

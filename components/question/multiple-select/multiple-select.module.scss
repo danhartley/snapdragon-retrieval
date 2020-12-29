@@ -1,0 +1,17 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+@include question-container();
+
+.chkBoxList {
+    @include rb-list-question();
+    max-width: initial;
+    input {
+        border-radius: 0;
+    }
+}
+
+.disableOverlay {
+    pointer-events: none;
+    opacity: .8;
+}

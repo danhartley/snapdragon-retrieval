@@ -6,7 +6,8 @@ enum LESSON_TYPE {
 enum QUESTION_TYPE {
     UNORDERED = "unordered",
     ORDERED = "ordered",
-    MULTIPLE_CHOICE = "multiple choice"
+    MULTIPLE_CHOICE = "multiple choice",
+    MULTIPLE_SELECT = "multiple select"
 };
 
 enum TRILEAN {

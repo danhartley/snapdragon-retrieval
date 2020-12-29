@@ -126,3 +126,29 @@
         visibility: hidden !important;
     }
 }
+
+@mixin rb-list-question() {
+    @include rb-list();        
+    max-width: 200px;
+    min-height: 40px;
+    border-bottom: 3px solid rgba($colour,0);  
+    &.incorrect { 
+        border-bottom: 3px solid rgba($colour,.3);  
+        color: rgba($colour, 0.4);
+        @include one-cross();
+    }
+    &.correct { 
+        @include one-tick();
+    }
+    &.correctAnswer { 
+        @include one-tick();
+        border-bottom: 3px solid rgba($colour,.4);  
+        color: rgba($colour, 0.4);
+    }
+    input {
+        border: 0.5rem solid rgba(0, 0, 0, 0.3);
+    }
+    &.longEntry {
+        max-width: 320px;
+    }
+}

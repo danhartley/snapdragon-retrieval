@@ -1,4 +1,3 @@
-import { useState, useEffect } from "preact/hooks";
 import { enums } from 'components/enums';
 import { logic } from 'logic/logic';
 
@@ -6,11 +5,9 @@ import styles from 'components/question/multiple-choice/multiple-choice.module.s
 
 const MultipleChoice = ({question, type, PLACEHOLDER, markTest, setQuestion}) => {
 
-    const [answerList, setAnswerList] = useState(logic.getPlaceholders(question.listCount, PLACEHOLDER));
-
     question.items = question.items || logic.sortBy(logic.shuffleArray([ ...question.answers.map(a => { return { name: a } }), { name: question.answer } ]), "name");
 
-    const handleCheckAnswers = (response) => {
+    const handleCheckAnswer = (response) => {
         question.response = response;
         question.items = question.items.map(item => {
             return (response === question.answer && response === item.name)
@@ -38,7 +35,7 @@ const MultipleChoice = ({question, type, PLACEHOLDER, markTest, setQuestion}) =>
                                     ? styles.correctAnswer
                                     : null;
                 return  <li class={styles.pie}>
-                            <button onClick={e => handleCheckAnswers(answer.name)} class={`${styles.pie} ${css}`} style={style} >
+                            <button onClick={e => handleCheckAnswer(answer.name)} class={`${styles.pie} ${css}`} style={style} >
                                 <span>{answer.name}</span>
                             </button>
                             <span class={css}></span>
@@ -59,7 +56,7 @@ const MultipleChoice = ({question, type, PLACEHOLDER, markTest, setQuestion}) =>
                                     : null;
                 const isLong = question.answer.length > 20 ? styles.longEntry : null;
                 return <li key={answer.name} class={`${styles.rbList} ${isCorrect} ${isLong}`}>
-                        <input onClick={e => handleCheckAnswers(answer.name)} type="radio" id={answer.name} name="answer" value={answer.name} />
+                        <input onClick={e => handleCheckAnswer(answer.name)} type="radio" id={answer.name} name="answer" value={answer.name} />
                         <label htmlFor={answer.name}>
                             <span>{answer.name}</span><span>{question.unit ?? ''}</span>
                         </label>
@@ -68,10 +65,6 @@ const MultipleChoice = ({question, type, PLACEHOLDER, markTest, setQuestion}) =>
             format = <ul class={question.response ? styles.disableOverlay : null}>{listItems}</ul>
             break;
     }
-
-    useEffect(() => {
-        setAnswerList(logic.getPlaceholders(question.listCount, PLACEHOLDER));
-    },[question.text]);
 
     return (
         <section class={styles.container}>            

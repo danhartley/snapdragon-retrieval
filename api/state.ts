@@ -62,6 +62,9 @@ export const getScore = (score: any) => {
     } else if (score.isCorrect) {
         total++;
         correct++;
+    } else {
+        total = score.total;
+        correct = score.correct;
     }
     return { total, correct };
 }

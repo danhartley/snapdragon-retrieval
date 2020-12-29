@@ -3,6 +3,7 @@ import { logic } from 'logic/logic';
 import { useLocalStorageState, getScore } from 'api/state';
 import { enums } from 'components/enums';
 import MultipleChoice from 'components/question/multiple-choice/multiple-choice';
+import MultipleSelect from 'components/question/multiple-select/multiple-select';
 import OrderedSelections from 'components/question/ordered/ordered';
 import Sources from 'components/question/source';
 
@@ -60,6 +61,10 @@ export const Question = ({lesson}) => {
         case enums.QUESTION_TYPE.MULTIPLE_CHOICE:
             format = <MultipleChoice setQuestion={setQuestion} question={question} type={question.unit === "%" ? enums.MULTIPLE_CHOICE_TYPE.PIE : enums.MULTIPLE_CHOICE_TYPE.RADIO_BUTTONS} PLACEHOLDER={PLACEHOLDER} markTest={(score) => markTest(score)} />
             break;
+        case enums.QUESTION_TYPE.MULTIPLE_SELECT:
+            format = <MultipleSelect setQuestion={setQuestion} question={question} markTest={(score) => markTest(score)} />
+            break;
+
     }
 
     return (
