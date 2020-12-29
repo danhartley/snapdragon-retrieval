@@ -129,13 +129,13 @@ collections:
       allow_add: true
       fields:
       - { label: "text", name: "text", widget: "string" }
-      - label: "lesson type"
-        name: "type"
-        widget: "relation"
-        collection: "questions"
-        search_fields: ["questionTypes.*.name"]
-        display_fields: ["questionTypes.*.name"]
-        value_field: "questionTypes.*.name"
+      # - label: "lesson type"
+      #   name: "type"
+      #   widget: "relation"
+      #   collection: "questions"
+      #   search_fields: ["questionTypes.*.name"]
+      #   display_fields: ["questionTypes.*.name"]
+      #   value_field: "questionTypes.*.name"
       - { label: "unit", name: "unit", widget: "string", required: false }
       - { label: "unit description", name: "unitDescription", widget: "string", required: false }      
       - { label: "list count", name: "listCount", widget: "number" }
@@ -217,5 +217,3 @@ collections:
           display_fields: ["authorsList.*.name"]
           value_field: "authorsList.*.name"
         - { label: "source", name: "source", widget: "string" }
-        # fields:
-        # - { label: "name", name: "name", widget: "string" }
