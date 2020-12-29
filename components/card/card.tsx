@@ -30,12 +30,16 @@ export const Card = ({lesson}) => {
         <div><a href={card.source} target="_blank">Additional source (opens in a new tab)</a></div>
         <div>Author: {card.author}</div>
         </>
-    }): null
+    }): null;
+
+    const isDefinitionLong = card.definition.length > 200;
 
     return (
         <div class={styles.cards}>
             <section>
-                <div onClick={flipCard} class={`${styles.term} ${face.value === card.definition ? styles.definition : null}`}><span>{face.value}</span></div>
+                <div onClick={flipCard} class={`${styles.term} ${face.value === card.definition ? styles.definition : null}`}>
+                    <span class={isDefinitionLong ? styles.longDefinition : null}>{face.value}</span>
+                </div>
             </section>
             <section class={styles.controls}>
                 <button aria-label="Got to previous card" data-direction={enums.DIRECTION.Previous} onClick={nextCard} class={styles.previous}></button>

@@ -23,7 +23,14 @@
         background-color: rgba($colour, .8);
         color: rgba($colour-light, .8);
         cursor: pointer;
-        & > span { padding: 10px; }
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+        & > span { 
+            display: flex;
+            align-items: center;
+            height: inherit;
+            margin: 10px;
+        }
         @media (min-width: $narrow) {
             & > span { padding: 30px; }
         }
@@ -34,6 +41,11 @@
             background-color: rgba($colour-light, .8);
             color: rgba($colour, .8);
             border: 1px solid rgba($colour, .3);
+            .longDefinition {
+                @media (max-width: 599px) {
+                    align-items: flex-start;
+                }
+            }
         }
     }
     .controls {

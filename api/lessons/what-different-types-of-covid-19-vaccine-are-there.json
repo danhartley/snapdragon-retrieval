@@ -128,6 +128,19 @@
             "there are many other similar licenced vaccines"
         ],
         "listCount": 5
-      }
+    },
+    {
+        "text": "The Oxford-AstraZeneca vaccine has which characteristics?",
+        "answers": [
+            "requires two doses",
+            "can be stored at 2-8° indefinitely",
+            "technology used to treat ebola"
+        ],
+        "alternatives": [
+            "has 95% efficacy",
+            "suitable for everyone"
+        ],
+        "listCount": 5
+    }
   ]
 }
