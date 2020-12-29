@@ -1,0 +1,118 @@
+{
+  "provider": "wellcome",
+  "title": "What different types of Covid-19 vaccine are there?",
+  "slug": "what-different-types-covid-19-vaccine-are-there",
+  "source": "https://wellcome.org/news/what-different-types-covid-19-vaccine-are-there",
+  "cards": [
+    {
+      "term": "How do vaccines work?",
+      "definition": "All vaccines work by teaching our bodies to recognise and fight the pathogen in a safe way. They encourage our immune system to produce antibodies, T-cells or both, so that if we encounter the infection later our immune system knows how to defend against it. ",
+      "text": "how vaccines work",
+      "year": "2020"
+    },
+    {
+      "term": "How do viral vector vaccines work?",
+      "definition": "A harmless virus is altered by introducing part of the disease-causing virus’ genetic code, such as the code for Covid-19’s ‘spike’ protein.   The harmless virus transports the code into our cells which then start to produce the protein.  This triggers an immune response, priming our immune system to attack the real virus later.",
+      "text": "viral vector vaccines",
+      "year": "2020"
+    },
+    {
+      "term": "How do RNA vaccines work?",
+      "definition": "Messenger RNA is a sequence of genetic code which our bodies use all the time – it tells our cells what proteins to build so they can function.   To produce an RNA vaccine, scientists develop a synthetic version of the virus’ messenger RNA.   When this is injected into our bodies, cells read it as an instruction to start building the relevant viral protein, for example Covid-19's 'spike' protein. This prompts our immune system to respond, and in doing so it learns how to protect against future Covid-19 infection.",
+      "text": "RNA vaccines",
+      "year": "2020"
+    },
+    {
+      "term": "What first has the Pfizer-BioNTech vaccine achieved?",
+      "definition": "It is the first RNA vaccine ever to be licensed for use against any disease.",
+      "text": "first RNA vaccine",
+      "year": "2020"
+    },
+    {
+      "term": "How do ‘whole’ virus vaccines work?",
+      "definition": "Inactivated – a version of the virus is inactivated by being exposed to heat, chemicals or radiation.  Virus-like particle – a version of the virus, closely resembling the real thing, is created artificially, however it doesn’t contain any genetic material, so it’s not infectious.    These vaccines cannot cause the disease, but will cause our bodies to produce an immune response which will protect against future infection. ",
+      "text": "‘whole’ virus vaccines",
+      "year": "2020"
+    },
+    {
+      "term": "How do protein subunit vaccines work?",
+      "definition": "A small piece of the virus’ genetic code is inserted into another cell – perhaps a bacterial, yeast, mammalian or insect cell. The code contains instructions for this cell to start building the virus protein, for example the Covid-19 ‘spike’ protein.  Cells like this act as factories, building large quantities of the protein – which is then extracted, purified and used as the active ingredient in the vaccine.   When it is injected, our bodies learn to recognise the viral protein so that they can mount an immune response which protects against future infection. ",
+      "text": "protein subunit vaccines",
+      "year": "2020"
+    },
+    {
+      "term": "State 4 reasons why we need multiple vaccines for Covid-19",
+      "definition": "1. We need a range of vaccines that can work for a range of people. 2. We need to produce billions of vaccine doses to protect those most at risk. 3. We need vaccines that can reach everyone, everywhere. 4. We need vaccines that are available to all countries and supported through COVAX.",
+      "text": "4 reasons for multiple vaccines",
+      "year": "2020",
+      "sources": [
+        {
+          "author": "The Wellcome Trust",
+          "source": "https://wellcome.org/news/four-reasons-why-we-need-multiple-vaccines-covid-19"
+        }
+      ]
+    }
+  ],
+  "unranked": [
+    {
+      "text": "What are the 4 approaches to vaccination that are most advanced?",
+      "listCount": 4,
+      "items": [
+        {
+          "name": "Viral vector"
+        },
+        {
+          "name": "RNA"
+        },
+        {
+          "name": "'Whole' virus"
+        },
+        {
+          "name": "Protein subunit"
+        }
+      ]
+    }
+  ],
+  "multiplechoice": [
+    {
+      "text": "What type of vaccine is Oxford-AstraZeneca?",
+      "listCount": 4,
+      "answer": "viral vector",
+      "answers": [
+        "RNA",
+        "'whole' virus",
+        "protein subunit"
+      ]
+    },
+    {
+      "text": "What type of vaccine do Pfizer-BioNTech and Moderna use?",
+      "listCount": 4,
+      "answers": [
+        "viral vector",
+        "'whole' virus",
+        "protein subunit"
+      ],
+      "answer": "RNA"
+    },
+    {
+      "text": "What type of vaccine are Novavax and Chinese Academy of Sciences using?",
+      "answers": [
+        "viral vector",
+        "'whole' virus",
+        "RNA"
+      ],
+      "answer": "protein subunit",
+      "listCount": 4
+    },
+    {
+      "text": "What type of vaccine are Sinovac, Bharat Biotech and Sinopharm using?",
+      "answers": [
+        "viral vector",
+        "RNA",
+        "protein subunit"
+      ],
+      "answer": "'whole' virus",
+      "listCount": 4
+    }
+  ]
+}
