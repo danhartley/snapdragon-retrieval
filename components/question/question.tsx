@@ -62,7 +62,7 @@ export const Question = ({lesson}) => {
             format = <MultipleChoice setQuestion={setQuestion} question={question} type={question.unit === "%" ? enums.MULTIPLE_CHOICE_TYPE.PIE : enums.MULTIPLE_CHOICE_TYPE.RADIO_BUTTONS} PLACEHOLDER={PLACEHOLDER} markTest={(score) => markTest(score)} />
             break;
         case enums.QUESTION_TYPE.MULTIPLE_SELECT:
-            format = <MultipleSelect setQuestion={setQuestion} question={question} markTest={(score) => markTest(score)} />
+            format = <MultipleSelect setQuestion={setQuestion} question={question} markTest={(score) => markTest(score)} testState={testState} />
             break;
 
     }

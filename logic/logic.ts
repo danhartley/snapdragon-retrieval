@@ -6,7 +6,7 @@ const sanitise = str => {
 
 const markUnordered = (lesson, placeholder) => {
     const score = { markedAnswerList: [], isCorrect: false, isOrderedCorrect: false };
-    const unusedCorrectAnswers = getUnusedAnswers(lesson.question.items.map(i => i.name), lesson.answerList.map(a => a.name));
+    const unusedCorrectAnswers = getUnusedAnswers(lesson.question.items.map(i => sanitise(i.name)), lesson.answerList.map(a => sanitise(a.name)));
     score.markedAnswerList = lesson.answerList.filter(answer => answer.name !== placeholder).map(answer => {
         const score = lesson.question.items.find(item => sanitise(item.name) === sanitise(answer.name));
         return score 

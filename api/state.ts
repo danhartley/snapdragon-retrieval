@@ -59,9 +59,11 @@ export const getScore = (score: any) => {
                     correct++;
             }
         });
-    } else if (score.isCorrect) {
-        total++;
-        correct++;
+    } else if (score.hasOwnProperty('isCorrect')) {
+        if(score.isCorrect) {
+            total++;
+            correct++;
+        }
     } else {
         total = score.total;
         correct = score.correct;
