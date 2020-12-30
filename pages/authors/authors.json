@@ -117,6 +117,11 @@
       "name": "Harvard T.H. Chan School of Public Health"
     },
     {
+      "slug": "who",
+      "link": "https://www.who.int/",
+      "name": "World Health Organisation (WHO)"
+    },
+    {
       "slug": "pik-potsdam",
       "link": "https://www.pik-potsdam.de/en",
       "name": "Potsdam Institute for Climate Impact Research"

@@ -1,6 +1,167 @@
 {
   "provider": "eat",
-  "title": "EAT-Lancet Commission on Healthy Diets From Sustainable Food Systems",
+  "title": "EAT-Lancet: Healthy Diets From Sustainable Food Systems",
   "slug": "eat-lancet-commission-summary-report",
-  "source": "https://eatforum.org/eat-lancet-commission/eat-lancet-commission-summary-report/"
+  "source": "https://eatforum.org/eat-lancet-commission/eat-lancet-commission-summary-report/",
+  "unranked": [
+        {
+        "text": "What does SDG stand for?",
+        "listCount": 1,
+        "items": [
+            {
+            "name": "Sustainable Development Goal"
+            }]
+        },
+        {
+        "text": "The report anticipates a world population of what size by 2050?",
+        "listCount": 1,
+        "items": [
+            {
+            "name": "10 billion"
+            }]
+        },
+        {
+        "text": "Which disease has almost doubled in the past 30 years due to the increase in overweight and obese people?",
+        "listCount": 1,
+        "items": [
+            {
+            "name": "Diabetes"
+            }]
+        },
+        {
+        "text": "What is the single strongest lever to optimise human health and environmental sustainability on Earth, according to the report?",
+        "listCount": 1,
+        "items": [
+            {
+            "name": "Food"
+            }]
+        },
+        {
+            "text": "The report focuses on which two 'end-points' of the global food system?",
+            "listCount": 2,
+            "items": [
+                {
+                    "name": "healthy diets"
+                },
+                {
+                    "name": "production"
+                }
+            ]
+        },
+        {
+            "text": "Healthy diets and food production disproportionately impact what?",
+            "listCount": 2,
+            "items": [
+                {
+                    "name": "human health"
+                },
+                {
+                    "name": "environmental sustainability"
+                }
+            ]
+        }
+    ],
+    "multiplechoice": [
+        {
+            "text": "How many people lack sufficient food?",
+            "unit": "mil",
+            "unitDescription": "million",
+            "listCount": 4,
+            "answer": "820",
+            "answers": [
+              "420",
+              "620",
+              "1220"
+            ],
+            "sources": [
+                {
+                  "author": "World Health Organisation (WHO)",
+                  "source": "https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight"
+                }
+              ]
+          },
+        {
+            "text": "How many million people are overweight?",
+            "unit": "mil",
+            "unitDescription": "million",
+            "listCount": 4,
+            "answer": "2000",
+            "answers": [
+              "500",
+              "1000",
+              "1500"
+            ]
+          },
+        {
+            "text": "By how much does North American meat consumption exceed the planetary health diet?",
+            "unit": "% excess",
+            "unitDescription": "% excess",
+            "listCount": 5,
+            "answer": "638",
+            "answers": [
+              "171",
+              "268",
+              "234",
+              "145"
+            ]
+          },
+        {
+            "text": "Agriculture occupies ~40% of global land, and what percentage of freshwater?",
+            "unit": "%",
+            "unitDescription": "%",
+            "listCount": 4,
+            "answer": "70",
+            "answers": [
+              "25",
+              "40",
+              "55"
+            ]
+          }
+    ],
+    "cards": [
+        {
+            "term": "Summarise the shift in dietary patterns required for healthy diets globally.",
+            "definition": "A more than doubling in the consumption of healthy foods such as fruits, vegetables, legumes and nuts, and a greater than 50% reduction in global consumption of less healthy foods such as added sugars and red meat."
+        },
+        {
+            "term": "Should people stop eating meat?",
+            "definition": "The role of animal source foods in people’s diets must be carefully considered in each context and within local and regional realities. Some people eat too much meat, others have access to too little protein."
+        },
+        {
+            "term": "What is the purpose of the report?",
+            "definition": "To set out a plan whereby changes to diet and food production improve human health and the environment in a sustainable way."
+        },
+        {
+            "term": "What is the Great Food Transformation?",
+            "definition": "The unprecedented range of actions taken by all food system sectors across all levels in order to normalise healthy diets from sustainable food systems."
+        }
+    ],
+    "multipleselect": [
+        {
+            "text": "Food production contributes to environmental change in which ways?",
+            "answers": [
+                "Climate change",
+                "Biodiversity loss",
+                "Freshwater (over)use",
+                "Interference with the global nitrogen and phosphorus cycles",
+                "Land-system change"
+            ],
+            "alternatives": [              
+            ],
+            "listCount": 5
+        },
+        {
+            "text": "Among the strategies suggested to achieve the Great Food Transformation are:",
+            "answers": [
+                "Commitment to shift towards healthy diets",
+                "Redistribution of the global use of nitrogen and phosphorus",
+                "At least halve food losses and waste"
+            ],
+            "alternatives": [        
+                "Reduction in food production",
+                "Reduction in fertiliser and water use"
+            ],
+            "listCount": 5
+        }
+    ]
 }

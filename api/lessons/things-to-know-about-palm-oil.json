@@ -120,5 +120,41 @@
         }
       ]
     }
-  ]
+  ],
+  "ranked": [
+    {
+      "text": "List, in descendcing order, the top 5 sources of calories for a healthy, non-vegan diet.",
+      "type": "ordered",
+      "unit": "kcal/day",
+      "unitDescription": "kilocalories per day",
+      "listCount": 5,
+      "items": [
+        {
+          "rank": 1,
+          "name": "whole grains",
+          "value": "811"
+        },
+        {
+            "rank": 2,
+            "name": "unsaturated oils",
+            "value": "354"
+        },
+        {
+            "rank": 3,
+            "name": "nuts",
+            "value": "291"
+        },
+        {
+            "rank": 4,
+            "name": "legumes",
+            "value": "284"
+        },
+        {
+            "rank": 5,
+            "name": "dairy",
+            "value": "153"
+        }
+        ]
+    }
+    ]
 }
