@@ -51,6 +51,18 @@
           "source": "https://wellcome.org/news/four-reasons-why-we-need-multiple-vaccines-covid-19"
         }
       ]
+    },
+    {
+      "term": "What are T-cells?",
+      "definition": "T-cells help the activity of other immune cells by releasing cytokines (chemical signals).",
+      "text": "T-cells",
+      "year": "2020",
+      "sources": [
+        {
+          "author": "The Conversation",
+          "source": "https://theconversation.com/coronavirus-b-cells-and-t-cells-explained-141888"
+        }
+      ]
     }
   ],
   "unranked": [
@@ -132,7 +144,7 @@
     {
         "text": "The Oxford-AstraZeneca vaccine has which characteristics?",
         "answers": [
-            "requires two doses",
+            "requires one to two doses",
             "can be stored at 2-8° indefinitely",
             "technology used to treat ebola"
         ],

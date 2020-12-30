@@ -95,6 +95,31 @@
       "slug": "wellcome",
       "link": "https://wellcome.org/",
       "name": "The Wellcome Trust"
+    },
+    {
+      "slug": "the-conversation",
+      "link": "https://theconversation.com/",
+      "name": "The Conversation"
+    },
+    {
+      "slug": "the-lancet",
+      "link": "https://www.thelancet.com/",
+      "name": "The Lancet"
+    },
+    {
+      "slug": "stockholm-resilience",
+      "link": "https://www.stockholmresilience.org/",
+      "name": "Stockholm Resilience Centre"
+    },
+    {
+      "slug": "harvard",
+      "link": "https://www.hsph.harvard.edu/",
+      "name": "Harvard T.H. Chan School of Public Health"
+    },
+    {
+      "slug": "pik-potsdam",
+      "link": "https://www.pik-potsdam.de/en",
+      "name": "Potsdam Institute for Climate Impact Research"
     }
   ]
 }
