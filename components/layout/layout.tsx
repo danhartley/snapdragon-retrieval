@@ -9,7 +9,8 @@ export default function Layout({
   title = 'This is the default title',
   description = 'Lesson retrieval',
   header = '',
-  headerLink = ''
+  headerLink = '',
+  disableNavigation
 }) {
 
     const router = useRouter();
@@ -29,7 +30,7 @@ export default function Layout({
                     <meta name="description" content={description}></meta>
                 </Head>
                 <header>
-                    <nav>
+                    <nav class={disableNavigation ? 'disableDisplay' : null }>
                         <div>
                             <Link href="/">
                                 <a>Home</a>

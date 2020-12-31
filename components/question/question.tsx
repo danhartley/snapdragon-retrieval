@@ -9,7 +9,7 @@ import Sources from 'components/question/source';
 
 import styles from 'components/question/question.module.scss';
 
-export const Question = ({lesson}) => {
+export const Question = ({lesson, testState, setTestState}) => {
 
     if(!lesson.questions) return;
 
@@ -17,7 +17,7 @@ export const Question = ({lesson}) => {
     const INITIAL_QUESTION = 0;
 
     const [question, setQuestion] = useState(lesson.questions[INITIAL_QUESTION]);
-    const [testState, setTestState] = useState(enums.QUESTION_STATE.RUNNING);
+    // const [testState, setTestState] = useState(enums.QUESTION_STATE.RUNNING);
     const [LessonHistories, setLessonHistories] = useLocalStorageState(null, enums.STORAGE_KEY.HISTORY);
     const [progress, setProgress] = useState({ number: 1, of: lesson.questions.length });
     const [score, setScore] = useState({total: 0, correct: 0, answered: 0, skipped: 0, isLessonOver: false});

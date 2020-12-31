@@ -1,3 +1,4 @@
+import { useState } from "preact/hooks";
 import { useRouter } from 'next/router';
 import { getLessons } from 'api/lessons/utils';
 import { logic } from 'logic/logic';
@@ -9,18 +10,21 @@ import { enums } from "components/enums";
 
 const Lesson = ({lesson}) => {
 
+    const [testState, setTestState] = useState(enums.QUESTION_STATE.RUNNING);
+
     lesson.questions = logic.shuffleArray(lesson.questions);
 
     const router = useRouter();
 
     const provider = router.query.provider;
     const type = router.query.type;
+    const disableNavigation = (testState !== enums.QUESTION_STATE.COMPLETED && type !== enums.LESSON_TYPE.CARDS);
     
     return (
-        <Layout title="Lesson" description={`${provider} ${lesson.title} lesson`} header={lesson.title} headerLink={lesson.source}>
+        <Layout title="Lesson" description={`${provider} ${lesson.title} lesson`} header={lesson.title} headerLink={lesson.source} disableNavigation={disableNavigation} >
             <div>
                 <QueryString options={enums.LESSON_TYPE} lesson={lesson} />
-                { type === enums.LESSON_TYPE.CARDS ? <Card lesson={lesson}></Card> : <Question lesson={lesson}></Question> }
+                { type === enums.LESSON_TYPE.CARDS ? <Card lesson={lesson}></Card> : <Question lesson={lesson} testState={testState} setTestState={setTestState}></Question> }
             </div>
         </Layout>
     )
