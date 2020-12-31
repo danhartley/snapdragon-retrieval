@@ -3,7 +3,6 @@ import Layout from 'components/layout/layout';
 import users from 'pages/users/users.json';
 import { getFromLocalStorage } from 'api/state';
 import { enums } from 'components/enums';
-import { getLessons } from 'api/lessons/utils';
 
 import Accordion from 'components/accordion/accordion';
 
@@ -15,7 +14,7 @@ const User = ({user, lessons}) => {
 
     return (
         <Layout title="User" description={`${user}, user`} header={user}>
-            {typeof window !== 'undefined' ? renderScoreHistory(lessons) : null}
+            {typeof window !== 'undefined' ? renderScoreHistory() : null}
         </Layout>
     )
 };
@@ -23,11 +22,9 @@ const User = ({user, lessons}) => {
 export default User;
 
 export const getStaticProps = async ({params}) => {
-    const lessons = getLessons();
     return {
         props: {
-            user: params.user,
-            lessons
+            user: params.user
         }
     }
 };
@@ -42,16 +39,15 @@ export const getStaticPaths = async () => {
     };
 };
 
-const renderScoreHistory = lessons => {    
+const renderScoreHistory = () => {    
     const histories = getFromLocalStorage(enums.STORAGE_KEY.HISTORY);
-    const lessonHistories = histories.map(history => {
+    const lessonHistories = histories ? histories.map(history => {
         return {
-            ...history,
-            ...lessons.find(lesson => lesson.title === history.lessonTitle)
+            ...history
         }
-    });
+    }) : [];
 
-    const lessonList = lessonHistories.map(lesson => <li><Accordion lesson={lesson} /></li>);
+    const lessonList = lessonHistories.filter(lesson => lesson.total !== null).map(lesson => <li><Accordion lesson={lesson} /></li>);
 
     return <ul>{lessonList}</ul>
 };

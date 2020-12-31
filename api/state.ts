@@ -28,46 +28,22 @@ const parseHistory = (score: any, histories: Array<History>) => {
 
     if(!score) return histories;
 
-    let { total, correct } = getScore(score);
+    let { total, correct, title } = score;
 
     const history = histories !== null
-        ? histories.find(h => h.lessonTitle === score.lessonTitle)
-            ? histories.find(h => h.lessonTitle === score.lessonTitle) as History
-            : new History(score.lessonTitle,0,0)
-        : new History(score.lessonTitle,0,0);
+        ? histories.find(h => h.title === title)
+            ? histories.find(h => h.title === title) as History
+            : new History(title, 0, 0, [score])
+        : new History(title, 0, 0, [score]);
 
     history.total = history.total + total;
     history.correct = history.correct + correct;
+    history.scores = history.scores ? [ ...history.scores, score ] : [];
 
-    return histories ? [ ...histories.filter(h => h.lessonTitle !== history.lessonTitle), history ] : [ history ];
+    return histories ? [ ...histories.filter(h => h.title !== history.title), history ] : [ history ];
 };
 
 export const getFromLocalStorage = key => {
     return JSON.parse(window.localStorage.getItem(key));
 };
-
-export const getScore = (score: any) => {
-    let total = 0, correct = 0;
-    if (score.markedAnswerList !== undefined) {
-        score.markedAnswerList.map(s => {
-            total++;
-            if (s.state === enums.TRILEAN.TRUE)
-                correct++;
-            if (s.hasOwnProperty('isOrdered')) {
-                total++;
-                if (s.isOrdered === enums.TRILEAN.TRUE)
-                    correct++;
-            }
-        });
-    } else if (score.hasOwnProperty('isCorrect')) {
-        if(score.isCorrect) {
-            total++;
-            correct++;
-        }
-    } else {
-        total = score.total;
-        correct = score.correct;
-    }
-    return { total, correct };
-}
 

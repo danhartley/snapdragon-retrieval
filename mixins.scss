@@ -111,7 +111,7 @@
                     @include two-ticks();
                 }
                 &.longEntry {
-                    max-width: 320px;
+                    width: 320px;
                 }
             }
             span:nth-child(2) {
@@ -156,6 +156,6 @@
         border: 0.5rem solid rgba(0, 0, 0, 0.3);
     }
     &.longEntry {
-        max-width: 320px;
+        width: 320px;
     }
 }

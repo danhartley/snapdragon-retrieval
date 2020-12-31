@@ -18,6 +18,19 @@ const Accordion = ({lesson}) => {
                 <div class={isOpen ? styles.visible : styles.invisible}>
                     <div>total: {lesson.total}</div>
                     <div>correct: {lesson.correct}</div>
+                    <ul>
+                    {
+                        lesson.scores.map(score => {
+                            return (
+                                <li>
+                                    <div>{score.text}</div>
+                                    <div>{score.answers.map(answer => <span>{answer}</span>)}</div>
+                                    <div>{score.correct}/{score.total}</div>
+                                </li>
+                            )
+                        })
+                    }
+                    </ul>
                 </div>
             </div>
         </>

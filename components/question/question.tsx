@@ -1,6 +1,6 @@
-import { useState, useRef, useEffect } from "preact/hooks";
+import { useState, useRef } from "preact/hooks";
 import { logic } from 'logic/logic';
-import { useLocalStorageState, getScore } from 'api/state';
+import { useLocalStorageState } from 'api/state';
 import { enums } from 'components/enums';
 import MultipleChoice from 'components/question/multiple-choice/multiple-choice';
 import MultipleSelect from 'components/question/multiple-select/multiple-select';
@@ -18,7 +18,7 @@ export const Question = ({lesson}) => {
 
     const [question, setQuestion] = useState(lesson.questions[INITIAL_QUESTION]);
     const [testState, setTestState] = useState(enums.QUESTION_STATE.RUNNING);
-    const [history, setHistory] = useLocalStorageState(null, enums.STORAGE_KEY.HISTORY);
+    const [LessonHistories, setLessonHistories] = useLocalStorageState(null, enums.STORAGE_KEY.HISTORY);
     const [progress, setProgress] = useState({ number: 1, of: lesson.questions.length });
     const [score, setScore] = useState({total: 0, correct: 0, answered: 0, skipped: 0, isLessonOver: false});
 
@@ -33,10 +33,10 @@ export const Question = ({lesson}) => {
         setScore({ ...score, answered: score.answered + 1, skipped: score.skipped + 1, isLessonOver: score.answered + 1 === lesson.questions.length });
     };
 
-    const markTest = currentScore => {
+    const markTest = ({total, correct, text, answers, type, unit}) => {
         setTestState(enums.QUESTION_STATE.MARKED);
-        setHistory({...currentScore, lessonTitle: lesson.title}, enums.STORAGE_KEY.HISTORY);
-        setScore({ ...score, total: score.total + getScore(currentScore).total, correct: score.correct + getScore(currentScore).correct, answered: score.answered + 1, isLessonOver: score.answered + 1 === lesson.questions.length });
+        setLessonHistories({total, correct, text, answers, type, unit, title: lesson.title }, enums.STORAGE_KEY.HISTORY);
+        setScore({ ...score, total: score.total + total, correct: score.correct + correct, answered: score.answered + 1, isLessonOver: score.answered + 1 === lesson.questions.length });
     };
 
     const nextTest = e => {

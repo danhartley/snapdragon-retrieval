@@ -21,7 +21,8 @@ const mark = (lesson, placeholder = '---') => {
     let score;
     switch(lesson.question.type) {
         case enums.QUESTION_TYPE.UNORDERED:
-            return markUnordered(lesson, placeholder);
+            score = markUnordered(lesson, placeholder);
+            break;
         case enums.QUESTION_TYPE.ORDERED:
             score = markUnordered(lesson, placeholder);
             score.markedAnswerList.forEach((score, index) => {
@@ -29,15 +30,23 @@ const mark = (lesson, placeholder = '---') => {
                 score.correct = score.isOrdered === "false" ? sanitise(lesson.question.items[index].name) : null;
             });
             score.isOrderedCorrect = lesson.answerList.length === score.markedAnswerList.filter(score => score.isOrdered === enums.TRILEAN.TRUE).length;
-            return score;
+            break;
         case enums.QUESTION_TYPE.MULTIPLE_CHOICE:
             score = {
                 scores: [],
                 isCorrect: sanitise(lesson.question.answer) === sanitise(lesson.question.response),
                 isOrderedCorrect: false
             };
-            return score;
+            break;
     }
+    score = { 
+          ...score
+        , ...getScore(score)
+        , text: lesson.question.text, answers: lesson.question.answer ? [ lesson.question.answer ] : lesson.question.items.map(item => item.name)
+        , type:  lesson.question.type
+        , unit:  lesson.question.unit
+    };
+    return score;
 };
 
 const markOrdered = (lesson, placeholder = '---') => {
@@ -68,7 +77,13 @@ const markMultipleAnswers = (lesson) => {
     const rightAnswers = question.items.filter(answer => answer.state === enums.TRILEAN.TRUE).length;
     const wrongAnswers = question.items.filter(answer => answer.state === enums.TRILEAN.FALSE).length;
     const score = { total: question.answers.length, correct: (rightAnswers - wrongAnswers), items: question.items };
-    return score;
+    return { 
+          ...score
+        , text: lesson.question.text
+        , answers: lesson.question.answers 
+        , type:  lesson.question.type
+        , unit:  lesson.question.unit
+    };
 };
 
 const next = (direction, currentIndex, length) => {
@@ -141,6 +156,31 @@ const sortBy = (arr, prop, dir = 'asc') => {
       ? arr.sort((a, b) => parseFloat(a[prop]) - parseFloat(b[prop]))
       : arr.sort((a, b) => parseFloat(b[prop]) - parseFloat(a[prop]));  
 };
+
+const getScore = (score: any) => {
+    let total = 0, correct = 0;
+    if (score.markedAnswerList !== undefined) {
+        score.markedAnswerList.map(s => {
+            total++;
+            if (s.state === enums.TRILEAN.TRUE)
+                correct++;
+            if (s.hasOwnProperty('isOrdered')) {
+                total++;
+                if (s.isOrdered === enums.TRILEAN.TRUE)
+                    correct++;
+            }
+        });
+    } else if (score.hasOwnProperty('isCorrect')) {
+        if(score.isCorrect) {
+            total++;
+            correct++;
+        }
+    } else {
+        total = score.total;
+        correct = score.correct;
+    }
+    return { total, correct };
+}
 
 export const logic = {
     mark,
