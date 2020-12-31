@@ -1,12 +1,13 @@
-import Link from 'next/link';
+import { useRouter } from 'next/router';
 import Layout from 'components/layout/layout';
 import users from 'pages/users/users.json';
 import { getFromLocalStorage } from 'api/state';
 import { enums } from 'components/enums';
+import { getLessons } from 'api/lessons/utils';
 
-import { useRouter } from 'next/router';
+import Accordion from 'components/accordion/accordion';
 
-const User = ({user}) => {
+const User = ({user, lessons}) => {
 
     const router = useRouter();
 
@@ -14,7 +15,7 @@ const User = ({user}) => {
 
     return (
         <Layout title="User" description={`${user}, user`} header={user}>
-            {typeof window !== 'undefined' ? renderScoreHistory() : null}
+            {typeof window !== 'undefined' ? renderScoreHistory(lessons) : null}
         </Layout>
     )
 };
@@ -22,9 +23,11 @@ const User = ({user}) => {
 export default User;
 
 export const getStaticProps = async ({params}) => {
+    const lessons = getLessons();
     return {
         props: {
-            user: params.user
+            user: params.user,
+            lessons
         }
     }
 };
@@ -39,16 +42,16 @@ export const getStaticPaths = async () => {
     };
 };
 
-const renderScoreHistory = () => {
-    const history = getFromLocalStorage(enums.STORAGE_KEY.HISTORY);
-    const histories = history.map(h => {
-        return (
-            <>
-            <div>title: {h.lessonTitle}</div>
-            <div>total: {h.total}</div>
-            <div>correct: {h.correct}</div>
-            </>
-        );
+const renderScoreHistory = lessons => {    
+    const histories = getFromLocalStorage(enums.STORAGE_KEY.HISTORY);
+    const lessonHistories = histories.map(history => {
+        return {
+            ...history,
+            ...lessons.find(lesson => lesson.title === history.lessonTitle)
+        }
     });
-    return histories;
+
+    const lessonList = lessonHistories.map(lesson => <li><Accordion lesson={lesson} /></li>);
+
+    return <ul>{lessonList}</ul>
 };

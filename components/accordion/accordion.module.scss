@@ -1,0 +1,19 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+.visible {
+    display: block;
+}
+
+.invisible {
+    display: none;
+}
+
+button.title, button.title:hover {
+    border: none;
+    text-transform: initial;
+    border-bottom: 1px dashed gray;
+    min-height: 30px;
+    padding: 0;
+    background-color: transparent;
+}

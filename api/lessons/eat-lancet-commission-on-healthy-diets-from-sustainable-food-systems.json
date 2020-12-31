@@ -37,19 +37,19 @@
             }]
         },
         {
-            "text": "The report focuses on which two 'end-points' of the global food system?",
+            "text": "The report focuses on which two 'end-points' of the global food system? (tip: two words)",
             "listCount": 2,
             "items": [
                 {
                     "name": "healthy diets"
                 },
                 {
-                    "name": "production"
+                    "name": "food production"
                 }
             ]
         },
         {
-            "text": "Healthy diets and food production disproportionately impact what?",
+            "text": "Healthy diets and food production disproportionately impact what? (tip: two words)",
             "listCount": 2,
             "items": [
                 {
@@ -106,7 +106,7 @@
             ]
           },
         {
-            "text": "Agriculture occupies ~40% of global land, and what percentage of freshwater?",
+            "text": "Agriculture occupies ~40% of global land, and uses what percentage of freshwater?",
             "unit": "%",
             "unitDescription": "%",
             "listCount": 4,

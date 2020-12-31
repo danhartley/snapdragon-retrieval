@@ -42,8 +42,8 @@
             @include one-cross();
         }
         &.correctAnswer { 
-            @include one-tick();
-            border-bottom: 3px solid rgba($colour,.4);  
+            @include one-tick();            
+            // border-bottom: 3px solid rgba($colour,.4);  
             color: rgba($colour, 0.4);
         }
     }

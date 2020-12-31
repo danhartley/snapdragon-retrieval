@@ -34,6 +34,14 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
         resetInput();
     };
 
+    let isLong = null;
+
+    { question.items.map(item => {
+            if(item.name.length > 20) {
+                isLong = styles.longEntry;
+            }
+        });
+    }
     const listItems = answerList.map((item, index) => { 
         return <li 
                 key={`${index}_${item.name}`}                
@@ -42,10 +50,10 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
                     class={item.name !== PLACEHOLDER 
                         ? item.state === enums.TRILEAN.TRUE 
                             ? item.isOrdered === enums.TRILEAN.TRUE 
-                                ? `${styles.correct} ${styles.correctOrder}`
-                                : styles.correct
+                                ? `${styles.correct} ${styles.correctOrder} ${isLong}`
+                                : `${styles.correct} ${isLong}`
                             : item.state === enums.TRILEAN.FALSE 
-                                ? styles.incorrect 
+                                ? `${styles.incorrect} ${isLong}`
                                 : '' 
                         : ''} 
                 >{item.name}</span><span>{item.correct}</span></li> 
