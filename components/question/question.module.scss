@@ -30,7 +30,7 @@
             font-size: .9rem;
         }
         border: 1px solid rgba($colour,.5);
-        color: rgba($colour,.5);        
+        color: rgba($colour,.5);
         border-radius: 50%;
         display: flex;
         flex-direction: column;
@@ -44,6 +44,16 @@
             justify-content: center;
             &:nth-child(1) {
                 border-bottom: 2px solid rgba($colour,.2);
+            }
+        }
+    }
+
+    .lessonOver {
+        color: $colour-light;
+        background-color: rgba($colour, .8);
+        span {
+            &:nth-child(1) {
+                border-bottom: 2px solid $colour-light;
             }
         }
     }

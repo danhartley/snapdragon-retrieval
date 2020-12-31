@@ -12,8 +12,6 @@ const Lesson = ({lesson}) => {
 
     const [testState, setTestState] = useState(enums.QUESTION_STATE.RUNNING);
 
-    lesson.questions = logic.shuffleArray(lesson.questions);
-
     const router = useRouter();
 
     const provider = router.query.provider;
@@ -34,21 +32,31 @@ export default Lesson;
 
 export async function getStaticProps({params: {provider, lesson}}) {    
 
-    const providerLesson = getLessons().find(l => l.provider === provider && l.slug === lesson);
+    const providerLesson = { ...getLessons().find(l => l.provider === provider && l.slug === lesson), availableCount: 0 }; 
 
-    const ranked = providerLesson.ranked ? providerLesson.ranked.map(r => r) : [];
+    const ranked = providerLesson.ranked ? providerLesson.ranked.map(r => {
+        providerLesson.availableCount += (r.listCount * 2);
+        return r;
+    }) : [];
     const unranked = providerLesson.unranked 
-        ? providerLesson.unranked.map(u => { return { ...u, type: u.type || enums.QUESTION_TYPE.UNORDERED } }) 
+        ? providerLesson.unranked.map(u => { 
+            providerLesson.availableCount += u.listCount;
+            return { ...u, type: u.type || enums.QUESTION_TYPE.UNORDERED } 
+        }) 
         : [];
     const multipleChoice = providerLesson.multiplechoice
         ? providerLesson.multiplechoice.map(m => { return { ...m, type: m.type || enums.QUESTION_TYPE.MULTIPLE_CHOICE } })
         : [];
     const multipleSelect = providerLesson.multipleselect
-        ? providerLesson.multipleselect.map(m => { return { ...m, type: m.type || enums.QUESTION_TYPE.MULTIPLE_SELECT } }) 
+        ? providerLesson.multipleselect.map(m => { 
+            providerLesson.availableCount += m.answers.length;
+            return { ...m, type: m.type || enums.QUESTION_TYPE.MULTIPLE_SELECT } 
+        }) 
         : [];
 
-    providerLesson.questions = [ ...multipleSelect ];
-    // providerLesson.questions = [ ...ranked, ...unranked, ...multipleChoice, ...multipleSelect ];
+    providerLesson.questions = logic.shuffleArray([ ...ranked, ...unranked, ...multipleChoice, ...multipleSelect ]);
+
+    providerLesson.availableCount += multipleChoice.length;
 
     return {
       props: {

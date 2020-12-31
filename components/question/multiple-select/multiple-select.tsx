@@ -6,15 +6,16 @@ import styles from 'components/question/multiple-select/multiple-select.module.s
 
 const MultipleSelect = ({question, markTest, setQuestion, testState}) => {
 
-    const [checkedAnswers,setCheckedAnswers] = useState([]);
-    const [items, setItems] = useState(logic.sortBy(logic.shuffleArray([ 
+    question.items = question.items || logic.sortBy(logic.shuffleArray([ 
         ...question.answers.map(a => { return { name: a } }), 
         ...question.alternatives.map(a => { return { name: a } })
-    ]), "name"));
+    ]), "name");
+
+    const [checkedAnswers,setCheckedAnswers] = useState([]);
 
     let alternatives, css;
 
-    const listItems = items.map(answer => {
+    const listItems = question.items.map(answer => {
         css = answer.state === enums.TRILEAN.TRUE ? styles.correct : answer.state === enums.TRILEAN.FALSE ? styles.incorrect : null;
         return <li key={answer.name} class={`${styles.chkBoxList} ${css}`}>
             <input type="checkbox" onChange={e => handleCheckBox(answer.name)} id={answer.name} name="answer" value={answer.name} />
@@ -34,9 +35,8 @@ const MultipleSelect = ({question, markTest, setQuestion, testState}) => {
 
     const handleCheckAnswer = e => {
         e.preventDefault();
-        const score = logic.markMultipleAnswers({ question: { ...question, items }, checkedAnswers });
-        setItems(score.items);
-        setQuestion(question);
+        const score = logic.markMultipleAnswers({ question, checkedAnswers });
+        setQuestion({ ...question, items: score.items });
         markTest(score);
     };
 

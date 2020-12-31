@@ -40,7 +40,7 @@ export const Question = ({lesson, testState, setTestState}) => {
 
     const nextTest = e => {
         e.preventDefault();
-        const index = logic.next(enums.DIRECTION.Next, lesson.questions.indexOf(question), lesson.questions.length);        
+        const index = logic.next(enums.DIRECTION.Next, lesson.questions.map(q => q.text).indexOf(question.text), lesson.questions.length);    
         setQuestion(lesson.questions[index]);
         setTestState(enums.QUESTION_STATE.RUNNING);
         setProgress({ ...progress, number: progress.number + 1});
@@ -72,7 +72,7 @@ export const Question = ({lesson, testState, setTestState}) => {
                 <div class={styles.text}>
                     <span class={styles.cue}></span>
                     <span><span>{question.text}</span><span class="super">{`${progress.number}/${progress.of}`}</span></span>
-                    <span class={`${styles.liveScore} ${score.total === 0 ? styles.hidden : null} `}><span>{score.correct}</span><span>{score.total}</span></span>
+                    <span class={`${styles.liveScore} ${score.total === 0 ? styles.hidden : null} ${lesson.availableCount === score.total ? styles.lessonOver : null } `}><span>{score.correct}</span><span>{score.total}</span></span>
                 </div> 
                 <>{format}</>
                 <div class={styles.flex}>
