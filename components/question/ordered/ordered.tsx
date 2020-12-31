@@ -54,7 +54,7 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
                                 : `${styles.correct} ${isLong}`
                             : item.state === enums.TRILEAN.FALSE 
                                 ? `${styles.incorrect} ${isLong}`
-                                : '' 
+                                : `${isLong}`
                         : ''} 
                 >{item.name}</span><span>{item.correct}</span></li> 
     });

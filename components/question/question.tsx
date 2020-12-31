@@ -17,7 +17,6 @@ export const Question = ({lesson, testState, setTestState}) => {
     const INITIAL_QUESTION = 0;
 
     const [question, setQuestion] = useState(lesson.questions[INITIAL_QUESTION]);
-    // const [testState, setTestState] = useState(enums.QUESTION_STATE.RUNNING);
     const [LessonHistories, setLessonHistories] = useLocalStorageState(null, enums.STORAGE_KEY.HISTORY);
     const [progress, setProgress] = useState({ number: 1, of: lesson.questions.length });
     const [score, setScore] = useState({total: 0, correct: 0, answered: 0, skipped: 0, isLessonOver: false});
@@ -27,7 +26,7 @@ export const Question = ({lesson, testState, setTestState}) => {
 
     const skipTest = e => {
         e.preventDefault();
-        const index = logic.next(enums.DIRECTION.Next, lesson.questions.indexOf(question), lesson.questions.length);
+        const index = logic.next(enums.DIRECTION.Next, lesson.questions.indexOf(question), lesson.questions.length);        
         setQuestion(lesson.questions[index]);
         setProgress({ ...progress, number: progress.number === lesson.questions.length ? 1 : progress.number + 1 });
         setScore({ ...score, answered: score.answered + 1, skipped: score.skipped + 1, isLessonOver: score.answered + 1 === lesson.questions.length });
@@ -41,7 +40,7 @@ export const Question = ({lesson, testState, setTestState}) => {
 
     const nextTest = e => {
         e.preventDefault();
-        const index = logic.next(enums.DIRECTION.Next, lesson.questions.indexOf(question), lesson.questions.length);
+        const index = logic.next(enums.DIRECTION.Next, lesson.questions.indexOf(question), lesson.questions.length);        
         setQuestion(lesson.questions[index]);
         setTestState(enums.QUESTION_STATE.RUNNING);
         setProgress({ ...progress, number: progress.number + 1});

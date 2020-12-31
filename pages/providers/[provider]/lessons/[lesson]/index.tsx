@@ -47,7 +47,8 @@ export async function getStaticProps({params: {provider, lesson}}) {
         ? providerLesson.multipleselect.map(m => { return { ...m, type: m.type || enums.QUESTION_TYPE.MULTIPLE_SELECT } }) 
         : [];
 
-    providerLesson.questions = [ ...ranked, ...unranked, ...multipleChoice, ...multipleSelect ];
+    providerLesson.questions = [ ...multipleSelect ];
+    // providerLesson.questions = [ ...ranked, ...unranked, ...multipleChoice, ...multipleSelect ];
 
     return {
       props: {

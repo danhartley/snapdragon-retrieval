@@ -90,7 +90,7 @@ const next = (direction, currentIndex, length) => {
     let index: number;
     switch(direction) {
         case enums.DIRECTION.Next:
-            index = (currentIndex + 1) % length;
+            index = (currentIndex + 1) % length;            
             break;
         case enums.DIRECTION.Previous:
             index = currentIndex > 0

@@ -21,7 +21,7 @@
         padding: 0;
         border: 1px solid transparent;
         background-color: rgba($colour, .8);
-        color: rgba($colour-light, .8);
+        color: rgba($colour-light, 1);        
         cursor: pointer;
         overflow-y: scroll;
         scroll-behavior: smooth;
@@ -35,7 +35,7 @@
             & > span { padding: 30px; }
         }
         &:hover {
-            color: rgba($colour-light, 1);
+            color: rgba($colour-light, .8);
         }
         &.definition {
             background-color: rgba($colour-light, .8);

@@ -32,13 +32,14 @@ const parseHistory = (score: any, histories: Array<History>) => {
 
     const history = histories !== null
         ? histories.find(h => h.title === title)
-            ? histories.find(h => h.title === title) as History
+            ? histories.find(h => h.title === title).scores.find(s => s.text === score.text)
+                ? new History(title, 0, 0, [score])
+                : { ...histories.find(h => h.title === title), scores: [ ...histories.find(h => h.title === title).scores, score ] } as History
             : new History(title, 0, 0, [score])
         : new History(title, 0, 0, [score]);
 
     history.total = history.total + total;
     history.correct = history.correct + correct;
-    history.scores = history.scores ? [ ...history.scores, score ] : [];
 
     return histories ? [ ...histories.filter(h => h.title !== history.title), history ] : [ history ];
 };
