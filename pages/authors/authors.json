@@ -125,6 +125,16 @@
       "slug": "pik-potsdam",
       "link": "https://www.pik-potsdam.de/en",
       "name": "Potsdam Institute for Climate Impact Research"
+    },
+    {
+      "slug": "nih",
+      "link": "https://www.nih.gov/",
+      "name": "National Institues of Health (NIH - US)"
+    },
+    {
+      "slug": "nlm",
+      "link": "https://www.nlm.nih.gov/",
+      "name": "National Library of Medicene (NLM)"
     }
   ]
 }

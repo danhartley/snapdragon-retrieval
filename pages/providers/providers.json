@@ -28,6 +28,11 @@
       "name": "EAT",
       "slug": "eat",
       "link": "https://eatforum.org/"
-    }
+    },
+    {
+        "slug": "bbc",
+        "link": "https://www.bbc.com/",
+        "name": "BBC"
+      }
   ]
 }
