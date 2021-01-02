@@ -15,7 +15,7 @@
       "listCount": 4
     },
     {
-      "text": "Recent research has demonstrated that cooking has __ effect on the properties of extra virgin olive oil.",
+      "text": "Recent research has demonstrated that cooking has __ effect on the properties of extra virgin olive oil",
       "answer": "negligible or no effect",
       "answers": [
         "a detrimental effect"
@@ -63,7 +63,7 @@
       "listCount": 4
     },
     {
-      "text": "Unsaturated fats are distinguished from saturated fats by double bonds between __.",
+      "text": "Unsaturated fats are distinguished from saturated fats by double bonds between __",
       "answer": "2 carbon atoms",
       "answers": [
         "2 hydrogen atoms",
@@ -123,7 +123,7 @@
       ]
     },
         {
-        "text": "Harvard University’s TH Chan School of Public Health’s nutrition department found that those with higher intake of all types of olive oil had a ___ of heart disease.",
+        "text": "Harvard University’s TH Chan School of Public Health’s nutrition department found that those with higher intake of all types of olive oil had a ___ of heart disease",
         "answer": "15% lower risk",
         "answers": [
             "15% higher risk",
@@ -207,7 +207,7 @@
           ]
         },        
         {
-          "text": "In the article, efficacy in preventing several diseases is attributed to extra virgin olive oil. Name one.",
+          "text": "In the article, efficacy in preventing several diseases is attributed to extra virgin olive oil. Name one",
           "unit": "",
           "unitDescription": "",
           "listCount": 1,
@@ -272,7 +272,7 @@
     "cards": [
         {
           "term": "What is a fatty acid?",
-          "definition": "Fatty acids are molecules that consist of a long chain of carbon and hydrogen atoms.",
+          "definition": "Fatty acids are molecules that consist of a long chain of carbon and hydrogen atoms",
           "text": "What is a fatty acid",
           "year": "2020",
           "sources": [
@@ -284,7 +284,7 @@
         },
         {
           "term": "What is the glycerol backbone?",
-          "definition": "A molecule formed of 3 carbons each in a hydroxyl group with oxygen and hydrogen.",
+          "definition": "A molecule formed of 3 carbons each in a hydroxyl group with oxygen and hydrogen",
           "text": "What is a glycerol backbone",
           "year": "2020",
           "sources": [
@@ -296,7 +296,7 @@
         },
         {
           "term": "What is a fat (triglyceride or triacylglycerol)?",
-          "definition": "A glycerol backbone to which 3 fatty acid 'tails' are attached.",
+          "definition": "A glycerol backbone to which 3 fatty acid 'tails' are attached",
           "text": "What is a fatty acid",
           "year": "2020",
           "sources": [
@@ -308,13 +308,13 @@
         },
         {
           "term": "What are the structures of fats (fatty acids), and how does this affect their function?",
-          "definition": "All fat molecules are made of chains of fatty acids, which are either held together with single bonds (saturated) or double bonds (unsaturated). There are three types of fatty acids: short, medium and long chain. Short and medium chain fatty acids are absorbed directly into the bloodstream and used for energy, but long chain fatty acids are transported to the liver, which raises blood cholesterol levels.",
+          "definition": "All fat molecules are made of chains of fatty acids, which are either held together with single bonds (saturated) or double bonds (unsaturated). There are three types of fatty acids: short, medium and long chain. Short and medium chain fatty acids are absorbed directly into the bloodstream and used for energy, but long chain fatty acids are transported to the liver, which raises blood cholesterol levels",
           "text": "Structure and function of fats",
           "year": "2020"
         },
         {
           "term": "What is an acid?",
-          "definition": "An acid is a molecule that can donate a proton (hydrogen ion) to another substance, or form a covalent bond (by sharing of elections).",
+          "definition": "An acid is a molecule that can donate a proton (hydrogen ion) to another substance, or form a covalent bond (by sharing of elections)",
           "text": "What is an acid",
           "year": "2020",
           "sources": [
@@ -326,7 +326,7 @@
         },      
         {
           "term": "What does HDL cholesterol do?",
-          "definition": "HDL clears from the body via the liver. HDL may therefore prevent the buildup of plaque, protect your arteries, and protect you from atherosclerotic cardiovascular disease. It is considered the “good” cholesterol, and higher levels are better. A good goal to aim for is higher than 55 mg/dL for women and 45 mg/dL for men. The higher your HDL cholesterol numbers, the lower your risk is for heart disease, vascular disease, and stroke.",
+          "definition": "HDL clears from the body via the liver. HDL may therefore prevent the buildup of plaque, protect your arteries, and protect you from atherosclerotic cardiovascular disease. It is considered the “good” cholesterol, and higher levels are better. A good goal to aim for is higher than 55 mg/dL for women and 45 mg/dL for men. The higher your HDL cholesterol numbers, the lower your risk is for heart disease, vascular disease, and stroke",
           "text": "HDL cholesterol",
           "year": "2020",
           "sources": [
@@ -338,7 +338,7 @@
         },
         {
           "term": "What does LDL cholesterol do?",
-          "definition": "HDL carries cholesterol to your arteries, where it may collect in the vessel walls and contribute to plaque formation, known as atherosclerosis. This can lead to decreased blood flow to the heart muscle (coronary artery disease), leg muscles (peripheral artery disease), or abrupt closure of an artery in the heart or brain, leading to a heart attack or stroke. Obesity, a large waist circumference, a sedentary lifestyle, or a diet rich in red meat, full-fat dairy, saturated fat, trans fats, and processed foods can lead to high LDL cholesterol.",
+          "definition": "HDL carries cholesterol to your arteries, where it may collect in the vessel walls and contribute to plaque formation, known as atherosclerosis. This can lead to decreased blood flow to the heart muscle (coronary artery disease), leg muscles (peripheral artery disease), or abrupt closure of an artery in the heart or brain, leading to a heart attack or stroke. Obesity, a large waist circumference, a sedentary lifestyle, or a diet rich in red meat, full-fat dairy, saturated fat, trans fats, and processed foods can lead to high LDL cholesterol",
           "text": "LDL cholesterol",
           "year": "2020",
           "sources": [
@@ -349,8 +349,8 @@
           ]
         },
         {
-          "term": "Describe the benefit to human health of trans fats.",
-          "definition": "Trans fats provide no benefits to human health and are not essential. There is no safe level of dietary trans fat. Trans fats help the food industry by extending shelf life and increasing the melting point of the hydrogenated fat.",
+          "term": "Describe the benefit to human health of trans fats",
+          "definition": "Trans fats provide no benefits to human health and are not essential. There is no safe level of dietary trans fat. Trans fats help the food industry by extending shelf life and increasing the melting point of the hydrogenated fat",
           "text": "LDL cholesterol",
           "year": "2020",
           "sources": [
@@ -414,9 +414,9 @@
         {
             "text": "Which is true in respect of monounsaturated fatty acids (MUFAs)?",
             "answers": [
-                "they have a single double bond.",
-                "MUFAs are found in red meat, whole milk, nuts, and high fat fruits such as olives and avocados.",
-                "MUFAs are generally healthier than saturated ones."
+                "they have a single double bond",
+                "MUFAs are found in red meat, whole milk, nuts, and high fat fruits such as olives and avocados",
+                "MUFAs are generally healthier than saturated ones"
             ],
             "alternatives": [
                 "olive oil contains little monounsaturated fat"
@@ -432,18 +432,54 @@
         {
             "text": "Which is true in respect of polyunsaturated fatty acids (PUFAs)?",
             "answers": [
-                "they have two or more double bond.",
-                "PUFAs are found mostly in nuts, seeds, fish, seed oils, and oysters."
+                "they have two or more double bond",
+                "PUFAs are found mostly in nuts, seeds, fish, seed oils, and oysters"
             ],
             "alternatives": [
-                "PUFAs are the most common fatty acids in the human diet.",
-                "PUFAs naturally contain trans fats."
+                "PUFAs are the most common fatty acids in the human diet",
+                "PUFAs naturally contain trans fats"
             ],
             "listCount": 4,
             "sources": [
                 {
                     "author": "Wikipedia",
                     "source": "https://en.wikipedia.org/wiki/Fat#Monounsaturated_fat"
+                }
+            ]
+        },
+        {
+            "text": "What is true of randomised controlled trials?",
+            "answers": [
+                "they are used for testing the effectiveness of new treatments",
+                "subjects are randomly allocated to two or more groups, and treated them differently"
+            ],
+            "alternatives": [
+                "the experimental receives an alternative treatment, such as a placebo or no intervention",
+                "the control group receives the intervention being assessed"
+            ],
+            "listCount": 4,
+            "sources": [
+                {
+                    "author": "Wikipedia",
+                    "source": "https://en.wikipedia.org/wiki/Randomized_controlled_trial"
+                }
+            ]
+        },
+        {
+            "text": "Which of the following are true about cholesterol?",
+            "answers": [
+                "it is a modified steroid (sterol)",
+                "it is a lipid",
+                "it is an essential structural component of animal cell membranes"
+            ],
+            "alternatives": [
+                "it cannot be synthesised by human cells"
+            ],
+            "listCount": 4,
+            "sources": [
+                {
+                    "author": "Wikipedia",
+                    "source": "https://en.wikipedia.org/wiki/Cholesterol"
                 }
             ]
         }
