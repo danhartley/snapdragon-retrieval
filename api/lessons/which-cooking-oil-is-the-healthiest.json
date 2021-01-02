@@ -2,5 +2,414 @@
   "provider": "bbc",
   "slug": "which-cooking-oil-is-the-healthiest",
   "source": "https://www.bbc.com/future/article/20200903-which-cooking-oil-is-the-healthiest",
-  "title": "Which cooking oil is the healthiest?"
+  "title": "Which cooking oil is the healthiest?",
+  "multiplechoice": [
+    {
+      "text": "What bonds are found in un/saturated oils?",
+      "answer": "saturated: single bonds, unsaturated: double bonds",
+      "answers": [
+        "saturated: double bonds, unsaturated: single bonds",
+        "saturated: single bonds, unsaturated: single bonds",
+        "saturated: double bonds, unsaturated: double bonds"
+      ],
+      "listCount": 4
+    },
+    {
+      "text": "Recent research has demonstrated that cooking has __ effect on the properties of extra virgin olive oil.",
+      "answer": "negligible or no effect",
+      "answers": [
+        "a detrimental effect"
+      ],
+      "listCount": 2,
+      "sources": [
+        {
+          "author": "MDPI (Multidisciplinary Digital Publishing Institute)",
+          "source": "https://www.mdpi.com/2076-3921/9/1/77"
+        }
+    ]
+    },
+    {
+      "text": "Which type of fats is it preferable to eat more of?",
+      "answer": "unsaturated fats",
+      "answers": [
+        "saturated fats"
+      ],
+      "listCount": 2
+    },
+    {
+      "text": "Is olive oil a saturated or unsaturated fat?",
+      "answer": "unsaturated fat",
+      "answers": [
+        "saturated fat"
+      ],
+      "listCount": 2
+    },
+    {
+      "text": "Omega 3 and omega 6 are what kind of fat?",
+      "answer": "polyunsaturated",
+      "answers": [
+        "monounsaturated"
+      ],
+      "listCount": 2
+    },
+    {
+      "text": "Carbon atoms in (hydrogen) saturated fats are connected to how many other atoms?",
+      "answer": "4",
+      "answers": [
+        "1",
+        "2",
+        "3"
+      ],
+      "listCount": 4
+    },
+    {
+      "text": "Unsaturated fats are distinguished from saturated fats by double bonds between __.",
+      "answer": "2 carbon atoms",
+      "answers": [
+        "2 hydrogen atoms",
+        "A carbon atom and a hydrogen atom",
+        "A carbon atom and an oxygen atom"
+      ],
+      "listCount": 4
+    },
+    {
+      "text": "Trans fats have the effect of --",
+      "answer": "Increasing LDCs, lowering HDCs",
+      "answers": [
+        "Increasing LDCs, increasing HDCs",
+        "Lowering LDCs, lowering HDCs",
+        "Lowering LDCs, increasing HDCs"
+      ],
+      "listCount": 4
+    },
+    {
+      "text": "Trans fats are unsaturated fats with trans double bonds instead of cis bonds. What do trans and cis mean in this context?",
+      "answer": "Cis: functional groups on the same side as the carbon chain, trans: opposite sides",
+      "answers": [
+        "Trans: functional groups on the same side as the carbon chain bond, cis: opposite sides"
+      ],
+      "listCount": 2
+    },
+    {
+      "text": "What are the recommended upper limits for daily saturated fat consumption for men and women?",
+      "answer": "20g for women and 30g for men",
+      "answers": [
+        "20g for women and 25g for men",
+        "25g for women and 35g for men",
+        "30g for women and 30g for men"
+      ],
+      "listCount": 4,
+      "sources": [
+          {
+            "author": "NHS",
+            "source": "https://www.nhs.uk/live-well/eat-well/eat-less-saturated-fat/"
+          }
+      ]
+    },
+    {
+      "text": "Hydrogenation of fat products is used in the food industry for what reason?",
+      "answer": "Extend their shelf life",
+      "answers": [
+        "Turn them into unsaturated fats",
+        "Turn them into saturated fats",
+        "Reduce their smoking point"
+      ],
+      "listCount": 4,
+      "sources": [
+          {
+            "author": "NHS",
+            "source": "https://www.nhs.uk/live-well/eat-well/eat-less-saturated-fat/"
+          }
+      ]
+    },
+        {
+        "text": "Harvard University’s TH Chan School of Public Health’s nutrition department found that those with higher intake of all types of olive oil had a ___ of heart disease.",
+        "answer": "15% lower risk",
+        "answers": [
+            "15% higher risk",
+            "30% lower risk",
+            "30% higher risk"
+        ],
+        "listCount": 4,
+        "sources": [
+            {
+                "author": "Harvard T.H. Chan School of Public Health",
+                "source": "https://www.ahajournals.org/doi/10.1161/circ.141.suppl_1.P509"
+            }
+        ]
+        }
+    ],
+    "unranked": [
+        {
+          "text": "Organic chemistry refers to the study of compounds that must contain which element?",
+          "unit": "",
+          "unitDescription": "",
+          "listCount": 1,
+          "items": [
+            {
+              "name": "Carbon"
+            }
+          ]
+        },
+        {
+          "text": "Triglyceride or triacylglycerol is the technical term for what?",
+          "unit": "",
+          "unitDescription": "",
+          "listCount": 1,
+          "items": [
+            {
+              "name": "Fat"
+            }
+          ]
+        },
+        {
+          "text": "What does HDL stand for?",
+          "unit": "",
+          "unitDescription": "",
+          "listCount": 1,
+          "items": [
+            {
+              "name": "High-density lipoprotein"
+            }
+          ]
+        },
+        {
+          "text": "Polyunsaturated fats, such as omega 3 and omega 6, and monounsaturated fat provide essential fatty acids and ___?",
+          "unit": "",
+          "unitDescription": "",
+          "listCount": 1,
+          "items": [
+            {
+              "name": "Vitamins"
+            }
+          ]
+        },
+        {
+          "text": "What is the name for micronutrients derived from plants?",
+          "unit": "",
+          "unitDescription": "",
+          "listCount": 1,
+          "items": [
+            {
+              "name": "polyphenols"
+            }
+          ]
+        },
+        {
+          "text": "In which organ are longer chain fatty acids more likely to be stored? (tip: one word)",
+          "unit": "",
+          "unitDescription": "",
+          "listCount": 1,
+          "items": [
+            {
+              "name": "Liver"
+            }
+          ]
+        },        
+        {
+          "text": "In the article, efficacy in preventing several diseases is attributed to extra virgin olive oil. Name one.",
+          "unit": "",
+          "unitDescription": "",
+          "listCount": 1,
+          "items": [
+            {
+              "name": "Cancer"
+            },
+            {
+              "name": "Heart disease"
+            },
+            {
+              "name": "Type 2 diabetes"
+            }
+          ],
+          "sources": [
+            {
+                "author": "ScienceDirect",
+                "source": "https://www.sciencedirect.com/science/article/abs/pii/S0924224419300779"
+            },
+            {
+                "author": "National Library of Medicine (NLM)",
+                "source": "https://pubmed.ncbi.nlm.nih.gov/29141571/"
+            }
+
+          ]
+        },
+        {
+          "text": "Which fats are unequivocally bad, and should be avoided, even in small amounts? (hint: two words)",
+          "unit": "",
+          "unitDescription": "",
+          "listCount": 1,
+          "items": [
+            {
+              "name": "trans fats"
+            }
+          ],
+          "sources": [
+            {
+                "author": "Khan Academy",
+                "source": "https://www.khanacademy.org/science/biology/macromolecules/lipids/v/saturated-fats-unsaturated-fats-and-trans-fats"
+            }
+          ]
+        },
+        {
+          "text": "What is the process by which unsaturated fats are turned into trans fats? (hint: __ or partial __)",
+          "unit": "",
+          "unitDescription": "",
+          "listCount": 1,
+          "items": [
+            {
+              "name": "hydrogenation"
+            }
+          ],
+          "sources": [
+            {
+                "author": "National Library of Medicine (NLM)",
+                "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2921725/"
+            }
+          ]
+        }
+    ],
+    "cards": [
+        {
+          "term": "What is a fatty acid?",
+          "definition": "Fatty acids are molecules that consist of a long chain of carbon and hydrogen atoms.",
+          "text": "What is a fatty acid",
+          "year": "2020",
+          "sources": [
+            {
+              "author": "Khan Academy",
+              "source": "https://www.khanacademy.org/science/biology/macromolecules/lipids/v/molecular-structure-of-triglycerides-fats"
+            }
+          ]
+        },
+        {
+          "term": "What is the glycerol backbone?",
+          "definition": "A molecule formed of 3 carbons each in a hydroxyl group with oxygen and hydrogen.",
+          "text": "What is a glycerol backbone",
+          "year": "2020",
+          "sources": [
+            {
+              "author": "Khan Academy",
+              "source": "https://www.khanacademy.org/science/biology/macromolecules/lipids/v/molecular-structure-of-triglycerides-fats"
+            }
+          ]
+        },
+        {
+          "term": "What is a fat (triglyceride or triacylglycerol)?",
+          "definition": "A glycerol backbone to which 3 fatty acid 'tails' are attached.",
+          "text": "What is a fatty acid",
+          "year": "2020",
+          "sources": [
+            {
+              "author": "Khan Academy",
+              "source": "https://www.khanacademy.org/science/biology/macromolecules/lipids/v/molecular-structure-of-triglycerides-fats"
+            }
+          ]
+        },
+        {
+          "term": "What are the structures of fats (fatty acids), and how does this affect their function?",
+          "definition": "All fat molecules are made of chains of fatty acids, which are either held together with single bonds (saturated) or double bonds (unsaturated). There are three types of fatty acids: short, medium and long chain. Short and medium chain fatty acids are absorbed directly into the bloodstream and used for energy, but long chain fatty acids are transported to the liver, which raises blood cholesterol levels.",
+          "text": "Structure and function of fats",
+          "year": "2020"
+        },
+        {
+          "term": "What is an acid?",
+          "definition": "An acid is a molecule that can donate a proton (hydrogen ion) to another substance, or form a covalent bond (by sharing of elections).",
+          "text": "What is an acid",
+          "year": "2020",
+          "sources": [
+            {
+              "author": "Khan Academy",
+              "source": "https://www.khanacademy.org/science/biology/water-acids-and-bases"
+            }
+          ]
+        },      
+        {
+          "term": "What does HDL cholesterol do?",
+          "definition": "HDL clears from the body via the liver. HDL may therefore prevent the buildup of plaque, protect your arteries, and protect you from atherosclerotic cardiovascular disease. It is considered the “good” cholesterol, and higher levels are better. A good goal to aim for is higher than 55 mg/dL for women and 45 mg/dL for men. The higher your HDL cholesterol numbers, the lower your risk is for heart disease, vascular disease, and stroke.",
+          "text": "HDL cholesterol",
+          "year": "2020",
+          "sources": [
+            {
+              "author": "Harvard Health",
+              "source": "https://www.health.harvard.edu/blog/understanding-cholesterol-hdl-vs-ldl-2018041213608"
+            }
+          ]
+        },
+        {
+          "term": "What does LDL cholesterol do?",
+          "definition": "HDL carries cholesterol to your arteries, where it may collect in the vessel walls and contribute to plaque formation, known as atherosclerosis. This can lead to decreased blood flow to the heart muscle (coronary artery disease), leg muscles (peripheral artery disease), or abrupt closure of an artery in the heart or brain, leading to a heart attack or stroke. Obesity, a large waist circumference, a sedentary lifestyle, or a diet rich in red meat, full-fat dairy, saturated fat, trans fats, and processed foods can lead to high LDL cholesterol.",
+          "text": "LDL cholesterol",
+          "year": "2020",
+          "sources": [
+            {
+              "author": "Harvard Health",
+              "source": "https://www.health.harvard.edu/blog/understanding-cholesterol-hdl-vs-ldl-2018041213608"
+            }
+          ]
+        },
+        {
+          "term": "Describe the benefit to human health of trans fats.",
+          "definition": "Trans fats provide no benefits to human health and are not essential. There is no safe level of dietary trans fat. Trans fats help the food industry by extending shelf life and increasing the melting point of the hydrogenated fat.",
+          "text": "LDL cholesterol",
+          "year": "2020",
+          "sources": [
+            {
+                "name": "National Library of Medicine (NLM)",
+                "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2921725/"
+            }
+          ]
+        }      
+    ],
+    "multipleselect": [
+        {
+            "text": "Which properties are true of trans fats?",
+            "answers": [
+                "the functional groups are on opposite sides of the carbon chain",
+                "a trans bond creates a straight chain",
+                "trans fats are a result of partial hydrogenation"                
+            ],
+            "alternatives": [
+                "hydrogenation decreases the fat’s melting point",
+                "trans fats have positive effects on human health"
+            ],
+            "listCount": 5,
+            "sources": [
+                {
+                    "author": "National Library of Medicine (NLM)",
+                    "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2921725/"
+                }
+              ]
+        },
+        {
+            "text": "When olive oil is excluded, the Mediterranean diet shows 1 health benefit, and 1 health drawback compared to the Western diet. What are they?",
+            "answers": [
+                "lower glucose levels",
+                "higher LDL levels"
+            ],
+            "alternatives": [
+                "lower HDL levels",
+                "lower vitamin levels"
+            ],
+            "listCount": 4,
+            "sources": [
+                {
+                    "author": "Frontiers in Nutrition",
+                    "source": "https://www.frontiersin.org/articles/10.3389/fnut.2019.00006/full"
+                }
+              ]
+        },
+        {
+            "text": "Extra virgin olive oil is rich in:",
+            "answers": [
+                "antioxidants",
+                "vitamin E"
+            ],
+            "alternatives": [
+                "vitamin D",
+                "free radicals"
+            ],
+            "listCount": 4
+        }
+    ]
 }

@@ -134,7 +134,37 @@
     {
       "slug": "nlm",
       "link": "https://www.nlm.nih.gov/",
-      "name": "National Library of Medicene (NLM)"
+      "name": "National Library of Medicine (NLM)"
+    },
+    {
+      "slug": "mdpi",
+      "link": "https://www.mdpi.com/",
+      "name": "MDPI (Multidisciplinary Digital Publishing Institute)"
+    },
+    {
+      "slug": "nhs",
+      "link": "https://www.nhs.uk/",
+      "name": "NHS (National Health Service - UK)"
+    },
+    {
+      "slug": "harvard-health",
+      "link": "https://www.health.harvard.edu/",
+      "name": "Harvard Health"
+    },
+    {
+      "slug": "khan-academy",
+      "link": "https://www.khanacademy.org/",
+      "name": "Khan Academy"
+    },
+    {
+      "slug": "tufts",
+      "link": "https://hnrca.tufts.edu/research-laboratories/cardiovascular-nutrition/",
+      "name": "Tufts Cardiovascular Nutrition"
+    },
+    {
+      "slug": "frontiers-in-nutrition",
+      "link": "https://www.frontiersin.org/journals/nutrition",
+      "name": "Frontiers in Nutrition"
     }
   ]
 }

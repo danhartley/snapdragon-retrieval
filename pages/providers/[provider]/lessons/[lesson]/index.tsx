@@ -16,7 +16,7 @@ const Lesson = ({lesson}) => {
 
     const provider = router.query.provider;
     const type = router.query.type;
-    const disableNavigation = (testState !== enums.QUESTION_STATE.COMPLETED && type !== enums.LESSON_TYPE.CARDS);
+    const disableNavigation = (testState !== enums.QUESTION_STATE.COMPLETED && type === enums.LESSON_TYPE.QUESTIONS);
     
     return (
         <Layout title="Lesson" description={`${provider} ${lesson.title} lesson`} header={lesson.title} headerLink={lesson.source} disableNavigation={disableNavigation} >

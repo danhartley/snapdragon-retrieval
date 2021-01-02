@@ -113,6 +113,12 @@
                 &.longEntry {
                     width: 320px;
                 }
+                &.extraLongEntry {
+                    width: 440px;
+                }
+                &.fullLongEntry {
+                    width: inherit;
+                }
             }
             span:nth-child(2) {
                 margin-left: 10px;
@@ -136,7 +142,7 @@
 
 @mixin rb-list-question() {
     @include rb-list();        
-    max-width: 200px;
+    width: 200px;
     min-height: 40px;
     border-bottom: 3px solid rgba($colour,0);  
     &.incorrect { 
@@ -157,5 +163,11 @@
     }
     &.longEntry {
         width: 320px;
+    }
+    &.extraLongEntry {
+        width: 440px;
+    }
+    &.fullLongEntry {
+        width: inherit;
     }
 }

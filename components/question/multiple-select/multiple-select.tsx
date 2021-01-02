@@ -15,9 +15,12 @@ const MultipleSelect = ({question, markTest, setQuestion, testState}) => {
 
     let alternatives, css;
 
-    const listItems = question.items.map(answer => {
+    const longest = question.items.map(i => i.name).sort((a, b) => b.length - a.length)[0].length;
+
+    const listItems = question.items.map(answer => {        
+        const isLong = longest > 20 ? longest > 40 ? longest > 55 ? styles.fullLongEntry : styles.extraLongEntry : styles.longEntry : null;
         css = answer.state === enums.TRILEAN.TRUE ? styles.correct : answer.state === enums.TRILEAN.FALSE ? styles.incorrect : null;
-        return <li key={answer.name} class={`${styles.chkBoxList} ${css}`}>
+        return <li key={answer.name} class={`${styles.chkBoxList} ${css} ${isLong}`}>
             <input type="checkbox" onChange={e => handleCheckBox(answer.name)} id={answer.name} name="answer" value={answer.name} />
             <label htmlFor={answer.name}>
                 <span>{answer.name}</span><span>{question.unit ?? ''}</span>

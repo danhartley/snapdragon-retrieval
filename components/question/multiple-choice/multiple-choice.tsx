@@ -44,6 +44,7 @@ const MultipleChoice = ({question, type, PLACEHOLDER, markTest, setQuestion}) =>
             format = <ul class={question.response ? styles.disableOverlay : null}>{options}</ul>
             break;
         case enums.MULTIPLE_CHOICE_TYPE.RADIO_BUTTONS:
+            const longest = question.items.map(i => i.name).sort((a, b) => b.length - a.length)[0].length;
             const listItems = question.items.map(answer => {
                 const isCorrect = answer.state 
                                     ? answer.state === enums.TRILEAN.TRUE 
@@ -53,8 +54,8 @@ const MultipleChoice = ({question, type, PLACEHOLDER, markTest, setQuestion}) =>
                                             : answer.name === question.answer && answer.state === enums.TRILEAN.UNKNOWN
                                                 ? styles.correctAnswer
                                                 : null
-                                    : null;
-                const isLong = question.answer.length > 20 ? styles.longEntry : null;
+                                    : null;                
+                const isLong = longest > 20 ? longest > 40 ? longest > 55 ? styles.fullLongEntry : styles.extraLongEntry : styles.longEntry : null;
                 return <li key={`${question.text}_${answer.name}`} class={`${styles.rbList} ${isCorrect} ${isLong}`}>
                         <input onClick={e => handleCheckAnswer(answer.name)} type="radio" id={answer.name} name="answer" value={answer.name} />
                         <label htmlFor={answer.name}>
