@@ -410,6 +410,42 @@
                 "free radicals"
             ],
             "listCount": 4
+        },
+        {
+            "text": "Which is true in respect of monounsaturated fatty acids (MUFAs)?",
+            "answers": [
+                "they have a single double bond.",
+                "MUFAs are found in red meat, whole milk, nuts, and high fat fruits such as olives and avocados.",
+                "MUFAs are generally healthier than saturated ones."
+            ],
+            "alternatives": [
+                "olive oil contains little monounsaturated fat"
+            ],
+            "listCount": 4,
+            "sources": [
+                {
+                    "author": "Wikipedia",
+                    "source": "https://en.wikipedia.org/wiki/Fat#Monounsaturated_fat"
+                }
+            ]
+        },
+        {
+            "text": "Which is true in respect of polyunsaturated fatty acids (PUFAs)?",
+            "answers": [
+                "they have two or more double bond.",
+                "PUFAs are found mostly in nuts, seeds, fish, seed oils, and oysters."
+            ],
+            "alternatives": [
+                "PUFAs are the most common fatty acids in the human diet.",
+                "PUFAs naturally contain trans fats."
+            ],
+            "listCount": 4,
+            "sources": [
+                {
+                    "author": "Wikipedia",
+                    "source": "https://en.wikipedia.org/wiki/Fat#Monounsaturated_fat"
+                }
+            ]
         }
     ]
 }
