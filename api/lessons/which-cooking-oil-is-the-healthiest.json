@@ -152,6 +152,17 @@
           ]
         },
         {
+          "text": "Saturated fats are saturated in what?",
+          "unit": "",
+          "unitDescription": "",
+          "listCount": 1,
+          "items": [
+            {
+              "name": "hydrogen"
+            }
+          ]
+        },
+        {
           "text": "Triglyceride or triacylglycerol is the technical term for what?",
           "unit": "",
           "unitDescription": "",
@@ -272,7 +283,7 @@
     "cards": [
         {
           "term": "What is a fatty acid?",
-          "definition": "Fatty acids are molecules that consist of a long chain of carbon and hydrogen atoms",
+          "definition": "Fatty acids are molecules that consist of a long chain of carbon and hydrogen atoms attached to a carboxyl group",
           "text": "What is a fatty acid",
           "year": "2020",
           "sources": [
@@ -284,8 +295,8 @@
         },
         {
           "term": "What is the glycerol backbone?",
-          "definition": "A molecule formed of 3 carbons each in a hydroxyl group with oxygen and hydrogen",
-          "text": "What is a glycerol backbone",
+          "definition": "A small, organic molecule formed of carbon and 3 hydroxyl groups (OH)",
+          "text": "glycerol backbone",
           "year": "2020",
           "sources": [
             {
@@ -297,7 +308,7 @@
         {
           "term": "What is a fat (triglyceride or triacylglycerol)?",
           "definition": "A glycerol backbone to which 3 fatty acid 'tails' are attached",
-          "text": "What is a fatty acid",
+          "text": "fatty acid",
           "year": "2020",
           "sources": [
             {
@@ -480,6 +491,60 @@
                 {
                     "author": "Wikipedia",
                     "source": "https://en.wikipedia.org/wiki/Cholesterol"
+                }
+            ]
+        },
+        {
+            "text": "How does the structure of fats affect their properties?",
+            "answers": [
+                "saturated fats are packed tightly and have a relatively high melting point",
+                "saturated fats are solid at room temperature",
+                "unsaturated fats are usully liquid at room temperature"
+            ],
+            "alternatives": [
+                "polyunsaturated fats are often solid at room temperature",
+                "olive oil is mostly made up of saturated fats"
+            ],
+            "listCount": 4,
+            "sources": [
+                {
+                    "author": "Wikipedia",
+                    "source": "https://en.wikipedia.org/wiki/Cholesterol"
+                }
+            ]
+        },
+        {
+            "text": "alpha-linolenic acid (ALA) and linolenic acid (LA) are essential fatty acids",
+            "answers": [
+                "the human body cannot synthesise ALA or LA",
+                "salmon and chia are sources of ALA (omega-3)"
+            ],
+            "alternatives": [
+                "Omega-3 and omega-6 fatty acids have at least two trans-unsaturated bonds"
+            ],
+            "listCount": 3,
+            "sources": [
+                {
+                    "author": "Khan Academy",
+                    "source": "https://www.khanacademy.org/science/biology/macromolecules/lipids/a/lipids"
+                }
+            ]
+        },
+        {
+            "text": "what are some of the benefits of fats?",
+            "answers": [
+                "insulation",
+                "necessary for the absorption of vitamins",
+                "energy store"
+            ],
+            "alternatives": [
+                "contain less energy per gram than carbohydrates"
+            ],
+            "listCount": 4,
+            "sources": [
+                {
+                    "author": "Khan Academy",
+                    "source": "https://www.khanacademy.org/science/biology/macromolecules/lipids/a/lipids"
                 }
             ]
         }
