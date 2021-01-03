@@ -52,7 +52,7 @@ export default function Layout({
                         <div>
                             <span>
                                 <Link href={`/users/danielhartley`}>
-                                    <a>User</a>
+                                    <a>Dashboard</a>
                                 </Link>
                             </span>
                         </div>

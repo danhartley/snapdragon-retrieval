@@ -123,7 +123,7 @@
   ],
   "ranked": [
     {
-      "text": "List, in descendcing order, the top 5 sources of calories for a healthy, non-vegan diet.",
+      "text": "List, in descending order, the top 5 sources of calories for a healthy, non-vegan diet.",
       "type": "ordered",
       "unit": "kcal/day",
       "unitDescription": "kilocalories per day",

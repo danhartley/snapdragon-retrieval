@@ -17,6 +17,7 @@
     row-gap: 10px;
     .term {
         @include active-screen();
+        height: 240px;
         @include double-centred();
         padding: 0;
         border: 1px solid transparent;
@@ -38,6 +39,7 @@
             color: rgba($colour-light, .8);
         }
         &.definition {
+            padding-top: 10px;
             background-color: rgba($colour-light, .8);
             color: rgba($colour, .8);
             border: 1px solid rgba($colour, .3);

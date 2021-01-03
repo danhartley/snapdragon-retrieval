@@ -34,8 +34,7 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
         resetInput();
     };
 
-    const longest = question.items.map(i => i.name).sort((a, b) => b.length - a.length)[0].length;
-    const style = `--dynamicLength:${longest}` as any;
+    const style = logic.calculateWidth(question.items, 'name');
 
     const listItems = answerList.map((item, index) => { 
         return <li 

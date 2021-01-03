@@ -15,8 +15,7 @@ const MultipleSelect = ({question, markTest, setQuestion, testState}) => {
 
     let alternatives, css;
 
-    const longest = question.items.map(i => i.name).sort((a, b) => b.length - a.length)[0].length;
-    const style = `--dynamicLength:${longest}` as any;
+    const style = logic.calculateWidth(question.items, 'name');
 
     const listItems = question.items.map(answer => {        
         css = answer.state === enums.TRILEAN.TRUE ? styles.correct : answer.state === enums.TRILEAN.FALSE ? styles.incorrect : null;

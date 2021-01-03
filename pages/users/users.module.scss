@@ -3,16 +3,25 @@
 
 
 .markedAnswers {
+    margin: 5px 0;
     .q {
         font-style: italic;
+        color: rgba($colour, .7);
+        span {
+            margin-right: 5px;
+        }
     }
     .a {
-
+        span {
+            margin-right: 5px;
+        }
     }
     .score {
-
+        display: flex;
     }
     .isCorrect {
+        width: 24px;
         @include one-tick();
+        border-bottom: none;
     }
 }

@@ -44,8 +44,7 @@ const MultipleChoice = ({question, type, PLACEHOLDER, markTest, setQuestion}) =>
             format = <ul class={question.response ? styles.disableOverlay : null}>{options}</ul>
             break;
         case enums.MULTIPLE_CHOICE_TYPE.RADIO_BUTTONS:
-            const longest = question.items.map(i => i.name).sort((a, b) => b.length - a.length)[0].length;
-            const style = `--dynamicLength:${longest}` as any;
+            const style = logic.calculateWidth(question.items, 'name');
             const listItems = question.items.map(answer => {
                 const isCorrect = answer.state 
                                     ? answer.state === enums.TRILEAN.TRUE 

@@ -182,6 +182,13 @@ const getScore = (score: any) => {
     return { total, correct };
 }
 
+const calculateWidth = (items, sortOn) => {
+    const longest = items.map(i => i[sortOn]).sort((a, b) => b.length - a.length)[0].length;
+    const dynamicPadding = longest > 25 ? 50 : 25;
+    const style = `--dynamicLength:${longest} --dynamicPadding:${dynamicPadding}` as string;
+    return style;
+};
+
 export const logic = {
     mark,
     markUnordered,
@@ -192,5 +199,6 @@ export const logic = {
     getPlaceholders,
     shuffleArray,
     getUnusedAnswers,
-    sortBy
+    sortBy,
+    calculateWidth
 };

@@ -43,7 +43,7 @@ export const getStaticPaths = async () => {
 
 const renderScoreHistory = () => {    
     const histories = getFromLocalStorage(enums.STORAGE_KEY.HISTORY);
-    const lessonHistories = histories ? histories.map(history => {
+    const lessonHistories = histories ? histories.filter(h => h.total > 0).map(history => {
         return {
             ...history
         }
@@ -54,8 +54,7 @@ const renderScoreHistory = () => {
             !lesson.scores ? null :
             <li>
                 <Accordion lesson={lesson}>
-                    <div>total: {lesson.total}</div>
-                    <div>correct: {lesson.correct}</div>
+                    <div><span>{`You scored ${lesson.total} out of ${lesson.correct}`}</span></div>
                     <ul>
                     {
                         lesson.scores.map(score => {
@@ -63,7 +62,9 @@ const renderScoreHistory = () => {
                                 <li class={styles.markedAnswers}>
                                     <div class={styles.q}><span>Q.</span><span>{score.text}</span></div>
                                     <div class={styles.a}><span>A.</span><span>{score.answers.map(answer => <span>{answer}</span>)}</span></div>
-                                    <div class={`${styles.score} ${score.correct === score.total ? styles.isCorrect : null}`}>{score.correct}/{score.total}</div>
+                                    <div class={styles.score}>
+                                        <div>{score.correct}/{score.total}</div><div class={`${score.correct === score.total ? styles.isCorrect : null}`}></div>
+                                    </div>
                                 </li>
                             )
                         })
