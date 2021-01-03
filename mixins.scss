@@ -7,21 +7,18 @@
 }
 
 @mixin one-tick() {
-    // border-bottom: 3px solid rgba($colour,.8);  
     border-bottom: 3px dashed rgba($colour,.3);
     color: rgba($colour, 0.8);
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23323232' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") right 0px center no-repeat;
 }
 
 @mixin two-ticks() {
-    // border-bottom: 3px solid rgba($colour,.8); 
     border-bottom: 3px dashed rgba($colour,.3); 
     color: rgba($colour, 0.8);
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23323232' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") right 20px center no-repeat, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23323232' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") right 0px center no-repeat;
 }
 
 @mixin one-cross() {
-    // border-bottom: 3px solid rgba($colour,.8);  
     border-bottom: 3px dashed rgba($colour,.3);
     color: rgba($colour, 0.8);
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23323232' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E") right 0px center no-repeat;
@@ -98,7 +95,6 @@
                 cursor: pointer;
                 color: rgba($colour,.8);            
                 border-bottom: 3px solid rgba($colour,0.05);
-                width: 200px;
                 display: inline-block;
                 &.correct { 
                     @include one-tick();
@@ -110,15 +106,7 @@
                 &.correctOrder {
                     @include two-ticks();
                 }
-                &.longEntry {
-                    width: 320px;
-                }
-                &.extraLongEntry {
-                    width: 440px;
-                }
-                &.fullLongEntry {
-                    width: inherit;
-                }
+                @include answerWidth();
             }
             span:nth-child(2) {
                 margin-left: 10px;
@@ -140,9 +128,19 @@
     }
 }
 
+@mixin answerWidth {
+    width: calc(((var(--dynamicLength)*10) + 50) * 1px);
+    max-width: 800px;
+    @media (max-width: 800px) {        
+        max-width: 90vw;
+        label {
+            padding-right: 50px;
+        }
+    }
+}
+
 @mixin rb-list-question() {
-    @include rb-list();        
-    width: 200px;
+    @include rb-list();
     min-height: 40px;
     border-bottom: 3px solid rgba($colour,0);  
     &.incorrect { 
@@ -161,13 +159,5 @@
     input {
         border: 0.5rem solid rgba(0, 0, 0, 0.3);
     }
-    &.longEntry {
-        width: 320px;
-    }
-    &.extraLongEntry {
-        width: 440px;
-    }
-    &.fullLongEntry {
-        width: inherit;
-    }
+    @include answerWidth();
 }

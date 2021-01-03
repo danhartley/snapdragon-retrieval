@@ -443,7 +443,7 @@
         {
             "text": "Which is true in respect of polyunsaturated fatty acids (PUFAs)?",
             "answers": [
-                "they have two or more double bond",
+                "they have two or more double bonds",
                 "PUFAs are found mostly in nuts, seeds, fish, seed oils, and oysters"
             ],
             "alternatives": [
@@ -462,10 +462,10 @@
             "text": "What is true of randomised controlled trials?",
             "answers": [
                 "they are used for testing the effectiveness of new treatments",
-                "subjects are randomly allocated to two or more groups, and treated them differently"
+                "subjects are randomly allocated to two or more groups, and treated differently in each"
             ],
             "alternatives": [
-                "the experimental receives an alternative treatment, such as a placebo or no intervention",
+                "the experimental groupe receives an alternative treatment, such as a placebo or no intervention",
                 "the control group receives the intervention being assessed"
             ],
             "listCount": 4,

@@ -10,7 +10,7 @@ export default function Layout({
   description = 'Lesson retrieval',
   header = '',
   headerLink = '',
-  disableNavigation
+  disableNavigation = false
 }) {
 
     const router = useRouter();

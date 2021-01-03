@@ -34,27 +34,23 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
         resetInput();
     };
 
-    let isLong = null;
+    const longest = question.items.map(i => i.name).sort((a, b) => b.length - a.length)[0].length;
+    const style = `--dynamicLength:${longest}` as any;
 
-    { question.items.map(item => {
-            if(item.name.length > 20) {
-                isLong = styles.longEntry;
-            }
-        });
-    }
     const listItems = answerList.map((item, index) => { 
         return <li 
+                style={style}
                 key={`${index}_${item.name}`}                
                 onClick={e => removeFromList(e)}>
                 <span
                     class={item.name !== PLACEHOLDER 
                         ? item.state === enums.TRILEAN.TRUE 
                             ? item.isOrdered === enums.TRILEAN.TRUE 
-                                ? `${styles.correct} ${styles.correctOrder} ${isLong}`
-                                : `${styles.correct} ${isLong}`
+                                ? `${styles.correct} ${styles.correctOrder}`
+                                : `${styles.correct}`
                             : item.state === enums.TRILEAN.FALSE 
-                                ? `${styles.incorrect} ${isLong}`
-                                : `${isLong}`
+                                ? `${styles.incorrect}`
+                                : ``
                         : ''} 
                 >{item.name}</span><span>{item.correct}</span></li> 
     });

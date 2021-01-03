@@ -6,6 +6,8 @@ import { enums } from 'components/enums';
 
 import Accordion from 'components/accordion/accordion';
 
+import styles from 'pages/users/users.module.scss';
+
 const User = ({user, lessons}) => {
 
     const router = useRouter();
@@ -47,7 +49,30 @@ const renderScoreHistory = () => {
         }
     }) : [];
 
-    const lessonList = lessonHistories.filter(lesson => lesson.total !== null).map(lesson => <li><Accordion lesson={lesson} /></li>);
+    const lessonList = lessonHistories.filter(lesson => lesson.total !== null).map(lesson => {
+           return (
+            !lesson.scores ? null :
+            <li>
+                <Accordion lesson={lesson}>
+                    <div>total: {lesson.total}</div>
+                    <div>correct: {lesson.correct}</div>
+                    <ul>
+                    {
+                        lesson.scores.map(score => {
+                            return (
+                                <li class={styles.markedAnswers}>
+                                    <div class={styles.q}><span>Q.</span><span>{score.text}</span></div>
+                                    <div class={styles.a}><span>A.</span><span>{score.answers.map(answer => <span>{answer}</span>)}</span></div>
+                                    <div class={`${styles.score} ${score.correct === score.total ? styles.isCorrect : null}`}>{score.correct}/{score.total}</div>
+                                </li>
+                            )
+                        })
+                    }
+                    </ul>
+                </Accordion>
+            </li>
+           )
+    });
 
     return <ul>{lessonList}</ul>
 };
