@@ -1,14 +1,14 @@
 {
   "provider": "bbc",
   "title": "39 Ways to Save the Planet: #1 Super Rice",
-  "slug": "39-ways-to-save-the-planet-1",
+  "slug": "39-ways-to-save-the-planet-1-super-rice",
   "source": "https://www.bbc.co.uk/programmes/m000qwt3",
   "multiplechoice": [
     {
-      "text": "Rice provides what percentage of the world's calories?",
+      "text": "Rice provides approximately what percentage of the world's calories?",
       "unit": "%",
       "unitDescription": "%",
-      "answer": "~20",
+      "answer": "20",
       "answers": [
         "5",
         "10",
@@ -56,15 +56,21 @@
         "2-3",
         "4-5"
       ],
-      "listCount": 4
+      "listCount": 4,
+      "sources": [
+        {
+            "author": "Rothamsted research",
+            "source": "https://www.rothamsted.ac.uk/news/future-rice-could-reduce-reliance-water-intensive-paddy-fields"
+        }
+    ]
     },
     {
-      "text": "What is the mesocotyl (tissue)?",
-      "answer": "2-3",
+      "text": "Which seedling tissue does Dr. Kurup refer to?",
+      "answer": "mesocotyl",
       "answers": [
-        "0.25-0.5",
-        "1-2",
-        "4-5"
+        "hypocotyl",
+        "monocotyledon",
+        "endosperm"
       ],
       "listCount": 4,
       "sources": [
@@ -98,7 +104,13 @@
                 "replaces the need for direct seeding of rice",
                 "many species are naturally adapted to growing in water"
             ],
-            "listCount": 4
+            "listCount": 4,
+            "sources": [
+              {
+                  "author": "Rothamsted research",
+                  "source": "https://www.rothamsted.ac.uk/news/future-rice-could-reduce-reliance-water-intensive-paddy-fields"
+              }
+          ]
         },
         {
             "text": "What is the benefit of growing rice using DSR?",
@@ -116,7 +128,7 @@
     ],
     "unranked": [
         {
-          "text": "Dr. Kurup uses the term __ transported rice in preference to paddy fields. What is the missing word?",
+          "text": "Dr. Kurup uses the term __ rice transporting in preference to paddy fields. What is the missing word?",
           "listCount": 1,
           "items": [
             {
@@ -152,5 +164,22 @@
           ]
         }
     ],
-    "cards": []
+    "cards": [
+        {
+          "term": "Compare traditional rice cultivation practices such as PDR (puddled rice transporting), and DRS (direct seeded rice)",
+          "definition": "Rice farming is heavily reliant on ready supplies of water and labour. Climate change and urbanisation, however, threaten traditional paddy cultivation. In many parts of Asia farmers are switching to direct seeded rice (DSR) as a more sustainable alternative. This is grown in dry fields, so uses less water and requires less work. It also cuts out the greenhouse gases that bacteria in paddy fields produce.",
+          "text": "PDR and DRS",
+          "year": "2020",
+          "sources": [
+            {
+              "author": "Rothamsted research",
+              "source": "https://www.rothamsted.ac.uk/news/future-rice-could-reduce-reliance-water-intensive-paddy-fields"
+            },
+            {
+              "author": "BBC",
+              "source": "https://www.bbc.co.uk/programmes/m000qwt1"
+            }
+          ]
+        }
+    ]
 }
