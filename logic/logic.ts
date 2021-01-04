@@ -183,9 +183,10 @@ const getScore = (score: any) => {
 }
 
 const calculateWidth = (items, sortOn) => {
-    const longest = items.map(i => i[sortOn]).sort((a, b) => b.length - a.length)[0].length;
-    const dynamicPadding = longest > 25 ? 50 : 25;
-    const style = `--dynamicLength:${longest} --dynamicPadding:${dynamicPadding}` as string;
+    let longest = items.map(i => i[sortOn]).sort((a, b) => b.length - a.length)[0].length;
+        longest = longest < 10 ? longest + 50 : longest;
+    let dynamicPadding = longest > 25 ? 50 : 25;
+    let style = `--dynamicLength:${longest}; --dynamicPadding:${dynamicPadding}` as any;
     return style;
 };
 

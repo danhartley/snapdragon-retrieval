@@ -22,15 +22,6 @@ export const Question = ({lesson, testState, setTestState}) => {
     const [score, setScore] = useState({total: 0, correct: 0, answered: 0, skipped: 0, isLessonOver: false});
 
     const btnNextRef = useRef(null);
-    const btnSkipRef = useRef(null);
-
-    const skipTest = e => {
-        e.preventDefault();
-        const index = logic.next(enums.DIRECTION.Next, lesson.questions.indexOf(question), lesson.questions.length);        
-        setQuestion(lesson.questions[index]);
-        setProgress({ ...progress, number: progress.number === lesson.questions.length ? 1 : progress.number + 1 });
-        setScore({ ...score, answered: score.answered + 1, skipped: score.skipped + 1, isLessonOver: score.answered + 1 === lesson.questions.length });
-    };
 
     const markTest = ({total, correct, text, answers, type, unit}) => {
         setTestState(score.answered + 1 === lesson.questions.length ? enums.QUESTION_STATE.COMPLETED : enums.QUESTION_STATE.MARKED);
@@ -66,6 +57,23 @@ export const Question = ({lesson, testState, setTestState}) => {
 
     }
 
+    let isNextBtnVisible = false, isNextBtnDisabled = false;
+    
+    switch(testState) {
+        case enums.QUESTION_STATE.RUNNING:
+            isNextBtnVisible = question.type === enums.QUESTION_TYPE.MULTIPLE_CHOICE;
+            isNextBtnDisabled = true;            
+            break;
+        case enums.QUESTION_STATE.COMPLETED:
+            isNextBtnVisible = question.type === enums.QUESTION_TYPE.MULTIPLE_CHOICE;
+            isNextBtnDisabled = true;
+            break;
+        case enums.QUESTION_STATE.MARKED:
+            isNextBtnVisible = true;
+            isNextBtnDisabled = score.isLessonOver;
+            break;
+    }
+
     return (
         <div class={styles.questions}>
             <section>
@@ -76,10 +84,9 @@ export const Question = ({lesson, testState, setTestState}) => {
                 </div> 
                 <>{format}</>
                 <div class={styles.flex}>
-                    <button class={testState !== enums.QUESTION_STATE.MARKED ? styles.hidden : null} ref={btnNextRef} onClick={nextTest} disabled={score.isLessonOver}>
-                        {score.isLessonOver ? `Lesson over` : `Next question`}
-                    </button>
-                    <button class={testState === enums.QUESTION_STATE.MARKED || testState === enums.QUESTION_STATE.COMPLETED ? styles.hidden : null} ref={btnSkipRef} onClick={skipTest}>Skip question</button>
+                <button class={isNextBtnVisible ? null : styles.hidden} ref={btnNextRef} onClick={nextTest} disabled={isNextBtnDisabled}>
+                    {score.isLessonOver ? `Lesson over` : `Next question`}
+                </button>
                 </div>
             </section>
             <Sources sources={question.sources} />          

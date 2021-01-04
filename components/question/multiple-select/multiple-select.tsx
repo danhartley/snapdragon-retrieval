@@ -42,18 +42,29 @@ const MultipleSelect = ({question, markTest, setQuestion, testState}) => {
         markTest(score);
     };
 
-    const className = (testState === enums.QUESTION_STATE.MARKED || testState === enums.QUESTION_STATE.COMPLETED) 
-                        ? styles.hidden
-                        : checkedAnswers.length === 0 
-                            ? styles.hidden 
-                            : null;
+    let isMarkBtnVisible = true, isMarkBtnDisabled = false;
+    
+    switch(testState) {
+        case enums.QUESTION_STATE.RUNNING:
+            isMarkBtnVisible = true;
+            isMarkBtnDisabled = checkedAnswers.length === 0;           
+            break;
+        case enums.QUESTION_STATE.COMPLETED:
+            isMarkBtnVisible = true;         
+            isMarkBtnDisabled = false;
+            break;
+        case enums.QUESTION_STATE.MARKED:
+            isMarkBtnVisible = false;
+            isMarkBtnDisabled = false;
+            break;
+    }
 
     return (
         <>
         <section class={styles.container}>            
             {alternatives}
         </section>
-        <button onClick={handleCheckAnswer} class={className}>Check answer</button>
+        <button onClick={handleCheckAnswer} class={isMarkBtnVisible ? null : styles.hidden} disabled={isMarkBtnDisabled}>Check answer</button>
         </>
     )
 };
