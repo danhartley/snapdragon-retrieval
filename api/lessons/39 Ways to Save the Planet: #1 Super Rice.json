@@ -1,0 +1,156 @@
+{
+  "provider": "bbc",
+  "title": "39 Ways to Save the Planet: #1 Super Rice",
+  "slug": "39-ways-to-save-the-planet-1",
+  "source": "https://www.bbc.co.uk/programmes/m000qwt3",
+  "multiplechoice": [
+    {
+      "text": "Rice provides what percentage of the world's calories?",
+      "unit": "%",
+      "unitDescription": "%",
+      "answer": "~20",
+      "answers": [
+        "5",
+        "10",
+        "30"
+      ],
+      "listCount": 4,
+      "sources": [
+        {
+            "author": "Wikipedia",
+            "source": "https://en.wikipedia.org/wiki/Rice"
+        }
+    ]
+    },
+    {
+      "text": "Rice contributes greenhouse gas emissions comparable to which sector?",
+      "answer": "aviation",
+      "answers": [
+        "transport",
+        "industry",
+        "iron and steel"
+      ],
+      "listCount": 4,
+      "sources": [
+        {
+            "author": "Our World in Data",
+            "source": "https://ourworldindata.org/emissions-by-sector"
+        }
+    ]
+    },
+    {
+      "text": "Rice contributes what percent of global greenhouse gas emissions?",
+      "answer": "2-3",
+      "answers": [
+        "0.25-0.5",
+        "1-2",
+        "4-5"
+      ],
+      "listCount": 4
+    },
+    {
+      "text": "What percentage of global greenhouse gas emissions could be reduced by a shift to DSR and no-till cultivation?",
+      "answer": ".5",
+      "answers": [
+        "2",
+        "2-3",
+        "4-5"
+      ],
+      "listCount": 4
+    },
+    {
+      "text": "What is the mesocotyl (tissue)?",
+      "answer": "2-3",
+      "answers": [
+        "0.25-0.5",
+        "1-2",
+        "4-5"
+      ],
+      "listCount": 4,
+      "sources": [
+          {
+              "author": "Wikipedia",
+              "source": "https://en.wikipedia.org/wiki/Hypocotyl" 
+          }
+      ]
+    }
+    ],
+    "multipleselect": [
+        {
+            "text": "What is true of current rice cultivation practices?",
+            "answers": [
+                "it has low labour costs",
+                "requires ample water",
+                "emits high amounts of methane"                
+            ],
+            "alternatives": [
+                "the mesocotyl cannot grow unless it is submerged"
+            ],
+            "listCount": 4
+        },
+        {
+            "text": "What is the benefit of growing rice in water?",
+            "answers": [
+                "eleviates the need to irrigate when the seeds are young",
+                "flooding removes weeds"                
+            ],
+            "alternatives": [
+                "replaces the need for direct seeding of rice",
+                "many species are naturally adapted to growing in water"
+            ],
+            "listCount": 4
+        },
+        {
+            "text": "What is the benefit of growing rice using DSR?",
+            "answers": [
+                "may increase use of herbicides",
+                "requires less water",
+                "has greater seedling vigour",
+                "leads to a reduction in methane emissions"
+            ],
+            "alternatives": [
+                "the seeds don't need to be planted as deeply"
+            ],
+            "listCount": 5
+        }
+    ],
+    "unranked": [
+        {
+          "text": "Dr. Kurup uses the term __ transported rice in preference to paddy fields. What is the missing word?",
+          "listCount": 1,
+          "items": [
+            {
+              "name": "puddled"
+            }
+          ]
+        },
+        {
+          "text": "Rice is a food staple for how many people worldwide?",
+          "listCount": 1,
+          "items": [
+            {
+              "name": "3 billion"
+            }
+          ]
+        },
+        {
+          "text": "Flooding of fields causes methanogenic bacteria to grow in the absence of which element?",
+          "listCount": 1,
+          "items": [
+            {
+              "name": "oxygen"
+            }
+          ]
+        },
+        {
+          "text": "DSR stands for __ Seeding of Rice",
+          "listCount": 1,
+          "items": [
+            {
+              "name": "direct"
+            }
+          ]
+        }
+    ],
+    "cards": []
+}

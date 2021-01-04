@@ -165,6 +165,16 @@
       "slug": "frontiers-in-nutrition",
       "link": "https://www.frontiersin.org/journals/nutrition",
       "name": "Frontiers in Nutrition"
+    },
+    {
+      "slug": "rothamsted-research",
+      "link": "https://www.rothamsted.ac.uk/",
+      "name": "Rothamsted research"
+    },
+    {
+      "slug": "irri",
+      "link": "https://www.irri.org/",
+      "name": "International Rice Research Institute (IRRI)"
     }
   ]
 }
