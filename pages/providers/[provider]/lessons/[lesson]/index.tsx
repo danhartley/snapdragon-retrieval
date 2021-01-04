@@ -11,18 +11,21 @@ import { enums } from "components/enums";
 const Lesson = ({lesson}) => {
 
     const [testState, setTestState] = useState(enums.QUESTION_STATE.RUNNING);
+    const [progress, setProgress] = useState({ number: 1, of: lesson.questions.length });
 
     const router = useRouter();
 
     const provider = router.query.provider;
     const type = router.query.type;
-    const disableNavigation = (testState !== enums.QUESTION_STATE.COMPLETED && type === enums.LESSON_TYPE.QUESTIONS);
+    const disableNavigation = (testState !== enums.QUESTION_STATE.COMPLETED && type === enums.LESSON_TYPE.QUESTIONS) && progress.number > 1;
     
     return (
         <Layout title="Lesson" description={`${provider} ${lesson.title} lesson`} header={lesson.title} headerLink={lesson.source} disableNavigation={disableNavigation} >
             <div>
                 <QueryString options={enums.LESSON_TYPE} lesson={lesson} />
-                { type === enums.LESSON_TYPE.CARDS ? <Card lesson={lesson}></Card> : <Question lesson={lesson} testState={testState} setTestState={setTestState}></Question> }
+                { type === enums.LESSON_TYPE.CARDS 
+                    ? <Card lesson={lesson}></Card> 
+                    : <Question lesson={lesson} testState={testState} setTestState={setTestState} progress={progress} setProgress={setProgress}></Question> }
             </div>
         </Layout>
     )
