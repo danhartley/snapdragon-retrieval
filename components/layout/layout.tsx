@@ -50,6 +50,7 @@ export default function Layout({
                             }
                         </div>
                         <div>
+                            <span class={styles.date}>{new Date().toDateString()}</span>
                             <span>
                                 <Link href={`/users/danielhartley`}>
                                     <a>Dashboard</a>
