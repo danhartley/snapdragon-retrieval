@@ -1,6 +1,106 @@
 {
-  "provider": "bbc",
-  "title": "39 Ways to Save the Planet: #3 Sublime Seagrass",
-  "slug": "39-ways-to-save-the-planet-3-sublime-seagrass",
-  "source": "https://www.bbc.co.uk/programmes/m000qwt3"
-}
+    "provider": "bbc",
+    "title": "39 Ways to Save the Planet: #3 Sublime Seagrass",
+    "slug": "39-ways-to-save-the-planet-3-sublime-seagrass",
+    "source": "https://www.bbc.co.uk/programmes/m000qwt3",
+    "multiplechoice": [    
+      {
+        "text": "The oceans have absorbed roughly absorbed roughly __% of our emissions between the beginning of the industrial revolution and the mid-1990s",
+        "unit": "%",
+        "unitDescription": "%",
+        "answer": "30",
+        "answers": [
+          "20",
+          "20",
+          "40"
+        ],
+        "sources": [
+            {
+                "author": "Science (American Association for the Advancement of Science)",
+                "source": "https://science.sciencemag.org/content/363/6432/1193"
+            }
+        ]
+      },
+      {
+          "text": "Dr. Edwards estimates there are how many hectares of seagrass worldwide",
+          "unit": "mil hectares",
+          "unitDescription": "million hectares",
+          "answer": "16-27",
+          "answers": [
+            "12-15",
+            "20-22",
+            "30-40"
+          ],
+          "sources": [
+              {
+                  "author": "Dr. Tamsin Edwards",
+                  "source": "King's College, London"
+              }
+          ]
+        },
+      {
+          "text": "Dr. Edwards estimates that __ hectares of seagrass have lost",
+          "unit": "mil hectares",
+          "unitDescription": "million hectares",
+          "answer": "6",
+          "answers": [
+            "2",
+            "4",
+            "8"
+          ],
+          "sources": [
+              {
+                  "author": "Dr. Tamsin Edwards",
+                  "source": "King's College, London"
+              }
+          ]
+        },
+      {
+          "text": "By what percentage might CO2 emissions be reduced through blue carbon sequestration?",
+          "answer": ".1-.2",
+          "answers": [
+            ".01",
+            ".5",
+            "1"
+          ],
+          "sources": [
+              {
+                  "author": "Dr. Tamsin Edwards",
+                  "source": "King's College, London"
+              }
+          ]
+        }
+      ],
+      "multipleselect": [
+          {
+              "text": "What are some of the benefits of seagrass?",
+              "answers": [
+                  "a habitat of great biodiversity",
+                  "sequesters carbon at a rate greater than the rainforests",
+                  "leaf litter does not rot",
+                  "slows the water down and traps particles in sediment"
+              ],
+              "alternatives": [
+                  "seagrass has a low leaf turnover"
+              ],
+              "listCount": 5,
+              "sources": [
+                  {
+                      "author": "Project Seagrass",
+                      "source": "https://www.projectseagrass.org/why-seagrass/climate-dev/"
+                  }
+              ]
+          }
+      ],
+      "unranked": [
+          {
+            "text": "In terms of climate change, seagrasses, salt marshes, and mangroves are collectively know as what? (hint two words)",
+            "listCount": 1,
+            "items": [
+              {
+                "name": "blue carbon"
+              }
+            ]
+          }
+      ]
+  }

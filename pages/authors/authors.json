@@ -190,6 +190,16 @@
       "slug": "global-construction-review",
       "link": "https://www.globalconstructionreview.com/",
       "name": "Global Construction Review"
+    },
+    {
+      "slug": "project-seagrass",
+      "link": "https://www.projectseagrass.org/",
+      "name": "Project Seagrass"
+    },
+    {
+      "slug": "kings-college",
+      "link": "https://www.kcl.ac.uk/",
+      "name": "King's College, London"
     }
   ]
 }
