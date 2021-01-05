@@ -2,5 +2,118 @@
   "provider": "bbc",
   "title": "39 Ways to Save the Planet: #4 Educating and Empowering Girls",
   "slug": "39-ways-to-save-the-planet-educating-and-empowering-girls",
-  "source": "https://www.bbc.co.uk/programmes/m000qwt3"
+  "source": "https://www.bbc.co.uk/programmes/m000qwt3",
+  "multipleselect": [
+    {
+        "text": "What are some of the reasons why girls do not attend school in sub-Saharan Africa?",
+        "answers": [
+            "poverty; when there is money boys are seen as a better investment",
+            "fear for girls' safety, particulary when schools are far"
+        ],
+        "alternatives": [
+            "parents not wanting girls to receive an education"
+        ],
+        "listCount": 3,
+        "sources": [
+            {
+                "author": "camfed",
+                "source": "https://camfed.org/why-girls-education/"
+            }
+        ]
+    },
+    {
+        "text": "According to Fiona Mavinga how do women benefit from an education?",
+        "answers": [
+            "have a greater choice over when they marry",
+            "earn 25% more",
+            "have fewer children"
+        ],
+        "alternatives": [
+            "higher infant and child mortality"
+        ],
+        "listCount": 5,
+        "sources": [
+            {
+                "author": "camfed",
+                "source": "https://camfed.org/why-girls-education/"
+            }
+        ]
+    },
+    {
+        "text": "In the project described, insects as a source of protein:",
+        "answers": [
+            "live largely on waste leaaves and vegetables",
+            "produce far lower GHGs in comparison to other animal sources of protein",
+            "can be converted into flour"
+        ],
+        "alternatives": [
+            "use more water than comparable sources of protein"
+        ],
+        "listCount": 5
+    }
+    ],
+    "multiplechoice": [    
+        {
+          "text": "What is the approximate ratio of children for uneducated to educated women?",
+          "unit": "children",
+          "unitDescription": "children",
+          "answer": "2:1",
+          "answers": [
+            "1:1",
+            "3:1",
+            "1:2"
+          ],
+          "sources": [
+              {
+                "author": "camfed",
+                "source": "https://camfed.org/why-girls-education/"
+              }
+          ]
+        },
+        {
+          "text": "How many women worldwide do not have access to family planning?",
+          "unit": "mil",
+          "unitDescription": "million",
+          "answer": "230",
+          "answers": [
+            "50",
+            "130",
+            "320"
+          ]
+        },
+        {
+          "text": "What is the estimated savings in emissions that would be derived from giving more women a proper education, and control over the number of children they have?",
+          "answer": "5%",
+          "answers": [
+            ".5%",
+            "1%",
+            "2.5%"
+          ]
+        }
+    ],
+    "unranked": [
+        {
+          "text": "According to Dr. Edwards improved women's education and funding of family planning could reduce the population by __ by 2050",
+          "listCount": 1,
+          "items": [
+            {
+              "name": "843 million"
+            }
+          ]
+        }
+    ],
+    "cards": [
+        {
+          "term": "What are is the value of investing in girls' education?",
+          "definition": "Girls’ education is the starting point for securing the rights of women and girls globally, while improving community health and resilience to climate shocks. It also leads to a drastic decrease in emissions. It's the most profound investment we can make to secure our planet’s future.",
+          "text": "girls' education",
+          "year": "2020",
+          "sources": [
+            {
+              "author": "CAMFED",
+              "source": "https://camfed.org//why-girls-education/gender-equality-climate-action/"
+            }
+          ]
+        }
+    ]
 }

@@ -200,6 +200,11 @@
       "slug": "kings-college",
       "link": "https://www.kcl.ac.uk/",
       "name": "King's College, London"
+    },
+    {
+      "slug": "camfed",
+      "link": "https://camfed.org/",
+      "name": "CAMFED"
     }
   ]
 }
