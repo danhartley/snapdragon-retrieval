@@ -65,7 +65,8 @@
     },
     {
       "name": "Our World in Data",
-      "slug": "ourworldindata"
+      "slug": "ourworldindata",
+      "link": "https://ourworldindata.org/"
     },
     {
       "name": "ScienceDirect",
@@ -205,6 +206,21 @@
       "slug": "camfed",
       "link": "https://camfed.org/",
       "name": "CAMFED"
+    },
+    {
+      "slug": "bladebug",
+      "link": "https://bladebug.co.uk/",
+      "name": "BladeBUG"
+    },
+    {
+      "slug": "catapult",
+      "link": "https://ore.catapult.org.uk/stories/mimree/",
+      "name": "The Catapult"
+    },
+    {
+      "slug": "gov-uk",
+      "link": "https://www.gov.uk/",
+      "name": "GOV.UK"
     }
   ]
 }

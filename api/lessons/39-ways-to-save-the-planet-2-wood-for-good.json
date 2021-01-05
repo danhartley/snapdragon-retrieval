@@ -118,14 +118,14 @@
     ],
     "cards": [
         {
-          "term": "",
-          "definition": "",
-          "text": "",
+          "term": "What is cross-laminated timber (CLT)?",
+          "definition": "CLT is a wood panel product made from gluing together layers of solid-sawn lumber, i.e., lumber cut from a single log. Each layer of boards is usually oriented perpendicular to adjacent layers.",
+          "text": "cross-laminated timber",
           "year": "2020",
           "sources": [
             {
-              "author": "BBC",
-              "source": "https://www.bbc.co.uk/sounds/play/m000qy43"
+              "author": "Wikipedia",
+              "source": "https://en.wikipedia.org/wiki/Cross-laminated_timber"
             }
           ]
         }

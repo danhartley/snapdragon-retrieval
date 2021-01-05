@@ -1,6 +1,132 @@
 {
-  "provider": "bbc",
-  "title": "39 Ways to Save the Planet: #5 Robots of the Wind",
-  "slug": "39-ways-to-save-the-planet-4-robots-of-the-wind",
-  "source": "https://www.bbc.co.uk/programmes/m000qwt3"
+	"provider": "bbc",
+	"title": "39 Ways to Save the Planet: #5 Robots of the Wind",
+	"slug": "39-ways-to-save-the-planet-4-robots-of-the-wind",
+	"source": "https://www.bbc.co.uk/programmes/m000qwt3",
+	"multipleselect": [{
+			"text": "Offshore wind turbines are:",
+			"answers": [
+				"expensive to access and maintain",
+				"difficult or dangerous for technicians to work on"
+			],
+			"alternatives": [
+				"easily accessible"
+			],
+			"listCount": 3
+		},
+		{
+			"text": "What are some of the costs associated with turbine maintenance?",
+			"answers": [
+				"downtime when energy is not generated",
+				"cost of technicians",
+				"cost of support crew, boats, fuel, etc."
+			],
+			"alternatives": [
+				"must be done every day"
+			],
+			"listCount": 4
+		},
+		{
+			"text": "What are some of the problems that can effect turbines performance?",
+			"answers": [
+				"lead edge erosion",
+                "loss of performance from weathering is 2-10%",
+                "stopping turbines for maintenance"
+			],
+			"alternatives": [
+				"loss of performance due to bird strikes"
+			],
+			"listCount": 4
+		}
+	],
+	"multiplechoice": [
+        {
+		"text": "What is the contribution to the life time cost of an offshore wind turbine attributable to maintenance?",
+		"answer": "25-40%",
+		"answers": [
+			"10-20%",
+			"15-25%",
+			"40-50%"
+        ],
+        "sources": [
+            {
+                "author": "International Energy Agency (IEA)",
+                "source": "https://www.iea.org/news/offshore-wind-to-become-a-1-trillion-industry"
+            }
+        ]
+    },
+        {
+		"text": "The cost of onshore wind generation has fallen by __% since 2009?",
+		"answer": "50%",
+		"answers": [
+			"10",
+			"25",
+            "35",
+            "60"
+        ],
+        "sources": [
+            {
+                "author": "Our World in Data",
+                "source": "https://ourworldindata.org/grapher/onshore-wind-lcoe-vs-wind-consumption?time=2009..2017"
+            }
+        ]
+    },
+        {
+        "text": "Current UK output from offshore wind is 10GW. What is the target for 2030?",
+        "unit": "GW",
+        "unitDescription": "Gigawatt (1 billion watts)",
+		"answer": "40",
+		"answers": [
+			"15",
+			"25",
+            "35",
+            "50"
+        ],
+        "sources": [
+            {
+                "author": "GOV.UK",
+                "source": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/875384/Wind_powered_electricity_in_the_UK.pdf"
+            },
+            {
+                "author": "Wikipedia",
+                "source": "https://en.wikipedia.org/wiki/Wind_power_in_the_United_Kingdom"
+            }
+        ]
+    }
+    ],
+    "unranked": [{
+		"text": "According to the IEA global wind capacity (offshore and onshore) could be increased by __%",
+		"listCount": 1,
+		"items": [{
+			"name": "40"
+        }],
+        "sources": [
+            {
+                "author": "International Energy Agency (IEA)",
+                "source": "https://www.iea.org/reports/renewables-2020/wind"
+            }
+        ]        
+    },
+    {
+		"text": "If energy from wind was increased forty fold this would reduce GHG emissions by nearly __%",
+		"listCount": 1,
+		"items": [{
+			"name": "4"
+        }]       
+    }
+],
+"cards": [
+    {
+      "term": "What is the future of offshore wind?",
+      "definition": "Offshore wind is also expected to grow rapidly. Deploying turbines in the sea takes advantage of better wind resources than at land-based sites. Therefore, new offshore turbines are able to achieve significantly more full-load hours depending on resource availability.",
+      "text": "cross-laminated timber",
+      "year": "2020",
+      "sources": [
+        {
+          "author": "International Energy Agency (IEA)",
+          "source": "https://www.iea.org/fuels-and-technologies/wind"
+        }
+      ]
+    }
+]
 }
