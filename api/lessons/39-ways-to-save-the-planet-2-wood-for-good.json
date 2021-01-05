@@ -2,5 +2,132 @@
   "provider": "bbc",
   "title": "39 Ways to Save the Planet: #2 Wood for Good",
   "source": "https://www.bbc.co.uk/programmes/m000qwt3",
-  "slug": "39-ways-to-save-the-planet-2-wood-for-good"
+  "slug": "39-ways-to-save-the-planet-2-wood-for-good",
+  "multiplechoice": [    
+    {
+      "text": "Cement is responsible for what percentage of ghg emissions (NB see worldindata for correct figure)?",
+      "answer": "3",
+      "answers": [
+        "4",
+        "8",
+        "2"
+      ],
+      "listCount": 4,
+      "sources": [
+        {
+            "author": "Chatham House",
+            "source": "https://www.chathamhouse.org/2018/06/making-concrete-change-innovation-low-carbon-cement-and-concrete"
+        },        
+        {
+            "author": "Our World in Data",
+            "source": "https://ourworldindata.org/emissions-by-sector"
+        },
+        {
+            "author": "BBC",
+            "source": "https://www.bbc.com/news/science-environment-46455844"
+        }
+    ]
+    },
+    {
+        "text": "The world's tallest building is in Mjøstårnet, Norway. How tall is it in metres?",
+        "answer": "85.4",
+        "answers": [
+          "56.6",
+          "74",
+          "99"
+        ],
+        "listCount": 4,
+        "sources": [
+          {
+              "author": "Wikipedia",
+              "source": "https://en.wikipedia.org/wiki/Mj%C3%B8st%C3%A5rnet"
+          }
+      ]
+    },
+    {
+        "text": "All public buildings in France will have to be made of at least __% organic materials by 2022",
+        "unit": "%",
+        "unitDescription": "%",
+        "answer": "50",
+        "answers": [
+          "10",
+          "25",
+          "75"
+        ],
+        "listCount": 4,
+        "sources": [
+          {
+              "author": "Global Construction Review",
+              "source": "https://www.globalconstructionreview.com/news/new-french-public-buildings-must-be-made-50-wood"
+          }
+      ]
+      },
+      {
+          "text": "What percentage of global greenhouse gas emissions could be reduced by constructing 50% of buildings from wood?",
+          "answer": ".5",
+          "answers": [
+            "2",
+            "2-3",
+            "4-5"
+          ],
+          "listCount": 4
+    }
+],
+"unranked": [
+    {
+      "text": "What does CLT stand for? (hint: hyphendated)",
+      "listCount": 1,
+      "items": [
+        {
+          "name": "cross-laminated timber"
+        }
+      ]
+    },
+    {
+      "text": "How many people does Dr. Ramage claim the forests of Canada could house in perpetuity, and sustainably",
+      "listCount": 1,
+      "items": [
+        {
+          "name": "1 billion"
+        }
+      ]
+    },
+    {
+      "text": "What can eleviate the effect of fire in buildings?",
+      "listCount": 1,
+      "items": [
+        {
+          "name": "charcoal"
+        }
+      ]
+    }
+    ],
+    "multipleselect": [
+        {
+            "text": "What are some of the benefits of CLT?",
+            "answers": [
+                "act as a carbon sink",
+                "avoids emissions from production of steel, concrete, and cement",
+                ""
+            ],
+            "alternatives": [
+                ""
+            ],
+            "listCount": 4
+        }
+    ],
+    "cards": [
+        {
+          "term": "",
+          "definition": "",
+          "text": "",
+          "year": "2020",
+          "sources": [
+            {
+              "author": "BBC",
+              "source": "https://www.bbc.co.uk/sounds/play/m000qy43"
+            }
+          ]
+        }
+    ]
 }

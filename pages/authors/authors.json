@@ -175,6 +175,21 @@
       "slug": "irri",
       "link": "https://www.irri.org/",
       "name": "International Rice Research Institute (IRRI)"
+    },
+    {
+      "slug": "arct-cam",
+      "link": "https://www.arct.cam.ac.uk/",
+      "name": "Department of Architecture, University of Cambridge"
+    },
+    {
+      "slug": "chatham-house",
+      "link": "https://www.chathamhouse.org/",
+      "name": "Chatham House"
+    },
+    {
+      "slug": "global-construction-review",
+      "link": "https://www.globalconstructionreview.com/",
+      "name": "Global Construction Review"
     }
   ]
 }
