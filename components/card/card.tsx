@@ -5,6 +5,7 @@ import { logic } from 'logic/logic';
 import Sources from 'components/question/source';
 
 import styles from 'components/card/card.module.scss';
+import { Question } from 'components/question/question';
 
 export const Card = ({lesson}) => {
 
@@ -42,10 +43,10 @@ export const Card = ({lesson}) => {
                 </div>
             </section>
             <section class={styles.controls}>
-                <button aria-label="Got to previous card" data-direction={enums.DIRECTION.Previous} onClick={nextCard} class={styles.previous}></button>
-                <button aria-label="Got to next card" data-direction={enums.DIRECTION.Next} onClick={nextCard} class={styles.next}></button>
+                <button aria-label="Got to previous card" data-direction={enums.DIRECTION.Previous} onClick={nextCard} class={styles.previous} disabled={lesson.cards.length === 1}></button>
+                <button aria-label="Got to next card" data-direction={enums.DIRECTION.Next} onClick={nextCard} class={styles.next} disabled={lesson.cards.length === 1}></button>
                 <button aria-label="Turn the card over" onClick={flipCard} class={styles.flip}></button>
-                <button aria-label="Shuffle the cards" class={styles.shuffle}></button>
+                <button aria-label="Shuffle the cards" class={styles.shuffle} disabled={lesson.cards.length === 1}></button>
             </section>
             <Sources sources={card.sources} />
             {/* <section><ExternalLinkList items={lesson.cards} source={lesson.source}></ExternalLinkList></section> */}
