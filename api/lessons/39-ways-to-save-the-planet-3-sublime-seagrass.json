@@ -11,8 +11,8 @@
         "answer": "30",
         "answers": [
           "20",
-          "20",
-          "40"
+          "40",
+          "50"
         ],
         "sources": [
             {
@@ -73,17 +73,35 @@
       ],
       "multipleselect": [
           {
-              "text": "What are some of the benefits of seagrass?",
+              "text": "What are some of the benefits of seagrasses?",
               "answers": [
-                  "a habitat of great biodiversity",
-                  "sequesters carbon at a rate greater than the rainforests",
-                  "leaf litter does not rot",
-                  "slows the water down and traps particles in sediment"
+                  "they are a habitat of great biodiversity",
+                  "they sequester carbon at a rate greater than the rainforests",
+                  "their leaf litter does not rot",
+                  "they slow the water down and traps particles in sediment"
               ],
               "alternatives": [
-                  "seagrass has a low leaf turnover"
+                  "seagrasses have a low leaf turnover"
               ],
               "listCount": 5,
+              "sources": [
+                  {
+                      "author": "Project Seagrass",
+                      "source": "https://www.projectseagrass.org/why-seagrass/climate-dev/"
+                  }
+              ]
+          },
+          {
+              "text": "Which of the following are true about seagrasses?",
+              "answers": [
+                  "they are autotrophic",
+                  "they are flowering plants",
+                  "there are ~60 species of seagrasses worldwide"
+              ],
+              "alternatives": [
+                  "they evolved independently from terrestrial plants"
+              ],
+              "listCount": 4,
               "sources": [
                   {
                       "author": "Project Seagrass",
@@ -102,5 +120,19 @@
               }
             ]
           }
-      ]
+      ],
+      "cards": [
+        {
+          "term": "What are seagrasses?",
+          "definition": "Seagrasses are the only flowering plants which grow in marine environments. Seagrasses form dense underwater seagrass meadows which are among the most productive ecosystems in the world. They function as important carbon sinks and provide habitats and food for a diversity of marine life comparable to that of coral reefs.",
+          "text": "seagrasses definition",
+          "year": "2020",
+          "sources": [
+            {
+              "author": "Wikipedia",
+              "source": "https://en.wikipedia.org/wiki/Seagrass"
+            }
+          ]
+        }
+    ]
   }
