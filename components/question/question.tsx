@@ -1,4 +1,4 @@
-import { useState, useRef } from "preact/hooks";
+import { useState, useRef, useEffect } from "preact/hooks";
 import { logic } from 'logic/logic';
 import { useLocalStorageState } from 'api/state';
 import { enums } from 'components/enums';
@@ -72,6 +72,18 @@ export const Question = ({lesson, testState, setTestState, progress, setProgress
             isNextBtnDisabled = score.isLessonOver;
             break;
     }
+
+    // useEffect(() => {
+    //     axios("/api/get-shopnotes").then(result => {
+    //       if (result.status !== 200) {
+    //         console.error("Error loading shopnotes");
+    //         console.error(result);
+    //         return;
+    //       }
+    //       setShopnotes(result.data.shopnotes);
+    //       setLoading(true);
+    //     });
+    //   }, [loading]);
 
     return (
         <div class={styles.questions}>

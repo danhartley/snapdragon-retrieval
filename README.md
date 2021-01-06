@@ -112,11 +112,11 @@ Here's how this example repo was set up:
 
 - For simple paths, add moduleDirectories: ['node_modules', './'] in jest.config.js
 
-# JS
+## JS
 
 - Already included: https://preactjs.com/guide/v10/preact-testing-library/
 
-# TS
+## TS
 
 Not sure which, if any, of these libraries were needed:
 
@@ -136,3 +136,13 @@ Required:
 - create new launch.json from the snippet
 - Create new JS debug terminal
 - run npm test from there
+
+## Fauna
+
+- Create Fauna account, obtain VS key and set up Code/Preference/Extensions
+- Get linter for .gql
+- Push schema to Fauna
+- Create /functions folder
+- npm i axios dotenv
+- .toml changes e.g. see here: https://css-tricks.com/how-to-create-a-client-serverless-jamstack-app-using-netlify-gatsby-and-fauna/
+- Add Fauna key to .env

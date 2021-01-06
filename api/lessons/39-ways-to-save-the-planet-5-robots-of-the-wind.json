@@ -59,10 +59,10 @@
 		"text": "The cost of onshore wind generation has fallen by __% since 2009?",
 		"answer": "50%",
 		"answers": [
-			"10",
-			"25",
-            "35",
-            "60"
+			"10%",
+			"25%",
+            "35%",
+            "60%"
         ],
         "sources": [
             {

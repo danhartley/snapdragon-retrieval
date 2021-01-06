@@ -1,0 +1,17 @@
+type Question {
+    text: String!
+    correct: Int!
+    total: Int!
+    lesson: Lesson!
+}
+
+type Lesson {
+    title: String!
+    questions: [Question] @relation
+}
+
+type Query {
+  allQuestions: [Question!]
+  questionsByLessonText(text: String!): [Question!]
+  allLessons: [Lesson!]
+}
