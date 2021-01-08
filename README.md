@@ -143,6 +143,17 @@ Required:
 - Get linter for .gql
 - Push schema to Fauna
 - Create /functions folder
+- npm install netlify-cli -g
 - npm i axios dotenv
 - .toml changes e.g. see here: https://css-tricks.com/how-to-create-a-client-serverless-jamstack-app-using-netlify-gatsby-and-fauna/
 - Add Fauna key to .env
+- Give netlify-cli access: netlify login, netlify link
+- Create functions folder, query helper, then run netlify dev
+- With netlify dev failing, trying netlify-lambda: 
+    (https://www.netlify.com/blog/2018/07/09/building-serverless-crud-apps-with-netlify-functions-faunadb/)
+- npm i netlify-lambda --save-dev
+- npm install npm-run-all --save-dev
+- Now to try this: @netlify/plugin-nextjs
+- [[plugins]]
+- package = "@netlify/plugin-nextjs"
+- IGNORE everything related to netlify dev for now; everything done manually…

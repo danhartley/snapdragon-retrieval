@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx", "components/question/question.ts", "logic/logic.ts", "logic/logic.test.ts", "api/lessons/utils.js"
-, "pages/_app.js"  ],
+, "pages/_app.js", "functions/get-lessons.js", "functions/utils/fauna-api.js"  ],
   "exclude": [
     "node_modules"
   ]

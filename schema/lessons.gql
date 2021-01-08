@@ -7,11 +7,12 @@ type Question {
 
 type Lesson {
     title: String!
-    questions: [Question] @relation
+    # questions: [Question] @relation
 }
 
 type Query {
-  allQuestions: [Question!]
-  questionsByLessonText(text: String!): [Question!]
   allLessons: [Lesson!]
+  lessonByTitle(title: String!): Lesson!
+  allQuestions: [Question!]
+  questionsByQuestionText(text: String!): Question!
 }

@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Layout from 'components/layout/layout';
 
 const Home = () => {
+
   return (
     <Layout title="Home" header={"Snapdragon retrieval"}>
         <main>

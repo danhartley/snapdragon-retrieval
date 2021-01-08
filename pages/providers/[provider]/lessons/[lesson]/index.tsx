@@ -1,4 +1,5 @@
-import { useState } from "preact/hooks";
+import { useState, useEffect } from "preact/hooks";
+import { api } from 'api/api';
 import { useRouter } from 'next/router';
 import { getLessons } from 'api/lessons/utils';
 import { logic } from 'logic/logic';
@@ -19,6 +20,39 @@ const Lesson = ({lesson}) => {
     const type = router.query.type;
     const disableNavigation = (testState !== enums.QUESTION_STATE.COMPLETED && type === enums.LESSON_TYPE.QUESTIONS) && progress.number > 1;
     
+    useEffect(() => {        
+
+        if(!lesson.questions) return;
+
+        let questions;
+        const getQuestions = async () => {
+
+            
+            const response = await api.getQuestionsByLesson(lesson) as Array<any>;
+            
+            questions = response.map(r => r.length > 0 ? r : null).filter(r => r);
+
+            console.log('questions:', questions)
+
+            if(questions.length === 0) {                
+                questions = await api.createQuestions(lesson);
+            }            
+
+            console.log('questions:', questions)
+        };
+        
+        const getLesson = async () => {
+            let _lesson = await api.getLessonByTitle(lesson.title) as any;            
+            if(_lesson && _lesson.data && _lesson.data.length > 0) {
+                getQuestions();                
+            } else {
+                _lesson = await api.createLesson(lesson.title);
+            }
+        };
+
+        getLesson();
+    },[]);
+  
     return (
         <Layout title="Lesson" description={`${provider} ${lesson.title} lesson`} header={lesson.title} headerLink={lesson.source} disableNavigation={disableNavigation} >
             <div>

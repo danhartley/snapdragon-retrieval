@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "preact/hooks";
 import { logic } from 'logic/logic';
 import { useLocalStorageState } from 'api/state';
 import { enums } from 'components/enums';
+import { api } from 'api/api';
 import MultipleChoice from 'components/question/multiple-choice/multiple-choice';
 import MultipleSelect from 'components/question/multiple-select/multiple-select';
 import OrderedSelections from 'components/question/ordered/ordered';
@@ -74,17 +75,17 @@ export const Question = ({lesson, testState, setTestState, progress, setProgress
     }
 
     // useEffect(() => {
-    //     axios("/api/get-shopnotes").then(result => {
-    //       if (result.status !== 200) {
-    //         console.error("Error loading shopnotes");
-    //         console.error(result);
-    //         return;
-    //       }
-    //       setShopnotes(result.data.shopnotes);
-    //       setLoading(true);
-    //     });
-    //   }, [loading]);
-
+    //     const init = async () => {
+    //         const questions = await api.getQuestionByText(question.text) as any;
+    //         if(questions.data.length > 0) {
+    //             console.log(questions.data[0].data);
+    //         } else {
+    //             const q = await api.createQuestion(lesson.title, question.text);
+    //         }
+    //     };
+    //     init();
+    // },[]);
+  
     return (
         <div class={styles.questions}>
             <section>
