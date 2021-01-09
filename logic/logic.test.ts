@@ -209,7 +209,7 @@ describe('marking markMultipleAnswers questions', () => {
     ],
     lesson = {question, checkedAnswers};
 
-    test.only('check for balance of right and wrong answers', () => {
+    test('check for balance of right and wrong answers', () => {
         score = logic.markMultipleAnswers(lesson);
         expect(score.total).toBe(3);
         expect(score.correct).toBe(0);

@@ -7,7 +7,7 @@ import MultipleChoice from 'components/question/multiple-choice/multiple-choice'
 import MultipleSelect from 'components/question/multiple-select/multiple-select';
 import OrderedSelections from 'components/question/ordered/ordered';
 import Sources from 'components/question/source';
-import CommunityScore from 'components/question/community-score';
+import CommunityScore from 'components/question/community-score/community-score';
 
 import styles from 'components/question/question.module.scss';
 

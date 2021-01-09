@@ -50,10 +50,7 @@ const Lesson = ({lesson}) => {
             lessonHistory = lessonHasQuestions ? lessonHistory : await api.createLesson(lesson.title);
             
             lessonQuestionHistories = await getQuestions();
-            lessonQuestionHistories = lessonQuestionHistories.map(lqh => lqh[0].data);
-
-            if(lessonQuestionHistories.length === 0) return;
-            
+                        
             lesson.questions.forEach(question => {
                 const questionHistory = lessonQuestionHistories.find(qt => qt.text === question.text) as any;
                 if(questionHistory) {
