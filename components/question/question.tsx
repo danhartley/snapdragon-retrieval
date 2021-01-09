@@ -7,6 +7,7 @@ import MultipleChoice from 'components/question/multiple-choice/multiple-choice'
 import MultipleSelect from 'components/question/multiple-select/multiple-select';
 import OrderedSelections from 'components/question/ordered/ordered';
 import Sources from 'components/question/source';
+import CommunityScore from 'components/question/community-score';
 
 import styles from 'components/question/question.module.scss';
 
@@ -16,17 +17,27 @@ export const Question = ({lesson, testState, setTestState, progress, setProgress
 
     const PLACEHOLDER = '---';
     const INITIAL_QUESTION = 0;
+    const COMMUNITY_SCORE = {};
 
     const [question, setQuestion] = useState(lesson.questions[INITIAL_QUESTION]);
-    const [LessonHistories, setLessonHistories] = useLocalStorageState(null, enums.STORAGE_KEY.HISTORY);
+    const [lessonHistories, setLessonHistories] = useLocalStorageState(null, enums.STORAGE_KEY.HISTORY);
     const [score, setScore] = useState({total: 0, correct: 0, answered: 0, skipped: 0, isLessonOver: false});
+    const [communityScore, setCommunityScore] = useState(COMMUNITY_SCORE);
+
+    useEffect(() => {
+        setCommunityScore(COMMUNITY_SCORE);
+    },[question.text]);
 
     const btnNextRef = useRef(null);
 
-    const markTest = ({total, correct, text, answers, type, unit}) => {
+    const markTest = async ({total, correct, text, answers, type, unit}) => {
         setTestState(score.answered + 1 === lesson.questions.length ? enums.QUESTION_STATE.COMPLETED : enums.QUESTION_STATE.MARKED);
         setLessonHistories({total, correct, text, answers, type, unit, title: lesson.title }, enums.STORAGE_KEY.HISTORY);
         setScore({ ...score, total: score.total + total, correct: score.correct + correct, answered: score.answered + 1, isLessonOver: score.answered + 1 === lesson.questions.length });
+        const response = await api.updateQuestion({ ...question, total: question.total + total, correct: question.correct + correct }) as any;
+        if(response) {
+            setCommunityScore({ correct: response.data.correct, total: response.data.total, question, userTotal: total, userCorrect: correct });
+        }
     };
 
     const nextTest = e => {
@@ -74,18 +85,6 @@ export const Question = ({lesson, testState, setTestState, progress, setProgress
             break;
     }
 
-    // useEffect(() => {
-    //     const init = async () => {
-    //         const questions = await api.getQuestionByText(question.text) as any;
-    //         if(questions.data.length > 0) {
-    //             console.log(questions.data[0].data);
-    //         } else {
-    //             const q = await api.createQuestion(lesson.title, question.text);
-    //         }
-    //     };
-    //     init();
-    // },[]);
-  
     return (
         <div class={styles.questions}>
             <section>
@@ -101,7 +100,8 @@ export const Question = ({lesson, testState, setTestState, progress, setProgress
                 </button>
                 </div>
             </section>
-            <Sources sources={question.sources} />          
+            <CommunityScore data={communityScore} />
+            <Sources sources={question.sources} />
         </div>
     )
 };

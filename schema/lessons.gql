@@ -7,7 +7,6 @@ type Question {
 
 type Lesson {
     title: String!
-    # questions: [Question] @relation
 }
 
 type Query {

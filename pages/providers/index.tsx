@@ -5,7 +5,6 @@ import { getLessons } from 'api/lessons/utils';
 
 const Providers = ({providers, lessonsProviders}) => {
 
-
 const providersWithLessons = providers.filter(p => lessonsProviders.indexOf(p.slug) > -1);
 const providerList = providersWithLessons.map(provider => <li><Link href={`/providers/${provider.slug}/lessons`}><a>{provider.name}</a></Link></li>);
 

@@ -1,10 +1,9 @@
-import { POINT_CONVERSION_COMPRESSED } from 'constants';
 import faunadb from 'faunadb';
 
-const createLesson = async title => {
+const q = faunadb.query;
+const client = new faunadb.Client({ secret: process.env.NEXT_PUBLIC_FAUNA_KEY });
 
-    const q = faunadb.query;
-    const client = new faunadb.Client({ secret: 'fnAD-5GAWYACB0DznQW7f36Ml1R8fP-_ps7L3cIo' });
+const createLesson = async title => {
 
     const lesson = await client.query(
         q.Create(
@@ -20,9 +19,6 @@ const createLesson = async title => {
 
 const getLessons = async () => {
 
-    const q = faunadb.query;
-    const client = new faunadb.Client({ secret: 'fnAD-5GAWYACB0DznQW7f36Ml1R8fP-_ps7L3cIo' });
-
     const lessons = await client.query(q.Map(
         q.Paginate(
             q.Match(q.Index("allLessons"))
@@ -34,9 +30,6 @@ const getLessons = async () => {
 };
 
 const getLessonByTitle = async (title = '39 Ways to Save the Planet: #1 Super Rice') => {
-
-    const q = faunadb.query;
-    const client = new faunadb.Client({ secret: 'fnAD-5GAWYACB0DznQW7f36Ml1R8fP-_ps7L3cIo' });
 
     const lesson = await client.query(q.Map(
         q.Paginate(
@@ -50,18 +43,6 @@ const getLessonByTitle = async (title = '39 Ways to Save the Planet: #1 Super Ri
 
 const getQuestionByText = async (text = 'Rice provides approximately what percentage of the world\'s calories?') => {
 
-    const q = faunadb.query;
-    const client = new faunadb.Client({ secret: 'fnAD-5GAWYACB0DznQW7f36Ml1R8fP-_ps7L3cIo' });
-
-    // const question = await client.query(q.Map(
-    //     q.Paginate(
-    //         q.Match(q.Index("questionsByQuestionText"), text)
-    //     ),
-    //     q.Lambda("X", q.Get(q.Var("X")))
-    //   )) as any;
-
-    // return question;
-
     return client.query(q.Map(
         q.Paginate(
             q.Match(q.Index("questionsByQuestionText"), text)
@@ -71,9 +52,6 @@ const getQuestionByText = async (text = 'Rice provides approximately what percen
 };
 
 const getQuestionsByLesson = async lesson => {
-
-    const q = faunadb.query;
-    const client = new faunadb.Client({ secret: 'fnAD-5GAWYACB0DznQW7f36Ml1R8fP-_ps7L3cIo' });
 
     const texts = lesson.questions.map(question => question.text);
 
@@ -86,9 +64,6 @@ const getQuestionsByLesson = async lesson => {
 };
 
 const createQuestion = async (title, text) => {
-
-    const q = faunadb.query;
-    const client = new faunadb.Client({ secret: 'fnAD-5GAWYACB0DznQW7f36Ml1R8fP-_ps7L3cIo' });
 
     const lesson = getLessonByTitle(title);
 
@@ -107,18 +82,34 @@ const createQuestion = async (title, text) => {
 
 const createQuestions = async lesson => {
 
-    const q = faunadb.query;
-    const client = new faunadb.Client({ secret: 'fnAD-5GAWYACB0DznQW7f36Ml1R8fP-_ps7L3cIo' });
-
     const texts = lesson.questions.map(question => question.text);
 
     const questions = await Promise.all(texts.map(async text => {
         const q = await createQuestion(lesson.title, text) as any;
-        console.log(q);
         return q.data;
     }));
 
     return questions;
+};
+
+const updateQuestion = async question => {
+
+    let ref = await getQuestionByText(question.text) as any;
+        ref = ref.data[0].ref.value.id;
+
+    const response = await client.query(
+        q.Update(
+            q.Ref(q.Collection('Question'), ref),
+            {
+                data: { 
+                    total: question.total,
+                    correct: question.correct
+                }
+            }
+        )
+    );
+
+    return response;    
 };
 
 export const api = {
@@ -128,5 +119,6 @@ export const api = {
     getQuestionByText,
     getQuestionsByLesson,
     createQuestion,
-    createQuestions
+    createQuestions,
+    updateQuestion
 }

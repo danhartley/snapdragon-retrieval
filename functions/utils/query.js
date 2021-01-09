@@ -6,7 +6,7 @@ module.exports = async (query, variables) => {
       url: "https://graphql.fauna.com/graphql",
       method: "POST",
       headers: {
-          Authorization: `Bearer ${process.env.FAUNA_SERVER_SECRET}`
+          Authorization: `Bearer ${process.env.NEXT_PUBLIC_FAUNA_KEY}`
       },
       data: {
         query,

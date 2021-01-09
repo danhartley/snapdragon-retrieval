@@ -25,32 +25,47 @@ const Lesson = ({lesson}) => {
         if(!lesson.questions) return;
 
         let questions;
-        const getQuestions = async () => {
 
+        const getQuestions = async () => {
             
             const response = await api.getQuestionsByLesson(lesson) as Array<any>;
             
             questions = response.map(r => r.length > 0 ? r : null).filter(r => r);
 
-            console.log('questions:', questions)
-
             if(questions.length === 0) {                
                 questions = await api.createQuestions(lesson);
             }            
 
-            console.log('questions:', questions)
+            return questions;
         };
         
-        const getLesson = async () => {
-            let _lesson = await api.getLessonByTitle(lesson.title) as any;            
-            if(_lesson && _lesson.data && _lesson.data.length > 0) {
-                getQuestions();                
-            } else {
-                _lesson = await api.createLesson(lesson.title);
-            }
-        };
+        const getLessonQuestions = async () => {
 
-        getLesson();
+            let lessonQuestionHistories, lessonHistory, lessonHasQuestions;
+            
+            lessonHistory = await api.getLessonByTitle(lesson.title) as any;   
+            
+            lessonHasQuestions = (lessonHistory && lessonHistory.data && lessonHistory.data.length > 0);
+
+            lessonHistory = lessonHasQuestions ? lessonHistory : await api.createLesson(lesson.title);
+            
+            lessonQuestionHistories = await getQuestions();
+            lessonQuestionHistories = lessonQuestionHistories.map(lqh => lqh[0].data);
+
+            if(lessonQuestionHistories.length === 0) return;
+            
+            lesson.questions.forEach(question => {
+                const questionHistory = lessonQuestionHistories.find(qt => qt.text === question.text) as any;
+                if(questionHistory) {
+                    question.total = questionHistory.total;
+                    question.correct = questionHistory.correct;
+                }
+            });
+
+        };
+        
+        getLessonQuestions();
+
     },[]);
   
     return (

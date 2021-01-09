@@ -157,3 +157,7 @@ Required:
 - [[plugins]]
 - package = "@netlify/plugin-nextjs"
 - IGNORE everything related to netlify dev for now; everything done manually…
+
+## Environment variables
+
+- https://nextjs.org/docs/basic-features/environment-variables
