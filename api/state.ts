@@ -38,8 +38,8 @@ const parseHistory = (score: any, histories: Array<History>) => {
             : new History(title, 0, 0, [score])
         : new History(title, 0, 0, [score]);
 
-    history.total = history.total + total || 0;
-    history.correct = history.correct + correct || 0;
+    history.total = history.total + total;
+    history.correct = history.correct + (total === correct ? 1 : 0);
 
     return histories ? [ ...histories.filter(h => h.title !== history.title), history ] : [ history ];
 };

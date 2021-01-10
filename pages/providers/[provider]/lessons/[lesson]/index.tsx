@@ -1,5 +1,5 @@
 import { useState, useEffect } from "preact/hooks";
-import { api } from 'api/api';
+import { addLessonCommuityState } from 'api/api-effects';
 import { useRouter } from 'next/router';
 import { getLessons } from 'api/lessons/utils';
 import { logic } from 'logic/logic';
@@ -21,48 +21,7 @@ const Lesson = ({lesson}) => {
     const disableNavigation = (testState !== enums.QUESTION_STATE.COMPLETED && type === enums.LESSON_TYPE.QUESTIONS) && progress.number > 1;
     
     useEffect(() => {        
-
-        if(!lesson.questions) return;
-
-        let questions;
-
-        const getQuestions = async () => {
-            
-            const response = await api.getQuestionsByLesson(lesson) as Array<any>;
-            
-            questions = response.map(r => r.length > 0 ? r : null).filter(r => r);
-
-            if(questions.length === 0) {                
-                questions = await api.createQuestions(lesson);
-            }            
-
-            return questions;
-        };
-        
-        const getLessonQuestions = async () => {
-
-            let lessonQuestionHistories, lessonHistory, lessonHasQuestions;
-            
-            lessonHistory = await api.getLessonByTitle(lesson.title) as any;   
-            
-            lessonHasQuestions = (lessonHistory && lessonHistory.data && lessonHistory.data.length > 0);
-
-            lessonHistory = lessonHasQuestions ? lessonHistory : await api.createLesson(lesson.title);
-            
-            lessonQuestionHistories = await getQuestions();
-                        
-            lesson.questions.forEach(question => {
-                const questionHistory = lessonQuestionHistories.find(qt => qt.text === question.text) as any;
-                if(questionHistory) {
-                    question.total = questionHistory.total;
-                    question.correct = questionHistory.correct;
-                }
-            });
-
-        };
-        
-        getLessonQuestions();
-
+        addLessonCommuityState(lesson);
     },[]);
   
     return (
@@ -103,7 +62,7 @@ export async function getStaticProps({params: {provider, lesson}}) {
         }) 
         : [];
 
-    providerLesson.questions = logic.shuffleArray([ ...ranked, ...unranked, ...multipleChoice, ...multipleSelect ])[0];
+    providerLesson.questions = logic.shuffleArray([ ...ranked, ...unranked, ...multipleChoice, ...multipleSelect ]);
 
     providerLesson.availableCount += multipleChoice.length;
 

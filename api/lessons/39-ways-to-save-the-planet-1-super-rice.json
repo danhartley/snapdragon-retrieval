@@ -95,7 +95,7 @@
             "listCount": 4
         },
         {
-            "text": "What is the benefit of growing rice in water?",
+            "text": "What are the benefits of growing rice in water?",
             "answers": [
                 "eleviates the need to irrigate when the seeds are young",
                 "flooding removes weeds"                
@@ -113,11 +113,11 @@
           ]
         },
         {
-            "text": "What is the benefit of growing rice using DSR?",
+            "text": "What are the consequences of growing rice using DSR?",
             "answers": [
                 "may increase use of herbicides",
                 "requires less water",
-                "has greater seedling vigour",
+                "seedlings have greater vigour",
                 "leads to a reduction in methane emissions"
             ],
             "alternatives": [

@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "preact/hooks";
+import { addLessonCommuityState } from 'api/api-effects';
 import { logic } from 'logic/logic';
 import { useLocalStorageState } from 'api/state';
 import { enums } from 'components/enums';
@@ -25,17 +26,27 @@ export const Question = ({lesson, testState, setTestState, progress, setProgress
     const [communityScore, setCommunityScore] = useState(COMMUNITY_SCORE);
 
     useEffect(() => {
+        console.log(COMMUNITY_SCORE);        
         setCommunityScore(COMMUNITY_SCORE);
     },[question.text]);
+
+    useEffect(() => {        
+        addLessonCommuityState(lesson);
+    },[]);
 
     const btnNextRef = useRef(null);
 
     const markTest = async ({total, correct, text, answers, type, unit}) => {
         setTestState(score.answered + 1 === lesson.questions.length ? enums.QUESTION_STATE.COMPLETED : enums.QUESTION_STATE.MARKED);
         setLessonHistories({total, correct, text, answers, type, unit, title: lesson.title }, enums.STORAGE_KEY.HISTORY);
-        setScore({ ...score, total: score.total + total, correct: score.correct + correct, answered: score.answered + 1, isLessonOver: score.answered + 1 === lesson.questions.length });
-        const response = await api.updateQuestion({ ...question, total: question.total + total, correct: question.correct + correct }) as any;
+        setScore({ ...score, total: score.total + 1, correct: score.correct + (total === correct ? 1 : 0), answered: score.answered + 1, isLessonOver: score.answered + 1 === lesson.questions.length });
+        const response = await api.updateQuestion({ 
+            ...question
+            , total: question.total + 1
+            , correct: question.correct + (total === correct ? 1 : 0)
+        }) as any;
         if(response) {
+            console.log(response);            
             setCommunityScore({ correct: response.data.correct, total: response.data.total, question, userTotal: total, userCorrect: correct });
         }
     };
