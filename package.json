@@ -10,7 +10,7 @@
     "start:app": "next dev",
     "start:server": "netlify-lambda serve functions",
     "export": "next export",
-    "test": "jest"
+    "test": "jest --watch"
   },
   "devDependencies": {
     "@babel/plugin-transform-react-jsx-source": "^7.12.1",

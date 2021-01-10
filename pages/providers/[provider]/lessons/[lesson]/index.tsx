@@ -103,7 +103,7 @@ export async function getStaticProps({params: {provider, lesson}}) {
         }) 
         : [];
 
-    providerLesson.questions = logic.shuffleArray([ ...ranked, ...unranked, ...multipleChoice, ...multipleSelect ]);
+    providerLesson.questions = logic.shuffleArray([ ...ranked, ...unranked, ...multipleChoice, ...multipleSelect ])[0];
 
     providerLesson.availableCount += multipleChoice.length;
 

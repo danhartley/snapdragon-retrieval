@@ -5,7 +5,7 @@ describe('community scores', () => {
 
     let data, actual;
 
-    test.only('for multiple choice', () => {
+    test('for multiple choice', () => {
 
         data = {
             question: {
@@ -18,13 +18,13 @@ describe('community scores', () => {
 
         actual = communityScoreSummary(data);
 
-        expect(actual).toBe('You are the first person to answer correctly!');
+        expect(actual).toBe('That is the correct answer.');
 
         data.userCorrect = 0;
 
         actual = communityScoreSummary(data);
 
-        expect(actual).toBe('No one has answered this correctly yet.');
+        expect(actual).toBe('No, that\'s not the right answer!');
 
         data.total = 5;
         data.correct = 5;
@@ -35,12 +35,12 @@ describe('community scores', () => {
 
     });
 
-    test.only('for ordered', () => {
+    test('for ordered', () => {
 
         data = {
             question: {
                 type: enums.QUESTION_TYPE.ORDERED,
-                answers: [
+                items: [
                     { value: 1 },
                     { value: 2 }
                 ]
@@ -52,22 +52,22 @@ describe('community scores', () => {
 
         actual = communityScoreSummary(data);
 
-        expect(actual).toBe('You scored 4 out of 4');
+        expect(actual).toBe('You scored 4 out of 4.');
 
         data.total = 20;
         data.correct = 16;
 
         actual = communityScoreSummary(data);
 
-        expect(actual).toBe('The average score for this test is 80%');
+        expect(actual).toBe('The average score for this test is 80%.');
     });
 
-    test.only('for unorded', () => {
+    test('for unordered', () => {
 
         data = {
             question: {
                 type: enums.QUESTION_TYPE.UNORDERED,
-                answers: [
+                items: [
                     { value: 1 },
                     { value: 2 }
                 ]
@@ -79,18 +79,25 @@ describe('community scores', () => {
 
         actual = communityScoreSummary(data);
 
-        expect(actual).toBe('You scored 2 out of 2');
+        expect(actual).toBe('You scored 2 out of 2.');
 
         data.total = 10;
         data.correct = 8;
 
         actual = communityScoreSummary(data);
 
-        expect(actual).toBe('The average score for this test is 1.6 out of 2');
+        expect(actual).toBe('The average score for this test is 1.6 out of 2.');
+
+        data.total = 17;
+        data.correct = 15;
+
+        actual = communityScoreSummary(data);
+
+        expect(actual).toBe('The average score for this test is 1.8 out of 2.');
 
     });
 
-    test.only('for multiple select', () => {
+    test('for multiple select', () => {
 
         data = {
             question: {
@@ -107,7 +114,7 @@ describe('community scores', () => {
 
         actual = communityScoreSummary(data);
 
-        expect(actual).toBe('You scored 2 out of 2');
+        expect(actual).toBe('You scored 2 out of 2.');
     });
 
 });

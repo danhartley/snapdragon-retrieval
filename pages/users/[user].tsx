@@ -54,7 +54,7 @@ const renderScoreHistory = () => {
             !lesson.scores ? null :
             <li>
                 <Accordion lesson={lesson}>
-                    <div><span>{`You scored ${lesson.total} out of ${lesson.correct}`}</span></div>
+                    <div><span>{`You scored ${lesson.total} out of ${lesson.correct}.`}</span></div>
                     <ul>
                     {
                         lesson.scores.map(score => {
