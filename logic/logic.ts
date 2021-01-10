@@ -43,8 +43,9 @@ const mark = (lesson, placeholder = '---') => {
           ...score
         , ...getScore(score)
         , text: lesson.question.text, answers: lesson.question.answer ? [ lesson.question.answer ] : lesson.question.items.map(item => item.name)
-        , type:  lesson.question.type
-        , unit:  lesson.question.unit
+        , type: lesson.question.type
+        , unit: lesson.question.unit
+        , total: 1
     };
     return score;
 };
@@ -158,7 +159,7 @@ const sortBy = (arr, prop, dir = 'asc') => {
 };
 
 const getScore = (score: any) => {
-    let total = 0, correct = 0;
+    let total = 1, correct = 0;
     if (score.markedAnswerList !== undefined) {
         score.markedAnswerList.map(s => {
             total++;

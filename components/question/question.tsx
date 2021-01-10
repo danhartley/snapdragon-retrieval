@@ -26,7 +26,6 @@ export const Question = ({lesson, testState, setTestState, progress, setProgress
     const [communityScore, setCommunityScore] = useState(COMMUNITY_SCORE);
 
     useEffect(() => {
-        console.log(COMMUNITY_SCORE);        
         setCommunityScore(COMMUNITY_SCORE);
     },[question.text]);
 
@@ -36,18 +35,21 @@ export const Question = ({lesson, testState, setTestState, progress, setProgress
 
     const btnNextRef = useRef(null);
 
-    const markTest = async ({total, correct, text, answers, type, unit}) => {
+    const markTest = async ({text, answers, type, unit, isCorrect}) => {
+
+        const total = 1; // each question counts as 1
+        const correct = (isCorrect ? 1 : 0); // each question is either correct (1), or wrong (0)
+
         setTestState(score.answered + 1 === lesson.questions.length ? enums.QUESTION_STATE.COMPLETED : enums.QUESTION_STATE.MARKED);
         setLessonHistories({total, correct, text, answers, type, unit, title: lesson.title }, enums.STORAGE_KEY.HISTORY);
-        setScore({ ...score, total: score.total + 1, correct: score.correct + (total === correct ? 1 : 0), answered: score.answered + 1, isLessonOver: score.answered + 1 === lesson.questions.length });
+        setScore({ ...score, total: score.total + 1, correct: score.correct + correct, answered: score.answered + 1, isLessonOver: score.answered + 1 === lesson.questions.length });
         const response = await api.updateQuestion({ 
             ...question
             , total: question.total + 1
-            , correct: question.correct + (total === correct ? 1 : 0)
+            , correct: question.correct + correct
         }) as any;
-        if(response) {
-            console.log(response);            
-            setCommunityScore({ correct: response.data.correct, total: response.data.total, question, userTotal: total, userCorrect: correct });
+        if(response) {  
+            setCommunityScore({ correct: response.data.correct, total: response.data.total, question, userCorrect: correct });
         }
     };
 

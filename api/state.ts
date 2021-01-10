@@ -16,7 +16,9 @@ export const useLocalStorageState = (defaulState, key) => {
             case enums.STORAGE_KEY.HISTORY:
                 const history = JSON.parse(window.localStorage.getItem(key)) as Array<History>;
                 const updatedHistory = parseHistory(value, history);
-                window.localStorage.setItem(key, JSON.stringify(updatedHistory));
+                if(updatedHistory) {
+                    window.localStorage.setItem(key, JSON.stringify(updatedHistory));
+                }
                 break;
         }
     }, [key, value]);
@@ -26,7 +28,7 @@ export const useLocalStorageState = (defaulState, key) => {
 
 const parseHistory = (score: any, histories: Array<History>) => {
 
-    if(!score) return histories;
+    if(!score || score.total === undefined) return histories;
 
     let { total, correct, title } = score;
 
@@ -39,7 +41,7 @@ const parseHistory = (score: any, histories: Array<History>) => {
         : new History(title, 0, 0, [score]);
 
     history.total = history.total + total;
-    history.correct = history.correct + (total === correct ? 1 : 0);
+    history.correct = history.correct + correct;
 
     return histories ? [ ...histories.filter(h => h.title !== history.title), history ] : [ history ];
 };

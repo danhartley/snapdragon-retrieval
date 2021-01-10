@@ -31,7 +31,7 @@ const Lessons = ({lessons}) => {
                 </ul>
             </Layout>
         )
-    };
+};
     
 export default Lessons;
 

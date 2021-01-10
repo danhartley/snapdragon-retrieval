@@ -28,7 +28,7 @@ export const Card = ({lesson}) => {
 
     const sources = card.sources ? card.sources.map(card => {
         <>
-        <div><a href={card.source} target="_blank">Additional source (opens in a new tab)</a></div>
+        <div><a href={card.source} rel="noreferrer" target="_blank">Additional source (opens in a new tab)</a></div>
         <div>Author: {card.author}</div>
         </>
     }): null;

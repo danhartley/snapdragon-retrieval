@@ -2,7 +2,7 @@ import styles from 'components/question/source.module.scss';
 
 const Source = ({source}) => {
     return (
-        <div><a href={source.source} target="_blank">Source: {source.author}</a></div>
+        <div><a href={source.source} rel="noreferrer" target="_blank">Source: {source.author}</a></div>
     )
 };
 

@@ -1,5 +1,4 @@
-import { useState, useEffect } from "preact/hooks";
-import { addLessonCommuityState } from 'api/api-effects';
+import { useState } from "preact/hooks";
 import { useRouter } from 'next/router';
 import { getLessons } from 'api/lessons/utils';
 import { logic } from 'logic/logic';
@@ -19,10 +18,6 @@ const Lesson = ({lesson}) => {
     const provider = router.query.provider;
     const type = router.query.type;
     const disableNavigation = (testState !== enums.QUESTION_STATE.COMPLETED && type === enums.LESSON_TYPE.QUESTIONS) && progress.number > 1;
-    
-    useEffect(() => {        
-        addLessonCommuityState(lesson);
-    },[]);
   
     return (
         <Layout title="Lesson" description={`${provider} ${lesson.title} lesson`} header={lesson.title} headerLink={lesson.source} disableNavigation={disableNavigation} >
