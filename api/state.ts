@@ -46,7 +46,7 @@ const parseHistory = (score: any, histories: Array<History>) => {
     return histories ? [ ...histories.filter(h => h.title !== history.title), history ] : [ history ];
 };
 
-export const getFromLocalStorage = key => {
+export const getFromLocalStorage = (window, key) => {
     return JSON.parse(window.localStorage.getItem(key));
 };
 

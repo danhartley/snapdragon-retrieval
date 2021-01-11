@@ -12,9 +12,24 @@
 
 button.title, button.title:hover {
     border: none;
-    text-transform: initial;
-    border-bottom: 1px dashed gray;
+    text-transform: initial;    
     min-height: 30px;
     padding: 0;
     background-color: transparent;
+    display: flex;
+    align-items: center;
+    & > span:nth-child(1) {
+        padding: 5px 0;
+        border-bottom: 1px dashed gray;
+    }
+}
+
+.indicator {
+    @include down-chevron('18px');
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    &.isOpen {
+        @include up-chevron('18px');
+    }    
 }

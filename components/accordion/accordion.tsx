@@ -12,8 +12,11 @@ const Accordion = ({lesson, children}) => {
     };
 
     return (
-        <>
-            <button class={styles.title} onClick={e => handleOnClick(e)}>{lesson.title}</button>
+        <>            
+            <button class={styles.title} onClick={e => handleOnClick(e)}>
+                <span>{lesson.title}</span>
+                <span class={`${styles.indicator} ${isOpen ? styles.isOpen : ''}` }></span>
+            </button>                        
             <div>
                 <div class={isOpen ? styles.visible : styles.invisible}>{children}</div>
             </div>
