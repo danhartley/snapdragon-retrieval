@@ -7,5 +7,5 @@ node_modules
 
 # Local Netlify folder
 .netlify
-test.json
-template.json
+_ignore_test.json
+_ignore_template.json
