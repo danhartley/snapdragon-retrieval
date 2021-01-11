@@ -9,8 +9,6 @@ export const getLessons = () => {
 
     let files = fs.readdirSync('api/lessons').filter(file => path.extname(file).toLowerCase() === EXTENSION);
 
-    console.log(files);
-
     files = files.filter(file => file.indexOf('_ignore_') === -1);
     
     files.forEach(file => {
