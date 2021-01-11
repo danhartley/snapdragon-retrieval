@@ -67,6 +67,7 @@ const User = ({user, lessons}) => {
             console.log('communityScores:', communityScores);
             setQuestionSummaries(communityScores);
             lh.slug = lesson.slug;
+            lh.provider = lesson.provider;
         });
     }, [lessonHistories]);
 
@@ -88,7 +89,7 @@ const renderScoreHistory = (lessonHistories, communityScores) => {
             !lesson.scores ? null :
             <li>
                 <Accordion lesson={lesson}>
-                    <Link href={`/providers/snapdragon/lessons/${lesson.slug}?type=questions`}>
+                    <Link href={`/providers/${lesson.provider}/lessons/${lesson.slug}?type=questions`}>
                         <a>Take the test again</a>
                     </Link>
                     <div><span>{`Your lesson score was ${Math.round((lesson.correct / lesson.total) * 100)}%.`}</span></div>           

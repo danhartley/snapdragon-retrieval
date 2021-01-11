@@ -221,6 +221,16 @@
       "slug": "gov-uk",
       "link": "https://www.gov.uk/",
       "name": "GOV.UK"
+    },
+    {
+      "slug": "clean-cold-power",
+      "link": "https://cleancoldpower.com/",
+      "name": "Clean Cold Power"
+    },
+    {
+      "slug": "wired",
+      "link": "https://www.wired.com",
+      "name": "Wired"
     }
   ]
 }

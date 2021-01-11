@@ -1,6 +1,166 @@
 {
-  "provider": "bbc",
-  "title": "39 Ways to Save the Planet: #6 Chilling Food",
-  "slug": "39-ways-to-save-the-planet-6-chilling-food",
-  "source": "https://www.bbc.co.uk/programmes/m000qwt3"
+	"provider": "bbc",
+	"title": "39 Ways to Save the Planet: #6 Chilling Food",
+	"slug": "39-ways-to-save-the-planet-6-chilling-food",
+	"source": "https://www.bbc.co.uk/programmes/m000qwt3",
+	"cards": [{
+		"sources": [{
+			"author": "author",
+			"source": "source"
+		}],
+		"year": "2020",
+		"term": "What are Transport Refrigeration Units?",
+		"definition": "Refrigeration systems powered by diesel engines designed to refrigerate or heat perishable products.",
+		"text": "text"
+	}],
+	"multiplechoice": [
+        {
+		"text": "What does TRU stand for in the context of the programme?",
+		"listCount": 4,
+		"answer": "Transport Refrigeration Unit",
+		"answers": [
+			"Transition Refrigeration Unit",
+			"Transport Refueling Unit",
+			"Transport Refrigeration Utility"
+		]
+    },
+        {
+		"text": "How many refrigerated units are there worldwide?",
+        "listCount": 4,
+        "unit": "mil",
+		"unitDescription": "million",
+		"answer": "2.5",
+		"answers": [
+			".5",
+			"1.5",
+			"3.5"
+        ],
+        "sources": [
+            {
+                "author": "Clean Cold Power",
+                "source": "https://cleancoldpower.com/intelligent-investors/"
+            }
+        ]
+    },
+    {
+		"text": "What percentage of TRUs are run with an auxiliary diesel engine?",
+        "listCount": 4,
+        "unit": "%",
+		"unitDescription": "%",
+		"answer": "50",
+		"answers": [
+			"25",
+			"60",
+			"75"
+        ],
+        "sources": [
+            {
+                "author": "Clean Cold Power",
+                "source": "https://cleancoldpower.com/intelligent-investors/"
+            }
+        ]
+    },
+    {
+		"text": "Replacing all of the 2.5 million diesel-powered TRUs would reduce emissions by approximately how much?",
+        "listCount": 4,
+        "answer": ".1%",
+		"answers": [
+			".5%",
+			"1%",
+			"2.5%"
+        ]
+    },
+    {
+		"text": "Preventing 50 million tonnes of food waste could reduce GHG emissions by how much?",
+        "listCount": 4,
+        "answer": ".1%",
+		"answers": [
+			".5%",
+			"1%",
+			"2.5%"
+        ]
+    },
+    {
+		"text": "Taking into account deforestation, cutting out food waste could reduce GHG emissions by how much?",
+        "listCount": 4,
+        "answer": "5-6%",
+		"answers": [
+			"2-3%",
+			"8-9",
+			"15-16%"
+        ]
+    }
+    ],
+	"unranked": [
+        {
+		"text": "According to Clean Cold Power what percentage of food loss is wasted post-harvest? (hint: it's a range)",
+		"listCount": 1,
+		"items": [{
+			"name": "30-40"
+        }],
+        "sources": [
+            {
+                "author": "Clean Cold Power",
+                "source": "https://cleancoldpower.com/intelligent-investors/"
+            },
+            {
+                "author": "Our World in Data",
+                "source": "https://ourworldindata.org/food-waste-emissions"
+            }
+        ]
+    },
+        {
+		"text": "The refrigeration unit is powered by a __ Engine.",
+		"listCount": 1,
+		"items": [{
+			"name": "Dearman"
+        }],
+        "sources": [
+            {
+                "author": "Wired",
+                "source": "https://www.wired.com/story/refrigeration-global-warming-food-preservation/"
+            }
+        ]
+    },
+        {
+		"text": "In the West ~90% of food goes through a cold chain but in India and China this figure is less than __%?",
+		"listCount": 1,
+		"items": [{
+			"name": "10"
+        }],
+        "sources": [
+            {
+                "author": "Wired",
+                "source": "https://www.wired.com/story/refrigeration-global-warming-food-preservation/"
+            }
+        ]
+    }
+    ],
+    "multipleselect": [
+        {
+		"text": "Which are true of TRU diesel-driven engines in comparison to the truck engine that pulls them?",
+		"answers": [
+            "29 times the Particulate Matter",
+            "6 times the NOx"
+		],
+		"alternatives": [
+			"6 times the Particulate Matter",
+            "29 times the NOx"
+		],
+		"listCount": 4
+    },
+        {
+		"text": "According to Cold Clean Power how do their TRUs compare to traditional diesel models?",
+		"answers": [
+            "Generate lower GHG emissions overall",
+            "Cause less pollution",
+            "Could lead to fewer vehicles"
+		],
+		"alternatives": [
+			"They are more complex",
+            "Result in greater deforestation"
+		],
+		"listCount": 4
+    }
+]
 }

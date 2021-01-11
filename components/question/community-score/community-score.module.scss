@@ -1,3 +1,20 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
 .container {
-    min-height: 25px;
+    padding: 5px 0;
+    display: flex !important;
+    align-items: center;
+    // justify-content: center;
+    span:nth-child(1) {
+        @include graph();
+        width: 20px;
+        height: 20px;
+        // margin: 0 5px;
+    }
+    span:nth-child(2) {
+        background-color: rgba($colour, .6);
+        color: $colour-light;
+        padding: 5px 10px;
+    }
 }
