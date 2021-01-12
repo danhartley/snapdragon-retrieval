@@ -231,6 +231,11 @@
       "slug": "wired",
       "link": "https://www.wired.com",
       "name": "Wired"
+    },
+    {
+      "slug": "oxford-pv",
+      "link": "https://www.oxfordpv.com/",
+      "name": "Oxford PV"
     }
   ]
 }
