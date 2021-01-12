@@ -4,13 +4,13 @@ export const communityScoreSummary = data => {
 
     let summary, average: number = 0, total;
 
-    average = data.total === 0 ? 0 : Math.round((data.correct / data.total) * 100) / 100;
+    average = data.total === 0 ? 0 : Math.round((data.correct / data.total) * 100);
 
     summary = data.total === 1
         ? data.userCorrect === 1
             ? 'That is the correct answer.'
             : 'No, that\'s not the right answer!' 
-        : `${average * 100}% of people answered this correctly.`;
+        : `${average}% of people answered this correctly.`;
 
 
     // switch(data.question.type) {

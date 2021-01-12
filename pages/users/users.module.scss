@@ -4,8 +4,8 @@
 
 .markedAnswers {
     margin: 10px 0;
-    border-bottom: 1px dashed rgba($colour, .2);
-    padding: 10px 0;
+    border: 1px dashed rgba($colour, .2);
+    padding: 10px;
     .q {        
         color: rgba($colour, .7);
         display: flex;
@@ -32,6 +32,7 @@
     }
     .score {
         display: flex;
+        margin-top: 5px;
         & > span:nth-child(2) {
             width: 20px;
         }

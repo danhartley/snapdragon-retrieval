@@ -77,7 +77,11 @@ const markMultipleAnswers = (lesson) => {
 
     const rightAnswers = question.items.filter(answer => answer.state === enums.TRILEAN.TRUE).length;
     const wrongAnswers = question.items.filter(answer => answer.state === enums.TRILEAN.FALSE).length;
-    const score = { total: question.answers.length, correct: (rightAnswers - wrongAnswers), items: question.items };
+    const score = { 
+          total: question.answers.length
+        , correct: (rightAnswers - wrongAnswers)
+        , items: question.items
+        , isCorrect: rightAnswers === question.answers.length};
     return { 
           ...score
         , text: lesson.question.text
