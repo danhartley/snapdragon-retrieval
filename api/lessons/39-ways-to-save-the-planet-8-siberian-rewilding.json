@@ -2,5 +2,114 @@
   "provider": "bbc",
   "source": "https://www.bbc.co.uk/programmes/m000qwt3",
   "title": "39 Ways to Save the Planet: #8 Siberian Rewilding",
-  "slug": "39-ways-to-save-the-planet-siberian-rewilding"
+  "slug": "39-ways-to-save-the-planet-siberian-rewilding",
+  "cards": [{
+    "sources": [{
+        "author": "Wikipedia",
+        "source": "https://en.wikipedia.org/wiki/Pleistocene_Park"
+    }],
+      "year": "2020",
+      "term": "What is Pleistocene Park?",
+      "definition": "A nature reserve on the Kolyma River south of Chersky in the Sakha Republic, Russia, Siberia, where an attempt is being made to re-create the northern subarctic steppe grassland ecosystem that flourished in the area during the last glacial period. The project is lead by scientists Sergey Zimov and Nikita Zimov.",
+      "text": "Pleistocene Park"
+  }],
+  "multiplechoice": [
+      {
+      "text": "What is permafrost?",
+      "listCount": 4,
+      "answer": "Ground that is frozen for more than two years",
+      "answers": [
+          "Ground that is frozen for more than a year",
+          "Ground that is frozen for more than ten years",
+          "Ground that is frozen for more than twenty years"
+      ]
+  },
+      {
+      "text": "During which did epoch humans start to colonise the whole planet, including the Russain steppe?",
+      "listCount": 4,
+      "answer": "Holocene",
+      "answers": [
+          "Pleistocene",
+          "Quaternary",
+          "Anthropocene"
+      ],
+      "sources": [{
+        "author": "Wikipedia",
+        "source": "https://en.wikipedia.org/wiki/Holocene"
+    }]
+  },
+      {
+      "text": "15,00 years ago there were how many trees globally?",
+      "listCount": 4,
+      "answer": "10 times less than today",
+      "answers": [
+        "20 times less than today",
+        "10 times more than today",
+        "20 times more than today"
+      ]
+  }
+],
+  "unranked": [{
+      "text": "Permafrost can form to a depth of hundreds of metres, but the most critical in terms of climate change are the top __metres? ",
+      "listCount": 1,
+      "items": [{
+          "name": "40"
+      }]
+  },
+  {
+    "text": "Pleistocene Park would be a recreation of which biome that existed during the last glacial maximum (~15,000 years ago)? (hint: 2 words)",
+    "listCount": 1,
+    "items": [{
+        "name": "mammoth steppe"
+    }],
+    "sources": [{
+        "author": "Wikipedia",
+        "source": "https://en.wikipedia.org/wiki/Pleistocene_Park"
+    }]
+},
+  {
+    "text": "The ecosystem of the mammoth steppe grasslands collapsed without which group of animals?",
+    "listCount": 1,
+    "items": [{
+        "name": "herbivores"
+    }]
+},
+{
+    "text": "Grazing 10% (2 million km2 of the subarctic) could lead to a net reduction in our GHG emissions of __%",
+    "answers": [
+        "1"
+    ],
+    "items": [{
+        "name": "1"
+    }],
+    "listCount": 1
+}
+],
+  "multipleselect": [{
+      "text": "Of the animals native to the subarctic which remained after humans entered the region?",
+      "answers": [
+          "reindeer"
+      ],
+      "alternatives": [
+          "woolly rhinoceroses",
+          "mammoths",
+          "horses",
+          "bison"
+      ],
+      "listCount": 5
+  },
+  {
+    "text": "In what ways are trees detrimental to the ecosystem and accelerate climate change in northern latitudes?",
+    "answers": [
+        "they decrease the albedo affect",
+        "they reflect ~40% of incoming sunlight back into space"
+    ],
+    "alternatives": [
+        "they increase the albedo affect",
+        "they reflect ~80% of incoming sunlight back into space",
+        "they disrupt the blanket of snow thus warming the trapped permafrost"
+    ],
+    "listCount": 5
+}
+]
 }
