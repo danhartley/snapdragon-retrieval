@@ -15,7 +15,7 @@
 	}],
 	"multiplechoice": [
         {
-		"text": "What type of energy do photons impart tp electrons when they strike them?",		
+		"text": "What type of energy do photons impart to electrons when they strike them?",		
 		"listCount": 4,
 		"answer": "kinetic",
 		"answers": [
@@ -35,7 +35,7 @@
 		]
 	},
         {
-        "text": "A good quality conventional solar panel produces 320watts; what can a perovskite-silicon panel produce?",
+        "text": "A good quality conventional solar panel has a potential output of ~320 watts; what can a perovskite-silicon panel produce?",
         "unit": "W",
 		"unitDescription": "Watt",
 		"listCount": 4,
@@ -47,7 +47,7 @@
 		]
 	},
         {
-        "text": "A 2-junction, or perovskite-silicon tandem, cell would capture what percentage of sunlight?",
+        "text": "A 2-junction, or perovskite-silicon tandem, cell would capture approxinately what percentage of sunlight?",
         "unit": "%",
 		"unitDescription": "%",
 		"listCount": 4,
@@ -101,11 +101,11 @@
 ],
 	"multipleselect": [
         {
-		"text": "Dr. Edwards makes what forecast about standard photovoltaic cells by 2050?",
+		"text": "If standard photovoltaic cells replaced fossil fuels, Dr. Edwards makes what forecasts for them by 2050? They will __",
 		"answers": [
             "convert 20% of energy in sunlight into useable energy",
             "lead to a 12% reduction in emissions",
-            "use would grow 14 fold"
+            "use will grow 14 fold"
 		],
 		"alternatives": [
             "lead to a 2% reduction in emissions",
@@ -114,11 +114,11 @@
 		"listCount": 5
     },
         {
-		"text": "Dr. Edwards makes what forecast about the most efficient perovskite-silicon cells by 2050?",
+		"text": "If standard the most efficient perovskite-silicon replaced fossil fuels, Dr. Edwards makes what forecasts for them by 2050",
 		"answers": [
             "convert 45% of energy in sunlight into useable energy",
             "lead to a 27% reduction in emissions",
-            "use would grow 14 fold"
+            "use will grow 14 fold"
 		],
 		"alternatives": [
             "lead to an 18% reduction in emissions",

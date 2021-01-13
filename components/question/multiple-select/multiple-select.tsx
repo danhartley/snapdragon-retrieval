@@ -19,8 +19,8 @@ const MultipleSelect = ({question, markTest, setQuestion, testState}) => {
 
     const listItems = question.items.map(answer => {        
         css = answer.state === enums.TRILEAN.TRUE ? styles.correct : answer.state === enums.TRILEAN.FALSE ? styles.incorrect : null;
-        return <li key={answer.name} class={`${styles.chkBoxList} ${css}`} style={style}>
-            <input type="checkbox" onChange={e => handleCheckBox(answer.name)} id={answer.name} name="answer" value={answer.name} />
+        return <li key={`${question.text}_${answer.name}`} class={`${styles.chkBoxList} ${css}`} style={style}>
+            <input type="checkbox" onChange={e => handleCheckBox(answer.name)} id={answer.name} name={`${question.text}_${answer.name}`} value={answer.name} />
             <label htmlFor={answer.name}>
                 <span>{answer.name}</span><span>{question.unit ?? ''}</span>
             </label>

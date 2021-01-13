@@ -13,11 +13,8 @@ const logError = e => {
 
 const init = () => {    
     secret = secret || process.env.NEXT_PUBLIC_SERVER_FAUNA_KEY;
-    console.log(`fauna key: ${secret}`);    
     q = q = faunadb.query;
     client = client = new faunadb.Client({ secret });
-    console.log('q: ', q);
-    console.dir(client);
 };
 
 try {

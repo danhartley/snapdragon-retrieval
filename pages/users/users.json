@@ -4,6 +4,11 @@
         "name": "Daniel Hartley",
         "username": "danielhartley",
         "slug": "danielhartley"
+      },
+      {
+        "name": "Anonymous",
+        "username": "Your scores",
+        "slug": "anonymous"
       }
     ]
   }

@@ -71,7 +71,7 @@ const User = ({user, lessons}) => {
     }, [lessonHistories]);
 
     return (
-        <Layout title="User" description={`${user}, user`} header={user}>
+        <Layout title="User" description={`${user}, user`} header={user === 'anonymous' ? 'Your scores' : user}>
             {typeof window !== 'undefined' ? renderScoreHistory(lessonHistories, communityScores) : null}
         </Layout>
     )
@@ -87,12 +87,9 @@ const renderScoreHistory = (lessonHistories, communityScores) => {
            return (
             !lesson.scores ? null :
             <li>
-                <Accordion lesson={lesson}>
-                    <Link href={`/providers/${lesson.provider}/lessons/${lesson.slug}?type=questions`}>
-                        <a>Take the test again</a>
-                    </Link>
-                    <div><span>{`Your lesson score was ${Math.round((lesson.correct / lesson.total) * 100)}%.`}</span></div>           
-                    { !communityScores ? null : <div><span>{`The average lesson score was ${communityScores.lessonScores.average}%.`}</span></div> }
+                <Accordion lesson={lesson}>                    
+                    <div><span>{`Your most recent score for this lesson was ${Math.round((lesson.correct / lesson.total) * 100)}%.`}</span></div>           
+                    { !communityScores ? null : <div><span>{`The average score for this lesson is ${communityScores.lessonScores.average}%.`}</span></div> }
                     <ul>
                     {
                         lesson.scores.map(score => {
@@ -116,6 +113,9 @@ const renderScoreHistory = (lessonHistories, communityScores) => {
                         })
                     }
                     </ul>
+                    <Link href={`/providers/${lesson.provider}/lessons/${lesson.slug}?type=questions`}>
+                        <a>Take the test again</a>
+                    </Link>
                 </Accordion>
             </li>
            )

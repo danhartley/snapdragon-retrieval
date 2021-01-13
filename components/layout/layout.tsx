@@ -52,7 +52,7 @@ export default function Layout({
                         <div>
                             <span class={styles.date}>{new Date().toDateString()}</span>
                             <span>
-                                <Link href={`/users/danielhartley`}>
+                                <Link href={`/users/anonymous`}>
                                     <a>Dashboard</a>
                                 </Link>
                             </span>

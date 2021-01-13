@@ -10,7 +10,7 @@
 		}],
 		"year": "2020",
 		"term": "What does CarbonBrief do?",
-		"definition": "We work in partnership across borders, systems and sectors. Our work focuses on changing the system – informing, implementing and enforcing the law, advising decision-makers on policy and training legal and judicial professionals. Because a future in which people and planet thrive together isn’t just possible: it’s essential.",
+		"definition": "CarbonBrief works in partnership across borders, systems and sectors. Their work focuses on changing the system – informing, implementing and enforcing the law, advising decision-makers on policy and training legal and judicial professionals. Because a future in which people and planet thrive together isn’t just possible: it’s essential.",
 		"text": "CarbonBrief mission"
 	}],
 	"multiplechoice": [{
@@ -54,7 +54,7 @@
 		"text": "China's promise to be carbon net-neutral by 2060 would see predicted warming for 2100 drop from 2.7° to __? (hint: it's a range)",
 		"listCount": 1,
 		"items": [{
-			"name": "2.4°-2.5°"
+			"name": "2.4-2.5"
         }],
         "sources": [
             {
