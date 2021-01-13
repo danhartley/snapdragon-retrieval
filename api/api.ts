@@ -1,20 +1,36 @@
 import faunadb from 'faunadb';
 
-const q = faunadb.query;
-const client = new faunadb.Client({ secret: process.env.NEXT_PUBLIC_FAUNA_KEY });
+export const logError = e => {
+    console.log(`Error message: ${e.message}`);
+    console.log(`Error stack trace: ${e.stack}`);
+    console.log(`key: ${process.env.NEXT_PUBLIC_FAUNA_KEY}`);
+};
+
+let q, client;
+
+try {
+    q = faunadb.query;
+    client = new faunadb.Client({ secret: process.env.NEXT_PUBLIC_FAUNA_KEY });
+} catch(e) {
+    logError(e);
+}
 
 const createLesson = async title => {
 
-    const lesson = await client.query(
-        q.Create(
-            q.Collection("Lesson"),
-            {
-                data: {
-                    "title": title
-                }
-        }));
-    
-    return lesson;
+    try {
+        const lesson = await client.query(
+            q.Create(
+                q.Collection("Lesson"),
+                {
+                    data: {
+                        "title": title
+                    }
+            }));
+        
+        return lesson;
+    } catch(e) {
+        logError(e);
+    }
 };
 
 const getLessons = async () => {
