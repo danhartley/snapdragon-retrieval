@@ -3,9 +3,7 @@ import faunadb from 'faunadb';
 let q, client, secret;
 
 const logFinally = request => {
-    console.log(`call on: ${request}`);
-    console.log(`client: ${client}`);
-    console.log(`fauna key: ${process.env.NEXT_PUBLIC_FAUNA_KEY}`);
+    console.log(`call on: ${request}`);    
 };
 
 const logError = e => {
@@ -15,10 +13,11 @@ const logError = e => {
 
 try {
     secret = secret || process.env.NEXT_PUBLIC_FAUNA_KEY;
+    console.log(`fauna key: ${process.env.NEXT_PUBLIC_FAUNA_KEY}`);    
     q = q || faunadb.query;
     client = client || new faunadb.Client({ secret });
     console.log('q: ', q);
-    console.log('client: ', client);
+    console.dir(`client: ${client}`);
 } catch(e) {
     logError(e);
 } finally {
