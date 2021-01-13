@@ -12,5 +12,6 @@ module.exports = withPreact({
   },
   env: {
     NEXT_PUBLIC_FAUNA_KEY: 'fnAD-5GAWYACB0DznQW7f36Ml1R8fP-_ps7L3cIo',
+    NEXT_PUBLIC_SERVER_FAUNA_KEY: 'fnAD_cbtMiACB1r1voTTFGuAxKkbE1OPYPr43Vvx'
   },
 });

@@ -1,5 +1,4 @@
 import faunadb from 'faunadb';
-import { loadGetInitialProps } from 'next/dist/next-server/lib/utils';
 
 let q, client, secret;
 
@@ -13,8 +12,9 @@ const logError = e => {
 };
 
 const init = () => {
-    secret = secret || process.env.NEXT_PUBLIC_FAUNA_KEY;
-    console.log(`fauna key: ${process.env.NEXT_PUBLIC_FAUNA_KEY}`);    
+    // secret = secret || process.env.NEXT_PUBLIC_FAUNA_KEY;
+    secret = secret || process.env.NEXT_PUBLIC_SERVER_FAUNA_KEY;
+    console.log(`fauna key: ${secret}`);    
     q = q || faunadb.query;
     client = new faunadb.Client({ secret });
     console.log('q: ', q);
