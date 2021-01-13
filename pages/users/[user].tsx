@@ -61,7 +61,9 @@ const User = ({user, lessons}) => {
             });            
 
             const communityScores = {
-                lessonScores : { ...lessonScores, average: Math.round((lessonScores.correct/lessonScores.total)*100) },
+                lessonScores : { 
+                      ...lessonScores
+                    , average: lessonScores.total === 0 ? 100 : Math.round((lessonScores.correct/lessonScores.total)*100) },
                 questionScores
             }
             setQuestionSummaries(communityScores);
