@@ -4,8 +4,8 @@ let q, client;
 
 const logFinally = request => {
     console.log(`call on: ${request}`);
-    // console.log(`client: ${client}`);
-    
+    console.log(`client: ${client}`);
+    console.log(`fauna key: ${process.env.NEXT_PUBLIC_FAUNA_KEY}`);
 };
 
 const logError = e => {
@@ -13,10 +13,11 @@ const logError = e => {
     console.log(`Error stack trace: ${e.stack}`);
 };
 
-
 try {
-    q = faunadb.query;
-    client = new faunadb.Client({ secret: process.env.NEXT_PUBLIC_FAUNA_KEY });
+    q = q || faunadb.query;
+    client = client || new faunadb.Client({ secret: process.env.NEXT_PUBLIC_FAUNA_KEY });
+    console.log('q: ', q);
+    console.log('client: ', client);
 } catch(e) {
     logError(e);
 } finally {
@@ -24,7 +25,7 @@ try {
 }
 
 const clientQuery = async (query, queryName) => {
-    try {
+    try {        
         const response = await client.query(query);
         return response;
     } catch(e) {
