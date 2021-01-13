@@ -18,7 +18,7 @@ const init = () => {
     q = q || faunadb.query;
     client = new faunadb.Client({ secret });
     console.log('q: ', q);
-    console.dir(`client: ${client}`);
+    console.dir(client);
 };
 
 try {
