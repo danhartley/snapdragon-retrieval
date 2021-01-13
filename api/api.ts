@@ -1,4 +1,5 @@
 import faunadb from 'faunadb';
+import { loadGetInitialProps } from 'next/dist/next-server/lib/utils';
 
 let q, client, secret;
 
@@ -11,13 +12,17 @@ const logError = e => {
     console.log(`Error stack trace: ${e.stack}`);
 };
 
-try {
+const init = () => {
     secret = secret || process.env.NEXT_PUBLIC_FAUNA_KEY;
     console.log(`fauna key: ${process.env.NEXT_PUBLIC_FAUNA_KEY}`);    
     q = q || faunadb.query;
     client = client || new faunadb.Client({ secret });
     console.log('q: ', q);
     console.dir(`client: ${client}`);
+};
+
+try {
+    init();
 } catch(e) {
     logError(e);
 } finally {
@@ -26,6 +31,7 @@ try {
 
 const clientQuery = async (query, queryName) => {
     try {        
+        init();
         const response = await client.query(query);
         return response;
     } catch(e) {
