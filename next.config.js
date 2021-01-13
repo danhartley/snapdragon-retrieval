@@ -9,5 +9,8 @@ module.exports = withPreact({
   },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
-  }
+  },
+  env: {
+    NEXT_PUBLIC_FAUNA_KEY: 'fnAD-5GAWYACB0DznQW7f36Ml1R8fP-_ps7L3cIo',
+  },
 });
