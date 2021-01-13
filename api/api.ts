@@ -16,7 +16,7 @@ const init = () => {
     secret = secret || process.env.NEXT_PUBLIC_FAUNA_KEY;
     console.log(`fauna key: ${process.env.NEXT_PUBLIC_FAUNA_KEY}`);    
     q = q || faunadb.query;
-    client = client || new faunadb.Client({ secret });
+    client = new faunadb.Client({ secret });
     console.log('q: ', q);
     console.dir(`client: ${client}`);
 };
