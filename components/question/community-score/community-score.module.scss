@@ -11,8 +11,10 @@
         height: 20px;
     }
     span:nth-child(2) {
-        background-color: rgba($colour, .6);
+        background-color: rgba($colour, .7);
         color: $colour-light;
         padding: 5px 10px;
+        margin-left: 5px;
+        letter-spacing: .25px;
     }
 }

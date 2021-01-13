@@ -1,0 +1,66 @@
+{
+	"provider": "bbc",
+	"source": "https://www.bbc.co.uk/programmes/m000qwt3",
+	"slug": "39-ways-to-save-the-planet-9-the-legal-fight",
+	"title": "39 Ways to Save the Planet: #9 The Legal Fight",
+	"cards": [{
+		"sources": [{
+			"author": "CarbonBrief",
+			"source": "https://www.clientearth.org/what-we-do/"
+		}],
+		"year": "2020",
+		"term": "What does CarbonBrief do?",
+		"definition": "We work in partnership across borders, systems and sectors. Our work focuses on changing the system – informing, implementing and enforcing the law, advising decision-makers on policy and training legal and judicial professionals. Because a future in which people and planet thrive together isn’t just possible: it’s essential.",
+		"text": "CarbonBrief mission"
+	}],
+	"multiplechoice": [{
+		"text": "Bełchatów is the biggest CO2 emitter in Europe. How much lignite does it burn each year?",
+		"unit": "mil tonnes",
+		"unitDescription": "million tonnes",
+		"listCount": 4,
+		"answer": "45",
+		"answers": [
+			"25",
+            "40",
+            "105"
+		],
+        "sources": [
+            {
+                "author": "The Guardian",
+                "source": "https://www.theguardian.com/environment/2019/sep/26/fight-power-climate-activists-europe-biggest-coal-poland-bechatow"
+            }
+        ]
+    },
+    {
+		"text": "126 countries have made pledges related to emissions reductions. What percentage of all emissions do these pledges represent?",
+		"unit": "%",
+		"unitDescription": "%",
+		"listCount": 4,
+		"answer": "51",
+		"answers": [
+			"21",
+            "43",
+            "61"
+        ]
+    }],
+	"unranked": [{
+		"text": "Roughly how many tonnes of CO2 has Bełchatów emitted during its life?",
+		"listCount": 1,
+		"items": [{
+			"name": "1 billion"
+		}]
+    },
+    {
+		"text": "China's promise to be carbon net-neutral by 2060 would see predicted warming for 2100 drop from 2.7° to __? (hint: it's a range)",
+		"listCount": 1,
+		"items": [{
+			"name": "2.4°-2.5°"
+        }],
+        "sources": [
+            {
+                "author": "Our World in Data",
+                "source": "https://ourworldindata.org/future-emissions"
+            }
+        ]
+	}]
+}

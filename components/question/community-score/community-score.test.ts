@@ -18,7 +18,7 @@ describe('community scores', () => {
 
         actual = communityScoreSummary(data);
 
-        expect(actual).toBe('That is the correct answer.');
+        expect(actual).toBe('That is the correct answer');
 
         data.userCorrect = 0;
 
@@ -31,7 +31,7 @@ describe('community scores', () => {
 
         actual = communityScoreSummary(data);
 
-        expect(actual).toBe('100% of people answered this correctly.');
+        expect(actual).toBe('100% of people answered this correctly');
 
     });
 
@@ -48,7 +48,7 @@ describe('community scores', () => {
 
     //     actual = communityScoreSummary(data);
 
-    //     expect(actual).toBe('That is the correct answer.');
+    //     expect(actual).toBe('That is the correct answer');
 
     //     data.userCorrect = 0;
 
@@ -61,7 +61,7 @@ describe('community scores', () => {
 
     //     actual = communityScoreSummary(data);
 
-    //     expect(actual).toBe('100% of people answered this correctly.');
+    //     expect(actual).toBe('100% of people answered this correctly');
 
     // });
 
@@ -139,7 +139,7 @@ describe('community scores', () => {
         
     //     actual = communityScoreSummary(data);
 
-    //     expect(actual).toBe('25% of people answered this correctly.');
+    //     expect(actual).toBe('25% of people answered this correctly');
 
     // });
 

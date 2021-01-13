@@ -236,6 +236,16 @@
       "slug": "oxford-pv",
       "link": "https://www.oxfordpv.com/",
       "name": "Oxford PV"
+    },
+    {
+      "slug": "climate-earth",
+      "link": "https://www.clientearth.org/",
+      "name": "ClimateEarth"
+    },
+    {
+      "slug": "glaia",
+      "link": "https://www.glaia.co.uk/",
+      "name": "Glaia"
     }
   ]
 }

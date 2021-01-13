@@ -1,0 +1,55 @@
+{
+	"provider": "bbc",
+	"source": "https://www.bbc.co.uk/programmes/m000qwt3",
+	"slug": "39-ways-to-save-the-planet-phenomenal-photosynthesis",
+	"title": "39 Ways to Save the Planet: #10 Phenomenal Photosynthesis",
+	"cards": [{
+		"sources": [{
+			"author": "Wikipedia",
+			"source": "https://en.wikipedia.org/wiki/Photosynthesis"
+		}],
+		"year": "2020",
+		"term": "What is photosynthesis?",
+		"definition": "The process used by plants and other organisms to convert light energy into chemical energy. From the reactants, including carbon dioxide and water, carbohydrates such as sugars are synthesised.",
+		"text": "photosynthesis"
+	}],
+	"multiplechoice": [{
+		"text": "Plants typically capture about __% of energy from the sun.",
+		"unit": "%",
+		"unitDescription": "%",
+		"listCount": 4,
+		"answer": "1",
+		"answers": [
+			"2",
+            "10",
+            "90"
+		]
+    },
+    {
+		"text": "If Glaia's research leads to a 20% increase in plant photosynthesis what effect could this have on GHG emissions?",
+		"listCount": 4,
+		"answer": "A reduction of up to 8% of emissions",
+		"answers": [
+			"A reduction of no less than 10% of emissions",
+            "A reduction of up to 18% of emissions",
+            "A increase of no more than 2% of emissions"
+		]
+    },
+    {
+		"text": "Glaia's carbon-based material helps plants how?",
+		"listCount": 4,
+		"answer": "Restart photosynthesis more quickly after exposure to strong sunlight",
+		"answers": [
+			"Absorb more energy from the sun",
+            "Photosynthesise more efficiently",
+            "Enable faster takeup of fertilisers"
+		]
+	}],
+	"unranked": [{
+		"text": "What is the name of the molecule that absorbs the sun's energy?",
+		"listCount": 1,
+		"items": [{
+			"name": "chlorophyll"
+		}]
+	}]
+}
