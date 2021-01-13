@@ -11,12 +11,11 @@ const logError = e => {
     console.log(`Error stack trace: ${e.stack}`);
 };
 
-const init = () => {
-    // secret = secret || process.env.NEXT_PUBLIC_FAUNA_KEY;
+const init = () => {    
     secret = secret || process.env.NEXT_PUBLIC_SERVER_FAUNA_KEY;
     console.log(`fauna key: ${secret}`);    
-    q = faunadb.query;
-    client = new faunadb.Client({ secret });
+    q = q = faunadb.query;
+    client = client = new faunadb.Client({ secret });
     console.log('q: ', q);
     console.dir(client);
 };
