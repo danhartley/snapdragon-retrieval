@@ -14,6 +14,20 @@ import Accordion from 'components/accordion/accordion';
 
 import styles from 'pages/users/users.module.scss';
 
+const Answer = ({score}) => {
+
+    return ( 
+        score.answers.length > 1 
+            ? <div class={styles.a}>
+                    <span>Answer</span>
+                    <ul>
+                        {score.answers.map(answer => <li>{answer}</li>)}
+                    </ul>
+                </div>        
+            : <div class={styles.a}><span>Answer</span><span>{score.answers.map(answer => <span>{answer}</span>)}</span></div>
+        )
+}
+
 const User = ({user, lessons}) => {
 
     const router = useRouter();
@@ -103,7 +117,7 @@ const renderScoreHistory = (lessonHistories, communityScores) => {
                                 <>                                
                                 <li class={styles.markedAnswers}>
                                     <div class={styles.q}><span>Question</span><span>{score.text}</span></div>
-                                    <div class={styles.a}><span>Answer</span><span>{score.answers.map(answer => <span>{answer}</span>)}</span></div>
+                                    <Answer score={score} />
                                     <div class={`${styles.score}`}>
                                         <span>{score.correct}/{score.total}</span>
                                         <span class={`${score.correct === score.total ? styles.isCorrect : styles.isIncorrect}`}></span>

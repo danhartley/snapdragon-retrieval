@@ -35,11 +35,11 @@
 			}]
 		},
 		{
-			"text": "In the project described, insects as a source of protein:",
+			"text": "In the project described, insects as a source of protein are described as:",
 			"answers": [
-				"live largely on waste leaaves and vegetables",
-				"produce far lower GHGs in comparison to other animal sources of protein",
-				"can be converted into flour"
+				"living largely on waste leaves and vegetables",
+				"producing far lower GHGs in comparison to other animal sources of protein",
+				"convertible into flour"
 			],
 			"alternatives": [
 				"use more water than comparable sources of protein"
@@ -48,7 +48,7 @@
 		}
 	],
 	"multiplechoice": [{
-			"text": "What is the approximate ratio of children for uneducated to educated women?",
+			"text": "What is the approximate number of children born to uneducated women compared to educated women?",
 			"unit": "children",
 			"unitDescription": "children",
 			"answer": "2:1",

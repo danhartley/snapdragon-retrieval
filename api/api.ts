@@ -3,7 +3,7 @@ import faunadb from 'faunadb';
 let q, client, secret;
 
 const logFinally = request => {
-    console.log(`call on: ${request}`);    
+    // console.log(`call on: ${request}`);
 };
 
 const logError = e => {

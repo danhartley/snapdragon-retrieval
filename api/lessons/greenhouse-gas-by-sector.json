@@ -21,10 +21,9 @@
       "text": "What proportion of ghg emissions does the energy sector account for?",
       "unit": "%",
       "unitDescription": "%",
-      "listCount": 5,
+      "listCount": 4,
       "answer": "75",
       "answers": [
-        "15",
         "25",
         "50",
         "65"
@@ -86,7 +85,7 @@
       "type": "ordered",
       "unit": "%",
       "unitDescription": "%",
-      "listCount": 1,
+      "listCount": 3,
       "items": [
         {
           "rank": 1,
@@ -162,7 +161,7 @@
     },
     {
       "text": "Landfills account for 1.9% of ghg emissions. Which gas is released when organic matter decomposes?",
-      "listCount": 0,
+      "listCount": 1,
       "items": [
         {
           "name": "Methane"

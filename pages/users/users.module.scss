@@ -48,4 +48,9 @@
         @include one-cross(14px);
         border-bottom: none;
     }
+    ul {
+        li {
+            font-size: .8rem;
+        }
+    }
 }

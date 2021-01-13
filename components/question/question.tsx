@@ -42,7 +42,7 @@ export const Question = ({lesson, testState, setTestState, progress, setProgress
 
         setTestState(score.answered + 1 === lesson.questions.length ? enums.QUESTION_STATE.COMPLETED : enums.QUESTION_STATE.MARKED);
         setLessonHistories({total, correct, text, answers, type, unit, title: lesson.title }, enums.STORAGE_KEY.HISTORY);
-        setScore({ ...score, total: score.total + 1, correct: score.correct + correct, answered: score.answered + 1, isLessonOver: score.answered + 1 === lesson.questions.length });
+        setScore({ ...score, total: score.total + 1, correct: score.correct + correct, answered: score.answered + 1, isLessonOver: score.answered + 1 >= lesson.questions.length });
         const updatedQuestion = { 
             ...question
             , total: question.total + 1
