@@ -1,18 +1,27 @@
 import faunadb from 'faunadb';
 
-export const logError = e => {
+let q, client;
+
+const logFinally = request => {
+    console.log(`call on: ${request}`);
+    console.log(`client: ${client}`);
+    
+};
+
+const logError = e => {
     console.log(`Error message: ${e.message}`);
     console.log(`Error stack trace: ${e.stack}`);
     console.log(`key: ${process.env.NEXT_PUBLIC_FAUNA_KEY}`);
 };
 
-let q, client;
 
 try {
     q = faunadb.query;
     client = new faunadb.Client({ secret: process.env.NEXT_PUBLIC_FAUNA_KEY });
 } catch(e) {
     logError(e);
+} finally {
+    logFinally('fauna authorisation');
 }
 
 const createLesson = async title => {
@@ -30,6 +39,8 @@ const createLesson = async title => {
         return lesson;
     } catch(e) {
         logError(e);
+    } finally {
+        logFinally('createLesson');
     }
 };
 
