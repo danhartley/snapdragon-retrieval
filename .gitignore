@@ -3,7 +3,7 @@
 node_modules
 .faunarc
 .env
-.env-Local
+.env.local
 
 # Local Netlify folder
 .netlify
