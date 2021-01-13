@@ -4,14 +4,13 @@ let q, client;
 
 const logFinally = request => {
     console.log(`call on: ${request}`);
-    console.log(`client: ${client}`);
+    // console.log(`client: ${client}`);
     
 };
 
 const logError = e => {
     console.log(`Error message: ${e.message}`);
     console.log(`Error stack trace: ${e.stack}`);
-    console.log(`key: ${process.env.NEXT_PUBLIC_FAUNA_KEY}`);
 };
 
 
@@ -24,24 +23,29 @@ try {
     logFinally('fauna authorisation');
 }
 
-const createLesson = async title => {
-
+const clientQuery = async (query, queryName) => {
     try {
-        const lesson = await client.query(
-            q.Create(
-                q.Collection("Lesson"),
-                {
-                    data: {
-                        "title": title
-                    }
-            }));
-        
-        return lesson;
+        const response = await client.query(query);
+        return response;
     } catch(e) {
         logError(e);
     } finally {
-        logFinally('createLesson');
+        logFinally(queryName);
     }
+};
+
+const createLesson = async title => {
+
+    const lesson = await clientQuery(
+        q.Create(
+        q.Collection("Lesson"),
+        {
+            data: {
+                "title": title
+            }
+    }), 'createLesson');
+
+    return lesson;
 };
 
 const getLessons = async () => {
@@ -58,24 +62,24 @@ const getLessons = async () => {
 
 const getLessonByTitle = async (title = '39 Ways to Save the Planet: #1 Super Rice') => {
 
-    const lesson = await client.query(q.Map(
+    const lesson = await clientQuery(q.Map(
         q.Paginate(
             q.Match(q.Index("lessonByTitle"), title)
         ),
-        q.Lambda("X", q.Get(q.Var("X")))
-      ));
+        q.Lambda("X", q.Get(q.Var("X"))))
+    , 'getLessonByTitle');
 
       return lesson;
 };
 
 const getQuestionByText = async (text = 'Rice provides approximately what percentage of the world\'s calories?') => {
 
-    return client.query(q.Map(
+    return clientQuery(q.Map(
         q.Paginate(
             q.Match(q.Index("questionsByQuestionText"), text)
         ),
         q.Lambda("X", q.Get(q.Var("X")))
-      ))
+      ), 'getQuestionByText')
 };
 
 const getQuestionsByLesson = async lesson => {
@@ -94,7 +98,7 @@ const createQuestion = async (title, text) => {
 
     const lesson = getLessonByTitle(title);
 
-    return await client.query(
+    return await clientQuery(
         q.Create(
             q.Collection("Question"),
             {
@@ -104,7 +108,7 @@ const createQuestion = async (title, text) => {
                     "correct": 0,
                     "lesson": lesson
                 }
-    }));
+    }), 'createQuestion');
 };
 
 const createQuestions = async lesson => {
@@ -124,7 +128,7 @@ const updateQuestion = async question => {
     let ref = await getQuestionByText(question.text) as any;
         ref = ref.data[0].ref.value.id;
 
-    const response = await client.query(
+    const response = await clientQuery(
         q.Update(
             q.Ref(q.Collection('Question'), ref),
             {
@@ -133,7 +137,7 @@ const updateQuestion = async question => {
                     correct: question.correct
                 }
             }
-        )
+        ), 'updateQuestion'
     );
 
     return response;    

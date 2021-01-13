@@ -64,7 +64,6 @@ const User = ({user, lessons}) => {
                 lessonScores : { ...lessonScores, average: Math.round((lessonScores.correct/lessonScores.total)*100) },
                 questionScores
             }
-            console.log('communityScores:', communityScores);
             setQuestionSummaries(communityScores);
             lh.slug = lesson.slug;
             lh.provider = lesson.provider;

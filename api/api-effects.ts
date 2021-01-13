@@ -8,8 +8,6 @@ const getQuestions = async lesson => {
     
     questions = response.map(r => r.length > 0 ? r : null).filter(r => r);
 
-    console.log(questions);
-
     if(questions.length === 0) {                
         questions = await api.createQuestions(lesson);
     }            
