@@ -17,21 +17,23 @@ const getQuestions = async lesson => {
 
 const getLessonQuestionHistories = async lesson => {
 
-    let lessonQuestionHistories, lessonHistory, lessonHasQuestions;
+    let questionScores, lessonScores;
     
-    lessonHistory = await api.getLessonByTitle(lesson.title) as any;
-    
-    lessonHasQuestions = (lessonHistory && lessonHistory.data && lessonHistory.data.length > 0);
+    lessonScores = await api.getLessonByTitle(lesson.title) as any;
 
-    lessonHistory = lessonHasQuestions ? lessonHistory : await api.createLesson(lesson.title);
-    
-    lessonQuestionHistories = await getQuestions(lesson);
+    console.log(`lessonScores: ${lessonScores}`);
 
-    lessonQuestionHistories = lessonQuestionHistories.map(lqh => {
+    lessonScores = (lessonScores && lessonScores.data && lessonScores.data.length > 0) || await api.createLesson(lesson.title);
+
+    console.log(`lessonScores: ${lessonScores}`);
+    
+    questionScores = await getQuestions(lesson);
+
+    questionScores = questionScores.map(lqh => {
         return Array.isArray(lqh) ? lqh[0].data : lqh;
     });
 
-    return lessonQuestionHistories;
+    return questionScores;
 };
 
 export const addLessonCommuityState = async lesson => {
@@ -40,10 +42,10 @@ export const addLessonCommuityState = async lesson => {
 
     if(lesson.total) return;
 
-    const lessonQuestionHistories = await getLessonQuestionHistories(lesson) as Array<any>;
+    const questionScores = await getLessonQuestionHistories(lesson) as Array<any>;
                 
     lesson.questions.forEach(question => {
-        const questionHistory = lessonQuestionHistories.find(qt => qt.text === question.text) as any;
+        const questionHistory = questionScores.find(qt => qt.text === question.text) as any;
         if(questionHistory) {
             question.total = questionHistory.total;
             question.correct = questionHistory.correct;
@@ -53,9 +55,9 @@ export const addLessonCommuityState = async lesson => {
 
 export const getLessonSummaries = async lesson => {
 
-    const lessonQuestionHistories = await getLessonQuestionHistories(lesson) as Array<any>;
+    const questionScores = await getLessonQuestionHistories(lesson) as Array<any>;
     
-    return lessonQuestionHistories.map(lqh => {
+    return questionScores.map(lqh => {
         return {
             total: lqh.total,
             correct: lqh.correct,
