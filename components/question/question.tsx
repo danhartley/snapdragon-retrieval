@@ -11,6 +11,7 @@ import Sources from 'components/question/source';
 import CommunityScore from 'components/question/community-score/community-score';
 
 import styles from 'components/question/question.module.scss';
+import { type } from "os";
 
 export const Question = ({lesson, testState, setTestState, progress, setProgress}) => {
 
@@ -76,7 +77,12 @@ export const Question = ({lesson, testState, setTestState, progress, setProgress
             format = <OrderedSelections question={question} testState={testState} type={question.type} PLACEHOLDER={PLACEHOLDER} markTest={(score) => markTest(score)} setTestState={setTestState} />
             break;
         case enums.QUESTION_TYPE.MULTIPLE_CHOICE:
-            format = <MultipleChoice setQuestion={setQuestion} question={question} type={question.unit === "%" ? enums.MULTIPLE_CHOICE_TYPE.PIE : enums.MULTIPLE_CHOICE_TYPE.RADIO_BUTTONS} PLACEHOLDER={PLACEHOLDER} markTest={(score) => markTest(score)} />
+            const isSafari = (typeof window !== 'undefined') ? (window.navigator.userAgent.search("Safari") >= 0 && window.navigator.userAgent.search("Chrome") < 0) : false;
+            
+            let type = question.unit === "%" ? enums.MULTIPLE_CHOICE_TYPE.PIE : enums.MULTIPLE_CHOICE_TYPE.RADIO_BUTTONS;
+                type = isSafari ? enums.MULTIPLE_CHOICE_TYPE.RADIO_BUTTONS : type;
+            
+            format = <MultipleChoice setQuestion={setQuestion} question={question} type={type} PLACEHOLDER={PLACEHOLDER} markTest={(score) => markTest(score)} />
             break;
         case enums.QUESTION_TYPE.MULTIPLE_SELECT:
             format = <MultipleSelect setQuestion={setQuestion} question={question} markTest={(score) => markTest(score)} testState={testState} />

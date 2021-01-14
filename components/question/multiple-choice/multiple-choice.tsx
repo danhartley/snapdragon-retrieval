@@ -23,53 +23,50 @@ const MultipleChoice = ({question, type, PLACEHOLDER, markTest, setQuestion}) =>
 
     let format;
 
-    const isSafari = (typeof window !== 'undefined') ? (window.navigator.userAgent.search("Safari") >= 0 && window.navigator.userAgent.search("Chrome") < 0) : false;
-    
-    // switch(type) {
-    //     case enums.MULTIPLE_CHOICE_TYPE.PIE:  
-    if(type === enums.MULTIPLE_CHOICE_TYPE.PIE && !isSafari) {
-            const options = question.items.map(answer => {
-                const style = `--value:${answer.name}; --unit:1${question.unit};` as any;
-                const css = answer.state === enums.TRILEAN.TRUE 
-                            ? styles.correct 
-                            : answer.state === enums.TRILEAN.FALSE 
-                                ? styles.incorrect 
-                                : answer.name === question.answer && answer.state === enums.TRILEAN.UNKNOWN
-                                    ? styles.correctAnswer
-                                    : null;
-                return  <li key={`${question.text}_${answer.name}`} class={styles.pie}>
-                            <button onClick={e => handleCheckAnswer(answer.name)} class={`${styles.pie} ${css}`} style={style} >
-                                <span>{answer.name}</span>
-                            </button>
-                            <span class={css}></span>
-                        </li>;
-            });            
-            format = <ul class={question.response ? styles.disableOverlay : null}>{options}</ul>;
-        } else {
-        //     break;
-        // case enums.MULTIPLE_CHOICE_TYPE.RADIO_BUTTONS:
-            const style = logic.calculateWidth(question.items, 'name');
-            const listItems = question.items.map(answer => {
-                const isCorrect = answer.state 
-                                    ? answer.state === enums.TRILEAN.TRUE 
-                                        ? styles.correct 
-                                        : answer.state === enums.TRILEAN.FALSE 
-                                            ? styles.incorrect 
-                                            : answer.name === question.answer && answer.state === enums.TRILEAN.UNKNOWN
-                                                ? styles.correctAnswer
-                                                : null
-                                    : null;                
-                return <li key={`${question.text}_${answer.name}`} class={`${styles.rbList} ${isCorrect}`} style={style}>
-                        <input onClick={e => handleCheckAnswer(answer.name)} type="radio" id={answer.name} name={`${question.text}_${answer.name}`} value={answer.name} />
-                        <label htmlFor={answer.name}>
-                            <span>{answer.name}</span><span>{question.unit ?? ''}</span>
-                        </label>
-                      </li>
-            });;
-            format = <ul class={question.response ? styles.disableOverlay : null}>{listItems}</ul>;
-        }
-    //         break;
-    // }
+    console.log('type: ', type);
+
+    switch(type) {
+        case enums.MULTIPLE_CHOICE_TYPE.PIE:
+        const options = question.items.map(answer => {
+            const style = `--value:${answer.name}; --unit:1${question.unit};` as any;
+            const css = answer.state === enums.TRILEAN.TRUE 
+                        ? styles.correct 
+                        : answer.state === enums.TRILEAN.FALSE 
+                            ? styles.incorrect 
+                            : answer.name === question.answer && answer.state === enums.TRILEAN.UNKNOWN
+                                ? styles.correctAnswer
+                                : null;
+            return  <li key={`${question.text}_${answer.name}`} class={styles.pie}>
+                        <button onClick={e => handleCheckAnswer(answer.name)} class={`${styles.pie} ${css}`} style={style} >
+                            <span>{answer.name}</span>
+                        </button>
+                        <span class={css}></span>
+                    </li>;
+        });            
+        format = <ul class={question.response ? styles.disableOverlay : null}>{options}</ul>
+        break;
+        case enums.MULTIPLE_CHOICE_TYPE.RADIO_BUTTONS:
+        const style = logic.calculateWidth(question.items, 'name');
+        const listItems = question.items.map(answer => {
+            const isCorrect = answer.state 
+                                ? answer.state === enums.TRILEAN.TRUE 
+                                    ? styles.correct 
+                                    : answer.state === enums.TRILEAN.FALSE 
+                                        ? styles.incorrect 
+                                        : answer.name === question.answer && answer.state === enums.TRILEAN.UNKNOWN
+                                            ? styles.correctAnswer
+                                            : null
+                                : null;                
+            return <li key={`${question.text}_${answer.name}`} class={`${styles.rbList} ${isCorrect}`} style={style}>
+                    <input onClick={e => handleCheckAnswer(answer.name)} type="radio" id={answer.name} name={`${question.text}_${answer.name}`} value={answer.name} />
+                    <label htmlFor={answer.name}>
+                        <span>{answer.name}</span><span>{question.unit ?? ''}</span>
+                    </label>
+                    </li>
+        });
+        format = <ul class={question.response ? styles.disableOverlay : null}>{listItems}</ul>
+        break;
+    }
 
     return (
         <section class={styles.container}>            
