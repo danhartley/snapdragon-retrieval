@@ -22,9 +22,12 @@ const MultipleChoice = ({question, type, PLACEHOLDER, markTest, setQuestion}) =>
     };
 
     let format;
+
+    const isSafari = (typeof window !== 'undefined') ? (window.navigator.userAgent.search("Safari") >= 0 && window.navigator.userAgent.search("Chrome") < 0) : false;
     
-    switch(type) {
-        case enums.MULTIPLE_CHOICE_TYPE.PIE:
+    // switch(type) {
+    //     case enums.MULTIPLE_CHOICE_TYPE.PIE:  
+    if(type === enums.MULTIPLE_CHOICE_TYPE.PIE && !isSafari) {
             const options = question.items.map(answer => {
                 const style = `--value:${answer.name}; --unit:1${question.unit};` as any;
                 const css = answer.state === enums.TRILEAN.TRUE 
@@ -41,9 +44,10 @@ const MultipleChoice = ({question, type, PLACEHOLDER, markTest, setQuestion}) =>
                             <span class={css}></span>
                         </li>;
             });            
-            format = <ul class={question.response ? styles.disableOverlay : null}>{options}</ul>
-            break;
-        case enums.MULTIPLE_CHOICE_TYPE.RADIO_BUTTONS:
+            format = <ul class={question.response ? styles.disableOverlay : null}>{options}</ul>;
+        } else {
+        //     break;
+        // case enums.MULTIPLE_CHOICE_TYPE.RADIO_BUTTONS:
             const style = logic.calculateWidth(question.items, 'name');
             const listItems = question.items.map(answer => {
                 const isCorrect = answer.state 
@@ -62,9 +66,10 @@ const MultipleChoice = ({question, type, PLACEHOLDER, markTest, setQuestion}) =>
                         </label>
                       </li>
             });;
-            format = <ul class={question.response ? styles.disableOverlay : null}>{listItems}</ul>
-            break;
-    }
+            format = <ul class={question.response ? styles.disableOverlay : null}>{listItems}</ul>;
+        }
+    //         break;
+    // }
 
     return (
         <section class={styles.container}>            

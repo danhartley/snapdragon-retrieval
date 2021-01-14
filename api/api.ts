@@ -129,7 +129,7 @@ const createQuestions = async lesson => {
 const updateQuestion = async question => {
 
     let ref = await getQuestionByText(question.text) as any;
-        ref = ref.data[0].ref.value.id;
+        ref = ref.data[0].ref.value.id; // will error at this point if lesson name changes after it has been loaded into client memory
 
     const response = await clientQuery(
         q.Update(

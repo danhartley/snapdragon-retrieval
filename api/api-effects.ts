@@ -21,11 +21,7 @@ const getLessonQuestionHistories = async lesson => {
     
     lessonScores = await api.getLessonByTitle(lesson.title) as any;
 
-    console.log(`lessonScores: ${lessonScores}`);
-
     lessonScores = (lessonScores && lessonScores.data && lessonScores.data.length > 0) || await api.createLesson(lesson.title);
-
-    console.log(`lessonScores: ${lessonScores}`);
     
     questionScores = await getQuestions(lesson);
 

@@ -46,7 +46,7 @@ const User = ({user, lessons}) => {
     };
     
     const [lessonHistories, setLessonHistories] = useState(null);
-    const [communityScores, setQuestionSummaries] = useState(null);
+    const [communityScores, setCommunityScores] = useState([]);
 
     useEffect(() => {
         setLessonHistories(getLessonHistories());
@@ -55,6 +55,8 @@ const User = ({user, lessons}) => {
     useEffect(() => {
 
         if(!lessonHistories) return;
+
+        const _communityScores = [];
 
         lessonHistories.forEach(async lh => {
             const lesson = lessons.find(l => l.title === lh.title);
@@ -74,13 +76,19 @@ const User = ({user, lessons}) => {
                 correct: 0
             });            
 
-            const communityScores = {
+            const communityScore = {
                 lessonScores : { 
                       ...lessonScores
                     , average: lessonScores.total === 0 ? 100 : Math.round((lessonScores.correct/lessonScores.total)*100) },
-                questionScores
+                questionScores,
+                lessonTitle: lh.title
             }
-            setQuestionSummaries(communityScores);
+
+            _communityScores.push(communityScore);
+
+            setCommunityScores([]);
+            setCommunityScores(_communityScores);
+
             lh.slug = lesson.slug;
             lh.provider = lesson.provider;
         });
@@ -100,17 +108,30 @@ const renderScoreHistory = (lessonHistories, communityScores) => {
     if(!lessonHistories) return;
 
     const lessonList = lessonHistories.filter(lesson => lesson.total !== null).map(lesson => {
-           return (
+           return (               
             !lesson.scores ? null :
             <li>
                 <Accordion lesson={lesson}>                    
                     <div><span>{`Your most recent score for this lesson was ${Math.round((lesson.correct / lesson.total) * 100)}%.`}</span></div>           
-                    { !communityScores ? null : <div><span>{`The average score for this lesson is ${communityScores.lessonScores.average}%.`}</span></div> }
+                    { 
+                        communityScores.length > 0
+                            ? communityScores.find(cs => cs.lessonTitle === lesson.title)
+                                ? <div><span>{`The average score for this lesson is ${communityScores.find(cs => cs.lessonTitle === lesson.title).lessonScores.average}%.`}</span></div> 
+                                : null
+                            : null 
+                    }
                     <ul>
                     {
                         lesson.scores.map(score => {
+                            
+                            // const communityQuestionScores = 0;
+                            // const communityQuestionAverage = 0;
 
-                            const communityQuestionScores = communityScores ? communityScores.questionScores.find(qs => qs.text === score.text) : null;
+                            const communityQuestionScores = communityScores.length > 0 
+                                ? communityScores.find(cs => cs.lessonTitle === lesson.title)
+                                    ? communityScores.find(cs => cs.lessonTitle === lesson.title).questionScores.find(qs => qs.text === score.text) 
+                                    : null
+                                : null;
                             const communityQuestionAverage = communityQuestionScores ? Math.round((communityQuestionScores.correct / communityQuestionScores.total) * 100) : null;
 
                             return (

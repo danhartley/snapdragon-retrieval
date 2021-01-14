@@ -23,7 +23,7 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
         if(entry.name === '') return;
         const updatedAnswerList = logic.updateAnswerList(question, answerList, entry, PLACEHOLDER);
         if(updatedAnswerList.filter(l => l.name !== PLACEHOLDER).length === question.listCount) {
-            setTestState(enums.QUESTION_STATE.COMPLETED);
+            setTestState(enums.QUESTION_STATE.ANSWERED);
         }
         setAnswerList(updatedAnswerList);
     };
@@ -85,7 +85,7 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
     };
 
     setTimeout(() => {
-        if(testState === enums.QUESTION_STATE.COMPLETED) btnMarkRef.current ? btnMarkRef.current.focus() : null;
+        if(testState === enums.QUESTION_STATE.ANSWERED) btnMarkRef.current ? btnMarkRef.current.focus() : null;
     });
 
     let isMarkBtnVisible = true, isMarkBtnDisabled = false;
@@ -95,11 +95,15 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
             isMarkBtnVisible = true;
             isMarkBtnDisabled = listItems.length > answerList.filter(a => a.name !== PLACEHOLDER).length;       
             break;
-        case enums.QUESTION_STATE.COMPLETED:
+        case enums.QUESTION_STATE.ANSWERED:
             isMarkBtnVisible = true;                                
             isMarkBtnDisabled = false;
             break;
         case enums.QUESTION_STATE.MARKED:
+            isMarkBtnVisible = false;
+            isMarkBtnDisabled = false;
+            break;
+        case enums.QUESTION_STATE.LESSON_OVER:
             isMarkBtnVisible = false;
             isMarkBtnDisabled = false;
             break;

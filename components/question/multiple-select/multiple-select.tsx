@@ -49,11 +49,15 @@ const MultipleSelect = ({question, markTest, setQuestion, testState}) => {
             isMarkBtnVisible = true;
             isMarkBtnDisabled = checkedAnswers.length === 0;           
             break;
-        case enums.QUESTION_STATE.COMPLETED:
-            isMarkBtnVisible = true;         
+        case enums.QUESTION_STATE.ANSWERED:
+            isMarkBtnVisible = false;         
             isMarkBtnDisabled = false;
             break;
         case enums.QUESTION_STATE.MARKED:
+            isMarkBtnVisible = false;
+            isMarkBtnDisabled = false;
+            break;
+        case enums.QUESTION_STATE.LESSON_OVER:
             isMarkBtnVisible = false;
             isMarkBtnDisabled = false;
             break;

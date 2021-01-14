@@ -39,10 +39,11 @@ export const Question = ({lesson, testState, setTestState, progress, setProgress
 
         const total = 1; // each question counts as 1
         const correct = (isCorrect ? 1 : 0); // each question is either correct (1), or wrong (0)
+        const isLessonOver = score.answered + 1 === lesson.questions.length;
 
-        setTestState(score.answered + 1 === lesson.questions.length ? enums.QUESTION_STATE.COMPLETED : enums.QUESTION_STATE.MARKED);
+        setTestState(score.answered + 1 === lesson.questions.length ? enums.QUESTION_STATE.LESSON_OVER : enums.QUESTION_STATE.MARKED);
         setLessonHistories({total, correct, text, answers, type, unit, title: lesson.title }, enums.STORAGE_KEY.HISTORY);
-        setScore({ ...score, total: score.total + 1, correct: score.correct + correct, answered: score.answered + 1, isLessonOver: score.answered + 1 >= lesson.questions.length });
+        setScore({ ...score, total: score.total + 1, correct: score.correct + correct, answered: score.answered + 1, isLessonOver });
         const updatedQuestion = { 
             ...question
             , total: question.total + 1
@@ -53,6 +54,7 @@ export const Question = ({lesson, testState, setTestState, progress, setProgress
         if(response) {  
             setCommunityScore({ correct: response.data.correct, total: response.data.total, question, userCorrect: correct });
         }
+        setProgress({ ...progress, number: isLessonOver ? 0 : progress.number + 1});
     };
 
     const nextTest = e => {
@@ -60,7 +62,6 @@ export const Question = ({lesson, testState, setTestState, progress, setProgress
         const index = logic.next(enums.DIRECTION.Next, lesson.questions.map(q => q.text).indexOf(question.text), lesson.questions.length);    
         setQuestion(lesson.questions[index]);
         setTestState(enums.QUESTION_STATE.RUNNING);
-        setProgress({ ...progress, number: progress.number + 1});
     };
 
     setTimeout(() => {
@@ -90,13 +91,17 @@ export const Question = ({lesson, testState, setTestState, progress, setProgress
             isNextBtnVisible = question.type === enums.QUESTION_TYPE.MULTIPLE_CHOICE;
             isNextBtnDisabled = true;            
             break;
-        case enums.QUESTION_STATE.COMPLETED:
-            isNextBtnVisible = question.type === enums.QUESTION_TYPE.MULTIPLE_CHOICE;
+        case enums.QUESTION_STATE.ANSWERED:
+            isNextBtnVisible = (question.type === enums.QUESTION_TYPE.MULTIPLE_CHOICE);
             isNextBtnDisabled = true;
             break;
         case enums.QUESTION_STATE.MARKED:
             isNextBtnVisible = true;
             isNextBtnDisabled = score.isLessonOver;
+            break;
+        case enums.QUESTION_STATE.LESSON_OVER:
+            isNextBtnVisible = true;
+            isNextBtnDisabled = true;
             break;
     }
 

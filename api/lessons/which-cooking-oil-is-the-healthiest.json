@@ -174,7 +174,7 @@
           ]
         },
         {
-          "text": "What does HDL stand for?",
+          "text": "What does HDL stand for? (hint: contains a hyphen)",
           "unit": "",
           "unitDescription": "",
           "listCount": 1,
@@ -196,7 +196,7 @@
           ]
         },
         {
-          "text": "What is the name for micronutrients derived from plants?",
+          "text": "What is the name for micronutrients derived from plants? (hint: plural)",
           "unit": "",
           "unitDescription": "",
           "listCount": 1,
@@ -465,7 +465,7 @@
                 "subjects are randomly allocated to two or more groups, and treated differently in each"
             ],
             "alternatives": [
-                "the experimental groupe receives an alternative treatment, such as a placebo or no intervention",
+                "the experimental group receives an alternative treatment, such as a placebo or no intervention",
                 "the control group receives the intervention being assessed"
             ],
             "listCount": 4,

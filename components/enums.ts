@@ -18,8 +18,9 @@ enum TRILEAN {
 
 enum QUESTION_STATE {
     RUNNING = "running",
-    COMPLETED = "completed",
-    MARKED = "marked"
+    ANSWERED = "answered",
+    MARKED = "marked",
+    LESSON_OVER = 'less over'
 }
 
 enum DIRECTION {
