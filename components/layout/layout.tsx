@@ -60,7 +60,7 @@ export default function Layout({
                     </nav>
                 </header>
                 
-                { headerLink !== '' ? <h1><a target="_blank" href={headerLink}>{header}</a></h1> : <h1>{header}</h1> }
+                { headerLink !== '' ? <h1><a target="_blank" href={headerLink}>{header.charAt(0).toUpperCase() + header.slice(1)}</a></h1> : <h1>{header}</h1> }
 
                 {children}
 

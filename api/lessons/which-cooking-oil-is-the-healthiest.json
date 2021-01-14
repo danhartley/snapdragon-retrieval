@@ -514,15 +514,16 @@
             ]
         },
         {
-            "text": "alpha-linolenic acid (ALA) and linolenic acid (LA) are essential fatty acids",
+            "text": "alpha-linolenic acid (ALA) and linolenic acid (LA) are essential fatty acids. What is true about them?",
             "answers": [
                 "the human body cannot synthesise ALA or LA",
-                "salmon and chia are sources of ALA (omega-3)"
+                "salmon and chia are sources of ALA",
+                "ALA is commonly called omega-3",
+                "LA is commonly called omega-6"
             ],
             "alternatives": [
-                "Omega-3 and omega-6 fatty acids have at least two trans-unsaturated bonds"
             ],
-            "listCount": 3,
+            "listCount": 4,
             "sources": [
                 {
                     "author": "Khan Academy",

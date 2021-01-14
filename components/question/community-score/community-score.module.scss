@@ -17,4 +17,7 @@
         margin-left: 5px;
         letter-spacing: .25px;
     }
+    span:nth-child(2).hidden {
+        visibility: hidden;
+    }
 }

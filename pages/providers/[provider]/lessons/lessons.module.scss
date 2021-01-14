@@ -1,0 +1,8 @@
+.list {
+    li {
+        margin-bottom: 12px;
+        @media (max-width: 414px) {
+            font-size: .8rem;
+        }
+    }
+}

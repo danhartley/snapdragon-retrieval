@@ -30,6 +30,8 @@
     },
     {
         "text": "The world's tallest building is in Mjøstårnet, Norway. How tall is it in metres?",
+        "unit": "m",
+        "unitDescription": "metres",
         "answer": "85.4",
         "answers": [
           "56.6",

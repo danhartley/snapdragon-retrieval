@@ -6,11 +6,23 @@ import { getLessons } from 'api/lessons/utils';
 
 import providers from 'pages/providers/providers.json';
 
+import styles from 'pages/providers/[provider]/lessons/lessons.module.scss';
+
 const Lessons = ({lessons}) => {
 
     const router = useRouter();
 
     const provider = router.query.provider;
+
+    const shortenTitle = title => {
+
+        let group = '39 Ways to Save the Planet: ';
+
+        title = title.indexOf(group) > -1 ? title.replace(group, '') : title;
+        title = title.charAt(0).toUpperCase() + title.slice(1);
+
+        return title;
+    };
 
     const providerLessons = lessons.filter(lesson => lesson.provider === router.query.provider).map(lesson => 
         <li>
@@ -20,13 +32,13 @@ const Lessons = ({lessons}) => {
                         query: { provider, lesson: lesson.slug, type: enums.LESSON_TYPE.QUESTIONS },
                     }}
             >
-                <a>{lesson.title}</a>
+                <a>{shortenTitle(lesson.title)}</a>
             </Link>
         </li>);
     
         return (
             <Layout title="Lessons" description={`Lessons for ${provider}`} header={lessons.find(l => l.provider === provider).providerName as string}>
-                <ul>
+                <ul class={styles.list}>
                     { providerLessons }
                 </ul>
             </Layout>

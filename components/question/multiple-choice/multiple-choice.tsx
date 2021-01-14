@@ -23,8 +23,6 @@ const MultipleChoice = ({question, type, PLACEHOLDER, markTest, setQuestion}) =>
 
     let format;
 
-    console.log('type: ', type);
-
     switch(type) {
         case enums.MULTIPLE_CHOICE_TYPE.PIE:
         const options = question.items.map(answer => {

@@ -5,7 +5,7 @@ import styles from 'components/question/community-score/community-score.module.s
 const CommunityScore = ({data}) => {
 
     if(data.question === undefined || data.question.type === undefined) {
-        return (<section class={styles.container}><span></span></section>);
+        return (<section class={styles.container}><span></span><span class={styles.hidden}>&nbsp;</span></section>);
     }
 
     const summary = communityScoreSummary(data);
