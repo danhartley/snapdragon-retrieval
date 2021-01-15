@@ -36,7 +36,7 @@ const MultipleChoice = ({question, type, PLACEHOLDER, markTest, setQuestion}) =>
                                 : null;
             return  <li key={`${question.text}_${answer.name}`} class={styles.pie}>
                         <button onClick={e => handleCheckAnswer(answer.name)} class={`${styles.pie} ${css}`} style={style} >
-                            <span>{answer.name}</span>
+                            <span>{logic.toCase(answer.name)}</span>
                         </button>
                         <span class={css}></span>
                     </li>;
@@ -58,7 +58,7 @@ const MultipleChoice = ({question, type, PLACEHOLDER, markTest, setQuestion}) =>
             return <li key={`${question.text}_${answer.name}`} class={`${styles.rbList} ${isCorrect}`} style={style}>
                     <input onClick={e => handleCheckAnswer(answer.name)} type="radio" id={answer.name} name={`${question.text}_${answer.name}`} value={answer.name} />
                     <label htmlFor={answer.name}>
-                        <span>{answer.name}</span><span>{question.unit ?? ''}</span>
+                        <span>{logic.toCase(answer.name)}</span><span>{question.unit ?? ''}</span>
                     </label>
                     </li>
         });

@@ -51,7 +51,7 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
                                 ? `${styles.incorrect}`
                                 : ``
                         : ''} 
-                >{item.name}</span><span>{item.correct}</span></li> 
+                >{logic.toCase(item.name)}</span><span>{logic.toCase(item.correct)}</span></li> 
     });
 
     setTimeout(() => {

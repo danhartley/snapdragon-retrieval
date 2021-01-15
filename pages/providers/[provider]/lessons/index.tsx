@@ -1,8 +1,9 @@
 import { useRouter } from 'next/router';
-import Link from 'next/link';
-import Layout from 'components/layout/layout';
+import { logic } from 'logic/logic';
 import { enums } from 'components/enums';
 import { getLessons } from 'api/lessons/utils';
+import Link from 'next/link';
+import Layout from 'components/layout/layout';
 
 import providers from 'pages/providers/providers.json';
 
@@ -14,41 +15,53 @@ const Lessons = ({lessons}) => {
 
     const provider = router.query.provider;
 
-    const shortenTitle = title => {
+    const providerLessons = lessons.filter(lesson => lesson.provider === router.query.provider);
+    const groupedLessons = logic.sortBy(providerLessons.filter(l => l.group).map(l => {
+        l.groupIndex = l.group.index;
+        return l;
+    }), "groupIndex").map(l => lessonLink(provider, l, providerLessons.filter(l => l.group).filter(gl => gl.group.name === l.group.name).length));
+    const unGroupedLessons = providerLessons.filter(l => !l.group).map(l => lessonLink(provider, l, 0));
 
-        let group = '39 Ways to Save the Planet: ';
-
-        title = title.indexOf(group) > -1 ? title.replace(group, '') : title;
-        title = title.charAt(0).toUpperCase() + title.slice(1);
-
-        return title;
-    };
-
-    const providerLessons = lessons.filter(lesson => lesson.provider === router.query.provider).map(lesson => 
-        <li>
-            <Link 
-                href={{
-                        pathname: '/providers/[provider]/lessons/[lesson]',
-                        query: { provider, lesson: lesson.slug, type: enums.LESSON_TYPE.QUESTIONS },
-                    }}
-            >
-                <a>{shortenTitle(lesson.title)}</a>
-            </Link>
-        </li>);
-    
-        return (
-            <Layout title="Lessons" description={`Lessons for ${provider}`} header={lessons.find(l => l.provider === provider).providerName as string}>
-                <ul class={styles.list}>
-                    { providerLessons }
-                </ul>
-            </Layout>
-        )
+    return (
+        <Layout title="Lessons" description={`Lessons for ${provider}`} header={lessons.find(l => l.provider === provider).providerName as string}>
+            <ul class={styles.list}>
+                { [ ...groupedLessons, ...unGroupedLessons ] }
+            </ul>
+        </Layout>
+    )
 };
     
 export default Lessons;
 
+const lessonLink = (provider: string | string[], lesson: any, groupCount) => {
+    return lesson.groupIndex && lesson.groupIndex === 1 
+    ? <>
+      <div class={styles.groupHeader}>{lesson.group.name}</div>
+      <li class={`${styles.grouped} ${styles.first}`}>
+        <Link
+            href={{
+                pathname: '/providers/[provider]/lessons/[lesson]',
+                query: { provider, lesson: lesson.slug, type: enums.LESSON_TYPE.QUESTIONS },
+            }}
+        >
+            <a>{`#${lesson.group.index} ${lesson.group.subtitle}`}</a>
+        </Link>
+      </li>
+      </>
+    : <li class={`${lesson.groupIndex ? styles.grouped : null} ${lesson.groupIndex && lesson.groupIndex === groupCount ? styles.last : null}`}>
+        <Link
+            href={{
+                pathname: '/providers/[provider]/lessons/[lesson]',
+                query: { provider, lesson: lesson.slug, type: enums.LESSON_TYPE.QUESTIONS },
+            }}
+        >
+            <a>{lesson.group ? `#${lesson.group.index}` : null } {lesson.group ? lesson.group.subtitle : lesson.title}</a>
+        </Link>
+     </li>
+};
+
 export async function getStaticProps() {    
-    const providerLessons = getLessons().map(lesson => {
+    const allLessons = getLessons().map(lesson => {
         return { 
             ...lesson,
             providerName: providers.providersList.find(p => p.slug === lesson.provider).name
@@ -56,7 +69,7 @@ export async function getStaticProps() {
     });
     return {
       props: {
-        lessons: providerLessons
+        lessons: allLessons
       },
     }
 }

@@ -116,7 +116,7 @@ export const Question = ({lesson, testState, setTestState, progress, setProgress
             <section>
                 <div class={styles.text}>
                     <span class={styles.cue}></span>
-                    <span><span>{question.text}</span><span class="super">{`${progress.number}/${progress.of}`}</span></span>
+                    <span><span>{logic.toCase(question.text)}</span><span class="super">{`${progress.number}/${progress.of}`}</span></span>
                     <span class={`${styles.liveScore} ${score.total === 0 ? styles.hidden : null} ${lesson.availableCount === score.total ? styles.lessonOver : null } `}><span>{score.correct}</span><span>{score.total}</span></span>
                 </div> 
                 <>{format}</>

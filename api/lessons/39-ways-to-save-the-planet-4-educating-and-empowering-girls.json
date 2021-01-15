@@ -35,7 +35,7 @@
 			}]
 		},
 		{
-			"text": "In the project described, insects as a source of protein are described as:",
+			"text": "In the project described, insects are cited as a good source of protein because:",
 			"answers": [
 				"living largely on waste leaves and vegetables",
 				"producing far lower GHGs in comparison to other animal sources of protein",
@@ -84,7 +84,7 @@
 		}
 	],
 	"unranked": [{
-		"text": "According to Dr. Edwards improved women's education and funding of family planning could reduce the population by __ by 2050",
+		"text": "According to Dr Edwards improved women's education and funding of family planning could reduce the population by __ by 2050",
 		"listCount": 1,
 		"items": [{
 			"name": "843 million"
@@ -99,5 +99,10 @@
 			"author": "CAMFED",
 			"source": "https://camfed.org//why-girls-education/gender-equality-climate-action/"
 		}]
-	}]
+	}],
+    "group": {
+        "name": "39 Ways to Save the Planet",
+        "index": 4,
+        "subtitle": "Educating and Empowering Girls"
+    }
 }

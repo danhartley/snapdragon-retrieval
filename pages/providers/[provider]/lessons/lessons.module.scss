@@ -1,8 +1,21 @@
-.list {
+.list { 
+    div { 
+        font-size: .9rem;
+        font-style: italic;
+    }   
     li {
         margin-bottom: 12px;
         @media (max-width: 414px) {
             font-size: .8rem;
         }
-    }
+        &.grouped {
+            margin-left: 20px;
+        }
+        &.first {
+            margin-top: 15px;
+        }        
+        &.last {
+            margin-bottom: 15px;
+        }        
+    }    
 }

@@ -5,7 +5,7 @@
     "source": "https://www.bbc.co.uk/programmes/m000qwt3",
     "multiplechoice": [    
       {
-        "text": "The oceans have absorbed roughly absorbed roughly __% of our emissions between the beginning of the industrial revolution and the mid-1990s",
+        "text": "The oceans have absorbed roughly __% of our emissions between the beginning of the industrial revolution and the mid-1990s",
         "unit": "%",
         "unitDescription": "%",
         "answer": "30",
@@ -22,7 +22,7 @@
         ]
       },
       {
-          "text": "Dr. Edwards estimates there are how many hectares of seagrass worldwide",
+          "text": "Dr Edwards estimates there are how many hectares of seagrass worldwide",
           "unit": "mil hectares",
           "unitDescription": "million hectares",
           "answer": "16-27",
@@ -39,7 +39,7 @@
           ]
         },
       {
-          "text": "Dr. Edwards estimates that __ hectares of seagrass have been lost",
+          "text": "Dr Edwards estimates that __ hectares of seagrass have been lost",
           "unit": "mil hectares",
           "unitDescription": "million hectares",
           "answer": "6",
@@ -56,7 +56,7 @@
           ]
         },
       {
-          "text": "By what percentage might CO2 emissions be reduced through blue carbon sequestration?",
+          "text": "By what percentage of CO2 emissions might be reduced through blue carbon sequestration?",
           "answer": ".1-.2",
           "answers": [
             ".01",
@@ -134,5 +134,10 @@
             }
           ]
         }
-    ]
+    ],
+    "group": {
+        "name": "39 Ways to Save the Planet",
+        "index": 3,
+        "subtitle": "Sublime Seagrass"
+    }
   }

@@ -181,5 +181,10 @@
             }
           ]
         }
-    ]
+    ],
+    "group": {
+        "name": "39 Ways to Save the Planet",
+        "index": 1,
+        "subtitle": "Super Rice"
+    }
 }

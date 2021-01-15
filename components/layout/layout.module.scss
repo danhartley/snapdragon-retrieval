@@ -3,7 +3,7 @@
 .container {
     display: grid;
     row-gap: 10px;
-    grid-template-rows: 45px 75px auto 45px;
+    grid-template-rows: 45px minmax(30px, auto) auto 45px;
     .date {
         display: none;
         color: rgba($colour, 0.6);

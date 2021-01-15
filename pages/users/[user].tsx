@@ -5,6 +5,7 @@ import Link from 'next/link'
 import users from 'pages/users/users.json';
 import { getFromLocalStorage } from 'api/state';
 import { enums } from 'components/enums';
+import { logic } from 'logic/logic';
 import { getLessonSummaries } from 'api/api-effects';
 import { getLessons } from 'api/lessons/utils';
 
@@ -21,10 +22,10 @@ const Answer = ({score}) => {
             ? <div class={styles.a}>
                     <span>Answer</span>
                     <ul>
-                        {score.answers.map(answer => <li>{answer}</li>)}
+                        {score.answers.map(answer => <li>{logic.toCase(answer)}{score.unit ?? null}</li>)}
                     </ul>
                 </div>        
-            : <div class={styles.a}><span>Answer</span><span>{score.answers.map(answer => <span>{answer}</span>)}</span></div>
+            : <div class={styles.a}><span>Answer</span><span>{score.answers.map(answer => <span>{logic.toCase(answer)}{score.unit ?? null}</span>)}</span></div>
         )
 }
 
@@ -112,20 +113,17 @@ const renderScoreHistory = (lessonHistories, communityScores) => {
             !lesson.scores ? null :
             <li>
                 <Accordion lesson={lesson}>                    
-                    <div><span>{`Your most recent score for this lesson was ${Math.round((lesson.correct / lesson.total) * 100)}%.`}</span></div>           
+                    <div><span>{`Your most recent mark for this lesson was ${Math.round((lesson.correct / lesson.total) * 100)}%.`}</span></div>           
                     { 
                         communityScores.length > 0
                             ? communityScores.find(cs => cs.lessonTitle === lesson.title)
-                                ? <div><span>{`The average score for this lesson is ${communityScores.find(cs => cs.lessonTitle === lesson.title).lessonScores.average}%.`}</span></div> 
+                                ? <div><span>{`The average mark for this lesson is ${communityScores.find(cs => cs.lessonTitle === lesson.title).lessonScores.average}%.`}</span></div> 
                                 : null
                             : null 
                     }
                     <ul>
                     {
                         lesson.scores.map(score => {
-                            
-                            // const communityQuestionScores = 0;
-                            // const communityQuestionAverage = 0;
 
                             const communityQuestionScores = communityScores.length > 0 
                                 ? communityScores.find(cs => cs.lessonTitle === lesson.title)

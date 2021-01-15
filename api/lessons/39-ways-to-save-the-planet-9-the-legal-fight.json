@@ -62,5 +62,10 @@
                 "source": "https://ourworldindata.org/future-emissions"
             }
         ]
-	}]
+	}],
+    "group": {
+        "name": "39 Ways to Save the Planet",
+        "index": 9,
+        "subtitle": "The Legal Fight"
+    }
 }

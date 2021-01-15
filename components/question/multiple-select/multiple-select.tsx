@@ -22,7 +22,7 @@ const MultipleSelect = ({question, markTest, setQuestion, testState}) => {
         return <li key={`${question.text}_${answer.name}`} class={`${styles.chkBoxList} ${css}`} style={style}>
             <input type="checkbox" onChange={e => handleCheckBox(answer.name)} id={answer.name} name={`${question.text}_${answer.name}`} value={answer.name} />
             <label htmlFor={answer.name}>
-                <span>{answer.name}</span><span>{question.unit ?? ''}</span>
+                <span>{logic.toCase(answer.name)}</span><span>{question.unit ?? ''}</span>
             </label>
         </li>
     });

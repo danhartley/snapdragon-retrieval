@@ -28,7 +28,7 @@
       "listCount": 5
     },
     {
-      "text": "Estimate the percentage of food that is lost or wasted annually.",
+      "text": "Estimate the percentage of food that is lost or wasted annually. (hint: it's a range)",
       "unit": "%",
       "unitDescription": "$",
       "listCount": 1,
@@ -83,9 +83,9 @@
       ]
     },
     {
-      "text": "The lowest impact beef requires 36 times more land than peas. And many times more greenhouse gases?",
-      "unit": "%",
-      "unitDescription": "%",
+      "text": "The lowest impact beef requires 36 times more land than peas. And how many times more greenhouse gases?",
+      "unit": "x",
+      "unitDescription": "times",
       "listCount": 4,
       "answer": "6",
       "answers": [

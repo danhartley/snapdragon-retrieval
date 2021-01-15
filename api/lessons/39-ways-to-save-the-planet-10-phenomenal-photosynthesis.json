@@ -36,13 +36,13 @@
 		]
     },
     {
-		"text": "Glaia's carbon-based material helps plants how?",
+		"text": "Glaia's carbon-based material enables plants to __?",
 		"listCount": 4,
 		"answer": "Restart photosynthesis more quickly after exposure to strong sunlight",
 		"answers": [
 			"Absorb more energy from the sun",
             "Photosynthesise more efficiently",
-            "Enable faster takeup of fertilisers"
+            "Take up fertilisers faster"
 		]
 	}],
 	"unranked": [{
@@ -51,5 +51,10 @@
 		"items": [{
 			"name": "chlorophyll"
 		}]
-	}]
+	}],
+    "group": {
+        "name": "39 Ways to Save the Planet",
+        "index": 10,
+        "subtitle": "Phenomenal Photosynthesis"
+    }
 }

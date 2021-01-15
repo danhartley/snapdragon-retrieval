@@ -10,7 +10,7 @@
 		}],
 		"year": "2020",
 		"term": "Briefly describe the new cells discussed in the programme.",
-		"definition": "Tandem solar cells that pair silicon with a metal halide perovskite are a promising option for surpassing the single-cell efficiency limit. We report a monolithic perovskite/silicon tandem with a certified power conversion efficiency of 29.15%.",
+		"definition": "Tandem solar cells that pair silicon with a metal halide perovskite are a promising option for surpassing the single-cell efficiency limit. Science reports a monolithic perovskite/silicon tandem with a certified power conversion efficiency of 29.15%.",
 		"text": "perovskite-silicon cells"
 	}],
 	"multiplechoice": [
@@ -101,30 +101,35 @@
 ],
 	"multipleselect": [
         {
-		"text": "If standard photovoltaic cells replaced fossil fuels, Dr. Edwards makes what forecasts for them by 2050? They will __",
+		"text": "If standard photovoltaic cells replaced fossil fuels, Dr Edwards makes what forecasts? This would __ by 2050",
 		"answers": [
-            "convert 20% of energy in sunlight into useable energy",
+            "be accompanied by a 20% conversion of energy from sunlight",
             "lead to a 12% reduction in emissions",
-            "use will grow 14 fold"
+            "increase their use 14 fold"
 		],
 		"alternatives": [
             "lead to a 2% reduction in emissions",
-            "convert 10% of energy in sunlight into useable energy"
+            "be accompanied by a 10% conversion of energy from sunlight"
 		],
 		"listCount": 5
     },
         {
-		"text": "If standard the most efficient perovskite-silicon replaced fossil fuels, Dr. Edwards makes what forecasts for them by 2050",
+		"text": "If the most efficient perovskite-silicon cells replaced fossil fuels, Dr Edwards makes what forecasts? This would __ by 2050",
 		"answers": [
-            "convert 45% of energy in sunlight into useable energy",
+            "be accompanied by a 45% conversion of energy from sunlight",
             "lead to a 27% reduction in emissions",
-            "use will grow 14 fold"
+            "increase their use 14 fold"
 		],
 		"alternatives": [
             "lead to an 18% reduction in emissions",
-            "convert 30% of energy in sunlight into useable energy"
+            "be accompanied by a 30% conversion of energy from sunlight"
 		],
 		"listCount": 5
     }
-]
+],
+"group": {
+    "name": "39 Ways to Save the Planet",
+    "index": 7,
+    "subtitle": "More Power from the Sun"
+}
 }

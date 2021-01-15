@@ -81,7 +81,7 @@ const markMultipleAnswers = (lesson) => {
           total: question.answers.length
         , correct: (rightAnswers - wrongAnswers)
         , items: question.items
-        , isCorrect: rightAnswers === question.answers.length};
+        , isCorrect: (rightAnswers - wrongAnswers) === question.answers.length};
     return { 
           ...score
         , text: lesson.question.text
@@ -195,6 +195,10 @@ const calculateWidth = (items, sortOn) => {
     return style;
 };
 
+const toCase = (str) => {
+    return (str && str.length > 0) ? str.charAt(0).toUpperCase() + str.slice(1) : '';
+};
+
 export const logic = {
     mark,
     markUnordered,
@@ -206,5 +210,6 @@ export const logic = {
     shuffleArray,
     getUnusedAnswers,
     sortBy,
-    calculateWidth
+    calculateWidth,
+    toCase
 };

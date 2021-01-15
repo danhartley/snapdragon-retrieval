@@ -81,7 +81,7 @@
   ],
   "ranked": [
     {
-      "text": "Rank the top 3 energy sectors by ghg emissions, highest to lowest (one word for each).",
+      "text": "Rank the top 3 energy sectors by ghg emissions, highest to lowest (hint: one word for each).",
       "type": "ordered",
       "unit": "%",
       "unitDescription": "%",
@@ -106,7 +106,7 @@
       "sources": []
     },
     {
-      "text": "Rank shipping, pipeline, road, rail, and aviation transport emissions in ascending order.",
+      "text": "Rank shipping, pipeline, road, rail, and aviation transport emissions by volume in ascending order.",
       "type": "ordered",
       "unit": "%",
       "unitDescription": "%",
