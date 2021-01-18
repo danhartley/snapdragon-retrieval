@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "preact/hooks";
 import { enums } from 'components/enums';
 import { logic } from 'logic/logic';
 
@@ -6,6 +7,14 @@ import styles from 'components/question/multiple-choice/multiple-choice.module.s
 const MultipleChoice = ({question, type, PLACEHOLDER, markTest, setQuestion}) => {
 
     question.items = question.items || logic.sortBy(logic.shuffleArray([ ...question.answers.map(a => { return { name: a } }), { name: question.answer } ]), "name");
+
+    const firstRB = useRef(null);
+
+    useEffect(() => {
+        if(firstRB && firstRB.current) {
+            firstRB.current.focus();
+        }
+    }, []);
 
     const handleCheckAnswer = (response) => {
         question.response = response;
@@ -35,7 +44,7 @@ const MultipleChoice = ({question, type, PLACEHOLDER, markTest, setQuestion}) =>
                                 ? styles.correctAnswer
                                 : null;
             return  <li key={`${question.text}_${answer.name}`} class={styles.pie}>
-                        <button onClick={e => handleCheckAnswer(answer.name)} class={`${styles.pie} ${css}`} style={style} autoFocus={index === 0}>
+                        <button onClick={e => handleCheckAnswer(answer.name)} class={`${styles.pie} ${css}`} style={style} ref={index === 0 ? firstRB : null}>
                             <span>{logic.toCase(answer.name)}</span>
                         </button>
                         <span class={css}></span>
@@ -56,7 +65,7 @@ const MultipleChoice = ({question, type, PLACEHOLDER, markTest, setQuestion}) =>
                                             : null
                                 : null;                
             return <li key={`${question.text}_${answer.name}`} class={`${styles.rbList} ${isCorrect}`} style={style}>
-                    <input onClick={e => handleCheckAnswer(answer.name)} type="radio" id={answer.name} name={`${question.text}_${answer.name}`} value={answer.name} autoFocus={index === 0} />
+                    <input onClick={e => handleCheckAnswer(answer.name)} type="radio" id={answer.name} name={`${question.text}_${answer.name}`} value={answer.name} ref={index === 0 ? firstRB : null} />
                     <label htmlFor={answer.name}>
                         <span>{logic.toCase(answer.name)}</span><span>{question.unit ?? ''}</span>
                     </label>
