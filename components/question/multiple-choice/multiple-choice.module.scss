@@ -8,7 +8,7 @@
     padding: 10px 0;
     align-items: center;
     button {        
-        background: conic-gradient(rgba($colour, .2) calc(var(--value, 0) * var(--unit)), rgba($colour, .6) calc(var(--value, 0) * var(--unit)));
+        background: conic-gradient(rgba($colour, .2) calc(var(--value, 0) * var(--unit)), rgba($colour, .8) calc(var(--value, 0) * var(--unit)));
         border-radius: 50%;
         height: 2rem;
         min-height: 2rem;

@@ -52,6 +52,7 @@ const mark = (lesson, placeholder = '---') => {
 
 const markOrdered = (lesson, placeholder = '---') => {
     const score = mark(lesson, placeholder);
+    score.isCorrect = score.isOrderedCorrect;
     score.markedAnswerList.forEach((score, index) => {
         score.isOrdered = sanitise(score.name) === sanitise(lesson.question.items[index].name) ? enums.TRILEAN.TRUE : enums.TRILEAN.FALSE;
         score.correct = !score.isOrdered ? sanitise(lesson.question.items[index].name) : null;

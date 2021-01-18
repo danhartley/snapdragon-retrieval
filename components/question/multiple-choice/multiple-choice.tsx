@@ -25,7 +25,7 @@ const MultipleChoice = ({question, type, PLACEHOLDER, markTest, setQuestion}) =>
 
     switch(type) {
         case enums.MULTIPLE_CHOICE_TYPE.PIE:
-        const options = question.items.map(answer => {
+        const options = question.items.map((answer, index) => {
             const style = `--value:${answer.name}; --unit:1${question.unit};` as any;
             const css = answer.state === enums.TRILEAN.TRUE 
                         ? styles.correct 
@@ -35,7 +35,7 @@ const MultipleChoice = ({question, type, PLACEHOLDER, markTest, setQuestion}) =>
                                 ? styles.correctAnswer
                                 : null;
             return  <li key={`${question.text}_${answer.name}`} class={styles.pie}>
-                        <button onClick={e => handleCheckAnswer(answer.name)} class={`${styles.pie} ${css}`} style={style} >
+                        <button onClick={e => handleCheckAnswer(answer.name)} class={`${styles.pie} ${css}`} style={style} autoFocus={index === 0}>
                             <span>{logic.toCase(answer.name)}</span>
                         </button>
                         <span class={css}></span>
@@ -45,7 +45,7 @@ const MultipleChoice = ({question, type, PLACEHOLDER, markTest, setQuestion}) =>
         break;
         case enums.MULTIPLE_CHOICE_TYPE.RADIO_BUTTONS:
         const style = logic.calculateWidth(question.items, 'name');
-        const listItems = question.items.map(answer => {
+        const listItems = question.items.map((answer, index) => {
             const isCorrect = answer.state 
                                 ? answer.state === enums.TRILEAN.TRUE 
                                     ? styles.correct 
@@ -56,7 +56,7 @@ const MultipleChoice = ({question, type, PLACEHOLDER, markTest, setQuestion}) =>
                                             : null
                                 : null;                
             return <li key={`${question.text}_${answer.name}`} class={`${styles.rbList} ${isCorrect}`} style={style}>
-                    <input onClick={e => handleCheckAnswer(answer.name)} type="radio" id={answer.name} name={`${question.text}_${answer.name}`} value={answer.name} />
+                    <input onClick={e => handleCheckAnswer(answer.name)} type="radio" id={answer.name} name={`${question.text}_${answer.name}`} value={answer.name} autoFocus={index === 0} />
                     <label htmlFor={answer.name}>
                         <span>{logic.toCase(answer.name)}</span><span>{question.unit ?? ''}</span>
                     </label>

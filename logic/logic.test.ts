@@ -48,12 +48,12 @@ describe('marking unordered lessons', () => {
     });
 });
 
-describe('marking unordered lessons', () => {
+describe('marking ordered lessons', () => {
     
     let lesson = {
         question: {
             "listCount": 2,
-            "type": enums.QUESTION_TYPE.UNORDERED,
+            "type": enums.QUESTION_TYPE.ORDERED,
             items: [
                 {"name": "water"},
                 {"name": "road"},
@@ -74,6 +74,7 @@ describe('marking unordered lessons', () => {
             { correct: null, name: 'rail', state: enums.TRILEAN.TRUE, isOrdered: enums.TRILEAN.TRUE },
             { correct: null, name: 'air', state: enums.TRILEAN.TRUE, isOrdered: enums.TRILEAN.TRUE },
         ]);
+        expect(score.isCorrect).toBe(true);
     });
 
     test('check answers are correct but in the wrong order', () => {
@@ -85,6 +86,7 @@ describe('marking unordered lessons', () => {
             { correct: null, name: 'air', state: enums.TRILEAN.TRUE, isOrdered: enums.TRILEAN.FALSE },
             { correct: null, name: 'rail', state: enums.TRILEAN.TRUE, isOrdered: enums.TRILEAN.FALSE }
         ]);
+        expect(score.isCorrect).toBe(false);
     });
 
     test('check answers are correct based on test type', () => {

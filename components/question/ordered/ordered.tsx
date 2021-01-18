@@ -29,8 +29,8 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
     };
 
     const removeFromList = e => {
-        const entry = e.target.innerText;
-        setAnswerList([ ...answerList.filter(item => item.name !== entry), { name: PLACEHOLDER, state: enums.TRILEAN.UNKNOWN } ]);
+        const entry = logic.toCase(e.target.innerText);
+        setAnswerList([ ...answerList.filter(item => logic.toCase(item.name) !== entry), { name: PLACEHOLDER, state: enums.TRILEAN.UNKNOWN } ]);
         resetInput();
     };
 
@@ -59,11 +59,12 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
     });
 
     useEffect(() => {
-        window.addEventListener("keydown", e => {                 
-            const target = e.target as HTMLButtonElement;          
+        window.addEventListener("keydown", e => {        
+            const target = e.target as HTMLButtonElement;
             if(target.type === 'submit' || !inputRef.current || (inputRef.current && inputRef.current.value === "")) return;
-            switch(e.code) {                
-                case 'Enter':              
+            console.log(e.code);                        
+            switch(e.code) {        
+                case 'Enter':         
                     const updatedAnswerList = logic.updateAnswerList(question, answerList, { name: inputRef.current.value, state: enums.TRILEAN.UNKNOWN }, PLACEHOLDER);
                     setAnswerList(updatedAnswerList);
                     break;

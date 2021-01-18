@@ -63,10 +63,11 @@
             background-color: rgba($colour, .7);
         }
         &:checked + label, &:hover + label {
-            color: rgba($colour, .8);
+            color: rgba($colour, .8);            
         }
         &:focus {
             outline: none;
+            border: .5em solid rgba($colour, .5);
         }
         &.square {
             border-radius: unset;

@@ -17,10 +17,10 @@ const MultipleSelect = ({question, markTest, setQuestion, testState}) => {
 
     const style = logic.calculateWidth(question.items, 'name');
 
-    const listItems = question.items.map(answer => {        
+    const listItems = question.items.map((answer,index) => {        
         css = answer.state === enums.TRILEAN.TRUE ? styles.correct : answer.state === enums.TRILEAN.FALSE ? styles.incorrect : null;
         return <li key={`${question.text}_${answer.name}`} class={`${styles.chkBoxList} ${css}`} style={style}>
-            <input type="checkbox" onChange={e => handleCheckBox(answer.name)} id={answer.name} name={`${question.text}_${answer.name}`} value={answer.name} />
+            <input type="checkbox" onChange={e => handleCheckBox(answer.name)} id={answer.name} name={`${question.text}_${answer.name}`} value={answer.name} autoFocus={index === 0} />
             <label htmlFor={answer.name}>
                 <span>{logic.toCase(answer.name)}</span><span>{question.unit ?? ''}</span>
             </label>
