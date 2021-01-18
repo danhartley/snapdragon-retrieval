@@ -6,7 +6,7 @@ import styles from 'components/question/question.module.scss';
 
 const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, setTestState}) => {
 
-    const [answerList, setAnswerList] = useState(logic.getPlaceholders(question.listCount, PLACEHOLDER));
+    const [answerList, setAnswerList] = useState(logic.getPlaceholders(question, PLACEHOLDER));
 
     const inputRef = useRef(null);
     const btnMarkRef = useRef(null);
@@ -75,7 +75,7 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
     });
 
     useEffect(() => {
-        setAnswerList(logic.getPlaceholders(question.listCount, PLACEHOLDER));
+        setAnswerList(logic.getPlaceholders(question, PLACEHOLDER));
     },[question.text]);
 
     const handleCheckAnswer = e => {

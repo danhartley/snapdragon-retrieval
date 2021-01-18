@@ -22,10 +22,10 @@ const Answer = ({score}) => {
             ? <div class={styles.a}>
                     <span>Answer</span>
                     <ul>
-                        {score.answers.map(answer => <li>{logic.toCase(answer)}{score.unit ?? null}</li>)}
+                        {score.answers.map(answer => <li>{logic.toCase(answer.name || answer)} {answer.value ?? null}{score.unit ?? null}</li>)}
                     </ul>
                 </div>        
-            : <div class={styles.a}><span>Answer</span><span>{score.answers.map(answer => <span>{logic.toCase(answer)}{score.unit ?? null}</span>)}</span></div>
+            : <div class={styles.a}><span>Answer</span><span>{score.answers.map(answer => <span>{logic.toCase(answer.name || answer)}{score.unit ?? null}</span>)}</span></div>
         )
 }
 
@@ -123,7 +123,7 @@ const renderScoreHistory = (lessonHistories, communityScores) => {
                     }
                     <ul>
                     {
-                        lesson.scores.map(score => {
+                        lesson.scores.map((score, index) => {
 
                             const communityQuestionScores = communityScores.length > 0 
                                 ? communityScores.find(cs => cs.lessonTitle === lesson.title)
@@ -135,7 +135,7 @@ const renderScoreHistory = (lessonHistories, communityScores) => {
                             return (
                                 <>                                
                                 <li class={styles.markedAnswers}>
-                                    <div class={styles.q}><span>Question</span><span>{score.text}</span></div>
+                                    <div class={styles.q}><span>Question</span><span>{score.text}</span><span>{index + 1}</span></div>
                                     <Answer score={score} />
                                     <div class={`${styles.score}`}>
                                         <span>{score.correct}/{score.total}</span>

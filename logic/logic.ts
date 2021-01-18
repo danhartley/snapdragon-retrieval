@@ -30,6 +30,7 @@ const mark = (lesson, placeholder = '---') => {
                 score.correct = score.isOrdered === "false" ? sanitise(lesson.question.items[index].name) : null;
             });
             score.isOrderedCorrect = lesson.answerList.length === score.markedAnswerList.filter(score => score.isOrdered === enums.TRILEAN.TRUE).length;
+            score.isCorrect = score.isOrderedCorrect;            
             break;
         case enums.QUESTION_TYPE.MULTIPLE_CHOICE:
             score = {
@@ -42,7 +43,8 @@ const mark = (lesson, placeholder = '---') => {
     score = { 
           ...score
         , ...getScore(score)
-        , text: lesson.question.text, answers: lesson.question.answer ? [ lesson.question.answer ] : lesson.question.items.map(item => item.name)
+        , text: lesson.question.text
+        , answers: lesson.question.answer ? [ lesson.question.answer ] : lesson.question.items.map(item => { return { name: item.name, value: item.value } })
         , type: lesson.question.type
         , unit: lesson.question.unit
         , total: 1
@@ -110,11 +112,12 @@ const next = (direction, currentIndex, length) => {
     return index;
 };
 
-const getPlaceholders = (number, placeholder) => {
-    const placeholders = [];
-    for(let step = 0; step < number; step++) { 
-        placeholders.push({ name: placeholder, state: enums.TRILEAN.UNKNOWN });
-    };
+const getPlaceholders = (question, placeholder) => {
+    const placeholders = question.items.map(q => { 
+        const ph = { name: placeholder, state: enums.TRILEAN.UNKNOWN } as any;
+        if(q.value) { ph.value = q.value };
+        return ph;
+    });
     return placeholders;
 };
 
