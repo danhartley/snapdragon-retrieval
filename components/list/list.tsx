@@ -5,7 +5,7 @@ export const ExternalLinkList = ({items, source}) => {
 
     const listItems = items.map(item => {
         return <li>
-            <a target="_blank" href={`${source}`}>{item.term}</a>
+            <a target="_blank" href={`${source}`} rel="noreferrer" >{item.term}</a>
             {/* <a target="_blank" href={`${source}#:~:text=${item.text}`}>{item.term}</a> */}
         </li>
     });
