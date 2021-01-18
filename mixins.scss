@@ -69,6 +69,9 @@
             outline: none;
             border: .5em solid rgba($colour, .5);
         }
+        &:focus + label {
+            color: rgba($colour, .8);
+        }
         &.square {
             border-radius: unset;
         }    

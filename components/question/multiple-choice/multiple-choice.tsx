@@ -11,9 +11,11 @@ const MultipleChoice = ({question, type, PLACEHOLDER, markTest, setQuestion}) =>
     const firstRB = useRef(null);
 
     useEffect(() => {
-        if(firstRB && firstRB.current) {
-            firstRB.current.focus();
-        }
+        setTimeout(() => {
+            if(firstRB && firstRB.current) {
+                firstRB.current.focus();
+            }   
+        });
     }, []);
 
     const handleCheckAnswer = (response) => {
