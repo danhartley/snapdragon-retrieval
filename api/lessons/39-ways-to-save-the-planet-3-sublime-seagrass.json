@@ -5,7 +5,7 @@
     "source": "https://www.bbc.co.uk/programmes/m000qwt3",
     "multiplechoice": [    
       {
-        "text": "The oceans have absorbed roughly __% of our emissions between the beginning of the industrial revolution and the mid-1990s",
+        "text": "The oceans have absorbed roughly __% of GHG emissions between the beginning of the industrial revolution and the mid-1990s?",
         "unit": "%",
         "unitDescription": "%",
         "answer": "30",
@@ -22,7 +22,7 @@
         ]
       },
       {
-          "text": "Dr Edwards estimates there are how many hectares of seagrass worldwide",
+          "text": "Dr Edwards estimates there are how many hectares of seagrass worldwide?",
           "unit": "mil hectares",
           "unitDescription": "million hectares",
           "answer": "16-27",
@@ -39,7 +39,7 @@
           ]
         },
       {
-          "text": "Dr Edwards estimates that __ hectares of seagrass have been lost",
+          "text": "Dr Edwards estimates that __ hectares of seagrass have been lost.",
           "unit": "mil hectares",
           "unitDescription": "million hectares",
           "answer": "6",
@@ -56,7 +56,7 @@
           ]
         },
       {
-          "text": "By what percentage of CO2 emissions might be reduced through blue carbon sequestration?",
+          "text": "By what percent of CO2 emissions might be reduced through blue carbon sequestration?",
           "answer": ".1-.2",
           "answers": [
             ".01",
@@ -78,7 +78,7 @@
                   "they are a habitat of great biodiversity",
                   "they sequester carbon at a rate greater than the rainforests",
                   "their leaf litter does not rot",
-                  "they slow the water down and trap particles in sediment"
+                  "they slow down water and trap particles in sediment"
               ],
               "alternatives": [
                   "seagrasses have a low leaf turnover"
@@ -99,7 +99,7 @@
                   "there are ~60 species of seagrasses worldwide"
               ],
               "alternatives": [
-                  "they evolved independently from terrestrial plants"
+                  "they evolved independently of terrestrial plants"
               ],
               "listCount": 4,
               "sources": [

@@ -15,7 +15,7 @@
       "listCount": 4
     },
     {
-      "text": "Recent research has demonstrated that cooking has __ effect on the properties of extra virgin olive oil",
+      "text": "Recent research has demonstrated that cooking has __ effect on the properties of extra virgin olive oil.",
       "answer": "negligible or no effect",
       "answers": [
         "a detrimental effect"
@@ -29,10 +29,10 @@
     ]
     },
     {
-      "text": "Which type of fats is it preferable to eat more of?",
-      "answer": "unsaturated fats",
+      "text": "Which type of fat is it preferable to eat more of?",
+      "answer": "unsaturated fat",
       "answers": [
-        "saturated fats"
+        "saturated fat"
       ],
       "listCount": 2
     },
@@ -91,7 +91,7 @@
       "listCount": 2
     },
     {
-      "text": "What are the recommended upper limits for daily saturated fat consumption for men and women?",
+      "text": "What are the recommended daily upper limits of saturated fat consumption for men and women?",
       "answer": "20g for women and 30g for men",
       "answers": [
         "20g for women and 25g for men",
@@ -185,7 +185,7 @@
           ]
         },
         {
-          "text": "Polyunsaturated fats, such as omega 3 and omega 6, and monounsaturated fat provide essential fatty acids and ___?",
+          "text": "Polyunsaturated fats, such as omega 3 and omega 6, and monounsaturated fats provide essential fatty acids and ___?",
           "unit": "",
           "unitDescription": "",
           "listCount": 1,
@@ -218,7 +218,7 @@
           ]
         },        
         {
-          "text": "In the article, efficacy in preventing several diseases is attributed to extra virgin olive oil. Name one",
+          "text": "In the article, efficacy in preventing several diseases is attributed to extra virgin olive oil. Name one.",
           "unit": "",
           "unitDescription": "",
           "listCount": 1,
@@ -441,7 +441,7 @@
             ]
         },
         {
-            "text": "Which is true in respect of polyunsaturated fatty acids (PUFAs)?",
+            "text": "Which are true in respect of polyunsaturated fatty acids (PUFAs)?",
             "answers": [
                 "they have two or more double bonds",
                 "PUFAs are found mostly in nuts, seeds, fish, seed oils, and oysters"
@@ -459,7 +459,7 @@
             ]
         },
         {
-            "text": "What is true of randomised controlled trials?",
+            "text": "Which statements are true of randomised controlled trials?",
             "answers": [
                 "they are used for testing the effectiveness of new treatments",
                 "subjects are randomly allocated to two or more groups, and treated differently in each"

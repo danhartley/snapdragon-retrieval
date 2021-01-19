@@ -35,7 +35,7 @@
 		]
 	},
         {
-        "text": "A good quality conventional solar panel has a potential output of ~320 watts; what can a perovskite-silicon panel produce?",
+        "text": "A good quality conventional solar panel has a potential output of ~320 watts; what is the potential of a perovskite-silicon panel?",
         "unit": "W",
 		"unitDescription": "Watt",
 		"listCount": 4,
@@ -47,7 +47,7 @@
 		]
 	},
         {
-        "text": "A 2-junction, or perovskite-silicon tandem, cell would capture approxinately what percentage of sunlight?",
+        "text": "A 2-junction, or perovskite-silicon tandem, cell captures approximately what percent of sunlight?",
         "unit": "%",
 		"unitDescription": "%",
 		"listCount": 4,
@@ -59,7 +59,7 @@
 		]
 	}],
 	"unranked": [{
-        "text": "Conventional solar panels capture approximately what percentage of the energy hitting them?",
+        "text": "Conventional solar panels capture approximately what percent of the sun's energy?",
         "unit": "%",
         "unitDescription": "%",
 		"listCount": 1,
@@ -68,14 +68,14 @@
 		}]
     },
     {
-		"text": "Which material do Oxford PV use to convert the blue part of the spectrum into energy?",
+		"text": "Which material does Oxford PV use to convert the blue part of the spectrum into energy?",
 		"listCount": 1,
 		"items": [{
 			"name": "perovskite"
 		}]
     },
     {
-		"text": "Oxford PV have demonstrated what level (percentage) of efficiency in their perovskite-silicon cells?",
+		"text": "Oxford PV has demonstrated what level (percent) of efficiency in their perovskite-silicon cells?",
 		"listCount": 1,
 		"items": [{
 			"name": "29"
@@ -88,7 +88,7 @@
         ]
     },
     {
-		"text": "Henry at Oxford PV places what ceiling on photovoltaic efficiency (as a percentage)?",
+		"text": "Henry at Oxford PV places what ceiling on photovoltaic efficiency (as a percent)?",
 		"listCount": 1,
 		"items": [{
 			"name": "55"

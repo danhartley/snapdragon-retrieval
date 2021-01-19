@@ -5,15 +5,15 @@
   "source": "https://eatforum.org/eat-lancet-commission/eat-lancet-commission-summary-report/",
   "unranked": [
         {
-        "text": "What does SDG stand for?",
+        "text": "What are SDGs?",
         "listCount": 1,
         "items": [
             {
-            "name": "Sustainable Development Goal"
+            "name": "Sustainable Development Goals"
             }]
         },
         {
-        "text": "The report anticipates a world population of what size by 2050?",
+        "text": "The report anticipates the world population will be __ by 2050?",
         "listCount": 1,
         "items": [
             {
@@ -81,7 +81,7 @@
               ]
           },
         {
-            "text": "How many million people are overweight?",
+            "text": "How many people worldwide are overweight?",
             "unit": "mil",
             "unitDescription": "million",
             "listCount": 4,
@@ -106,7 +106,7 @@
             ]
           },
         {
-            "text": "Agriculture occupies ~40% of global land, and uses what percentage of freshwater?",
+            "text": "Agriculture occupies ~40% of global land, and uses what percent of freshwater?",
             "unit": "%",
             "unitDescription": "%",
             "listCount": 4,
@@ -151,7 +151,7 @@
             "listCount": 5
         },
         {
-            "text": "Among the strategies suggested to achieve the Great Food Transformation are:",
+            "text": "Among the strategies suggested to bring about the Great Food Transformation are:",
             "answers": [
                 "Commitment to shift towards healthy diets",
                 "Redistribution of the global use of nitrogen and phosphorus",

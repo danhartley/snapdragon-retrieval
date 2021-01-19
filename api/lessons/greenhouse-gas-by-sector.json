@@ -5,7 +5,7 @@
   "source": "https://ourworldindata.org/ghg-emissions-by-sector",
   "multiplechoice": [
     {
-      "text": "How many billion tonnes of greenhouse gases does the world emit each year?",
+      "text": "How many billions of tonnes of greenhouse gases does the world emit each year?",
       "unit": "CO2eq",
       "unitDescription": "CO2 equivalents",
       "listCount": 5,
@@ -18,7 +18,7 @@
       ]
     },
     {
-      "text": "What proportion of ghg emissions does the energy sector account for?",
+      "text": "What proportion of GHG emissions does the energy sector account for?",
       "unit": "%",
       "unitDescription": "%",
       "listCount": 4,
@@ -36,7 +36,7 @@
       ]
     },
     {
-      "text": "Energy use in private and commercial buildings contribute 17.5% of emissions, but in what proportion?",      
+      "text": "Energy use in private and commercial buildings contributes 17.5% of emissions, but in what proportion?",      
       "listCount": 2,
       "answer": "Residential 10.9%, Commercial 6.6%",
       "answers": [
@@ -55,7 +55,7 @@
           "source": "https://ourworldindata.org/food-ghg-emissions"
         }
       ],
-      "text": "ghg emissions from food"
+      "text": "GHG emissions from food"
     },
     {
       "term": "Road transport accounts for 11.9% of greenhouse gas emissions. Break this figure down, and explain how it could be mitigated.",
@@ -78,7 +78,7 @@
   ],
   "ranked": [
     {
-      "text": "Rank the top 3 energy sectors by ghg emissions, highest to lowest (hint: one word for each).",
+      "text": "Rank the top 3 energy sectors by GHG emissions, highest to lowest (hint: one word for each).",
       "type": "ordered",
       "unit": "%",
       "unitDescription": "%",
@@ -139,7 +139,7 @@
   ],
   "unranked": [
     {
-      "text": "Chemicals & petrochemicals account for 2.2% of ghg emissions. What 4 materials are given by way of example?",
+      "text": "Chemicals & petrochemicals account for 2.2% of GHG emissions. What 4 materials are given by way of example?",
       "listCount": 4,
       "items": [
         {
@@ -157,7 +157,7 @@
       ]
     },
     {
-      "text": "Landfills account for 1.9% of ghg emissions. Which gas is released when organic matter decomposes?",
+      "text": "Landfills account for 1.9% of GHG emissions. Which gas is released when organic matter decomposes?",
       "listCount": 1,
       "items": [
         {

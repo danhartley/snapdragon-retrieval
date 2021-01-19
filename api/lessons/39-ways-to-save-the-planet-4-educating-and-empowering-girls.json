@@ -48,7 +48,7 @@
 		}
 	],
 	"multiplechoice": [{
-			"text": "What is the approximate number of children born to uneducated women compared to educated women?",
+			"text": "What is the ratio of children born to uneducated woman and children born to educated women?",
 			"unit": "children",
 			"unitDescription": "children",
 			"answer": "2:1",
@@ -74,7 +74,7 @@
 			]
 		},
 		{
-			"text": "What is the estimated savings in emissions that would be derived from giving more women a proper education, and control over the number of children they have?",
+			"text": "What are the estimated savings in emissions if more women are given a proper education, and control over family planning?",
 			"answer": "5%",
 			"answers": [
 				".5%",
@@ -84,15 +84,15 @@
 		}
 	],
 	"unranked": [{
-		"text": "According to Dr Edwards improved women's education and funding of family planning could reduce the population by __ by 2050",
+		"text": "According to Dr Edwards, improved women's education and funding of family planning could reduce the population by __ by 2050",
 		"listCount": 1,
 		"items": [{
 			"name": "843 million"
 		}]
 	}],
 	"cards": [{
-		"term": "What are is the value of investing in girls' education?",
-		"definition": "Girls’ education is the starting point for securing the rights of women and girls globally, while improving community health and resilience to climate shocks. It also leads to a drastic decrease in emissions. It's the most profound investment we can make to secure our planet’s future.",
+		"term": "What is the value of investing in girls' education?",
+		"definition": "Girls' education is the starting point for securing the rights of women and girls globally, while improving community health and resilience to climate shocks. It also leads to a drastic decrease in emissions. It's the most profound investment we can make to secure our planet’s future.",
 		"text": "girls' education",
 		"year": "2020",
 		"sources": [{

@@ -5,7 +5,7 @@
   "source": "https://www.bbc.co.uk/programmes/m000qwt3",
   "multiplechoice": [
     {
-      "text": "Rice provides approximately what percentage of the world's calories?",
+      "text": "Rice provides approximately what percent of the world's calories?",
       "unit": "%",
       "unitDescription": "%",
       "answer": "20",
@@ -49,7 +49,7 @@
       "listCount": 4
     },
     {
-      "text": "What percentage of global greenhouse gas emissions could be reduced by a shift to DSR and no-till cultivation?",
+      "text": "What percent of global greenhouse gas emissions could be reduced by a shift to DSR and no-till cultivation?",
       "answer": ".5",
       "answers": [
         "2",
@@ -65,7 +65,7 @@
     ]
     },
     {
-      "text": "Which seedling tissue does Dr. Kurup refer to?",
+      "text": "Which seedling tissue does Dr Kurup refer to?",
       "answer": "mesocotyl",
       "answers": [
         "hypocotyl",
@@ -83,7 +83,7 @@
     ],
     "multipleselect": [
         {
-            "text": "What is true of current rice cultivation practice?",
+            "text": "Which are true of current rice cultivation practice?",
             "answers": [
                 "it has low labour costs",
                 "requires ample water",
@@ -128,7 +128,7 @@
     ],
     "unranked": [
         {
-          "text": "Dr. Kurup uses the term __ rice transporting in preference to paddy fields. What is the missing word?",
+          "text": "Dr Kurup uses the term __ rice transporting in preference to paddy fields. What is the missing word?",
           "listCount": 1,
           "items": [
             {

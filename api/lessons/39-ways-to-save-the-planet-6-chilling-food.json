@@ -11,7 +11,7 @@
 		"year": "2020",
 		"term": "What are Transport Refrigeration Units?",
 		"definition": "Refrigeration systems powered by diesel engines designed to refrigerate or heat perishable products.",
-		"text": "text"
+		"text": "TRUs"
 	}],
 	"multiplechoice": [
         {
@@ -43,7 +43,7 @@
         ]
     },
     {
-		"text": "What percentage of TRUs are run with an auxiliary diesel engine?",
+		"text": "What percent of TRUs are run with an auxiliary diesel engine?",
         "listCount": 4,
         "unit": "%",
 		"unitDescription": "%",
@@ -93,7 +93,7 @@
     ],
 	"unranked": [
         {
-		"text": "According to Clean Cold Power what percentage of food loss is wasted post-harvest? (hint: it's a range)",
+		"text": "According to Clean Cold Power what percent of food loss is wasted post-harvest? (hint: it's a range)",
         "listCount": 1,
         "unit": "%",
 		"unitDescription": "%",
@@ -112,7 +112,7 @@
         ]
     },
         {
-		"text": "The refrigeration unit is powered by a __ Engine.",
+		"text": "Clean Cold Power's refrigeration unit is powered by a __ Engine.",
 		"listCount": 1,
 		"items": [{
 			"name": "Dearman"
@@ -158,7 +158,7 @@
 		"answers": [
             "Generate lower GHG emissions overall",
             "Cause less pollution",
-            "Require fewer vehicles"
+            "Result in fewer vehicles"
 		],
 		"alternatives": [
 			"They are more complex",

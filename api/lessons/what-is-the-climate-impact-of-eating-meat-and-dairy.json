@@ -32,9 +32,9 @@
         }
       ],
       "year": "2020",
-      "term": "Meat and dairy specifically account for what percentage of global greenhouse gas emissions?",
+      "term": "Meat and dairy account for what percent of global greenhouse gas emissions?",
       "definition": "~14.5%",
-      "text": "Meat and dairy specifically accounts for around 14.5% of global greenhouse gas emissions"
+      "text": "Meat and dairy account for around 14.5% of global greenhouse gas emissions"
     },
     {
       "sources": [
@@ -125,7 +125,7 @@
       "type": "unordered",
       "unit": "kgCO2",
       "unitDescription": "gas emissions per kilo",
-      "text": "List 5 of the top 10 foods with the highest emissions",
+      "text": "List 5 of the top 10 foods with the highest GHG emissions.",
       "listCount": 5,
       "items": [
         {
@@ -189,7 +189,7 @@
     {
       "unit": "%",
       "unitDescription": "share of carbon dioxide emissions",
-      "text": "List by highest to lowest emissions the 4 main forms of food transport",
+      "text": "List in descending order of GHG emissions the top 4 means by which food is transported.",
       "listCount": 4,
       "items": [
         {
@@ -216,7 +216,7 @@
       "type": "ordered"
     },
     {
-      "text": "List by highest to lowest emissions the main sources of milk (hint: e.g. dairy)",
+      "text": "List in descending order of GHG emissions the main sources of milk (hint: e.g. dairy)",
       "unit": "kgCO2eq",
       "unitDescription": "share of carbon dioxide emissions",
       "listCount": 5,
@@ -250,7 +250,7 @@
       "type": "ordered"
     },
     {
-      "text": "The main greenhouse gases are methane, carbon dioxide, water vapour, ozone, and nitrous oxide. Order them in order of abundance, from highest to lowest.",
+      "text": "The main greenhouse gases are methane, carbon dioxide, water vapour, ozone, and nitrous oxide. Rank them in order of abundance, from highest to lowest.",
       "type": "ordered",
       "unit": "%",
       "unitDescription": "%",
@@ -290,7 +290,7 @@
       ]
     },
     {
-      "text": "Give the chemical formulae for methane, carbon dioxide, water vapour, ozone, and nitrous oxide.",
+      "text": "What is the chemical formula for methane, carbon dioxide, water vapour, ozone, and nitrous oxide.",
       "type": "ordered",
       "listCount": 5,
       "items": [
@@ -322,31 +322,31 @@
       ]
     },
     {
-      "text": "Rank, from lowest to highest, the sources of beef production emissions from Farming (fertilisers, machinery, etc.), Transport, Land Use Change, and Feed.",
+      "text": "Rank in descending order the GHG emissions attributed to beef production caused by farming (fertilisers, machinery, etc.), transport, land use change, and feed.",
       "type": "ordered",
       "unit": "kg CO2 eq. per kg",
       "unitDescription": "kg CO2 eq. per kg",
       "listCount": 4,
       "items": [
         {
-          "rank": 1,
-          "name": "Transport",
-          "value": "0.3"
+            "rank": 1,
+            "value": "39.4",
+            "name": "Farming"
         },
         {
-          "rank": 2,
-          "name": "Feed",
-          "value": "1.9"
+            "value": "16.3",
+            "rank": 2,
+            "name": "Land Use Change"
         },
         {
-          "value": "16.3",
-          "rank": 3,
-          "name": "Land Use Change"
+            "rank": 3,
+            "name": "Feed",
+            "value": "1.9"
         },
         {
           "rank": 4,
-          "value": "39.4",
-          "name": "Farming"
+          "name": "Transport",
+          "value": "0.3"
         }
       ],
       "sources": [
@@ -359,7 +359,7 @@
   ],
   "multiplechoice": [
     {
-      "text": "Food production accounts for what % of the planet’s habitable surface?",
+      "text": "Food production accounts for what percent of the planet’s habitable surface?",
       "unit": "%",
       "unitDescription": "%",
       "listCount": 4,
@@ -371,7 +371,7 @@
       ]
     },
     {
-      "text": "Meat and dairy specifically account for what % of ghg emissions?",
+      "text": "Meat and dairy account for what percent of GHG emissions?",
       "unit": "%",
       "unitDescription": "%",
       "answer": "14.5",
@@ -389,7 +389,7 @@
       ]
     },
     {
-      "text": "By what amount could annual total emissions of 50GtCO2e emissions be reduced by if we all became vegan?",
+      "text": "By what amount could the annual total emissions of 50GtCO2e be reduced by if we all became vegan?",
       "unit": "GtCO2e",
       "unitDescription": "bn tonnes of CO2e a year",
       "listCount": 4,
@@ -411,7 +411,7 @@
       ]
     },
     {
-      "text": "Transport typically contributes what percentage to herd beef emissions?",
+      "text": "Transport typically contributes what percent of herd beef production emissions?",
       "unit": "kg CO2 eq.",
       "unitDescription": "kg COe equivalent emissions",
       "listCount": 4,

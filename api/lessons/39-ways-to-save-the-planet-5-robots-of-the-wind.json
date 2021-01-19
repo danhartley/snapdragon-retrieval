@@ -41,7 +41,7 @@
 	],
 	"multiplechoice": [
         {
-		"text": "What percentage of an offshore wind turbine's life time cost is attributable to maintenance?",
+		"text": "What percent of an offshore wind turbine's life time cost is attributable to maintenance?",
 		"answer": "25-40%",
 		"answers": [
 			"10-20%",

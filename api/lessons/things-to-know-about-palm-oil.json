@@ -5,7 +5,7 @@
   "source": "https://www.wwf.org.uk/updates/8-things-know-about-palm-oil",
   "multiplechoice": [
     {
-      "text": "Which 2 countries make up 85% of global supply?",
+      "text": "Which 2 countries make up 85% of global palm oil supply?",
       "answer": " Indonesia and Malaysia",
       "answers": [
         "Indonesia and India",
@@ -16,7 +16,7 @@
       "listCount": 5
     },
     {
-      "text": "Palm oil is in roughly what percentage of packaged products?",
+      "text": "Palm oil is in roughly what percent of packaged products?",
       "unit": "%",
       "unitDescription": "%",
       "listCount": 4,
@@ -71,7 +71,7 @@
   ],
   "unranked": [
     {
-      "text": "Alternative crop plants that yield oil typically yield .4-.7 tonnes per hectare. What is palm oil's yield?",
+      "text": "Alternative oil producing plants typically yield .4-.7 tonnes per hectare. What does palm oil yield?",
       "unit": "t/ha",
       "unitDescription": "tonnes per hectare",
       "listCount": 1,
@@ -123,7 +123,7 @@
   ],
   "ranked": [
     {
-      "text": "List, in descending order, the top 5 sources of calories for a healthy, non-vegan diet.",
+      "text": "List in descending order of calories the top 5 food types for a healthy, non-vegan diet.",
       "type": "ordered",
       "unit": "kcal/day",
       "unitDescription": "kilocalories per day",

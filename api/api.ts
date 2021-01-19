@@ -75,7 +75,7 @@ const getLessonByTitle = async (title = '39 Ways to Save the Planet: #1 Super Ri
       return lesson;
 };
 
-const getQuestionByText = async (text = 'Rice provides approximately what percentage of the world\'s calories?') => {
+const getQuestionByText = async (text = 'Rice provides approximately what percent of the world\'s calories?') => {
 
     return clientQuery(q.Map(
         q.Paginate(

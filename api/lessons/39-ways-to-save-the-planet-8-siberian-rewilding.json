@@ -31,7 +31,7 @@
       ]
   },
       {
-      "text": "During which did epoch humans start to colonise the whole planet, including the Russian steppe?",
+      "text": "During which epoch did humans start to colonise the whole planet, including the Russian steppe?",
       "listCount": 4,
       "answer": "Holocene",
       "answers": [
@@ -65,7 +65,7 @@
       }]
   },
   {
-    "text": "Pleistocene Park would be a recreation of which biome that existed during the last glacial maximum (~15,000 years ago)? (hint: 2 words)",
+    "text": "Pleistocene Park recreates which biome that existed during the last glacial maximum (~15,000 years ago)? (hint: 2 words)",
     "listCount": 1,
     "items": [{
         "name": "mammoth steppe"
@@ -76,7 +76,7 @@
     }]
 },
   {
-    "text": "The ecosystem of the mammoth steppe grasslands collapsed without which group of animals?",
+    "text": "The ecosystem of the mammoth steppe grasslands collapsed due to the loss of which group of animals?",
     "listCount": 1,
     "items": [{
         "name": "herbivores"
