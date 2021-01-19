@@ -145,7 +145,6 @@
 
 @mixin answerWidth {
     width: calc(((var(--dynamicLength)*10) + 50) * 1px);
-    // width: 100%;
     max-width: 800px;
     @media (max-width: 800px) {        
         max-width: calc(100vw - 50px);
