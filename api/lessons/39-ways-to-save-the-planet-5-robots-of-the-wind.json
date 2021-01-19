@@ -22,15 +22,15 @@
 				"cost of support crew, boats, fuel, etc."
 			],
 			"alternatives": [
-				"must be done every day"
+				"daily maintenance"
 			],
 			"listCount": 4
 		},
 		{
-			"text": "What are some of the problems that can effect turbines performance?",
+			"text": "What are some of the issues that can affect a wind turbine's performance?",
 			"answers": [
 				"lead edge erosion",
-                "loss of performance from weathering is 2-10%",
+                "loss of performance from weathering (2-10%)",
                 "stopping turbines for maintenance"
 			],
 			"alternatives": [
@@ -41,7 +41,7 @@
 	],
 	"multiplechoice": [
         {
-		"text": "What is the contribution to the life time cost of an offshore wind turbine attributable to maintenance?",
+		"text": "What percentage of an offshore wind turbine's life time cost is attributable to maintenance?",
 		"answer": "25-40%",
 		"answers": [
 			"10-20%",
@@ -108,8 +108,10 @@
         ]        
     },
     {
-		"text": "If energy from wind was increased forty fold this would reduce GHG emissions by nearly __%",
-		"listCount": 1,
+		"text": "If energy from wind was increased forty fold this would reduce GHG emissions by nearly __%?",
+        "listCount": 1,
+        "unit": "%",
+        "unitDescription": "%",
 		"items": [{
 			"name": "4"
         }]       

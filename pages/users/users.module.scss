@@ -9,11 +9,12 @@
     .q {        
         color: rgba($colour, .7);
         display: grid;
-        grid-template-columns: 55px auto 25px;
+        grid-template-columns: 55px auto 50px;
         align-items: center;
         position: relative;
         span {
             margin-right: 5px;
+            line-height: 1.5;
         }
         span:nth-child(1) {
             font-style: italic;

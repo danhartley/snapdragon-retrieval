@@ -47,7 +47,7 @@
       ]
     },
     {
-        "text": "All public buildings in France will have to be made of at least __% organic materials by 2022",
+        "text": "All public buildings in France will have to be made of at least __% organic materials by 2022.",
         "unit": "%",
         "unitDescription": "%",
         "answer": "50",
@@ -86,7 +86,7 @@
       ]
     },
     {
-      "text": "How many people does Dr. Ramage claim the forests of Canada could house in perpetuity, and sustainably",
+      "text": "How many people does Dr. Ramage claim the forests of Canada could house in perpetuity, and sustainably?",
       "listCount": 1,
       "items": [
         {

@@ -59,7 +59,9 @@
 		]
 	}],
 	"unranked": [{
-		"text": "Conventional solar panels capture approximately what percentage of the energy hitting them?",
+        "text": "Conventional solar panels capture approximately what percentage of the energy hitting them?",
+        "unit": "%",
+        "unitDescription": "%",
 		"listCount": 1,
 		"items": [{
 			"name": "20"

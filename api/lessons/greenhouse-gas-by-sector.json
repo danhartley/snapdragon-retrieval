@@ -36,14 +36,11 @@
       ]
     },
     {
-      "text": "Energy use in private and commercial buildings contribute 17.5% of emissions, but in what proportion?",
-      "unit": "%",
-      "unitDescription": "%",
+      "text": "Energy use in private and commercial buildings contribute 17.5% of emissions, but in what proportion?",      
       "listCount": 2,
-      "answer": "Residential 10.9%, Commercial 6.6% ",
+      "answer": "Residential 10.9%, Commercial 6.6%",
       "answers": [
-        "Residential 6.6%",
-        "Commercial 10.9%"
+        "Residential 6.6%, Commercial 10.9%"
       ]
     }
   ],

@@ -91,8 +91,8 @@
     border: 1px dashed rgba($colour, .2);
     padding: 10px;
     @media (min-width: 601px) {        
-        height: 240px;
-    }
+        height: 15rem;
+    }    
 }
 
 @mixin question-container() {
@@ -100,15 +100,15 @@
         @include active-screen();
     }    
     .text {
-        min-height: 50px;
+        height: 50px;
         @include double-centred();
         font-style: italic;
     }
     .answers {
-        min-height: 5 * 35px;
+        height: 5 * 35px;
         li { 
             line-height: 2;
-            min-height: 35px;
+            height: 35px;
             span:nth-child(1) {
                 cursor: pointer;
                 color: rgba($colour,.8);            
@@ -125,9 +125,6 @@
                     @include two-ticks();
                 }
                 @include answerWidth();
-            }
-            span:nth-child(2) {
-                margin-left: 10px;
             }
         }
     }
@@ -148,6 +145,7 @@
 
 @mixin answerWidth {
     width: calc(((var(--dynamicLength)*10) + 50) * 1px);
+    // width: 100%;
     max-width: 800px;
     @media (max-width: 800px) {        
         max-width: calc(100vw - 50px);

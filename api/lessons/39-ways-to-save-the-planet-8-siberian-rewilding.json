@@ -45,7 +45,7 @@
     }]
   },
       {
-      "text": "15,00 years ago there were how many trees globally?",
+      "text": "15,000 years ago there were how many trees globally?",
       "listCount": 4,
       "answer": "10 times less than today",
       "answers": [
@@ -57,6 +57,8 @@
 ],
   "unranked": [{
       "text": "Permafrost can form to a depth of hundreds of metres, but the most critical in terms of climate change are the top __metres? ",
+      "unit": "m",
+      "unitDescription": "metres",
       "listCount": 1,
       "items": [{
           "name": "40"
@@ -81,7 +83,9 @@
     }]
 },
 {
-    "text": "Grazing 10% (2 million km2 of the subarctic) could lead to a net reduction in our GHG emissions of __%",
+    "text": "Grazing 10% (2 million km2 of the subarctic) could lead to a net reduction in our GHG emissions of __%?",
+    "unit": "%",
+    "unitDescription": "%",
     "answers": [
         "1"
     ],

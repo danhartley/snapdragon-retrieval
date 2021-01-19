@@ -130,6 +130,7 @@ const updateQuestion = async question => {
 
     let ref = await getQuestionByText(question.text) as any;
         ref = ref.data[0].ref.value.id; // will error at this point if lesson name changes after it has been loaded into client memory
+        // option to create new question… ?? or prevent changing question title
 
     const response = await clientQuery(
         q.Update(

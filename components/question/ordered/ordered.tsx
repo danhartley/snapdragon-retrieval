@@ -51,7 +51,7 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
                                 ? `${styles.incorrect}`
                                 : ``
                         : ''} 
-                >{logic.toCase(item.name)}</span><span>{logic.toCase(item.correct)}</span></li> 
+                >{logic.toCase(item.name)}</span><span>{logic.toCase(item.correct)}{(answerList.length === 1 && item.correct) ? question.unit || null : null }</span></li> 
     });
 
     setTimeout(() => {
@@ -62,7 +62,7 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
         window.addEventListener("keydown", e => {        
             const target = e.target as HTMLButtonElement;
             if(target.type === 'submit' || !inputRef.current || (inputRef.current && inputRef.current.value === "")) return;
-            console.log(e.code);                        
+                          
             switch(e.code) {        
                 case 'Enter':         
                     const updatedAnswerList = logic.updateAnswerList(question, answerList, { name: inputRef.current.value, state: enums.TRILEAN.UNKNOWN }, PLACEHOLDER);

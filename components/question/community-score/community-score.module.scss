@@ -2,7 +2,7 @@
 @import 'mixins.scss';
 
 .container {
-    padding: 5px 0;
+    height: calc(2rem + 10px);
     display: flex !important;
     align-items: center;
     span:nth-child(1) {
@@ -16,6 +16,7 @@
         padding: 5px 10px;
         margin-left: 5px;
         letter-spacing: .25px;
+        height: calc(2rem - 10px);
     }
     span:nth-child(2).hidden {
         visibility: hidden;

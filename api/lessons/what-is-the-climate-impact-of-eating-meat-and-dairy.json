@@ -371,7 +371,7 @@
       ]
     },
     {
-      "text": "Meat and dairy specifically account for what % of emissions?",
+      "text": "Meat and dairy specifically account for what % of ghg emissions?",
       "unit": "%",
       "unitDescription": "%",
       "answer": "14.5",
@@ -389,7 +389,7 @@
       ]
     },
     {
-      "text": "By what amount could emissions of CO2e emissions be reduced per year if we all became vegan?",
+      "text": "By what amount could annual total emissions of 50GtCO2e emissions be reduced by if we all became vegan?",
       "unit": "GtCO2e",
       "unitDescription": "bn tonnes of CO2e a year",
       "listCount": 4,

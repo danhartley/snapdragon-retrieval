@@ -94,7 +94,9 @@
 	"unranked": [
         {
 		"text": "According to Clean Cold Power what percentage of food loss is wasted post-harvest? (hint: it's a range)",
-		"listCount": 1,
+        "listCount": 1,
+        "unit": "%",
+		"unitDescription": "%",
 		"items": [{
 			"name": "30-40"
         }],
@@ -124,7 +126,9 @@
     },
         {
 		"text": "In the West ~90% of food goes through a cold chain but in India and China this figure is less than __%?",
-		"listCount": 1,
+        "listCount": 1,
+        "unit": "%",
+		"unitDescription": "%",
 		"items": [{
 			"name": "10"
         }],

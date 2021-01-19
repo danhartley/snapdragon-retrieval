@@ -30,7 +30,7 @@
     {
       "text": "Estimate the percentage of food that is lost or wasted annually. (hint: it's a range)",
       "unit": "%",
-      "unitDescription": "$",
+      "unitDescription": "%",
       "listCount": 1,
       "items": [
         {

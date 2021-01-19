@@ -44,7 +44,7 @@
       ]
     },
     {
-      "text": "The lowest impact beef requires 36 times more land than peas. And how many times more greenhouse gases?",
+      "text": "The lowest impact beef requires 36 times more land than peas. How many times more greenhouse gases does it produce?",
       "unit": "x",
       "unitDescription": "times",
       "listCount": 4,
@@ -72,6 +72,8 @@
     {
       "text": "Rank milk, beef, chicken, plants, and pork in order, from lowest to highest, of their climate cost.",
       "type": "ordered",
+      "unit": "kg ghg/100g protein",
+      "unitDescription": "kg of greenhouse gases per 100g of protein",
       "listCount": 5,
       "sources": [
         {
@@ -128,7 +130,7 @@
   ],
   "unranked": [
     {
-      "text": "Freshwater fish farming is conducive for the release of which greenhouse gas in particular?",
+      "text": "Freshwater fish farming is conducive to the release of which greenhouse gas in particular?",
       "listCount": 1,
       "items": [
         {

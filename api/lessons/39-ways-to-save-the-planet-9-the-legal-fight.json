@@ -51,7 +51,9 @@
 		}]
     },
     {
-		"text": "China's promise to be carbon net-neutral by 2060 would see predicted warming for 2100 drop from 2.7° to __? (hint: it's a range)",
+        "text": "China's promise to be carbon net-neutral by 2060 would see predicted warming for 2100 drop from 2.7° to __? (hint: it's a range)",
+        "unit": "°",
+        "unitDescription": "degree",
 		"listCount": 1,
 		"items": [{
 			"name": "2.4-2.5"
