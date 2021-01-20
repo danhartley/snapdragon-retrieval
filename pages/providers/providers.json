@@ -1,27 +1,27 @@
 {
   "providersList": [
     {
-      "name": "carbon brief",
+      "name": "Carbon Brief",
       "slug": "carbonbrief"
     },
     {
-      "name": "the guardian",
+      "name": "The Guardian",
       "slug": "the-guardian"
     },
     {
-      "name": "intergovernmental panel on climate change",
+      "name": "Intergovernmental Panel on Climate Change",
       "slug": "ipcc"
     },
     {
-      "name": "world wildlife fund for nature",
+      "name": "World Wildlife Fund for Nature",
       "slug": "wwf"
     },
     {
-      "name": "our world in data",
+      "name": "Our World in Data",
       "slug": "our-world-in-data"
     },
     {
-      "name": "the wellcome trust",
+      "name": "The Wellcome Trust",
       "slug": "wellcome"
     },
     {
