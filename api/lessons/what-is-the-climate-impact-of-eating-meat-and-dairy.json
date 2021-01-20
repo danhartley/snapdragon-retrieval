@@ -125,7 +125,7 @@
       "type": "unordered",
       "unit": "kgCO2",
       "unitDescription": "gas emissions per kilo",
-      "text": "List 5 of the top 10 foods with the highest GHG emissions.",
+      "text": "List the top 5 foods with the highest GHG emissions, in any order.",
       "listCount": 5,
       "items": [
         {
@@ -144,7 +144,7 @@
           "value": "21.20"
         },
         {
-          "rank": 3,
+          "rank": 4,
           "name": "dairy beef",
           "value": "21.20"
         },
@@ -152,32 +152,7 @@
           "rank": 5,
           "name": "chocolate",
           "value": "18.70"
-        },
-        {
-          "rank": 6,
-          "name": "coffee",
-          "value": "16.50"
-        },
-        {
-          "rank": 7,
-          "name": "shrimps",
-          "value": "11.80"
-        },
-        {
-          "rank": 8,
-          "name": "palm oil",
-          "value": "7.60"
-        },
-        {
-          "rank": 9,
-          "name": "pork",
-          "value": "7.20"
-        },
-        {
-          "rank": 10,
-          "name": "poultry",
-          "value": "6.10"
-        }
+        }        
       ],
       "sources": [
         {

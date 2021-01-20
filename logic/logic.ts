@@ -113,7 +113,7 @@ const next = (direction, currentIndex, length) => {
 };
 
 const getPlaceholders = (question, placeholder) => {
-    const placeholders = question.items.map(q => { 
+    const placeholders = question.items.map((q, index) => {
         const ph = { name: placeholder, state: enums.TRILEAN.UNKNOWN } as any;
         if(q.value) { ph.value = q.value };
         return ph;
