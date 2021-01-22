@@ -10,7 +10,8 @@ export default function Layout({
   description = 'Lesson retrieval',
   header = '',
   headerLink = '',
-  disableNavigation = false
+  disableNavigation = false,
+  score = null
 }) {
 
     const router = useRouter();
@@ -60,7 +61,13 @@ export default function Layout({
                     </nav>
                 </header>
                 
-                { headerLink !== '' ? <h1><a target="_blank" href={headerLink}>{header.charAt(0).toUpperCase() + header.slice(1)}</a></h1> : <h1>{header}</h1> }
+                { headerLink !== '' 
+                    ? <div class={styles.header}>
+                        <h1><a target="_blank" href={headerLink}>{header.charAt(0).toUpperCase() + header.slice(1)}</a></h1>
+                        <div><span class={`${styles.liveScore} ${score && score.total === 0 ? styles.hidden : null} ${score.isLessonOver ? styles.lessonOver : null }`}><span>{score ? score.correct : null}</span><span>{score ? score.total : null}</span></span></div>
+                    </div>
+                    : <div class={styles.header}><h1>{header}</h1><div></div></div>
+                }
 
                 {children}
 

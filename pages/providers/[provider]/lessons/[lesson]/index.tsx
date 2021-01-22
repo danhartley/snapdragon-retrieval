@@ -12,6 +12,7 @@ const Lesson = ({lesson}) => {
 
     const [testState, setTestState] = useState(enums.QUESTION_STATE.RUNNING);
     const [progress, setProgress] = useState({ number: 1, of: lesson.questions.length });
+    const [score, setScore] = useState({total: 0, correct: 0, answered: 0, skipped: 0, isLessonOver: false});
 
     const router = useRouter();
 
@@ -20,12 +21,12 @@ const Lesson = ({lesson}) => {
     const disableNavigation = (testState !== enums.QUESTION_STATE.ANSWERED && type === enums.LESSON_TYPE.QUESTIONS) && progress.number > 1;
   
     return (
-        <Layout title="Lesson" description={`${provider} ${lesson.title} lesson`} header={lesson.title} headerLink={lesson.source} disableNavigation={disableNavigation} >
+        <Layout title="Lesson" description={`${provider} ${lesson.title} lesson`} header={lesson.title} headerLink={lesson.source} disableNavigation={disableNavigation} score={score} >
             <div>
                 <QueryString options={enums.LESSON_TYPE} lesson={lesson} />
                 { type === enums.LESSON_TYPE.CARDS 
                     ? <Card lesson={lesson}></Card> 
-                    : <Question lesson={lesson} testState={testState} setTestState={setTestState} progress={progress} setProgress={setProgress}></Question> }
+                    : <Question lesson={lesson} testState={testState} setTestState={setTestState} progress={progress} setProgress={setProgress} score={score} setScore={setScore}></Question> }
             </div>
         </Layout>
     )
@@ -57,7 +58,7 @@ export async function getStaticProps({params: {provider, lesson}}) {
         }) 
         : [];
 
-    providerLesson.questions = logic.shuffleArray([ ...ranked, ...unranked, ...multipleChoice, ...multipleSelect ]);
+    providerLesson.questions = [ ...ranked, ...unranked, ...multipleChoice, ...multipleSelect ];
 
     providerLesson.availableCount += multipleChoice.length;
 

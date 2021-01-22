@@ -49,6 +49,7 @@ const mark = (lesson, placeholder = '---') => {
         , unit: lesson.question.unit
         , total: 1
     };
+    if(lesson.question.workings) score.workings = lesson.question.workings;
     return score;
 };
 

@@ -15,17 +15,30 @@ import Accordion from 'components/accordion/accordion';
 
 import styles from 'pages/users/users.module.scss';
 
+const unitDisplay = score => {
+    return score.unit 
+            ? score.unit === '%' || score.unit === "°" 
+                ? score.unit
+                : ` ${score.unit}` 
+                : null
+};
+
 const Answer = ({score}) => {
 
     return ( 
         score.answers.length > 1 
             ? <div class={styles.a}>
-                    <span>Answer</span>
+                    <span>Answer</span>                    
                     <ul>
-                        {score.answers.map(answer => <li>{logic.toCase(answer.name || answer)} {answer.value ?? null}{score.unit ?? null}</li>)}
+                        {score.answers.map(answer => <li>{logic.toCase(answer.name || answer)} {answer.value ?? null}{unitDisplay(score)}</li>)}
                     </ul>
                 </div>        
-            : <div class={styles.a}><span>Answer</span><span>{score.answers.map(answer => <span>{logic.toCase(answer.name || answer)}{score.unit ?? null}</span>)}</span></div>
+            : <>
+              <div class={styles.a}>
+                <span>Answer</span><span>{score.answers.map(answer => <span>{logic.toCase(answer.name || answer)}{unitDisplay(score)}</span>)}</span>
+              </div>
+              { score.workings ? <div class={styles.w}><span>Workings</span><span>{score.workings}</span></div> : null }
+              </>
         )
 }
 

@@ -13,37 +13,19 @@
 		"definition": "definition",
 		"text": "text"
 	}],
-	"ranked": [{
-		"type": "unordered",
-		"unit": "unit",
-		"unitDescription": "unitDescription",
-		"text": "text",
-		"listCount": 1,
-		"items": [{
-			"rank": 1,
-			"name": "name",
-			"value": "value"
-		}],
-		"sources": [{
-			"author": "author",
-			"source": "source"
-		}]
-	}],
 	"multiplechoice": [
         {
 		"text": "The Paris Agreement had the goal of limiting global warming to below __°C, and ideally __°C.",
-		"unit": "°",
-		"unitDescription": "degrees °C",
 		"listCount": 4,
-		"answer": "2C° and 1.5°C",
+		"answer": "2°C and 1.5°C",
 		"answers": [
-			"1.5°C and 1.2C°",
-			"2.5°C and 1.5C°",
-			"3°C and 2C°"
+			"1.5°C and 1.2°C",
+			"2.5°C and 1.5°C",
+			"3°C and 2°C"
 		]
     },
         {
-		"text": "What is the approximate per-capita global emissions of CO2 per person per year?",
+		"text": "What is the approximate value of global emissions of CO2 per person per year?",
 		"unit": "tonnes",
 		"unitDescription": "tonnes of CO2",
 		"listCount": 4,
@@ -56,8 +38,8 @@
     },
         {
 		"text": "The lifetime budget of someone born today is equal to how many years of current per capita emissions for 2°C of warming?",
-		"unit": "tonnes",
-		"unitDescription": "tonnes of CO2",
+		"unit": "years",
+		"unitDescription": "years",
 		"listCount": 4,
 		"answer": "25",
 		"answers": [
@@ -68,8 +50,8 @@
     },
         {
 		"text": "The lifetime budget of someone born today is equal to how many years of current per capita emissions for 1.5°C of warming?",
-		"unit": "tonnes",
-		"unitDescription": "tonnes of CO2",
+		"unit": "years",
+		"unitDescription": "years",
 		"listCount": 4,
 		"answer": "9",
 		"answers": [
@@ -91,7 +73,7 @@
 		]
     },
     {
-		"text": "For someone born in 2017 the lifetime allowance given 1.5°C of warming is 86 tonnes, or how __ flights NY to Mumbai?",
+		"text": "For someone born in 2017 the lifetime allowance given 1.5°C of warming is 86 tonnes, or how __ economy flights NY to Mumbai?",
 		"listCount": 4,
 		"answer": "86",
 		"answers": [
@@ -106,21 +88,21 @@
 	}],
 	"unranked": [
         {
-		"text": "Given a warming of 1.5°C, someone born in the US today can emit only an __ of the lifetime emissions of someone born in 1950.",
+		"text": "Given a warming of 1.5°C, someone born in the US today can emit approximately one __ of the lifetime emissions of someone born in 1950.",
 		"listCount": 1,
 		"items": [{
 			"name": "eighth"
 		}]
     },
     {
-        "text": "For warming to be kept below 2°C emissions would have to fall by around 50% by which year?",
+        "text": "For warming to be kept below 2°C emissions would have to fall ~50% by which year?",
         "listCount": 1,
         "items": [{
             "name": "2045"
         }]
     },
     {
-    "text": "For warming to be kept below 1.5°C emissions would have to fall by around 50% by which year?",
+    "text": "For warming to be kept below 1.5°C emissions would have to fall ~50% by which year?",
     "listCount": 1,
     "items": [{
         "name": "2030"
@@ -134,7 +116,7 @@
     }]
     },
     {
-    "text": "Other than differences betwen countries, what furter complicates the division of emissions? (hint: two words)",
+    "text": "Other than differences between countries, what further complicates the division of emissions? (hint: two words)",
     "listCount": 1,
     "items": [{
         "name": "historical emissions"
@@ -157,12 +139,14 @@
     }]
     },
     {
-    "text": "What are the sustainable per capita emissions per year from now if we are to limit warming to 2°C?",
+    "text": "What is the value of sustainable per capita emissions per year from now if we are to limit warming to 2°C?",
     "listCount": 1,
+    "unit": "tonnes of CO2",
+    "unitDescription": "tonnes of CO2",
     "items": [{
-        "name": "1.4 tonnes"
+        "name": "1.4"
     }],
-    "workings": "For some born in 2017 the life time emissions are 122 tonnes. For a life expectancy of 85 years, the annual budget is 122/85."
+    "workings": "For someone born in 2017 the lifetime emissions are 122 tonnes. For a life expectancy of 85 years, the annual budget is 122/85, or ~1.4 tonnes."
     }
 ],
 	"multipleselect": [{

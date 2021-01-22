@@ -3,18 +3,59 @@
 .container {
     display: grid;
     row-gap: 10px;
-    grid-template-rows: 45px minmax(30px, auto) auto 45px;
+    grid-template-rows: 45px minmax(auto, 80px) auto 45px;
     .date {
         display: none;
         color: rgba($colour, 0.6);
         margin-right: 10px;
     }
     @media (min-width: 601px) {
-        grid-template-rows: 45px 50px auto 45px;
         .date {
             display: inline;
         }
     }
     height: 100%;
-    position: relative;    
+    position: relative;
+    .header {
+        display: grid;
+        grid-template-columns: auto 60px;
+        .liveScore {
+            height: 25px;
+            width: 25px;
+            padding: 10px;
+            font-size: .8rem;
+            @media (min-width: 601px) {
+                top: 50px;
+                height: 40px;
+                width: 40px;
+                font-size: .9rem;
+            }
+            border: 1px solid rgba($colour,.5);
+            color: rgba($colour,.5);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            // position: absolute;
+            align-items: center;
+            justify-content: center;
+            right: 0;
+            span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &:nth-child(1) {
+                    border-bottom: 2px solid rgba($colour,.2);
+                }
+            }
+        }
+        .lessonOver {
+            color: $colour-light;
+            background-color: rgba($colour, .8);
+            span {
+                &:nth-child(1) {
+                    border-bottom: 2px solid $colour-light;
+                }
+            }
+        }
+    }
 }

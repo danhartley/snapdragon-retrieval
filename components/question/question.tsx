@@ -13,7 +13,7 @@ import CommunityScore from 'components/question/community-score/community-score'
 import styles from 'components/question/question.module.scss';
 import { type } from "os";
 
-export const Question = ({lesson, testState, setTestState, progress, setProgress}) => {
+export const Question = ({lesson, testState, setTestState, progress, setProgress, score, setScore }) => {
 
     if(!lesson.questions) return;
 
@@ -23,7 +23,6 @@ export const Question = ({lesson, testState, setTestState, progress, setProgress
 
     const [question, setQuestion] = useState(lesson.questions[INITIAL_QUESTION]);
     const [lessonHistories, setLessonHistories] = useLocalStorageState(null, enums.STORAGE_KEY.HISTORY);
-    const [score, setScore] = useState({total: 0, correct: 0, answered: 0, skipped: 0, isLessonOver: false});
     const [communityScore, setCommunityScore] = useState(COMMUNITY_SCORE);
 
     useEffect(() => {
@@ -43,7 +42,7 @@ export const Question = ({lesson, testState, setTestState, progress, setProgress
         const isLessonOver = score.answered + 1 === lesson.questions.length;
 
         setTestState(score.answered + 1 === lesson.questions.length ? enums.QUESTION_STATE.LESSON_OVER : enums.QUESTION_STATE.MARKED);
-        setLessonHistories({total, correct, text, answers, type, unit, title: lesson.title }, enums.STORAGE_KEY.HISTORY);
+        setLessonHistories({total, correct, text, answers, type, unit, title: lesson.title, workings: question.workings }, enums.STORAGE_KEY.HISTORY);
         setScore({ ...score, total: score.total + 1, correct: score.correct + correct, answered: score.answered + 1, isLessonOver });
         const updatedQuestion = { 
             ...question
@@ -116,8 +115,7 @@ export const Question = ({lesson, testState, setTestState, progress, setProgress
             <section>
                 <div class={styles.text}>
                     <span class={styles.cue}></span>
-                    <span><span>{logic.toCase(question.text)}</span><span class="super">{`${progress.number}/${progress.of}`}</span></span>
-                    <span class={`${styles.liveScore} ${score.total === 0 ? styles.hidden : null} ${lesson.availableCount === score.total ? styles.lessonOver : null } `}><span>{score.correct}</span><span>{score.total}</span></span>
+                    <span><span>{logic.toCase(question.text)}</span><span class="super">{`${progress.number}/${progress.of}`}</span></span>                    
                 </div> 
                 <>{format}</>
                 <div class={styles.flex}>

@@ -115,7 +115,16 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
         <section class={styles.container}>
             <input id="orderedTextInput" disabled={answerList.filter(l => l.name !== PLACEHOLDER).length === question.listCount} ref={inputRef} type="text" onBlur={e => addToList(e)} placeholder="" />
             <label htmlFor="orderedTextInput"></label>
-            <ul class={styles.answers}>{listItems}</ul>
+            <ul class={styles.answers}>
+                {listItems}
+                {
+                !question.workings 
+                    ? null
+                    : testState === enums.QUESTION_STATE.ANSWERED
+                        ? <li>{question.workings}</li>
+                        : null
+            }
+            </ul>
         </section>
         <button ref={btnMarkRef} onClick={handleCheckAnswer} class={isMarkBtnVisible ? null : styles.hidden} disabled={isMarkBtnDisabled}>Check answer</button>
         </>

@@ -1,26 +1,32 @@
 @import 'variables.scss';
 @import 'mixins.scss';
 
+@mixin columnLayout {
+    display: grid;
+    grid-template-columns: 60px auto 50px;
+    align-items: center;
+    position: relative;
+ }
+
+@mixin firstColumn() {
+    font-style: italic;
+    margin-right: 5px;
+    font-size: .7rem;
+}
 
 .markedAnswers {
     margin: 10px 0;
     border: 1px dashed rgba($colour, .2);
     padding: 10px;
     .q {        
+        @include columnLayout();
         color: rgba($colour, .7);
-        display: grid;
-        grid-template-columns: 55px auto 50px;
-        align-items: center;
-        position: relative;
         span {
             margin-right: 5px;
             line-height: 1.5;
         }
         span:nth-child(1) {
-            font-style: italic;
-            margin-right: 5px;
-            min-width: 50px;
-            font-size: .7rem;
+            @include firstColumn();
         }
         span:nth-child(3) {
             position: absolute;
@@ -38,13 +44,18 @@
         }
     }
     .a {
-        display: flex;
-        align-items: center;
+        @include columnLayout();
         & > span:nth-child(1) {
-            font-style: italic;
-            margin-right: 5px;
-            min-width: 50px;
-            font-size: .7rem;
+            @include firstColumn();
+        }
+    }
+    .w {
+        @include columnLayout();
+        span:nth-child(1) {
+            @include firstColumn();
+        }
+        span:nth-child(2) {
+            font-size: .8rem;
         }
     }
     .score {
