@@ -12,6 +12,6 @@ type Lesson {
 type Query {
   allLessons: [Lesson!]
   lessonByTitle(title: String!): Lesson!
-  allQuestions: [Question!]
+  activeLessons(isActive: Boolean!): Lesson!
   questionsByQuestionText(text: String!): Question!
 }

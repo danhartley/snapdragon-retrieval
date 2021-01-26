@@ -143,7 +143,11 @@ const renderScoreHistory = (lessonHistories, communityScores) => {
                                     ? communityScores.find(cs => cs.lessonTitle === lesson.title).questionScores.find(qs => qs.text === score.text) 
                                     : null
                                 : null;
-                            const communityQuestionAverage = communityQuestionScores ? Math.round((communityQuestionScores.correct / communityQuestionScores.total) * 100) : null;
+                            const communityQuestionAverage = (communityQuestionScores && communityQuestionScores.total) 
+                                ? Math.round((communityQuestionScores.correct / communityQuestionScores.total) * 100) 
+                                : score 
+                                    ? (score.correct / score.total) * 100
+                                    : 0;
 
                             return (
                                 <>                                
@@ -153,7 +157,8 @@ const renderScoreHistory = (lessonHistories, communityScores) => {
                                     <div class={`${styles.score}`}>
                                         <span>{score.correct}/{score.total}</span>
                                         <span class={`${score.correct === score.total ? styles.isCorrect : styles.isIncorrect}`}></span>
-                                        { !communityQuestionScores ? null : <span>{`${communityQuestionAverage}% of participants answered correctly.`}</span> }
+                                        {console.log(communityQuestionAverage)}
+                                        { !communityQuestionScores ? <span>0% of participants answered correctly.</span> : <span>{`${communityQuestionAverage}% of participants answered correctly.`}</span> }
                                     </div>                                    
                                 </li>
                                 </>
@@ -173,6 +178,7 @@ const renderScoreHistory = (lessonHistories, communityScores) => {
 };
 
 export const getStaticProps = async ({params}) => {
+    
     const lessons = getLessons().map(lesson => {
         return { 
             ...lesson,

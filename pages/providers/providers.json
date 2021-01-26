@@ -33,6 +33,11 @@
         "slug": "bbc",
         "link": "https://www.bbc.com/",
         "name": "BBC"
+    },
+    {
+        "slug": "snapdragon",
+        "link": "",
+        "name": "Snapdragon"
     }
   ]
 }

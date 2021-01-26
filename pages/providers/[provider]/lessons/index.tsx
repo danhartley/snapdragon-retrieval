@@ -61,7 +61,8 @@ const lessonLink = (provider: string | string[], lesson: any, groupCount) => {
 };
 
 export async function getStaticProps() {    
-    const allLessons = getLessons().map(lesson => {
+
+    const allLessons = getLessons().filter(lesson => lesson.isActive).map(lesson => {
         return { 
             ...lesson,
             providerName: providers.providersList.find(p => p.slug === lesson.provider).name

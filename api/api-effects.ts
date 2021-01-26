@@ -8,9 +8,9 @@ const getQuestions = async lesson => {
     
     questions = response.map(r => r.length > 0 ? r : null).filter(r => r);
 
-    if(questions.length === 0) {                
-        questions = await api.createQuestions(lesson);
-    }            
+    // if(questions.length === 0) {                
+    //     questions = await api.createQuestions(lesson);
+    // }            
 
     return questions;
 };
@@ -21,7 +21,7 @@ const getLessonQuestionHistories = async lesson => {
     
     lessonScores = await api.getLessonByTitle(lesson.title) as any;
 
-    lessonScores = (lessonScores && lessonScores.data && lessonScores.data.length > 0) || await api.createLesson(lesson.title);
+    // lessonScores = (lessonScores && lessonScores.data && lessonScores.data.length > 0) || await api.createLesson(lesson.title);
     
     questionScores = await getQuestions(lesson);
 
@@ -31,6 +31,15 @@ const getLessonQuestionHistories = async lesson => {
 
     return questionScores;
 };
+
+export const createLessonHistories = async lesson => {
+
+    await api.createLesson(lesson.title);
+
+    const questions = await api.createQuestions(lesson);
+
+    return questions;
+}
 
 export const addLessonCommuityState = async lesson => {
 

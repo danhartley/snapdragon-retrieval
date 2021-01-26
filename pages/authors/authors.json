@@ -11,8 +11,13 @@
       "link": "https://www.theguardian.com/"
     },
     {
+      "name": "NASA Science",
+      "slug": "nasa-science",
+      "link": "https://science.nasa.gov/"
+    },
+    {
       "name": "Earth Observatory (NASA)",
-      "slug": "nasa",
+      "slug": "nasa-earth-observatory",
       "link": "https://earthobservatory.nasa.gov/"
     },
     {
