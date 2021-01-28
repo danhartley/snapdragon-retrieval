@@ -2,26 +2,16 @@ import { api } from 'api/api';
 
 const getQuestions = async lesson => {
 
-    let questions;
-    
     const response = await api.getQuestionsByLesson(lesson) as Array<any>;
     
-    questions = response.map(r => r.length > 0 ? r : null).filter(r => r);
-
-    // if(questions.length === 0) {                
-    //     questions = await api.createQuestions(lesson);
-    // }            
-
-    return questions;
+    return response.map(r => r.length > 0 ? r : null).filter(r => r);
 };
 
 const getLessonQuestionHistories = async lesson => {
 
-    let questionScores, lessonScores;
+    let questionScores;
     
-    lessonScores = await api.getLessonByTitle(lesson.title) as any;
-
-    // lessonScores = (lessonScores && lessonScores.data && lessonScores.data.length > 0) || await api.createLesson(lesson.title);
+    await api.getLessonByTitle(lesson.title) as any;
     
     questionScores = await getQuestions(lesson);
 
@@ -34,11 +24,19 @@ const getLessonQuestionHistories = async lesson => {
 
 export const createLessonHistories = async lesson => {
 
-    await api.createLesson(lesson.title);
+    let lessonScores = await api.getLessonByTitle(lesson.title) as any;
+        lessonScores = (lessonScores && lessonScores.data && lessonScores.data.length > 0) || await api.createLesson(lesson.title);
+    
+    const ranked = lesson.ranked || [];
+    const unranked = lesson.unranked || [];
+    const multiplechoice = lesson.multiplechoice || [];
+    const multipleselect = lesson.multipleselect || [];
 
-    const questions = await api.createQuestions(lesson);
+    lesson.questions = [ ...multiplechoice, ...unranked, ...multipleselect, ...ranked ];
+    
+    let questions = await getQuestions(lesson);
 
-    return questions;
+    return questions.length > 1 ? questions : await api.createQuestions(lesson);
 }
 
 export const addLessonCommuityState = async lesson => {

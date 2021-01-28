@@ -1,4 +1,5 @@
 {
+  "isActive": false,
   "provider": "our-world-in-data",
   "title": "Greenhouse gas emissions by sector",
   "slug": "ghg-emissions-by-sector",

@@ -251,6 +251,11 @@
       "slug": "glaia",
       "link": "https://www.glaia.co.uk/",
       "name": "Glaia"
+    },
+    {
+      "slug": "openstax",
+      "link": "https://cnx.org/",
+      "name": "OpenStax"
     }
   ]
 }

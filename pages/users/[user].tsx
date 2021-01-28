@@ -78,7 +78,7 @@ const User = ({user, lessons}) => {
             const unranked = lesson.unranked || [];
             const multiplechoice = lesson.multiplechoice || [];
             const multipleselect = lesson.multipleselect || [];
-            lesson.questions = [ ...ranked, ...unranked, ...multiplechoice, ...multipleselect ];
+            lesson.questions = [ ...multiplechoice, ...unranked, ...multipleselect, ...ranked ];
             const questionScores = await getLessonSummaries(lesson) as Array<any>;
             const lessonScores = questionScores.reduce((lqs, score) => {
                 return {

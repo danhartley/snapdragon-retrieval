@@ -1,4 +1,5 @@
 {
+  "isActive": false,
   "provider": "the-guardian",
   "multiplechoice": [
     {

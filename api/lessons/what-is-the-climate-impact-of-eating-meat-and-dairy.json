@@ -116,6 +116,7 @@
       ]
     }
   ],
+  "isActive": true,
   "provider": "carbonbrief",
   "source": "https://interactive.carbonbrief.org/what-is-the-climate-impact-of-eating-meat-and-dairy/",
   "slug": "what-is-the-climate-impact-of-eating-meat-and-dairy",

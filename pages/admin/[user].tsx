@@ -6,6 +6,10 @@ import users from 'pages/users/users.json';
 import { createLessonHistories } from 'api/api-effects';
 import { getLessons } from 'api/lessons/utils';
 
+import styles from 'pages/admin/admin.module.scss';
+
+import Layout from 'components/layout/layout';
+
 const authenticateUser = (user, password) => {
 
     return user === 'danielhartley' && password === 'snapdragon';
@@ -18,28 +22,37 @@ const Admin = ({lessons}) => {
 
     const { user, pwd } = router.query;
 
-    const activateLesson = async lesson => {
+    const [activeLessons, setActiveLessons] = useState(lessons);
+
+    const activateLesson = async lesson => {        
         const questions = await createLessonHistories(lesson);
-        console.log(questions);
-        
+        if(questions) {
+            const activeLesson = activeLessons.find(l => l.title === lesson.title);
+            activeLesson.disabled = true;
+            setActiveLessons([ ...lessons, activeLesson ])
+        }        
     };
 
     if(authenticateUser(user, pwd)) {
 
-        const inActiveLessons = lessons.map(lesson => {
-            return <li>
-                <section>
+        const inActiveLessons = activeLessons.map(lesson => {
+            return <li class={styles.li}>
                     <div>{lesson.title}</div>
-                    <button onClick={activateLesson}>Enable scoring</button>
-                </section>
-            </li>
+                    <button disabled={lesson.disabled} onClick={() => activateLesson(lesson)}>Enable scoring</button>
+                  </li>
         });
 
-        return <ul>{inActiveLessons}</ul>
+        return  (
+            <Layout title="User" description={'Admin page'} header={'Admin'}>
+                <ul>{inActiveLessons}</ul>
+            </Layout>
+        )
 
     } else {
         return (
-            <div>You are not authorised!</div>
+            <Layout title="User" description={'Admin page'} header={'Admin'}>
+                <div>You are not authorised!</div>
+            </Layout>
         )
     }
         
