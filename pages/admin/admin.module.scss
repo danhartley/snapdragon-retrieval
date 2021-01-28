@@ -1,8 +1,22 @@
 .li {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin: 10px 0 0 0;
+    .inactive {
+        opacity: .8;
+    }
+    .group {
+        display: flex;
+        align-items: center;
+        span {
+            width: 30px;
+            margin-left: 5px;
+        }
+    }
     button {
         margin: 0 0 0 10px;
+        text-transform: revert;
+        height: 40px;
     }
 }

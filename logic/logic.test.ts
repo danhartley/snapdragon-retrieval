@@ -136,7 +136,7 @@ describe('update answer answerList', () => {
     };
     let entry = { name:'beef', state: enums.TRILEAN.UNKNOWN };
     let placeholder = '---';
-    let answerList = logic.getPlaceholders(question.listCount, placeholder);
+    let answerList = logic.getPlaceholders(question, placeholder);
     let updatedList;
 
     test('unordered answer answerList', () => {
@@ -152,7 +152,7 @@ describe('update answer answerList', () => {
 
     test('ordered answer answerList', () => {
         question.type = enums.QUESTION_TYPE.ORDERED;
-        answerList = logic.getPlaceholders(question.listCount, placeholder);        
+        answerList = logic.getPlaceholders(question, placeholder);        
         entry = { name:'beef', state: enums.TRILEAN.UNKNOWN };
         updatedList = logic.updateAnswerList(question, answerList, entry, placeholder);
         entry = { name:'lamb', state: enums.TRILEAN.UNKNOWN };

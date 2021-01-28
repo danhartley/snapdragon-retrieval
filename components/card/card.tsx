@@ -36,6 +36,7 @@ export const Card = ({lesson}) => {
     const isDefinitionLong = card.definition.length > 200;
 
     return (
+        <>
         <div class={styles.cards}>
             <section>
                 <div onClick={flipCard} class={`${styles.term} ${face.value === card.definition ? styles.definition : null}`}>
@@ -48,8 +49,9 @@ export const Card = ({lesson}) => {
                 <button aria-label="Turn the card over" onClick={flipCard} class={styles.flip}></button>
                 <button aria-label="Shuffle the cards" class={styles.shuffle} disabled={lesson.cards.length === 1}></button>
             </section>
-            <Sources sources={card.sources} />
             {/* <section><ExternalLinkList items={lesson.cards} source={lesson.source}></ExternalLinkList></section> */}
         </div>
+        <Sources sources={card.sources} />
+        </>
     )
 };

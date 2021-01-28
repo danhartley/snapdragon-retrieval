@@ -6,9 +6,10 @@ const logFinally = request => {
     // console.log(`call on: ${request}`);
 };
 
-const logError = e => {
+const logError = (e, src = '') => {
     console.log(`Error message: ${e.message}`);
     console.log(`Error stack trace: ${e.stack}`);
+    console.log(`Error source: ${src}`);    
 };
 
 const init = () => {    
@@ -20,7 +21,7 @@ const init = () => {
 try {
     init();
 } catch(e) {
-    logError(e);
+    logError(e, 'fauna authorisation');
 } finally {
     logFinally('fauna authorisation');
 }
@@ -31,7 +32,7 @@ const clientQuery = async (query, queryName) => {
         const response = await client.query(query);
         return response;
     } catch(e) {
-        logError(e);
+        logError(e, queryName);
     } finally {
         logFinally(queryName);
     }
@@ -101,6 +102,10 @@ const createQuestion = async (title, text) => {
 
     const lesson = getLessonByTitle(title);
 
+    let ref = await getQuestionByText(text);
+
+    if(ref && ref.data && ref.data.length > 0) return ref; // question exists
+
     return await clientQuery(
         q.Create(
             q.Collection("Question"),
@@ -128,21 +133,25 @@ const createQuestions = async lesson => {
 
 const updateQuestion = async question => {
 
-    let ref = await getQuestionByText(question.text) as any;
-        ref = ref.data[0].ref.value.id; // will error at this point if lesson name changes after it has been loaded into client memory
-        // option to create new question… ?? or prevent changing question title
+    let ref = await getQuestionByText(question.text);
 
-    const response = await clientQuery(
-        q.Update(
-            q.Ref(q.Collection('Question'), ref),
-            {
-                data: { 
-                    total: question.total,
-                    correct: question.correct
-                }
-            }
-        ), 'updateQuestion'
-    );
+    console.log('ref: ', ref)
+
+    const response = (ref && ref.data && ref.data.length > 0)
+        ? await clientQuery(
+                q.Update(
+                    q.Ref(q.Collection('Question'), ref.data[0].ref.value.id),
+                    {
+                        data: { 
+                            total: question.total,
+                            correct: question.correct
+                        }
+                    }
+                ), 'updateQuestion'
+            )
+        : null;
+
+    console.log('response: ', response)   
 
     return response;    
 };

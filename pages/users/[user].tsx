@@ -74,11 +74,7 @@ const User = ({user, lessons}) => {
 
         lessonHistories.forEach(async lh => {
             const lesson = lessons.find(l => l.title === lh.title);
-            const ranked = lesson.ranked || [];
-            const unranked = lesson.unranked || [];
-            const multiplechoice = lesson.multiplechoice || [];
-            const multipleselect = lesson.multipleselect || [];
-            lesson.questions = [ ...multiplechoice, ...unranked, ...multipleselect, ...ranked ];
+            lesson.questions = logic.groupQuestionsAsItems(lesson);
             const questionScores = await getLessonSummaries(lesson) as Array<any>;
             const lessonScores = questionScores.reduce((lqs, score) => {
                 return {
@@ -158,7 +154,7 @@ const renderScoreHistory = (lessonHistories, communityScores) => {
                                         <span>{score.correct}/{score.total}</span>
                                         <span class={`${score.correct === score.total ? styles.isCorrect : styles.isIncorrect}`}></span>
                                         {console.log(communityQuestionAverage)}
-                                        { !communityQuestionScores ? <span>0% of participants answered correctly.</span> : <span>{`${communityQuestionAverage}% of participants answered correctly.`}</span> }
+                                        <span>{`${communityQuestionAverage}% of participants answered correctly.`}</span>
                                     </div>                                    
                                 </li>
                                 </>

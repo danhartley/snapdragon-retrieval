@@ -1,4 +1,5 @@
 import { api } from 'api/api';
+import { logic } from 'logic/logic';
 
 const getQuestions = async lesson => {
 
@@ -26,17 +27,10 @@ export const createLessonHistories = async lesson => {
 
     let lessonScores = await api.getLessonByTitle(lesson.title) as any;
         lessonScores = (lessonScores && lessonScores.data && lessonScores.data.length > 0) || await api.createLesson(lesson.title);
+        
+    lesson.questions = logic.groupQuestionsAsItems(lesson);
     
-    const ranked = lesson.ranked || [];
-    const unranked = lesson.unranked || [];
-    const multiplechoice = lesson.multiplechoice || [];
-    const multipleselect = lesson.multipleselect || [];
-
-    lesson.questions = [ ...multiplechoice, ...unranked, ...multipleselect, ...ranked ];
-    
-    let questions = await getQuestions(lesson);
-
-    return questions.length > 1 ? questions : await api.createQuestions(lesson);
+    return await api.createQuestions(lesson);
 }
 
 export const addLessonCommuityState = async lesson => {

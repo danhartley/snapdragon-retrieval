@@ -52,7 +52,7 @@ export const Question = ({lesson, testState, setTestState, progress, setProgress
         setCommunityScore({ correct: updatedQuestion.correct, total: updatedQuestion.total, question, userCorrect: correct });
         const response = await api.updateQuestion(updatedQuestion) as any;
         if(response) {  
-            setCommunityScore({ correct: response.data.correct, total: response.data.total, question, userCorrect: correct });
+            // setCommunityScore({ correct: response.data.correct, total: response.data.total, question, userCorrect: correct });
         }
         setProgress({ ...progress, number: isLessonOver ? 0 : progress.number + 1});
     };

@@ -1,0 +1,243 @@
+{
+    "isActive": true,
+	"provider": "snapdragon",
+	"source": "",
+	"slug": "plants-in-your-life-light",
+    "title": "Plants in Your Life: #1 Light",
+    "group": {
+        "name": "Plants in Your Life",
+        "index": 1,
+        "subtitle": "Light"
+    },
+	"cards": [{
+		"sources": [{
+			"author": "author",
+			"source": "source"
+		}],
+		"year": "2020",
+		"term": "term",
+		"definition": "definition",
+		"text": "text"
+	}],
+	"ranked": [
+        {
+        "index": 5,
+		"unit": "nm",
+		"unitDescription": "nanometre",
+        "text": "Place red, green and blue in order of wavelength from shortest to longest.",
+        "type": "ordered",
+		"listCount": 3,
+		"items": [
+            {
+                "rank": 1,
+                "name": "blue",
+                "value": "450–490"
+            },
+            {
+                "rank": 2,
+                "name": "green",
+                "value": "520–560"
+            },
+            {
+                "rank": 3,
+                "name": "red",
+                "value": "635–700"
+            }
+        ],
+		"sources": [
+            {
+                "author": "Khan Academy",
+                "source": "https://www.khanacademy.org/science/biology/photosynthesis-in-plants/the-light-dependent-reactions-of-photosynthesis/a/light-and-photosynthetic-pigments"
+            },
+            {
+                "author": "Wikipedia",
+                "source": "https://en.wikipedia.org/wiki/Color"
+            }
+        ]
+    }],
+	"multiplechoice": [
+        {
+        "index": 2,
+		"text": "Approximately what percent of sunlight is converted into chemical energy during photosynthesis?",
+		"unit": "%",
+		"unitDescription": "%",
+		"listCount": 4,
+		"answer": "1",
+		"answers": [
+			"5",
+            "10",
+            "50"
+		]
+    },
+        {
+        "index": 9,
+		"text": "How far has light hitting Earth travelled from the sun?",
+		"unit": "million km",
+		"unitDescription": "million kilometres",
+		"listCount": 4,
+		"answer": "147.27",
+		"answers": [
+            "1.47",
+			"14.72",
+            "1472.07"
+		]
+    },
+        {
+        "index": 12,
+		"text": "Match the carotenoids to the plant they found in",
+		"listCount": 4,
+		"answer": "tomato: lycopene; corn: zeaxanthin; orange: β-carotene",
+		"answers": [
+            "tomato: lycopene; corn: β-carotene; orange: zeaxanthin",
+			"tomato: zeaxanthin; corn: β-carotene; orange: lycopene",
+            "tomato: β-carotene; corn: zeaxanthin; orange: lycopene"
+		]
+    }
+    ],
+	"unranked": [
+        {
+        "index": 1,
+		"text": "The kinetic energy from sunlight is converted into __ during photosynthesis.",
+		"listCount": 1,
+		"items": [{
+			"name": "chemical"
+        }]
+        },
+        {
+        "index": 4,
+		"text": "What is the term for the study of periodic events in biological life cycles, and how these are influenced by seasonal and interannual variations in climate, as well as habitat factors?",
+		"listCount": 1,
+		"items": [{
+			"name": "phenology"
+        }],
+        "sources": [
+            {
+                "author": "Wikipedia",
+                "source": "https://en.wikipedia.org/wiki/Phenology"
+            }
+        ]
+        },
+        {
+        "index": 6,
+		"text": "Of red, green and blue which has the shortest wavelength, greater frequency, and therefore the greatest energy?",
+		"listCount": 1,
+		"items": [{
+			"name": "blue"
+        }],
+        "sources": [
+            {
+                "author": "Khan Academy",
+                "source": "https://www.khanacademy.org/science/biology/photosynthesis-in-plants/the-light-dependent-reactions-of-photosynthesis/a/light-and-photosynthetic-pigments"
+            },
+            {
+                "author": "Wikipedia",
+                "source": "https://en.wikipedia.org/wiki/Color"
+            }
+        ]
+        },
+        {
+        "index": 7,
+		"text": "What is the name of the specialised organic molecules that are found in the chloroplasts of plant cells?",
+		"listCount": 1,
+		"items": [{
+			"name": "pigments"
+        }],
+        "sources": [
+            {
+                "author": "Khan Academy",
+                "source": "https://www.khanacademy.org/science/biology/photosynthesis-in-plants/the-light-dependent-reactions-of-photosynthesis/a/light-and-photosynthetic-pigments"
+            },
+            {
+                "author": "Wikipedia",
+                "source": "https://en.wikipedia.org/wiki/Color"
+            }
+        ]
+        },
+        {
+        "index": 10,
+		"text": "According to NASA the human eye can detect light in what approximate range (in nanometres)?",
+        "listCount": 1,
+        "unit": "nm",
+		"unitDescription": "nanometres",
+		"items": [{
+			"name": "380-750"
+        }],
+        "sources": [
+            {
+                "author": "NASA Science",
+                "source": "https://science.nasa.gov/ems/09_visiblelight"
+            }
+        ]
+        },
+        {
+        "index": 11,
+		"text": "What are the two major classes of photosynthetic pigments found in plants and algae? (hint: both plural)",
+        "listCount": 2,
+        "items": [
+            {
+			    "name": "Chlorophylls"
+            },
+            {
+			    "name": "carotenoids"
+            }
+        ],
+        "sources": [
+            {
+                "author": "OpenStax",
+                "source": "https://cnx.org/contents/-CmzvUct@11/The-Light-Dependent-Reactions-of-Photosynthesis"
+            }
+        ]
+        },
+        {
+        "index": 13,
+		"text": "Many carotenoids that reside in the thylakoid membrane absorb potentially damaging excess energy, and dissipiate it in the form of __ energy.",
+        "listCount": 1,
+        "items": [
+            {
+			    "name": "Heat"
+            }
+        ],
+        "sources": [
+            {
+                "author": "OpenStax",
+                "source": "https://cnx.org/contents/-CmzvUct@11/The-Light-Dependent-Reactions-of-Photosynthesis"
+            }
+        ]
+        }
+    ],
+	"multipleselect": [
+        {
+        "index": 3,
+		"text": "Light is critical to which processes in plants?",
+		"answers": [
+            "photosynthesis",
+            "seed germination",
+            "leaf formation",
+            "flower development"
+		],
+		"alternatives": [
+			
+		],
+		"listCount": 4
+    },
+        {
+        "index": 8,
+		"text": "Phytochromes, photoreceptors in plants, are sensitive to light in which regions of the visible spectrum?",
+		"answers": [
+            "red",
+            "far-red"        
+		],
+		"alternatives": [
+			"blue",
+            "violet"
+		],
+        "listCount": 4,
+        "sources": [
+            {
+                "author": "Wikipedia",
+                "source": "https://en.wikipedia.org/wiki/Phytochrome"
+            }
+        ]
+        }
+    ]
+}

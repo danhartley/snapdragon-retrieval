@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 
 import users from 'pages/users/users.json';
 
+import { logic } from 'logic/logic';
 import { createLessonHistories } from 'api/api-effects';
 import { getLessons } from 'api/lessons/utils';
 
@@ -36,9 +37,12 @@ const Admin = ({lessons}) => {
     if(authenticateUser(user, pwd)) {
 
         const inActiveLessons = activeLessons.map(lesson => {
-            return <li class={styles.li}>
-                    <div>{lesson.title}</div>
-                    <button disabled={lesson.disabled} onClick={() => activateLesson(lesson)}>Enable scoring</button>
+            return <li class={`${styles.li}`}>
+                    <div class={`${lesson.isActive ? styles.active : styles.inactive}`}>{lesson.title}</div>                    
+                    <div class={styles.group}>
+                        <button disabled={lesson.disabled} onClick={() => activateLesson(lesson)}>Add/update scoring</button>
+                        <span>{lesson.questions.length}</span>
+                    </div>
                   </li>
         });
 
@@ -60,11 +64,11 @@ const Admin = ({lessons}) => {
 
 export const getStaticProps = async ({params}) => {
     
-    let lessons = getLessons().filter(lesson => !lesson.isActive);
-
+    let lessons = getLessons() as any;
+    
     lessons = lessons.map(lesson => {
         return { 
-            ...lesson
+            ...lesson, questions: logic.groupQuestionsAsItems(lesson)
         } as any;
     }) as Array<any>;
 

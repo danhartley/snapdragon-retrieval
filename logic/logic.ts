@@ -204,6 +204,18 @@ const toCase = (str) => {
     return (str && str.length > 0) ? str.charAt(0).toUpperCase() + str.slice(1) : '';
 };
 
+const groupQuestionsAsItems = lesson => {
+    
+    const ranked = lesson.ranked || [];
+    const unranked = lesson.unranked || [];
+    const multiplechoice = lesson.multiplechoice || [];
+    const multipleselect = lesson.multipleselect || [];
+
+    const questions = [ ...multiplechoice, ...unranked, ...multipleselect, ...ranked ];
+
+    return questions; 
+};
+
 export const logic = {
     mark,
     markUnordered,
@@ -216,5 +228,6 @@ export const logic = {
     getUnusedAnswers,
     sortBy,
     calculateWidth,
-    toCase
+    toCase,
+    groupQuestionsAsItems
 };
