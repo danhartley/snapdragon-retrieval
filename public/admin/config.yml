@@ -140,6 +140,7 @@ collections:
       - { label: "unit", name: "unit", widget: "string", required: false }
       - { label: "unit description", name: "unitDescription", widget: "string", required: false }      
       - { label: "list count", name: "listCount", widget: "number" }
+      - { label: "index", name: "index", widget: "number", required: false }
       - label: "Items"
         label_singular: "Item"
         name: "items"

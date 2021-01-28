@@ -58,7 +58,7 @@ export async function getStaticProps({params: {provider, lesson}}) {
         }) 
         : [];
 
-    providerLesson.questions = [ ...multipleChoice, ...unranked, ...multipleSelect, ...ranked ];
+    providerLesson.questions = logic.sortBy([ ...multipleChoice, ...unranked, ...multipleSelect, ...ranked ], 'index');
 
     providerLesson.availableCount += multipleChoice.length;
 
