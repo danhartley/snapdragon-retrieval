@@ -8,6 +8,8 @@ import { Question } from 'components/question/question';
 import QueryString from 'components/query-string/query-string';
 import { enums } from "components/enums";
 
+import styles from 'pages/providers/[provider]/lessons/[lesson]/index.module.scss';
+
 const Lesson = ({lesson}) => {
 
     const [testState, setTestState] = useState(enums.QUESTION_STATE.RUNNING);
@@ -22,7 +24,7 @@ const Lesson = ({lesson}) => {
   
     return (
         <Layout title="Lesson" description={`${provider} ${lesson.title} lesson`} header={lesson.title} headerLink={lesson.source} disableNavigation={disableNavigation} score={score} >
-            <div>
+            <div class={styles.question}>
                 <QueryString options={enums.LESSON_TYPE} lesson={lesson} />
                 { type === enums.LESSON_TYPE.CARDS 
                     ? <Card lesson={lesson}></Card> 
@@ -59,6 +61,7 @@ export async function getStaticProps({params: {provider, lesson}}) {
         : [];
 
     providerLesson.questions = logic.sortBy([ ...multipleChoice, ...unranked, ...multipleSelect, ...ranked ], 'index');
+    // providerLesson.questions = providerLesson.questions.filter(q => (q.index === 5 || q.index === 9))
 
     providerLesson.availableCount += multipleChoice.length;
 

@@ -10,6 +10,7 @@ const providerList = providersWithLessons.map(provider => <li><Link href={`/prov
 
     return (
         <Layout title="Providers" header="Providers">
+            <h1>Providers</h1>
             <ul>
                 { providerList }
             </ul>

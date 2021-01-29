@@ -24,6 +24,7 @@ const Lessons = ({lessons}) => {
 
     return (
         <Layout title="Lessons" description={`Lessons for ${provider}`} header={lessons.find(l => l.provider === provider).providerName as string}>
+            <h1>Lesson</h1>
             <ul class={styles.list}>
                 { [ ...groupedLessons, ...unGroupedLessons ] }
             </ul>
@@ -55,6 +56,7 @@ const lessonLink = (provider: string | string[], lesson: any, groupCount) => {
                 query: { provider, lesson: lesson.slug, type: enums.LESSON_TYPE.QUESTIONS },
             }}
         >
+            
             <a>{lesson.group ? `#${lesson.group.index}` : null } {lesson.group ? lesson.group.subtitle : lesson.title}</a>
         </Link>
      </li>

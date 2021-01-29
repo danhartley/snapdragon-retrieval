@@ -11,7 +11,6 @@ import Sources from 'components/question/source';
 import CommunityScore from 'components/question/community-score/community-score';
 
 import styles from 'components/question/question.module.scss';
-import { type } from "os";
 
 export const Question = ({lesson, testState, setTestState, progress, setProgress, score, setScore }) => {
 
@@ -111,6 +110,7 @@ export const Question = ({lesson, testState, setTestState, progress, setProgress
     }
 
     return (
+        <>
         <div class={styles.questions}>
             <section>
                 <div class={styles.text}>
@@ -125,7 +125,8 @@ export const Question = ({lesson, testState, setTestState, progress, setProgress
                 </div>
             </section>
             <CommunityScore data={communityScore} />
-            <Sources sources={question.sources} />
         </div>
+        <Sources sources={question.sources} />
+        </>
     )
 };

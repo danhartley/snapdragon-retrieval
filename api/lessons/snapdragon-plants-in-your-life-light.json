@@ -137,10 +137,10 @@
         },
         {
         "index": 7,
-		"text": "What is the name of the specialised organic molecules that are found in the chloroplasts of plant cells?",
+		"text": "What is the name of the molecule found in the chloroplasts of plant cells which can harvest light?",
 		"listCount": 1,
 		"items": [{
-			"name": "pigments"
+			"name": "pigment"
         }],
         "sources": [
             {

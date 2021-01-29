@@ -170,7 +170,12 @@ const renderScoreHistory = (lessonHistories, communityScores) => {
            )
     });
 
-    return <ul>{lessonList}</ul>
+    return (
+        <>
+        <h1>Score history</h1>
+        <ul>{lessonList}</ul>
+        </>
+    )
 };
 
 export const getStaticProps = async ({params}) => {

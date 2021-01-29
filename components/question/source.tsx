@@ -8,7 +8,7 @@ const Source = ({source}) => {
 
 const Sources = ({sources}) => {
 
-    if(!sources) return null;
+    if(!sources) return <section class={styles.sources}><div>&nbsp;</div></section>;
 
     return (
         <section class={styles.sources}>

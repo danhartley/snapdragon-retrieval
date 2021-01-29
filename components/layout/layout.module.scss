@@ -3,7 +3,7 @@
 .container {
     display: grid;
     row-gap: 10px;
-    grid-template-rows: 45px minmax(auto, 80px) auto 45px;
+    grid-template-rows: 45px 80px auto 45px;
     .date {
         display: none;
         color: rgba($colour, 0.6);
@@ -19,6 +19,12 @@
     .header {
         display: grid;
         grid-template-columns: auto 60px;
+        border-bottom: 3px solid lightgray;
+        padding-left: 5px;
+        h1 {
+            display: flex;
+            align-items: center;
+        }
         .liveScore {
             height: 25px;
             width: 25px;
