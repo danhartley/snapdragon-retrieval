@@ -228,8 +228,6 @@
     {
       "text": "The main greenhouse gases are methane, carbon dioxide, water vapour, ozone, and nitrous oxide. Rank them in order of abundance, from highest to lowest.",
       "type": "ordered",
-      "unit": "%",
-      "unitDescription": "%",
       "listCount": 5,
       "sources": [
         {

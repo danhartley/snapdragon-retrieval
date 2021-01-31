@@ -24,7 +24,6 @@ const Lessons = ({lessons}) => {
 
     return (
         <Layout title="Lessons" description={`Lessons for ${provider}`} header={lessons.find(l => l.provider === provider).providerName as string}>
-            <h1>Lesson</h1>
             <ul class={styles.list}>
                 { [ ...groupedLessons, ...unGroupedLessons ] }
             </ul>

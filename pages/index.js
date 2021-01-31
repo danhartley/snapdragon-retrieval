@@ -4,7 +4,7 @@ import Layout from 'components/layout/layout';
 const Home = () => {
 
   return (
-    <Layout title="Home" header={"Snapdragon retrieval"}>
+    <Layout title="Home" header={"Welcome"}>
         <main>
             <Link href="/providers">
                 <a>Providers</a>

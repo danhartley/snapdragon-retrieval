@@ -149,15 +149,5 @@
     }],
     "workings": "For someone born in 2017 the lifetime emissions are 122 tonnes. For a life expectancy of 85 years, the annual budget is 122/85, or ~1.4 tonnes."
     }
-],
-	"multipleselect": [{
-		"text": "text",
-		"answers": [
-			"answers1"
-		],
-		"alternatives": [
-			"alternatives1"
-		],
-		"listCount": 2
-	}]
+]
 }

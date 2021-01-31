@@ -73,7 +73,9 @@ export default function Layout({
                             <h1>{header}</h1>
                             <div><span class={`${styles.liveScore} ${score && score.total === 0 ? styles.hidden : null} ${score.isLessonOver ? styles.lessonOver : null }`}><span>{score ? score.correct : null}</span><span>{score ? score.total : null}</span></span></div>
                          </div>
-                      : null
+                      : <div class={styles.header}>
+                            <h1>{header}</h1>                        
+                        </div>
                 }   
 
                 {children}

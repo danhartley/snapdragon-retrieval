@@ -216,6 +216,14 @@ const groupQuestionsAsItems = lesson => {
     return questions; 
 };
 
+const unitDisplay = unit => {
+    return unit 
+            ? unit === '%' || unit === "°" 
+                ? unit
+                : ` ${unit}` 
+            : null;
+};
+
 export const logic = {
     mark,
     markUnordered,
@@ -229,5 +237,6 @@ export const logic = {
     sortBy,
     calculateWidth,
     toCase,
-    groupQuestionsAsItems
+    groupQuestionsAsItems,
+    unitDisplay
 };

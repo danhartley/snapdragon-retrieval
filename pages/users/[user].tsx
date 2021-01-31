@@ -15,14 +15,6 @@ import Accordion from 'components/accordion/accordion';
 
 import styles from 'pages/users/users.module.scss';
 
-const unitDisplay = score => {
-    return score.unit 
-            ? score.unit === '%' || score.unit === "°" 
-                ? score.unit
-                : ` ${score.unit}` 
-                : null
-};
-
 const Answer = ({score}) => {
 
     return ( 
@@ -30,12 +22,12 @@ const Answer = ({score}) => {
             ? <div class={styles.a}>
                     <span>Answer</span>                    
                     <ul>
-                        {score.answers.map(answer => <li>{logic.toCase(answer.name || answer)} {answer.value ?? null}{unitDisplay(score)}</li>)}
+                        {score.answers.map(answer => <li>{logic.toCase(answer.name || answer)} {answer.value ?? null}{logic.unitDisplay(score.unit)}</li>)}
                     </ul>
                 </div>        
             : <>
               <div class={styles.a}>
-                <span>Answer</span><span>{score.answers.map(answer => <span>{logic.toCase(answer.name || answer)}{unitDisplay(score)}</span>)}</span>
+                <span>Answer</span><span>{score.answers.map(answer => <span>{logic.toCase(answer.name || answer)}{logic.unitDisplay(score.unit)}</span>)}</span>
               </div>
               { score.workings ? <div class={styles.w}><span>Workings</span><span>{score.workings}</span></div> : null }
               </>
@@ -170,12 +162,7 @@ const renderScoreHistory = (lessonHistories, communityScores) => {
            )
     });
 
-    return (
-        <>
-        <h1>Score history</h1>
-        <ul>{lessonList}</ul>
-        </>
-    )
+    return <ul>{lessonList}</ul>
 };
 
 export const getStaticProps = async ({params}) => {
