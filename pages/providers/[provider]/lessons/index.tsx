@@ -78,7 +78,7 @@ export async function getStaticProps() {
 
 export async function getStaticPaths() {
 
-    const paths = providers.providersList.map(provider => {
+    const paths = providers.providersList.filter(p => p.name !== 'Snapdragon').map(provider => {
         return { params: { provider: provider.slug }}
     });
 

@@ -62,6 +62,7 @@ export async function getStaticProps({params: {provider, lesson}}) {
 
     providerLesson.questions = logic.sortBy([ ...multipleChoice, ...unranked, ...multipleSelect, ...ranked ], 'index');
     // providerLesson.questions = providerLesson.questions.filter(q => (q.index === 5 || q.index === 9))
+    // providerLesson.questions = providerLesson.questions.filter(q => q.text === 'List in descending order of calories the top 5 food types for a healthy, non-vegan diet.')
 
     providerLesson.availableCount += multipleChoice.length;
 
