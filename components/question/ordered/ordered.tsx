@@ -89,8 +89,12 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
     };
 
     setTimeout(() => {
-        if(testState === enums.QUESTION_STATE.ANSWERED) btnMarkRef.current ? btnMarkRef.current.focus() : null;
-    });
+        if(testState === enums.QUESTION_STATE.ANSWERED) {
+            btnMarkRef.current 
+                ? btnMarkRef.current.focus() 
+                : null;
+        }
+    },100);
 
     let isMarkBtnVisible = true, isMarkBtnDisabled = false;
     
