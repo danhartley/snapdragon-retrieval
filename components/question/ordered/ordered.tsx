@@ -18,16 +18,14 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
         }
     };
 
-    const handleSetAnswerList = entry => {
-        setTimeout(() => {                    
-            console.log(entry);                
-            if(entry.name === '') return;
-            const updatedAnswerList = logic.updateAnswerList(question, answerList, entry, PLACEHOLDER);
-            if(updatedAnswerList.filter(l => l.name !== PLACEHOLDER).length === question.listCount) {
-                setTestState(enums.QUESTION_STATE.ANSWERED);
-            }
-            setAnswerList(updatedAnswerList);
-        });
+    const handleSetAnswerList = entry => {         
+        if(entry.name === '') return;
+        const updatedAnswerList = logic.updateAnswerList(question, answerList, entry, PLACEHOLDER);
+        if(updatedAnswerList.filter(l => l.name !== PLACEHOLDER).length === question.listCount) {
+            setTestState(enums.QUESTION_STATE.ANSWERED);
+        }
+        setAnswerList(updatedAnswerList);        
+        resetInput();
     };
 
     const addToList = e => {
@@ -69,9 +67,6 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
         window.addEventListener("keydown", e => {        
             const target = e.target as HTMLButtonElement;
             if(target.type === 'submit' || !inputRef.current || (inputRef.current && inputRef.current.value === "")) return;
-            
-            console.log(e.code);            
-
             switch(e.code) {        
                 case 'Enter':
                     handleSetAnswerList({ name: inputRef.current.value, state: enums.TRILEAN.UNKNOWN });
