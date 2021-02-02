@@ -103,7 +103,7 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
                     console.log('testState: ', testState);    
                     btnMarkRef.current.focus();
                 }   
-            });
+            },250);
             break;
         case enums.QUESTION_STATE.MARKED:
             isMarkBtnVisible = false;
