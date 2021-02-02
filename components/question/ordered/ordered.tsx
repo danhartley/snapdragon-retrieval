@@ -91,13 +91,8 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
                     btnMarkRef.current.focus();
                     console.log(document.activeElement);
                 }
-            }, 500);
+            }, 250);
         }
-        // setTimeout(() => {
-        //     let btn = document.querySelector('#btnMarkId') as HTMLButtonElement;
-        //         btn.focus();
-        //     console.log(document.activeElement);
-        // }, 500);
     }, [answerList]);
 
     const handleCheckAnswer = e => {
