@@ -34,6 +34,7 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
                 let btn = document.querySelector('#btnMarkId') as HTMLButtonElement;
                     btn.focus();
                 console.log(btn);
+                console.log(document.activeElement);                
             }, 500);
         }
         setAnswerList(updatedAnswerList);        
@@ -137,7 +138,7 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
             }
             </ul>
         </section>
-        <button id="btnMarkId" ref={btnMarkRef} onClick={handleCheckAnswer} class={isMarkBtnVisible ? null : styles.hidden} disabled={isMarkBtnDisabled}>Check answer</button>
+        <button autoFocus id="btnMarkId" ref={btnMarkRef} onClick={handleCheckAnswer} class={isMarkBtnVisible ? null : styles.hidden} disabled={isMarkBtnDisabled}>Check answer</button>
         </>
     )
 };
