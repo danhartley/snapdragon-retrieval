@@ -26,16 +26,6 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
         
         if(updatedAnswerList.filter(l => l.name !== PLACEHOLDER).length === question.listCount) {
             setTestState(enums.QUESTION_STATE.ANSWERED);
-
-            if(btnMarkRef.current) {                
-                btnMarkRef.current.focus();
-            }
-            setTimeout(() => {
-                let btn = document.querySelector('#btnMarkId') as HTMLButtonElement;
-                    btn.focus();
-                console.log(btn);
-                console.log(document.activeElement);                
-            }, 500);
         }
         setAnswerList(updatedAnswerList);        
         resetInput();
@@ -94,6 +84,22 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
         setAnswerList(logic.getPlaceholders(question, PLACEHOLDER));
     },[question.text]);
 
+    useEffect(() => {
+        if(btnMarkRef.current) {                
+            setTimeout(() => {
+                if(listItems.length === answerList.filter(a => a.name !== PLACEHOLDER).length) {
+                    btnMarkRef.current.focus();
+                    console.log(document.activeElement);
+                }
+            }, 500);
+        }
+        // setTimeout(() => {
+        //     let btn = document.querySelector('#btnMarkId') as HTMLButtonElement;
+        //         btn.focus();
+        //     console.log(document.activeElement);
+        // }, 500);
+    }, [answerList]);
+
     const handleCheckAnswer = e => {
         e.preventDefault();
         const score = logic.mark({ question, answerList }, PLACEHOLDER);
@@ -138,7 +144,7 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
             }
             </ul>
         </section>
-        <button autoFocus id="btnMarkId" ref={btnMarkRef} onClick={handleCheckAnswer} class={isMarkBtnVisible ? null : styles.hidden} disabled={isMarkBtnDisabled}>Check answer</button>
+        <button id="btnMarkId" ref={btnMarkRef} onClick={handleCheckAnswer} class={isMarkBtnVisible ? null : styles.hidden} disabled={isMarkBtnDisabled}>Check answer</button>
         </>
     )
 };
