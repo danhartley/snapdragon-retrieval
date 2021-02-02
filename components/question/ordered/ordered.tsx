@@ -101,9 +101,11 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
             setTimeout(() => {
                 if(btnMarkRef.current) {
                     console.log('testState: ', testState);    
-                    btnMarkRef.current.focus();
+                    // btnMarkRef.current.focus();
+                    const btn = document.querySelector('#btnMarkId') as HTMLButtonElement;
+                    btn.focus();
                 }   
-            },5250);
+            },250);
             break;
         case enums.QUESTION_STATE.MARKED:
             isMarkBtnVisible = false;
@@ -131,7 +133,7 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
             }
             </ul>
         </section>
-        <button ref={btnMarkRef} onClick={handleCheckAnswer} class={isMarkBtnVisible ? null : styles.hidden} disabled={isMarkBtnDisabled}>Check answer</button>
+        <button id="btnMarkId" ref={btnMarkRef} onClick={handleCheckAnswer} class={isMarkBtnVisible ? null : styles.hidden} disabled={isMarkBtnDisabled}>Check answer</button>
         </>
     )
 };
