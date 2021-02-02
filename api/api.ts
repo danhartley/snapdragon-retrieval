@@ -135,8 +135,6 @@ const updateQuestion = async question => {
 
     let ref = await getQuestionByText(question.text);
 
-    console.log('ref: ', ref)
-
     const response = (ref && ref.data && ref.data.length > 0)
         ? await clientQuery(
                 q.Update(
@@ -150,8 +148,6 @@ const updateQuestion = async question => {
                 ), 'updateQuestion'
             )
         : null;
-
-    console.log('response: ', response)   
 
     return response;    
 };

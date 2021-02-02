@@ -144,8 +144,7 @@ const renderScoreHistory = (lessonHistories, communityScores) => {
                                     <Answer score={score} />
                                     <div class={`${styles.score}`}>
                                         <span>{score.correct}/{score.total}</span>
-                                        <span class={`${score.correct === score.total ? styles.isCorrect : styles.isIncorrect}`}></span>
-                                        {console.log(communityQuestionAverage)}
+                                        <span class={`${score.correct === score.total ? styles.isCorrect : styles.isIncorrect}`}></span>                                        
                                         <span>{`${communityQuestionAverage}% of participants answered correctly.`}</span>
                                     </div>                                    
                                 </li>

@@ -18,14 +18,18 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
         }
     };
 
-    const addToList = e => {
-        const entry = { name: e.target.value, state: enums.TRILEAN.UNKNOWN };
+    const handleSetAnswerList = entry => {
         if(entry.name === '') return;
         const updatedAnswerList = logic.updateAnswerList(question, answerList, entry, PLACEHOLDER);
         if(updatedAnswerList.filter(l => l.name !== PLACEHOLDER).length === question.listCount) {
             setTestState(enums.QUESTION_STATE.ANSWERED);
         }
         setAnswerList(updatedAnswerList);
+    };
+
+    const addToList = e => {
+        const entry = { name: e.target.value, state: enums.TRILEAN.UNKNOWN };
+        handleSetAnswerList(entry);
     };
 
     const removeFromList = e => {
@@ -62,11 +66,12 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
         window.addEventListener("keydown", e => {        
             const target = e.target as HTMLButtonElement;
             if(target.type === 'submit' || !inputRef.current || (inputRef.current && inputRef.current.value === "")) return;
-                          
+            
             switch(e.code) {        
-                case 'Enter':         
-                    const updatedAnswerList = logic.updateAnswerList(question, answerList, { name: inputRef.current.value, state: enums.TRILEAN.UNKNOWN }, PLACEHOLDER);
-                    setAnswerList(updatedAnswerList);
+                case 'Enter':
+                    handleSetAnswerList({ name: inputRef.current.value, state: enums.TRILEAN.UNKNOWN });
+                    // const updatedAnswerList = logic.updateAnswerList(question, answerList, { name: inputRef.current.value, state: enums.TRILEAN.UNKNOWN }, PLACEHOLDER);
+                    // setAnswerList(updatedAnswerList);
                     break;
                 default:
                     break;

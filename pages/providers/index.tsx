@@ -20,7 +20,8 @@ const providerList = providersWithLessons.map(provider => <li><Link href={`/prov
 export default Providers;
 
 export async function getStaticProps() {
-    const lessonsProviders = getLessons().filter(lesson => lesson.isActive && lesson.provider !== 'snapdragon').map(l => l.provider);
+    // const lessonsProviders = getLessons().filter(lesson => lesson.isActive && lesson.provider !== 'snapdragon').map(l => l.provider);
+    const lessonsProviders = getLessons().filter(lesson => lesson.isActive).map(l => l.provider);
     return {
       props: {
         providers: providers.providersList,

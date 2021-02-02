@@ -48,7 +48,6 @@ const Admin = ({lessons}) => {
 
         return  (
             <Layout title="User" description={'Admin page'} header={'Admin'}>
-                <h1>Lesson control</h1>
                 <ul>{inActiveLessons}</ul>
             </Layout>
         )
