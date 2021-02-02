@@ -94,6 +94,7 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
                 ? btnMarkRef.current.focus() 
                 : null;
         }
+        console.log('testState: ', testState);        
     },250);
 
     let isMarkBtnVisible = true, isMarkBtnDisabled = false;
