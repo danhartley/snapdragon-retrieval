@@ -18,15 +18,6 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
         }
     };
 
-    const focusMarkBtn = () => {
-        if(testState === enums.QUESTION_STATE.ANSWERED) {
-            btnMarkRef.current 
-                ? btnMarkRef.current.focus() 
-                : null;
-        }
-        console.log('testState: ', testState);    
-    };
-
     const handleSetAnswerList = entry => {         
         if(entry.name === '') return;
         const updatedAnswerList = logic.updateAnswerList(question, answerList, entry, PLACEHOLDER);
@@ -34,8 +25,7 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
             setTestState(enums.QUESTION_STATE.ANSWERED);
         }
         setAnswerList(updatedAnswerList);        
-        resetInput();
-        focusMarkBtn();
+        resetInput();        
     };
 
     const addToList = e => {
@@ -71,7 +61,6 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
 
     setTimeout(() => {
         resetInput();
-        focusMarkBtn();
     });
 
     useEffect(() => {
@@ -109,6 +98,12 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
         case enums.QUESTION_STATE.ANSWERED:
             isMarkBtnVisible = true;                                
             isMarkBtnDisabled = false;
+            setTimeout(() => {
+                if(btnMarkRef.current) {
+                    console.log('testState: ', testState);    
+                    btnMarkRef.current.focus();
+                }   
+            });
             break;
         case enums.QUESTION_STATE.MARKED:
             isMarkBtnVisible = false;
