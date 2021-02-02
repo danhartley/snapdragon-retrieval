@@ -93,19 +93,19 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
     switch(testState) {
         case enums.QUESTION_STATE.RUNNING:
             isMarkBtnVisible = true;
-            isMarkBtnDisabled = listItems.length > answerList.filter(a => a.name !== PLACEHOLDER).length;       
+            isMarkBtnDisabled = listItems.length > answerList.filter(a => a.name !== PLACEHOLDER).length;
             break;
         case enums.QUESTION_STATE.ANSWERED:
             isMarkBtnVisible = true;                                
             isMarkBtnDisabled = false;
+            if(btnMarkRef.current) {                
+                btnMarkRef.current.focus();
+            }
             setTimeout(() => {
-                if(btnMarkRef.current) {
-                    console.log('testState: ', testState);    
-                    // btnMarkRef.current.focus();
-                    const btn = document.querySelector('#btnMarkId') as HTMLButtonElement;
+                let btn = document.querySelector('#btnMarkId') as HTMLButtonElement;
                     btn.focus();
-                }   
-            },250);
+                console.log(btn);
+            }, 500);            
             break;
         case enums.QUESTION_STATE.MARKED:
             isMarkBtnVisible = false;
