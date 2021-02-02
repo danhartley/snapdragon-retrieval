@@ -19,12 +19,15 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
     };
 
     const handleSetAnswerList = entry => {
-        if(entry.name === '') return;
-        const updatedAnswerList = logic.updateAnswerList(question, answerList, entry, PLACEHOLDER);
-        if(updatedAnswerList.filter(l => l.name !== PLACEHOLDER).length === question.listCount) {
-            setTestState(enums.QUESTION_STATE.ANSWERED);
-        }
-        setAnswerList(updatedAnswerList);
+        setTimeout(() => {                    
+            console.log(entry);                
+            if(entry.name === '') return;
+            const updatedAnswerList = logic.updateAnswerList(question, answerList, entry, PLACEHOLDER);
+            if(updatedAnswerList.filter(l => l.name !== PLACEHOLDER).length === question.listCount) {
+                setTestState(enums.QUESTION_STATE.ANSWERED);
+            }
+            setAnswerList(updatedAnswerList);
+        });
     };
 
     const addToList = e => {
@@ -67,11 +70,11 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
             const target = e.target as HTMLButtonElement;
             if(target.type === 'submit' || !inputRef.current || (inputRef.current && inputRef.current.value === "")) return;
             
+            console.log(e.code);            
+
             switch(e.code) {        
                 case 'Enter':
                     handleSetAnswerList({ name: inputRef.current.value, state: enums.TRILEAN.UNKNOWN });
-                    // const updatedAnswerList = logic.updateAnswerList(question, answerList, { name: inputRef.current.value, state: enums.TRILEAN.UNKNOWN }, PLACEHOLDER);
-                    // setAnswerList(updatedAnswerList);
                     break;
                 default:
                     break;
