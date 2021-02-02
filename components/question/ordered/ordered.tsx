@@ -19,13 +19,25 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
     };
 
     const handleSetAnswerList = entry => {         
+        
         if(entry.name === '') return;
+        
         const updatedAnswerList = logic.updateAnswerList(question, answerList, entry, PLACEHOLDER);
+        
         if(updatedAnswerList.filter(l => l.name !== PLACEHOLDER).length === question.listCount) {
             setTestState(enums.QUESTION_STATE.ANSWERED);
+
+            if(btnMarkRef.current) {                
+                btnMarkRef.current.focus();
+            }
+            setTimeout(() => {
+                let btn = document.querySelector('#btnMarkId') as HTMLButtonElement;
+                    btn.focus();
+                console.log(btn);
+            }, 500);
         }
         setAnswerList(updatedAnswerList);        
-        resetInput();        
+        resetInput();
     };
 
     const addToList = e => {
@@ -97,15 +109,7 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
             break;
         case enums.QUESTION_STATE.ANSWERED:
             isMarkBtnVisible = true;                                
-            isMarkBtnDisabled = false;
-            if(btnMarkRef.current) {                
-                btnMarkRef.current.focus();
-            }
-            setTimeout(() => {
-                let btn = document.querySelector('#btnMarkId') as HTMLButtonElement;
-                    btn.focus();
-                console.log(btn);
-            }, 500);            
+            isMarkBtnDisabled = false;         
             break;
         case enums.QUESTION_STATE.MARKED:
             isMarkBtnVisible = false;
