@@ -85,13 +85,13 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
     useEffect(() => {
         if(btnMarkRef.current) {                
             setTimeout(() => {
-                if(listItems.length === answerList.filter(a => a.name !== PLACEHOLDER).length) {
+                if(testState === enums.QUESTION_STATE.ANSWERED) {
                     btnMarkRef.current.focus();
                     console.log(document.activeElement);
                 }
             }, 250);
         }
-    }, [answerList]);
+    }, [testState]);
 
     const handleCheckAnswer = e => {
         e.preventDefault();
