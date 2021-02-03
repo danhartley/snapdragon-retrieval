@@ -11,15 +11,6 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
     const inputRef = useRef(null);
     const btnMarkRef = useRef(null);
 
-    const resetInput = () => {
-        if(inputRef.current) {
-            inputRef.current.value = '';
-            if(testState === enums.QUESTION_STATE.RUNNING) {
-                inputRef.current.focus();
-            }
-        }
-    };
-
     const handleSetAnswerList = (answer, answerList) => {         
         
         if(answer.name === '') return;
@@ -29,8 +20,7 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
         if(updatedAnswerList.filter(l => l.name !== PLACEHOLDER).length === question.listCount) {
             setTestState(enums.QUESTION_STATE.ANSWERED);
         }
-        setAnswerList(updatedAnswerList);        
-        resetInput();
+        setAnswerList(updatedAnswerList);
     };
 
     const addToList = e => {
@@ -64,10 +54,6 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
                 >{logic.toCase(item.name)}</span><span>{logic.toCase(item.correct)}{(answerList.length === 1 && item.correct) ? logic.unitDisplay(question.unit) || null : null }</span></li> 
     });
 
-    setTimeout(() => {
-        resetInput();
-    });
-
     const handleOnKeyDown = e => {
         const target = e.target as HTMLButtonElement;
             if(target.type === 'submit' || !inputRef.current || (inputRef.current && inputRef.current.value === "")) return;
@@ -86,15 +72,22 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
 
     useEffect(() => {
         if(btnMarkRef.current) {                
-            // setTimeout(() => {
-                if(testState === enums.QUESTION_STATE.ANSWERED) {
-                    btnMarkRef.current.disabled = false;
-                    btnMarkRef.current.focus();
-                    console.log(document.activeElement);
-                }
-            // }, 250);
+            if(testState === enums.QUESTION_STATE.ANSWERED) {
+                btnMarkRef.current.disabled = false;
+                btnMarkRef.current.focus();
+                console.log(document.activeElement);
+            }
         }
     }, [testState]);
+
+    useEffect(() => {
+        if(testState === enums.QUESTION_STATE.RUNNING) {
+            if(inputRef.current) {
+                inputRef.current.value = '';
+                inputRef.current.focus();
+            }
+        }
+    },[answerList])
 
     const handleCheckAnswer = e => {
         e.preventDefault();
