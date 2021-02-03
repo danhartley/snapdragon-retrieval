@@ -31,7 +31,6 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
     const removeFromList = e => {
         const entry = logic.toCase(e.target.innerText);
         setAnswerList([ ...answerList.filter(item => logic.toCase(item.name) !== entry), { name: PLACEHOLDER, state: enums.TRILEAN.UNKNOWN } ]);
-        resetInput();
     };
 
     const style = logic.calculateWidth(question.items, 'name');
