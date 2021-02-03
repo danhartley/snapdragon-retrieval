@@ -122,17 +122,17 @@ const getPlaceholders = (question, placeholder) => {
     return placeholders;
 };
 
-const updateAnswerList = (question, list, entry, placeholder) => {
+const updateAnswerList = (question, list, answer, placeholder) => {
     let updatedList;
     switch(question.type) {
         case enums.QUESTION_TYPE.UNORDERED:
-            updatedList = [ entry, ...list.slice(0, list.length - 1) ];
+            updatedList = [ answer, ...list.slice(0, list.length - 1) ];
             break;
         case enums.QUESTION_TYPE.ORDERED:
             const nonPlaceHolders = list.filter(l => l.name !== placeholder);
             const existingEntries = list.slice(0, nonPlaceHolders.length);
             const placeholderEntries = list.slice(existingEntries.length+1);
-            updatedList = [ ...existingEntries, entry, ...placeholderEntries ];
+            updatedList = [ ...existingEntries, answer, ...placeholderEntries ];
             break;
     }
     return updatedList;

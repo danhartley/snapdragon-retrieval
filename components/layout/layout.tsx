@@ -23,8 +23,9 @@ export default function Layout({
     }
 
     return (
-        !widget ? 
-            <div class={styles.container}>
+        !widget 
+            ? 
+                <div class={styles.container}>
                 <Head>
                     <title>{title}</title>
                     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes"></meta>
@@ -83,14 +84,29 @@ export default function Layout({
                 <footer>© Daniel Hartley 2020. All rights reserved.</footer>
             </div>
             :
-            <div class={styles.container}>
-            <Head>
-                <title>{title}</title>
-                <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes"></meta>
-                <meta name="description" content={description}></meta>
-            </Head>
-            <header><h1>{header}</h1></header>
-            {children}
-        </div>
+                <div class={styles.container}>
+                <Head>
+                    <title>{title}</title>
+                    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes"></meta>
+                    <meta name="description" content={description}></meta>
+                </Head>
+                <header>
+                    <nav class={disableNavigation ? 'disableDisplay' : null }>
+                        <div>
+                            
+                        </div>
+                        <div>
+                            <span class={styles.date}>{new Date().toDateString()}</span>
+                            <span>
+                                <Link href={`/users/anonymous`}>
+                                    <a>Dashboard</a>
+                                </Link>
+                            </span>
+                        </div>
+                    </nav>
+                </header>
+                
+                {children}
+                </div>
     )
 }

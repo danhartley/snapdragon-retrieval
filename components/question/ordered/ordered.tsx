@@ -6,7 +6,7 @@ import styles from 'components/question/question.module.scss';
 
 const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, setTestState}) => {
 
-    const [answerList, setAnswerList] = useState(logic.getPlaceholders(question, PLACEHOLDER));
+    const [answerList, setAnswerList] = useState(() => logic.getPlaceholders(question, PLACEHOLDER));
 
     const inputRef = useRef(null);
     const btnMarkRef = useRef(null);
@@ -18,11 +18,11 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
         }
     };
 
-    const handleSetAnswerList = entry => {         
+    const handleSetAnswerList = (answer, answerList) => {         
         
-        if(entry.name === '') return;
+        if(answer.name === '') return;
         
-        const updatedAnswerList = logic.updateAnswerList(question, answerList, entry, PLACEHOLDER);
+        const updatedAnswerList = logic.updateAnswerList(question, answerList, answer, PLACEHOLDER);
         
         if(updatedAnswerList.filter(l => l.name !== PLACEHOLDER).length === question.listCount) {
             setTestState(enums.QUESTION_STATE.ANSWERED);
@@ -32,8 +32,8 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
     };
 
     const addToList = e => {
-        const entry = { name: e.target.value, state: enums.TRILEAN.UNKNOWN };
-        handleSetAnswerList(entry);
+        const answer = { name: e.target.value, state: enums.TRILEAN.UNKNOWN };
+        handleSetAnswerList(answer, answerList);
     };
 
     const removeFromList = e => {
@@ -66,19 +66,17 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
         resetInput();
     });
 
-    useEffect(() => {
-        window.addEventListener("keydown", e => {        
-            const target = e.target as HTMLButtonElement;
+    const handleOnKeyDown = e => {
+        const target = e.target as HTMLButtonElement;
             if(target.type === 'submit' || !inputRef.current || (inputRef.current && inputRef.current.value === "")) return;
             switch(e.code) {        
                 case 'Enter':
-                    handleSetAnswerList({ name: inputRef.current.value, state: enums.TRILEAN.UNKNOWN });
+                    handleSetAnswerList({ name: inputRef.current.value, state: enums.TRILEAN.UNKNOWN }, answerList);
                     break;
                 default:
                     break;
             }
-        });
-    });
+    };
 
     useEffect(() => {
         setAnswerList(logic.getPlaceholders(question, PLACEHOLDER));
@@ -126,7 +124,7 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
     return (
         <>
         <section class={styles.container}>
-            <input id="orderedTextInput" disabled={answerList.filter(l => l.name !== PLACEHOLDER).length === question.listCount} ref={inputRef} type="text" onBlur={e => addToList(e)} placeholder="" />
+            <input id="orderedTextInput" disabled={answerList.filter(l => l.name !== PLACEHOLDER).length === question.listCount} ref={inputRef} type="text" onBlur={e => addToList(e)} placeholder="" onKeyDown={e => handleOnKeyDown(e)} />
             <label htmlFor="orderedTextInput"></label>
             <ul class={styles.answers}>
                 {listItems}
