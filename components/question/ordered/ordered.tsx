@@ -60,6 +60,9 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
                 case 'Enter':
                     handleSetAnswerList({ name: inputRef.current.value, state: enums.TRILEAN.UNKNOWN }, answerList);
                     break;
+                case 'Tab':
+                    e.preventDefault();
+                    handleSetAnswerList({ name: inputRef.current.value, state: enums.TRILEAN.UNKNOWN }, answerList);
                 default:
                     break;
             }
@@ -115,16 +118,6 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
             isMarkBtnDisabled = false;
             break;
     }
-
-    useEffect(() => {
-        window.addEventListener(
-            "focus",
-            () => {
-                console.log(document.activeElement);
-            },
-            true
-          );
-    }, []);
 
     return (
         <>
