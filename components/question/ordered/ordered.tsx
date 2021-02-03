@@ -82,8 +82,9 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
     useEffect(() => {
         if(testState === enums.QUESTION_STATE.RUNNING) {
             if(inputRef.current) {
-                inputRef.current.value = '';
-                inputRef.current.focus();
+                let input = inputRef.current as HTMLInputElement;
+                    input.value = '';
+                    input.focus();
                 console.log('inputRef: ', document.activeElement);
             }
         }
