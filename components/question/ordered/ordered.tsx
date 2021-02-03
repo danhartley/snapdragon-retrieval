@@ -74,7 +74,7 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
             if(testState === enums.QUESTION_STATE.ANSWERED) {
                 btnMarkRef.current.disabled = false;
                 btnMarkRef.current.focus();
-                console.log('btnMarkRef: ', document.activeElement);
+                // console.log('btnMarkRef: ', document.activeElement);
             }
         }
     }, [testState]);
@@ -85,7 +85,7 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
                 let input = inputRef.current as HTMLInputElement;
                     input.value = '';
                     input.focus();
-                console.log('inputRef: ', document.activeElement);
+                // console.log('inputRef: ', document.activeElement);
             }
         }
     },[answerList])
@@ -117,6 +117,9 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
             isMarkBtnDisabled = false;
             break;
     }
+
+    console.log(document.activeElement);
+    
 
     return (
         <>
