@@ -14,7 +14,9 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
     const resetInput = () => {
         if(inputRef.current) {
             inputRef.current.value = '';
-            inputRef.current.focus();
+            if(testState === enums.QUESTION_STATE.RUNNING) {
+                inputRef.current.focus();
+            }
         }
     };
 
@@ -84,12 +86,13 @@ const OrderedSelections = ({question, testState, type, PLACEHOLDER, markTest, se
 
     useEffect(() => {
         if(btnMarkRef.current) {                
-            setTimeout(() => {
+            // setTimeout(() => {
                 if(testState === enums.QUESTION_STATE.ANSWERED) {
+                    btnMarkRef.current.disabled = false;
                     btnMarkRef.current.focus();
                     console.log(document.activeElement);
                 }
-            }, 250);
+            // }, 250);
         }
     }, [testState]);
 
