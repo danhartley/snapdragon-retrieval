@@ -54,6 +54,16 @@
         "80"
       ],
       "listCount": 4
+    },
+    {
+      "text": "What is the name of hydrogen produced from gas with carbon capture and storage?",
+      "answer": "Blue",
+      "answers": [
+        "Grey",
+        "Green",
+        "Yellow"
+      ],
+      "listCount": 4
     }
   ],
   "active": true
