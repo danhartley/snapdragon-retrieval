@@ -110,16 +110,16 @@
     },
     {
       "text": "What is the name of hydrogen produced from gas with carbon capture and storage?",
-      "answer": "Blue",
+      "answer": "Blue hydrogen",
       "answers": [
-        "Grey",
-        "Green",
-        "Yellow"
+        "Grey hydrogen",
+        "Green hydrogen",
+        "Yellow hydrogen"
       ],
       "listCount": 4
     },
     {
-      "text": "What is the name of the epoch when electrons and protons first became bound to form H atoms?",
+      "text": "What is the name of the epoch when electrons and protons first became bound to form hydrogen atoms?",
       "sources": [
         {
           "author": "Wikipedia",
