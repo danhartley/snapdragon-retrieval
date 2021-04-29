@@ -24,6 +24,7 @@
   "ranked": [
     {
       "text": "What are the 4 most abundant elements by mass in the universe in descending order?",
+      "type": "ordered",
       "listCount": 4,
       "items": [
         {
