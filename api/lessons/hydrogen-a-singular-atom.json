@@ -32,6 +32,17 @@
       "answers": [
         "Low"
       ]
+    },
+    {
+      "text": "Global production of hydrogen from electrolysis accounts for what percent of the total?",
+      "answer": "0.1",
+      "answers": [
+        "1",
+        "2",
+        "10",
+        "20"
+      ],
+      "listCount": 5
     }
   ],
   "active": true
