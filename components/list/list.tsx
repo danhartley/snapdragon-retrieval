@@ -1,5 +1,4 @@
 import styles from 'components/list/list.module.scss';
-import { syncBuiltinESMExports } from 'module';
 
 export const ExternalLinkList = ({items, source}) => {
 

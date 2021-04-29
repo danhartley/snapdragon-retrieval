@@ -35,8 +35,13 @@ footer {
 
 h1 {
     opacity: .8;
-    font-size: 1.3rem;
+    font-size: .9rem;
+    line-height: 1.7;
     font-weight: normal;
+    @media (min-width: $narrow) {
+        font-size: 1.3rem;
+        line-height: 1.5;
+    }
     @media (min-width: 601px) {
         font-size: 1.5rem;
     }
@@ -84,6 +89,13 @@ button {
         border: 3px solid rgba($colour, 0.4);
         background-color: rgba($colour, .05);
     }
+    font-size: .7rem;
+    @media (min-width: $narrow) {
+        font-size: .9rem;
+    }
+    @media (min-width: 601px) {
+        font-size: 1rem;
+    }
 }
 
 input {
@@ -106,7 +118,10 @@ button:disabled {
 }
 
 .super {
-    font-size: .8rem;
+    font-size: .6rem;
+    @media (min-width: $narrow) {
+        font-size: .8rem;
+    }
     vertical-align: super;
     margin-left: 5px;
     margin-top: -.5rem;

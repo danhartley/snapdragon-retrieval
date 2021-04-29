@@ -5,20 +5,26 @@
     height: calc(2rem + 10px);
     display: flex !important;
     align-items: center;
-    span:nth-child(1) {
+    div:nth-child(1) {
+    // span:nth-child(1) {
         @include graph();
         width: 20px;
         height: 20px;
     }
-    span:nth-child(2) {
+    div:nth-child(2) {
+    // span:nth-child(2) {
         background-color: rgba($colour, .7);
         color: $colour-light;
         padding: 5px 10px;
         margin-left: 5px;
         letter-spacing: .25px;
         height: calc(2rem - 10px);
+        display: flex;
+        align-items: center;
     }
-    span:nth-child(2).hidden {
+    div:nth-child(2).hidden {
+    // span:nth-child(2).hidden {
         visibility: hidden;
     }
+    @include font-size();
 }

@@ -11,7 +11,8 @@ const CommunityScore = ({data}) => {
     const summary = communityScoreSummary(data);
     
     return (
-        <section class={styles.container}><span></span><span>{summary}</span></section>
+        <section class={styles.container}><div></div><div>{summary}</div></section>
+        // <section class={styles.container}><span></span><span>{summary}</span></section>
     );
 
 };
