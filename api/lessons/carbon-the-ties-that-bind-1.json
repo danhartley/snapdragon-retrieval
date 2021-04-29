@@ -42,6 +42,15 @@
           "source": "https://ourworldindata.org/co2-emissions"
         }
       ]
+    },
+    {
+      "text": "Fossil fuels have relatively less of which isotope of carbon?",
+      "answer": "carbon-13",
+      "answers": [
+        "carbon-12",
+        "carbon-14"
+      ],
+      "listCount": 3
     }
   ]
 }
