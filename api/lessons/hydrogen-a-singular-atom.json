@@ -18,6 +18,15 @@
         }
       ],
       "unit": "u"
+    },
+    {
+      "text": "What is the name for a substance that produces an electrically conducting solution when dissolved in a polar solvent?",
+      "listCount": 1,
+      "items": [
+        {
+          "name": "Electrolyte"
+        }
+      ]
     }
   ],
   "active": true,
@@ -108,6 +117,22 @@
         "Yellow"
       ],
       "listCount": 4
+    },
+    {
+      "text": "What is the name of the epoch when electrons and protons first became bound to form H atoms?",
+      "sources": [
+        {
+          "author": "Wikipedia",
+          "source": "https://en.wikipedia.org/wiki/Recombination_(cosmology)"
+        }
+      ],
+      "answer": "Recombination",
+      "answers": [
+        "The Big Bang",
+        "The Cosmic Dark Age",
+        "Reconstitution"
+      ],
+      "listCount": 5
     }
   ],
   "title": "Hydrogen - a singular atom",
