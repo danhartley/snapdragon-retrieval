@@ -256,6 +256,11 @@
       "slug": "openstax",
       "link": "https://cnx.org/",
       "name": "OpenStax"
+    },
+    {
+      "name": "Energy education",
+      "link": "https://energyeducation.ca/",
+      "slug": "energyeducation"
     }
   ]
 }
