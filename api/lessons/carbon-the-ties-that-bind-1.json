@@ -21,6 +21,26 @@
         {
           "name": "12"
         }
+      ],
+      "unit": "u"
+    }
+  ],
+  "multiplechoice": [
+    {
+      "text": "What are the approximate carbon dioxide emissions to date?",
+      "unit": "tonnes",
+      "listCount": 4,
+      "answer": "1.5 trillion",
+      "answers": [
+        "1.5 billion",
+        "0.5 trillion",
+        "15 trillion"
+      ],
+      "sources": [
+        {
+          "author": "Our World in Data",
+          "source": "https://ourworldindata.org/co2-emissions"
+        }
       ]
     }
   ]
