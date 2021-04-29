@@ -32,6 +32,15 @@
           "name": "Oxygen"
         }
       ]
+    },
+    {
+      "text": "What is the process by which elements heavier than boron are created?",
+      "listCount": 0,
+      "items": [
+        {
+          "name": "nucleosynthesis"
+        }
+      ]
     }
   ],
   "multiplechoice": [
