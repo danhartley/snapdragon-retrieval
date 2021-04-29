@@ -3,5 +3,16 @@
   "provider": "the-public-good",
   "title": "Hydrogen - a singular atom",
   "slug": "hydrogen-a-singular-atom",
-  "source": "https://www.the-public-good.com/hydrogen"
+  "source": "https://www.the-public-good.com/hydrogen",
+  "unranked": [
+    {
+      "text": "What is the atomic number of hydrogen?",
+      "listCount": 1,
+      "items": [
+        {
+          "name": "1"
+        }
+      ]
+    }
+  ]
 }
