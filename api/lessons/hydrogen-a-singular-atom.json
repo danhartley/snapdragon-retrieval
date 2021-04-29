@@ -18,6 +18,15 @@
         }
       ],
       "unit": "u"
+    },
+    {
+      "text": "What is the name for a substance that produces an electrically conducting solution when dissolved in a polar solvent?",
+      "listCount": 1,
+      "items": [
+        {
+          "name": "Electrolyte"
+        }
+      ]
     }
   ],
   "active": true,
