@@ -41,7 +41,19 @@
   "ranked": [
     {
       "text": "Rank natural gas, wood, hydrogen, and coal in descending order for energy density by mass.",
-      "listCount": 4
+      "listCount": 4,
+      "items": [
+        {
+          "rank": 1,
+          "name": "hydrogen",
+          "value": "hydrogen"
+        },
+        {
+          "rank": 2,
+          "name": "natural gas",
+          "value": "natural gas"
+        }
+      ]
     }
   ],
   "slug": "carbon-the-ties-that-bind",
