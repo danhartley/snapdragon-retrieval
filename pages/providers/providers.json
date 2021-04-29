@@ -30,14 +30,18 @@
       "link": "https://eatforum.org/"
     },
     {
-        "slug": "bbc",
-        "link": "https://www.bbc.com/",
-        "name": "BBC"
+      "slug": "bbc",
+      "link": "https://www.bbc.com/",
+      "name": "BBC"
     },
     {
-        "slug": "snapdragon",
-        "link": "",
-        "name": "Snapdragon"
+      "slug": "snapdragon",
+      "link": "",
+      "name": "Snapdragon"
+    },
+    {
+      "name": "The Public Good",
+      "slug": "the-public-good"
     }
   ]
 }
