@@ -32,6 +32,15 @@
           "name": "Oxygen"
         }
       ]
+    },
+    {
+      "text": "What is the process by which elements heavier than boron are created?",
+      "listCount": 0,
+      "items": [
+        {
+          "name": "nucleosynthesis"
+        }
+      ]
     }
   ],
   "multiplechoice": [
@@ -60,6 +69,30 @@
         "carbon-14"
       ],
       "listCount": 3
+    },
+    {
+      "text": "Every carbon atom in diamond is bound to four other carbon atoms in the form of a _?",
+      "answer": "tetrahedron",
+      "answers": [
+        "triangle",
+        "octahedron",
+        "cube"
+      ],
+      "listCount": 4
+    }
+  ],
+  "multipleselect": [
+    {
+      "text": "What are the products of burning hydrocarbons in air?",
+      "answers": [
+        "carbon dioxide + water + energy"
+      ],
+      "alternatives": [
+        "carbon monoxide + water + energy",
+        "carbon dioxide + oxygen + energy",
+        "carbon dioxide + oxygen + energy"
+      ],
+      "listCount": 4
     }
   ]
 }
