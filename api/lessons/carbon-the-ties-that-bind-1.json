@@ -69,6 +69,16 @@
         "carbon-14"
       ],
       "listCount": 3
+    },
+    {
+      "text": "Every carbon atom in diamond is bound to four other carbon atoms in the form of a _?",
+      "answer": "tetrahedron",
+      "answers": [
+        "triangle",
+        "octahedron",
+        "cube"
+      ],
+      "listCount": 4
     }
   ]
 }
