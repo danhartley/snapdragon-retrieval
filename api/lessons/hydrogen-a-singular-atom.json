@@ -1,9 +1,4 @@
 {
-  "isActive": true,
-  "provider": "the-public-good",
-  "title": "Hydrogen - a singular atom",
-  "slug": "hydrogen-a-singular-atom",
-  "source": "https://www.the-public-good.com/hydrogen",
   "unranked": [
     {
       "text": "What is the atomic number of hydrogen?",
@@ -25,6 +20,44 @@
       "unit": "u"
     }
   ],
+  "active": true,
+  "ranked": [
+    {
+      "text": "What are the 4 most abundant elements by mass in the universe in descending order?",
+      "listCount": 4,
+      "items": [
+        {
+          "rank": 1,
+          "name": "Hydrogen",
+          "value": "Hydrogen"
+        },
+        {
+          "rank": 2,
+          "name": "Helium",
+          "value": "Helium"
+        },
+        {
+          "rank": 3,
+          "name": "Oxygen",
+          "value": "Oxygen"
+        },
+        {
+          "rank": 4,
+          "name": "Carbon",
+          "value": "Carbon"
+        }
+      ],
+      "sources": [
+        {
+          "author": "Wikipedia",
+          "source": "https://en.wikipedia.org/wiki/Abundance_of_the_chemical_elements"
+        }
+      ]
+    }
+  ],
+  "slug": "hydrogen-a-singular-atom",
+  "isActive": true,
+  "provider": "the-public-good",
   "multiplechoice": [
     {
       "text": "What is the attraction between individual water molecules called?",
@@ -76,5 +109,6 @@
       "listCount": 4
     }
   ],
-  "active": true
+  "title": "Hydrogen - a singular atom",
+  "source": "https://www.the-public-good.com/hydrogen"
 }
