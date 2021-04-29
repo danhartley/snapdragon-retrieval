@@ -24,6 +24,46 @@
       ],
       "answer": "Hydrogen bond",
       "listCount": 3
+    },
+    {
+      "text": "Hydrogen gas has a low or high energy density",
+      "listCount": 2,
+      "answer": "High",
+      "answers": [
+        "Low"
+      ]
+    },
+    {
+      "text": "Global production of hydrogen from electrolysis accounts for what percent of the total?",
+      "answer": "0.1",
+      "answers": [
+        "1",
+        "2",
+        "10",
+        "20"
+      ],
+      "listCount": 5
+    },
+    {
+      "text": "What is the approximate current efficiency of fuel cells?",
+      "unit": "%",
+      "answer": "60",
+      "answers": [
+        "20",
+        "40",
+        "80"
+      ],
+      "listCount": 4
+    },
+    {
+      "text": "What is the name of hydrogen produced from gas with carbon capture and storage?",
+      "answer": "Blue",
+      "answers": [
+        "Grey",
+        "Green",
+        "Yellow"
+      ],
+      "listCount": 4
     }
   ],
   "active": true
