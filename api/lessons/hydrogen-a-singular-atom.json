@@ -14,5 +14,17 @@
         }
       ]
     }
-  ]
+  ],
+  "multiplechoice": [
+    {
+      "text": "What is the attraction between individual water molecules called?",
+      "answers": [
+        "Covalent bond",
+        "Ionic bond"
+      ],
+      "answer": "Hydrogen bond",
+      "listCount": 3
+    }
+  ],
+  "active": true
 }
