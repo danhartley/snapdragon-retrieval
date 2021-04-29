@@ -80,5 +80,19 @@
       ],
       "listCount": 4
     }
+  ],
+  "multipleselect": [
+    {
+      "text": "What are the products of burning hydrocarbons in air?",
+      "answers": [
+        "carbon dioxide + water + energy"
+      ],
+      "alternatives": [
+        "carbon monoxide + water + energy",
+        "carbon dioxide + oxygen + energy",
+        "carbon dioxide + oxygen + energy"
+      ],
+      "listCount": 4
+    }
   ]
 }
