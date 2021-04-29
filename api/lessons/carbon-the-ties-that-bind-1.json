@@ -50,6 +50,7 @@
   "ranked": [
     {
       "text": "Rank natural gas, wood, hydrogen, and coal in descending order for energy density by mass.",
+      "type": "ordered",
       "listCount": 4,
       "items": [
         {
