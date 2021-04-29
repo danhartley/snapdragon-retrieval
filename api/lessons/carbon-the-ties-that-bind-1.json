@@ -36,6 +36,15 @@
           "name": "nucleosynthesis"
         }
       ]
+    },
+    {
+      "text": "CH4 is the chemical formula for which compound?",
+      "listCount": 1,
+      "items": [
+        {
+          "name": "Methane"
+        }
+      ]
     }
   ],
   "ranked": [
