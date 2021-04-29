@@ -1,9 +1,4 @@
 {
-  "isActive": true,
-  "provider": "the-public-good",
-  "title": "Carbon - the ties that bind",
-  "slug": "carbon-the-ties-that-bind",
-  "source": "https://www.the-public-good.com/carbon",
   "unranked": [
     {
       "text": "What is the atomic number of carbon?",
@@ -43,6 +38,57 @@
       ]
     }
   ],
+  "ranked": [
+    {
+      "text": "Rank natural gas, wood, hydrogen, and coal in descending order for energy density by mass.",
+      "listCount": 4,
+      "items": [
+        {
+          "rank": 1,
+          "name": "hydrogen",
+          "value": "143"
+        },
+        {
+          "rank": 2,
+          "name": "natural gas",
+          "value": "55"
+        },
+        {
+          "rank": 3,
+          "name": "coal",
+          "value": "24"
+        },
+        {
+          "rank": 4,
+          "name": "wood",
+          "value": "16"
+        }
+      ]
+    }
+  ],
+  "slug": "carbon-the-ties-that-bind",
+  "multipleselect": [
+    {
+      "text": "What are the products of burning hydrocarbons in air?",
+      "answers": [
+        "carbon dioxide + water + energy"
+      ],
+      "alternatives": [
+        "carbon monoxide + water + energy",
+        "carbon dioxide + oxygen + energy",
+        "carbon dioxide + oxygen + energy"
+      ],
+      "listCount": 4,
+      "sources": [
+        {
+          "author": "Energy Education University of Calgary",
+          "source": "https://energyeducation.ca/encyclopedia/Hydrocarbon_combustion"
+        }
+      ]
+    }
+  ],
+  "isActive": true,
+  "provider": "the-public-good",
   "multiplechoice": [
     {
       "text": "What are the approximate carbon dioxide emissions to date?",
@@ -81,24 +127,6 @@
       "listCount": 4
     }
   ],
-  "multipleselect": [
-    {
-      "text": "What are the products of burning hydrocarbons in air?",
-      "answers": [
-        "carbon dioxide + water + energy"
-      ],
-      "alternatives": [
-        "carbon monoxide + water + energy",
-        "carbon dioxide + oxygen + energy",
-        "carbon dioxide + oxygen + energy"
-      ],
-      "listCount": 4,
-      "sources": [
-        {
-          "author": "Energy Education University of Calgary",
-          "source": "https://energyeducation.ca/encyclopedia/Hydrocarbon_combustion"
-        }
-      ]
-    }
-  ]
+  "title": "Carbon - the ties that bind",
+  "source": "https://www.the-public-good.com/carbon"
 }
