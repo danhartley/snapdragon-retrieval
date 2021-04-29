@@ -92,7 +92,13 @@
         "carbon dioxide + oxygen + energy",
         "carbon dioxide + oxygen + energy"
       ],
-      "listCount": 4
+      "listCount": 4,
+      "sources": [
+        {
+          "author": "Energy Education University of Calgary",
+          "source": "https://energyeducation.ca/encyclopedia/Hydrocarbon_combustion"
+        }
+      ]
     }
   ]
 }
