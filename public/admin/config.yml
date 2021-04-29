@@ -88,7 +88,7 @@ collections:
       search_fields: ["providersList.*.name"]
       display_fields: ["providersList.*.name"]
       value_field: "providersList.*.slug"
-    - { label: "active", name: "active", widget: "boolean", default: false }
+    - { label: "isActive", name: "isActive", widget: "boolean", default: false }
     - { label: "title", name: "title", widget: "string" }
     - { label: "slug", name: "slug", widget: "string" }
     - { label: "source", name: "source", widget: "string" }
