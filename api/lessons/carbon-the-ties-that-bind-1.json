@@ -1,0 +1,65 @@
+{
+  "isActive": true,
+  "provider": "the-public-good",
+  "title": "Carbon - the ties that bind",
+  "slug": "carbon-the-ties-that-bind",
+  "source": "https://www.the-public-good.com/carbon",
+  "unranked": [
+    {
+      "text": "What is the atomic number of carbon?",
+      "listCount": 1,
+      "items": [
+        {
+          "name": "6"
+        }
+      ]
+    },
+    {
+      "text": "What is the approximate atomic mass of carbon?",
+      "listCount": 1,
+      "items": [
+        {
+          "name": "12"
+        }
+      ],
+      "unit": "u"
+    },
+    {
+      "text": "Which is the most abundant element in the human body?",
+      "listCount": -1,
+      "items": [
+        {
+          "name": "Oxygen"
+        }
+      ]
+    }
+  ],
+  "multiplechoice": [
+    {
+      "text": "What are the approximate carbon dioxide emissions to date?",
+      "unit": "tonnes",
+      "listCount": 4,
+      "answer": "1.5 trillion",
+      "answers": [
+        "1.5 billion",
+        "0.5 trillion",
+        "15 trillion"
+      ],
+      "sources": [
+        {
+          "author": "Our World in Data",
+          "source": "https://ourworldindata.org/co2-emissions"
+        }
+      ]
+    },
+    {
+      "text": "Fossil fuels have relatively less of which isotope of carbon?",
+      "answer": "carbon-13",
+      "answers": [
+        "carbon-12",
+        "carbon-14"
+      ],
+      "listCount": 3
+    }
+  ]
+}
