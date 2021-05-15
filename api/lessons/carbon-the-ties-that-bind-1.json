@@ -76,7 +76,7 @@
       ]
     }
   ],
-  "slug": "carbon-the-ties-that-bind",
+  "slug": "carbon-element-of-life",
   "multipleselect": [
     {
       "text": "What are the products of burning hydrocarbons in air?",
@@ -86,7 +86,7 @@
       "alternatives": [
         "carbon monoxide + water + energy",
         "carbon dioxide + oxygen + energy",
-        "carbon dioxide + oxygen + energy"
+        "carbon monoxide + oxygen + energy"
       ],
       "listCount": 4,
       "sources": [
@@ -138,5 +138,5 @@
     }
   ],
   "title": "Carbon - the ties that bind",
-  "source": "https://www.the-public-good.com/carbon"
+  "source": "https://www.the-public-good.com/climate-crisis/carbon-element-of-life"
 }
